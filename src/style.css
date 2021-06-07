@@ -1,11 +1,14 @@
-.container{
-    display: flex ;
-
+.container {
+    display: flex;
 }
+
 .pokemon-card {
-    width: 324px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    width: 304px;
     height: 305px;
-    
     background: rgba(21, 25, 42, 0.6);
     border-radius: 10px;
-   }
+    margin: 2px;
+    text-align: center;
+}
