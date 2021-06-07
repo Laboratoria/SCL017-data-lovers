@@ -1,4 +1,11 @@
-.Tarjetitas {
-    border: solid 1px ;
-    margin: 1px;
+.cajacontarjetas{
+    display: flex ;
+
+}
+.pokemon-card {
+    width: 324px;
+    height: 305px;
+    
+    background: rgba(21, 25, 42, 0.6);
+    border-radius: 10px;
    }
