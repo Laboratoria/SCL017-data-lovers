@@ -3,7 +3,7 @@ console.log(data);
 
 for (let i = 0; i < data.pokemon.length; i++) {
 
-    let card = document.createElement("div");
+    let card = document.createElement("article");
     card.className = "pokemon-card";
 
     let pokemonName = document.createElement("h1");
