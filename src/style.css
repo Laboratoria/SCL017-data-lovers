@@ -1,0 +1,36 @@
+
+.container {
+    background-color:rgba(240, 240, 240, 0.913);
+    width: 800px;
+    padding: 8rem;
+    text-align:left;
+    margin-left: auto;
+    margin-right:auto ;
+    margin-top: 60px;
+    }
+
+.begin{
+    text-align: center;
+    display: block;
+    border-radius: 20px;
+    text-decoration:none;
+    cursor:pointer;
+    color:white;
+    font-size: 25px;
+    width: 200px;
+    padding: 15px;
+    background-color:black;
+    margin: 320px auto 0 auto;
+  
+    
+}
+
+.picture{
+float:right;
+justify-content: flex-start;
+}
+
+.introduction {
+    width: 70%;
+    float:left;
+}
