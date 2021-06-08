@@ -2,11 +2,10 @@
 .container {
     background-color:rgba(240, 240, 240, 0.913);
     width: 800px;
-    padding: 8rem;
+    padding: 2rem;
     text-align:left;
     margin-left: auto;
     margin-right:auto ;
-    margin-top: 60px;
     }
 
 .begin{
@@ -39,6 +38,7 @@ body{
     background-attachment: fixed;
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: 0;
 }
 
 .logo{
@@ -59,6 +59,8 @@ body{
 .hide{
     display: none;
 }
+
+
 .options{
     display: flex;
     align-items: center;
@@ -76,10 +78,11 @@ body{
    
 }
 .footer{
-    width: auto;
+    width: 100%;
     background-color: rgba(240, 240, 240, 0.913);
     border: 2px solid black;
-
+    position: fixed;
+    bottom:0;
 }
 /* .contacts{
     display: inline-block;
