@@ -1,7 +1,14 @@
+@font-face {
+    font-family: "pokemon-pixel";
+    src: url("pokemon_pixel_font.ttf");
+}
+
 .container {
     display: flex;
 }
-
+.banner{
+    font-family: pokemon-pixel;
+}
 .pokemon-card {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     float: left;
