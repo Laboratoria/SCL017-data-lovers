@@ -34,3 +34,85 @@ justify-content: flex-start;
     width: 70%;
     float:left;
 }
+body{
+    background-image: url("img/01-pokemon.jpeg");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.logo{
+    width: 35%;
+    margin-left: 30%;
+
+}
+
+.second-window{
+    height:300px;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgba(240, 240, 240, 0.913);
+    border: 1px solid black;
+    margin-bottom: 20px;
+    
+}
+.hide{
+    display: none;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.input{
+    margin: 2%;
+    text-align: center;
+}
+.select-dues{
+    width: 30%;
+    margin: 2%;
+   
+}
+.footer{
+    width: auto;
+    background-color: rgba(240, 240, 240, 0.913);
+    border: 2px solid black;
+
+}
+/* .contacts{
+    display: inline-block;
+    object-fit: cover;
+    background-repeat: no-repeat;  
+} */
+.img-footer{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    display: inline-block;
+    object-fit: cover;
+    background-repeat: no-repeat;  
+    
+}
+.img-squir{
+    width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  background-size: 60px 60px;
+  
+}
+.img-pica{
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    background-size: 60px 60px;
+}
+.img-poke{
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 60px 60px;
+}
