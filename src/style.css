@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(pictures/fondo1.png.jpeg);
+/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+    background-position: center center;
+/* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+background-size: cover;
+/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+    background-color: 	#008080;
+
+}
+.banner {
+    width: auto;
+    min-height: 357px;
+    height: auto;
+    background: url(pictures/Magenta\ and\ Yellow\ Vibrant\ and\ Dynamic\ Business\ Retractable\ Exhibition\ Banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.firstDiv{
+    display: flex ;
+    background-color: aliceblue;
+    opacity: 50px;
+    padding: 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.firstDiv div{
+    width: 210px;
+    height: 209px;
+    background-color: 	#4682B4;
+    margin: 50px;
+    
+}
+
+/*.searcher{
+    width: 1520px;
+    height: 45px;
+    margin: 35px;
+    margin-top: 130px;
+    background: rgb(139, 134, 134);
+}*/
+
