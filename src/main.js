@@ -1,6 +1,7 @@
   
 import data from './data/pokemon/pokemon.js';
 console.log(data);
+
 for (let i = 0; i < data.pokemon.length; i++) {
 
     let card = document.createElement("div");
@@ -36,6 +37,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
         document.getElementById("container").appendChild(card);
   
  };
+
 
 
 
