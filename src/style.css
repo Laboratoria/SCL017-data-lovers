@@ -1,9 +1,84 @@
 
+@font-face {
+    font-family: DyslexicFont;
+    src: url("../font/OpenDyslexic-Regular.otf");
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #15192A;
+    /*When the image doesnt load*/
+    background-image: url("../img/pokeball2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #e5d549;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(37, 65, 178, 0.9);
+    color: white;
+    text-align: center;
+}
+
+#banner {
+    margin: 0;
+    padding: 0;
+    font-family: pokemonFont;
+    font-size: 25px;
+}
+
+#page-wrap {
+    position: relative;
+}
+
+.sidebar {
+    height: 100vh;
+    /*Made it so it was the side of the viewport height*/
+    width: 85px;
+    position: fixed;
+
+    left: 0;
+    background-color: rgba(3, 37, 108, 0.6);
+
+    overflow-x: hidden;
+    color: #e5d549;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 16px;
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+
+}
+
+
+
 
 .pokemon-card {
     float:left;
     height: 300px;
     background: rgba(21, 25, 42, 0.6);
+
     border-radius: 10px;
     margin: 10px;
     text-align: center;
@@ -239,9 +314,5 @@
 }
 
 
-
-.container {
-    display: flex;
-}
 
 
