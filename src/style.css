@@ -28,7 +28,6 @@ background-size: cover;
 
 .firstDiv{
     display: flex ;
-    background-color: aliceblue;
     opacity: 50px;
     padding: 60px;
     flex-direction: row;
