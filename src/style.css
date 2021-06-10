@@ -1,13 +1,13 @@
 
 .container {
     background-color:rgba(240, 240, 240, 0.913);
-    width: 60%;
+    width: 50%;
     padding: 1.5rem;
     text-align:left;
     margin-left: auto;
     margin-right:auto ;
-    border: 5px solid #9900FF;
-    border-radius: 40px;
+    border: 2px solid #9900FF;
+    border-radius: 30px;
     }
 
 .introduction{
@@ -23,7 +23,7 @@
 .begin{
     text-align: center;
     display: block;
-    border-radius: 25px;
+    border-radius: 15px;
     text-decoration:none;
     cursor:pointer;
     color:black;
@@ -36,7 +36,7 @@
     
 }
 .begin:hover {
-background-color:rgb(24, 24, 190);
+background-color:#2575BC;
 color:white;
 border: 4px solid white;
 }
@@ -63,13 +63,14 @@ body{
 }
 
 .second-window{
-    height:300px;
+    height:auto;
     width: 50%;
     margin-left: 25%;
     background-color: rgba(240, 240, 240, 0.913);
     border: 1px solid black;
     margin-bottom: 20px;
-    border: 5px solid #9900FF;
+    border: 2px solid #9900FF;
+    border-radius: 25px;
     
 }
 .hide{
@@ -95,6 +96,7 @@ body{
 }
 .footer{
     width: 100%;
+    height: 10%;
     background-color: rgba(240, 240, 240, 0.913);
     border: 2px solid black;
     position: fixed;
@@ -118,22 +120,23 @@ body{
 
 }
 .img-squir{
-  width: 60px;
-  height: 55px;
-  margin: 0 10px;
+  width: 70px;
+  height: 70px;
+  margin: 10px 10px;
   background-size: 60px 60px;
   
 }
 .img-pica{
-    width: 60px;
-    height: 60px;
-    margin: 0 10px;
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px;
     background-size: 60px 60px;
 }
 .img-poke{
   width: 50px;
   height: 50px;
-  margin: 0 10px;
+  margin: 10px 10px;
+  padding-right: 20px;
   background-size: 60px 60px;
 }
 
