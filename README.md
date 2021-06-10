@@ -1,5 +1,20 @@
-# Data Lovers
+# Proyecto #2: DataLovers (Javiera Herrera & Valeria Argomedo)
+* Link a la Página: 
+## Historias de usuario (Sprint 1)
+Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de baja y mediana fidelidad respectivos. 
 
+1. Yo como Maestro Pokemón quiero ver todos los pokemones en la página principal.
+2. Yo como Maestro Pokemón quiero filtrar diferentes aspectos de los pokemones.
+3. Yo como Maestro Pokemón quiero que muestre cada pokemon y con un poco mas de información.
+4. Yo como Maestro Pokemón quiero que haya una bienvenida a la página principal.
+
+### Prototipos 
+![Prototipo_Baja1](../img_prototipo/Prototipo_Baja_Pagina_Principal.png)
+
+
+
+***
+# Data Lovers
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)

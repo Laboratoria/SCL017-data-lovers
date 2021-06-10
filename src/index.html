@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <nav class="navbar" id="myNavbar">
+    <button class="openbtn" id = "open-btn" onclick="openNav()">☰ Abrir Menu</button>  
+  </nav>  
   <header >
     <img src="../img/logoPokemon.png" alt="Logo de Pokemon Go id="header-logo" class = "header-img">
     <img src="../img/Pokedex1.png" alt="Pokedex" id="header-text" class = "header-img">
   </header>
 
-  <main id="main-section">
-    <div id="page-wrap" >
-      <section class="sidebar" id="mySidebar" >
-        Filtros y orden
-      </section>
-    </div>
-
-
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" id ="close-btn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  <main id="main">
     <section id="container"></section>
   </main>
 

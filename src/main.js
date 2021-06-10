@@ -1,4 +1,5 @@
-  
+ // ----------------------------------------------------------
+ // Manipulacion de la data de Pokemon 
 import data from './data/pokemon/pokemon.js';
 console.log(data);
 
@@ -40,5 +41,23 @@ for (let i = 0; i < data.pokemon.length; i++) {
 
 
 
+ // ----------------------------------------------------------
+ // Manipulacion del menu lateral 
 
-
+ const openNavBtn = document.getElementById("open-btn");
+ const closeNavBtn = document.getElementById("close-btn");
+ 
+ openNavBtn.addEventListener("click", openNav);
+ closeNavBtn.addEventListener("click", closeNav);
+ 
+ function openNav() {
+     document.getElementById("mySidebar").style.width = "250px";
+     document.getElementById("main").style.marginLeft = "250px";
+ }
+ 
+ function closeNav() {
+     document.getElementById("mySidebar").style.width = "0";
+     document.getElementById("main").style.marginLeft = "0";
+ }
+ 
+ 
