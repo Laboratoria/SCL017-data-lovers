@@ -5,11 +5,12 @@ console.log(data);
 
 for (let i = 0; i < data.pokemon.length; i++) {
 
-    let card = document.createElement("div");
+    let card = document.createElement("article");
     card.className = "pokemon-card";
 
     let pokemonName = document.createElement("div");
-    pokemonName.innerHTML = data.pokemon[i].name;
+    let capitalizedName = data.pokemon[i].name.charAt(0).toUpperCase()+ data.pokemon[i].name.slice(1);
+    pokemonName.innerHTML = capitalizedName;
     pokemonName.className = "pokemon-name";
 
     let pokemonNumber = document.createElement("div");
@@ -26,11 +27,14 @@ for (let i = 0; i < data.pokemon.length; i++) {
 
     data.pokemon[i].type.forEach(function(value){
         let pokemonType = document.createElement("div");
-        pokemonType.innerHTML =value;
-        pokemonType.className = "pokemon-type-"+value;
+        let capitalizedType = value.charAt(0).toUpperCase()+ value.slice(1);
+        
+        pokemonType.innerHTML =capitalizedType;
+        pokemonType.className = "pokemon-type";
+        pokemonType.id = "pokemon-type-"+value;
         card.appendChild(pokemonType);
-
     })
+    
     card.appendChild(pokemonImagediv);
     card.appendChild(pokemonNumber);
     card.appendChild(pokemonName); 
@@ -38,7 +42,6 @@ for (let i = 0; i < data.pokemon.length; i++) {
         document.getElementById("container").appendChild(card);
   
  };
-
 
 
  // ----------------------------------------------------------

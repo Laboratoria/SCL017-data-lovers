@@ -55,7 +55,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: rgba(37, 65, 178, 0.9);
-    color: white;
+    color: #FFFFFF;
     text-align: center;
 }
 
@@ -63,6 +63,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+
 /*----------------------------------------------------
 Manipulacion del Menu Lateral */
 
@@ -129,7 +130,7 @@ Manipulacion de las tarjetas del pokemon*/
 
 .pokemon-card {
     float: left;
-    height: 300px;
+    height: 305px;
     background: rgba(21, 25, 42, 0.6);
     border-radius: 10px;
     margin: 10px;
@@ -141,223 +142,121 @@ Manipulacion de las tarjetas del pokemon*/
     flex-basis: 32%;
     margin-left: 0.6%;
 }
-
-.pokemon-type-grass {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #2BD03B;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-poison {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #9200EB;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: white;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-fire {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #FE6E1D;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-flying {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #BCA8E4;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-water {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #108CFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-bug {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #83EA8D;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-normal {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #EAAB90;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-electric {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #E7F635;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-ground {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #A6582C;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-ice {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #86E1E1;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-dark {
-    box-shadow: 2px 2px 4px 1px white;
-    background-color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: white;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-fighting {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #DC2E2E;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-ghost {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #2C214E;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: white;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-steel {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #ADBDCC;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-psychic {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #FA14FF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-fairy {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #F199D8;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-rock {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #682804;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: white;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-type-dragon {
-    box-shadow: 2px 2px 4px 1px #000000;
-    background-color: #9654EB;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #000000;
-    margin-top: 5px;
-    margin-left: 2px;
-}
-
-.pokemon-name {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #0b140a;
-    vertical-align: bottom;
-}
-
-.pokemon-number {
-    font-family: Arial, Helvetica, sans-serif;
+.pokemon-name, .pokemon-number {
+    font-family: DyslexicFont;
     font-size: 25px;
-    font-weight: 400;
-    color: #0b140a;
+    color: #FFFFFF;
     vertical-align: bottom;
 }
 
 .pokemon-image {
     vertical-align: bottom;
-    margin-top: 15%;
-    margin-block-end: 5%;
+    margin-top: 5px;
+    margin-block-end: 5px;
 }
+
+.pokemon-type{
+    display:inline-block;
+    box-shadow: 2px 2px 4px 1px #000000;
+    font-family: DyslexicFont;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 8px;
+    padding: 5px;
+    border-radius: 10px;
+
+    }
+
+#pokemon-type-grass {
+    background-color: #2BD03B;
+    color: #000000;
+
+}
+
+#pokemon-type-poison {
+    background-color: #9200EB;
+    color: #FFFFFF;
+}
+
+#pokemon-type-fire {
+    background-color: #FE6E1D;
+    color: #000000;
+}
+
+#pokemon-type-flying {
+    background-color: #BCA8E4;
+    color: #000000;
+}
+
+#pokemon-type-water {
+    background-color: #108CFF;
+    color: #000000;
+}
+
+#pokemon-type-bug {
+    background-color: #83EA8D;
+    color: #000000;
+}
+
+#pokemon-type-normal {
+    background-color: #EAAB90;
+    color: #000000;
+}
+
+#pokemon-type-electric {
+    background-color: #E7F635;
+    color: #000000;
+}
+
+#pokemon-type-ground {
+    background-color: #A6582C;
+    color: #000000;
+}
+
+#pokemon-type-ice {
+    background-color: #86E1E1;
+    color: #000000;
+}
+
+#pokemon-type-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#pokemon-type-fighting {
+    background-color: #DC2E2E;
+    color: #000000;
+}
+
+#pokemon-type-ghost {
+    background-color: #2C214E;
+    color: #FFFFFF;
+}
+
+#pokemon-type-steel {
+    background-color: #ADBDCC;
+    color: #000000;
+}
+
+#pokemon-type-psychic {
+    background-color: #FA14FF;
+    color: #000000;
+}
+
+#pokemon-type-fairy {
+    background-color: #F199D8;
+    color: #000000;
+}
+
+#pokemon-type-rock {
+    background-color: #682804;
+    color: #FFFFFF;
+}
+
+#pokemon-type-dragon {
+    background-color: #9654EB;
+    color: #000000;
+}
+
+

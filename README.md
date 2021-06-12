@@ -1,13 +1,16 @@
 # Proyecto #2: DataLovers (Javiera Herrera & Valeria Argomedo)
 
-* Link a la Página: 
+* Link a la Página (gh-pages): 
+* Link Figma (Prototipo de Alta Fidelidad):
+
+## Definición del producto
 
 ## Historias de usuario (Sprint 1)
 Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de baja y mediana fidelidad respectivos. 
 
 1. Yo como Maestro Pokemón quiero ver todos los pokemones en la página principal.
 2. Yo como Maestro Pokemón quiero filtrar diferentes aspectos de los pokemones.
-3. Yo como Maestro Pokemón quiero que muestre cada pokemon y con un poco mas de información.
+3. Yo como Maestro Pokemón quiero que muestre cada pokemon y con un poco más de información.
 4. Yo como Maestro Pokemón quiero que haya una bienvenida a la página principal.
 
 ### Prototipos  
@@ -18,13 +21,15 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 ![Prototipo_bienvenida]("../img_prototipo/Prototipo_Baja_Pagina_Bienvenida.png")
 ![Prototipo_alta]("../img_prototipo/Prototipo_Alta_Pagina_Principal.png")
 
+
+
 ## Sprint 1 
 * Luego de generar las historias de usuario y sus respectivos bocetos de baja fidelidad, usamos Figma para generar nuestro prototipo de alta fidelidad para la historia de usuario elegida para este sprint (Página Principal).
 * Con el prototipo de alta fidelidad, pudimos mostrar a usuarios los cuales hicieron comentarios sobre nuestro producto y tomamos nota para hacer los cambios pertinentes
 * Comenzamos a trabajar en la historia de usuario sobre la Página Principal sin esperar terminarla
 ## Sprint 2
 * Nos dimos el objetivo de terminar la primera historia de usuario.
-* También maquetamos y pusimos en la página donde estaria la historia de usuario de los filtros de la pagina. 
+* También maquetamos y pusimos en la página donde estaría la historia de usuario de los filtros de la pagina. 
 * Al quedar con tiempo en el día jueves decidimos investigar lo referente a la historia de usuario referida a como hacer los filtros y también la de la tarjeta con más información. 
 
 
