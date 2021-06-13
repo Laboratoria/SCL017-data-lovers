@@ -280,10 +280,9 @@ Manipulacion del Menu Lateral */
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
+    background-color: rgba(3, 37, 108, 1);;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
     width: 80%;
   }
   
@@ -301,3 +300,4 @@ Manipulacion del Menu Lateral */
     text-decoration: none;
     cursor: pointer;
   }
+
