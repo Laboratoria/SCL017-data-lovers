@@ -1,7 +1,7 @@
 # Proyecto #2: DataLovers (Javiera Herrera & Valeria Argomedo)
 
 * Link a la Página (gh-pages): 
-* Link Figma (Prototipo de Alta Fidelidad):
+* Link Figma: [Prototipo de Alta Fidelidad ](https://www.figma.com/file/fxpUJgdxYroRBwpN3yXuvC/DataLovers-Herrera-and-Argomedo)
 
 ## Definición del producto
 
