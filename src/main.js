@@ -9,6 +9,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
     let card = document.createElement("article");
     card.className = "pokemon-card";
 
+
     let pokemonName = document.createElement("div");
     let capitalizedName = data.pokemon[i].name.charAt(0).toUpperCase() + data.pokemon[i].name.slice(1);
     pokemonName.innerHTML = capitalizedName;
@@ -92,7 +93,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
     })
 
     // Info del Modal 
-    let modalBtn = document.createElement("button");
+   let modalBtn = document.createElement("button");
     modalBtn.className = "myBtn";
     modalBtn.innerHTML = "Open mod";
 
@@ -128,84 +129,35 @@ for (let i = 0; i < data.pokemon.length; i++) {
 
 };
 
-
-/*
-let modalBtn = document.createElement("button");
-modalBtn.id = "myBtn";
-modalBtn.innerHTML = "Open mod";
-
-
-let modal1 = document.createElement("div");
-modal1.id = "myModal";
-modal1.className = "modal";
-
-let modalContent = document.createElement("div");
-modalContent.className = "modal-content";
-
-let modalSpan = document.createElement("span");
-modalSpan.className = "close";
-modalSpan.innerHTML = "&times;";
-
-let modalInfo = document.createElement("p");
-modalInfo.innerHTML = "Informacion";
-
-modalContent.appendChild(modalSpan);
-modalContent.appendChild(modalInfo);
-
-modal1.appendChild(modalContent);
-
-  
-document.getElementById("mod-container").appendChild(modalBtn);
-document.getElementById("mod-container").appendChild(modal1);
-*/
-
-/*
 // ----------------------------------------------------------
-// Manipulacion tarjetas de informacion
-for (let i = 0; i < data.pokemon.length; i++) {
-    
+// Manipulacion del modal 
+// Get the modal
+const modal = document.getElementsByClassName("modal");
 
-    let modal = document.createElement("span");
-    modal.className = "pokemon-info";
+// Get the button that opens the modal
+const btn = document.getElementsByClassName("myBtn");
 
-    let pokemonName = document.createElement("div");
-    let capitalizedName = data.pokemon[i].name.charAt(0).toUpperCase() + data.pokemon[i].name.slice(1);
-    pokemonName.innerHTML = capitalizedName;
-    pokemonName.className = "pokemon-name";
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close");
 
-    let pokemonNumber = document.createElement("div");
-    pokemonNumber.innerHTML = data.pokemon[i].num;
-    pokemonNumber.className = "pokemon-number";
+for(let ii = 0; ii < data.pokemon.length; ii++ ){
+    // When the user clicks the button, open the modal 
+    btn[ii].onclick = function () {
+        modal[ii].style.display = "block";
+    }
 
-    let pokemonImagediv = document.createElement("div");
-    let pokemonImage = document.createElement("img");
-    pokemonImage.src = data.pokemon[i].img;
-    pokemonImage.className = "pokemon-image";
-    pokemonImagediv.className = "pokemon-image-div";
-    pokemonImagediv.appendChild(pokemonImage);
+    // When the user clicks on <span> (x), close the modal
+    span[ii].onclick = function () {
+        modal[ii].style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal[ii]) {
+            modal[ii].style.display = "none";
+        }
 
-
-    data.pokemon[i].type.forEach(function (value) {
-        let pokemonType = document.createElement("div");
-        let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1);
-
-        pokemonType.innerHTML = capitalizedType;
-        pokemonType.className = "pokemon-type";
-        pokemonType.id = "pokemon-type-" + value;
-        card.appendChild(pokemonType);
-    })
-
-    modal.appendChild(pokemonImagediv);
-    modal.appendChild(pokemonNumber);
-    modal.appendChild(pokemonName);
-    
-    document.getElementById("myModal").appendChild(modal);
-
-};
-*/
-
-
-
+    }
+}
 
 // ----------------------------------------------------------
 // Manipulacion del menu lateral 
@@ -225,33 +177,3 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
-
-// ----------------------------------------------------------
-// Manipulacion del modal 
-// Get the modal
-var modal = document.getElementsByClassName("modal");
-
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close");
-
-for(let ii = 0; ii < data.pokemon.length; ii++ ){
-    // When the user clicks the button, open the modal 
-    btn[ii].onclick = function () {
-        modal[ii].style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span[ii].onclick = function () {
-        modal[ii].style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal[ii]) {
-            modal[ii].style.display = "none";
-        }
-
-    }
-}
-
