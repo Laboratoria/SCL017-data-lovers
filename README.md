@@ -14,12 +14,12 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 4. Yo como Maestro Pokemón quiero que haya una bienvenida a la página principal.
 
 ### Prototipos  
-![Prototipo_Baja1]("../img_prototipo/Prototipo_Baja_Pagina_Principal.png")
-![Prototipo_Baja2]("../img_prototipo/Prototipo_Baja_Pagina_Principal_iteracion.png")
-![Prototipo_popUp]("../img_prototipo/Prototipo_Baja_Pagina_popUp.png")
-![Prototipo_popUp1](../img_prototipo/Prototipo_Baja_Pagina_popUp_iteracion.png)
-![Prototipo_bienvenida]("../img_prototipo/Prototipo_Baja_Pagina_Bienvenida.png")
-![Prototipo_alta]("../img_prototipo/Prototipo_Alta_Pagina_Principal.png")
+![Prototipo_Baja1](/img_prototipo/Prototipo_Baja_Pagina_Principal.png)
+![Prototipo_Baja2](/img_prototipo/Prototipo_Baja_Pagina_Principal_iteracion.png)
+![Prototipo_popUp](/img_prototipo/Prototipo_Baja_Pagina_popUp.png)
+![Prototipo_popUp1](/img_prototipo/Prototipo_Baja_Pagina_popUp_iteracion.png)
+![Prototipo_bienvenida](/img_prototipo/Prototipo_Baja_Pagina_Bienvenida.png)
+![Prototipo_alta](/img_prototipo/Prototipo_Alta_Pagina_Principal.png)
 
 
 
@@ -30,7 +30,7 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 ## Sprint 2
 * Nos dimos el objetivo de terminar la primera historia de usuario.
 * También maquetamos y pusimos en la página donde estaría la historia de usuario de los filtros de la pagina. 
-* Al quedar con tiempo en el día jueves decidimos investigar lo referente a la historia de usuario referida a como hacer los filtros y también la de la tarjeta con más información. 
+* Al quedar con tiempo en el día jueves decidimos investigar lo referente a la historia de usuario referida a como hacer los filtros y también la de la tarjeta emergente con más información. 
 
 
 ***
