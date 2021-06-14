@@ -4,22 +4,44 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+
   <body>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
 
     <header>
+
       <div class= "header">
+
         <div class="logo">
-          <img id="logoHeader" src="img/logoheader.png" width="200px">
+          <img src="img/logoheader.png">
         </div>
+
+        <div class="tab">
+          <a href="https://pokemongolive.com/es/play-where-you-are/"
+          target="_blank"><h1>Información</h1></a>             
+        </div>
+
+        <div class="tab2">
+          <a href="https://pokemongolive.com/post/?hl=es"
+          target="_blank"><h1>Noticias</h1></a>          
+        </div>
+
+        <div class="tab3">
+          <a href="https://www.pokemon.com/el/play-pokemon/"
+          target="_blank"><h1>Play!</h1></a>   
+        </div>
+
       </div>
+
     </header>
 
-    <main>
+    <article>
+
       <div class="main">
-        <p id="text">En el laboratorio del Profesor Oak están los 
+        <p class="text">En el laboratorio del Profesor Oak están los 
           <br>
           pokémon de las regiones Kanto y Johto conoce
           <br>
@@ -27,17 +49,61 @@
           <br>
           equipo para tus batallas.</p>
       </div>
-    </main>
+      
+      <div class="search">
+           <form id="form">
+              <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
+                <br />
+              <button type="submit" class="btn" id="btn">¡Quiero verlos todos!</button>
+          </form>
+    </div>
+
+    </article>
+
     <footer>
+
       <div class= "footer">
-            <div class="logofooter">
-              <img id="go" src="img/go.png" width="100px">
-            </div>
-            <div class="download">
-          <img id="play" src="img/play.png" width="100px">
-          <img id="store" src="img/store.png" width="100px">
-            </div>
-      </div>
+
+          <div class="logofooter">
+
+              <img src="img/go.png">
+
+          </div>
+
+          <div class="social">
+
+                <h1>Redes Sociales</h1>
+
+                <div class="row">
+                  <a href="https://es-la.facebook.com/PokemonGO/"
+                   target="_blank"><img src="img/face.png" alt="Link Facebook"></a>                                  
+                  <label>Facebook</label>
+                </div>
+
+                <div class="row">
+                  <a href="https://www.instagram.com/pokemongoapp/?hl=es-la"
+                   target="_blank"><img src="img/ig.png" alt="Link Instagram"></a>                    
+                  <label>Instagram</label>                
+                  </div>
+
+          </div>
+
+          <div class="download">
+
+                <h1>Descarga en tu móvil</h1>
+
+                <div class="row2">
+                   <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"
+                   target="_blank"><img src="img/play.png" alt="Link descarga Google Play"></a>
+
+                   <a href="https://apps.apple.com/us/app/pokemon-go/id1094591345"
+                   target="_blank"><img src="img/store.png" alt="Link descarga App Store"></a>
+                
+                </div>
+
+          </div>
+
+       </div>
     </footer>
   </body>
 </html>

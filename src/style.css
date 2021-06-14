@@ -1,58 +1,153 @@
 *{
-    margin:0px;
-    padding:0px;
-    box-sizing:border-box;
-  }
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 body {
-    background-image: url(img/lab.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-.header{
-        display:flex;
-        flex-flow:column nowrap;
-        background:rgba(107, 190, 242, 0.8);
-        position:fixed;
-        width: 100%;
-        height: 20%;
-      }
-.footer {
-        display:flex;
-        flex-flow:column nowrap;
-        position: absolute;
-        width: 100%;
-        height: 10%;
-        top: 710px;
-        background: rgba(242, 183, 5, 0.8);
-      }
-.logo   {
-        margin-top: 40px;
-        margin-left: 10px;
-      }
-.download {
-        text-align: right;
-        margin-right: 10px;
-        margin-top: -40px;
-      }     
-.logofooter   {
-        margin-top: 10px;
-        margin-left: 50px;
-      }
+  background-image: url(img/lab.png);
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+.header {
+  display:flex;
+  margin: auto;
+  background:rgba(107, 190, 242, 0.8);
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  max-width: 3000px;
+}
+.logo img {
+  margin: 10px 0px 10px 10px;
+  width: 155px;
+  height: 60px;
+  max-width: 750px;
+}
+.tab h1 {
+  font-size: 18px;
+  color: #0E1426;
+  margin: 20px 0px 0px -100px;
+  max-width: 750px;
+}
+.tab2 h1 {
+  font-size: 18px;
+  color: #0E1426;
+  margin: 20px 0px 0px -100px;
+  max-width: 750px;
+}
+.tab3 h1 {
+  font-size: 18px;
+  color: #0E1426;
+  margin: 20px 200px 0px -100px;
+  max-width: 750px;
+}
 .main {
-        display:flex;
-        /* flex-direction:row; */
-        flex-wrap:nowrap;
-        background: rgba(14, 20, 38, 0.3);
-        justify-content:center;
-        text-align: center;
-        color: white;
-        width: 550px;
-        height: 320px;
-        border-radius: 20px;
-        padding: 25px 0px 0px 0px;
-        margin-left: 50%;
-        margin-top: 500px;
-        font-size:20px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      } 
+  display: flex;
+  background: rgba(14, 20, 38, 0.3);
+  justify-content: center;
+  border-radius: 20px;
+  padding: 25px 0px 0px 0px;
+  margin: 30px 0px 12px 700px;
+  width: 780px;
+  height: 510px;
+}
+.text {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin: 20px 0px 0px 0px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: -250px 0px 0px 700px;
+}
+#searchpokemon {
+  width: 680px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+}
+::placeholder{
+  color: #0E1426;
+  font-size: 18px;
+}
+.btn {
+  width: 200px;
+  height: 50px;
+  margin: 50px 0px 180px 0px;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
+}
+.footer {
+  display:flex;
+  margin: auto;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  max-width: 3000px;
+  background: rgba(242, 183, 5, 0.8);
+}
+.logofooter {
+  max-width: 1000px;
+  margin-top: 20px;
+}
+.logofooter img {
+  width: 100px;
+  height: 55px;
+  margin-left: 10px;
+}        
+.social {
+  max-width: 1000px;
+  margin-bottom: 10px;
+}
+.social h1 {
+  font-size: 15px;
+  color: #0E1426;
+}
+.row {
+  margin-top: 10px;
+  display: flex;
+}
+.row img {
+  width: 20px;
+  height: 20px;
+}
+.row label {
+  margin-top: -2px;
+  margin-left: 5px;
+}
+.download {
+  max-width: 1000px;
+}
+.download h1{
+  font-size: 15px;
+  color: #0E1426;
+}
+.row2 {
+  margin-top: 10px;
+  display: flex;
+}
+.row2 img {
+  width: 85px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width:1100px) {
+  .footer, .header, .main, .search {
+    flex-wrap: wrap;
+  }
+  
+  .social, .download, .tab, .tab2, .tab3{
+    margin-top: 10px;
+  }
+}      
+
+
+
          
