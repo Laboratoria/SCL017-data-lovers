@@ -23,7 +23,7 @@ const pokemon= data.pokemon;
 
     for (let i=0; i<pokemon.length; i++){
         console.log(pokemon[i].name)
-        containerRoot.innerHTML += `       <div id= "containerPokemon">
+        containerRoot.innerHTML += `       <div id= "containerPokemon">git 
                                            <p>${pokemon[i].name}</p>
                                         </div>
                                     `;
