@@ -1,8 +1,7 @@
 // ----------------------------------------------------------
 // Manipulacion de la data de Pokemon 
 import data from './data/pokemon/pokemon.js';
-//console.log(data);
-console.log(data.pokemon[0]['pokemon-rarity']);
+
 
 for (let i = 0; i < data.pokemon.length; i++) {
     //Generación de la tarjeta pokemon (página principal)
@@ -53,7 +52,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
                 capitalizedType = "Agua";
                 break;
             case "Grass":
-                capitalizedType = "Hierva";
+                capitalizedType = "Hierba";
                 break;
             case "Poison":
                 capitalizedType = "Veneno";
