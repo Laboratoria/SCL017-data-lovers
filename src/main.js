@@ -1,8 +1,6 @@
 // ----------------------------------------------------------
 // Manipulacion de la data de Pokemon 
 import data from './data/pokemon/pokemon.js';
-console.log(data);
-
 
 for (let i = 0; i < data.pokemon.length; i++) {
 
@@ -36,7 +34,7 @@ for (let i = 0; i < data.pokemon.length; i++) {
                 capitalizedType = "Agua";
                 break;
             case "Grass":
-                capitalizedType = "Hierva";
+                capitalizedType = "Hierba";
                 break;
             case "Poison":
                 capitalizedType = "Veneno";
