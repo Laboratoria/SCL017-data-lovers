@@ -23,11 +23,10 @@ const pokemon= data.pokemon;
 
     for (let i=0; i<pokemon.length; i++){
         console.log(pokemon[i].name)
-        containerRoot.innerHTML += ` <div class= "contenedor">
-                                       <div class="firstDiv">
+        containerRoot.innerHTML += `       <div id= "containerPokemon">
                                            <p>${pokemon[i].name}</p>
                                         </div>
-                                    </div>`;
+                                    `;
 
     };
 

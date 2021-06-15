@@ -26,22 +26,41 @@ background-size: cover;
 
 }
 
-.firstDiv{
+#root{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#containerPokemon{
+
+    opacity: 50px;
+    padding: 60px;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    width: 210px;
+    /*height: 209px;*/
+    background-color:	#4682B4;
+}
+
+/*.firstDiv{
     display: flex ;
     opacity: 50px;
     padding: 60px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
+    background-color: 	#4682B4;
+}*/
 
-.firstDiv div{
+/*.firstDiv div{
     width: 210px;
     height: 209px;
     background-color: 	#4682B4;
     margin: 50px;
     
-}
+}*/
 
 .searcher{
     width: 80%;
