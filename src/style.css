@@ -26,7 +26,7 @@ background-size: cover;
 
 }
 
-.firstDiv{
+/*.firstDiv{
     display: flex ;
     opacity: 50px;
     padding: 60px;
@@ -41,7 +41,8 @@ background-size: cover;
     background-color: 	#4682B4;
     margin: 50px;
     
-}
+} */
+
 
 .searcher{
     width: 80%;
