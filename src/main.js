@@ -1,8 +1,8 @@
 // ----------------------------------------------------------
 // Manipulacion de la data de Pokemon 
 import data from './data/pokemon/pokemon.js';
-console.log(data);
-
+//console.log(data);
+console.log(data.pokemon[0]['pokemon-rarity']);
 
 for (let i = 0; i < data.pokemon.length; i++) {
     //Generación de la tarjeta pokemon (página principal)
@@ -24,6 +24,25 @@ for (let i = 0; i < data.pokemon.length; i++) {
     pokemonImage.className = "pokemon-image";
     pokemonImagediv.className = "pokemon-image-div";
     pokemonImagediv.appendChild(pokemonImage);
+
+        // Generación de la tarjeta emergente de los pokemon 
+        let modalBtn = document.createElement("button");
+        modalBtn.className = "myBtn";
+        modalBtn.innerHTML = "Más información";
+    
+        let modal1 = document.createElement("div");
+        modal1.id = "myModal";
+        modal1.className = "modal";
+    
+        let modalContent = document.createElement("div");
+        modalContent.className = "modal-content";
+    
+        let modalSpan = document.createElement("span");
+        modalSpan.className = "close";
+        modalSpan.innerHTML = "&times;";
+    
+        let modalInfo = document.createElement("div");
+        modalInfo.className = "modal-info";
 
     data.pokemon[i].type.forEach(function (value) {
         let pokemonType = document.createElement("div");
@@ -88,29 +107,20 @@ for (let i = 0; i < data.pokemon.length; i++) {
         pokemonType.className = "pokemon-type";
         pokemonType.id = "pokemon-type-" + value;
         card.appendChild(pokemonType);
+        modalInfo.innerHTML += pokemonType.outerHTML;
     })
 
-    // Generación de la tarjeta emergente de los pokemon 
-    let modalBtn = document.createElement("button");
-    modalBtn.className = "myBtn";
-    modalBtn.innerHTML = "Open mod";
 
-    let modal1 = document.createElement("div");
-    modal1.id = "myModal";
-    modal1.className = "modal";
 
-    let modalContent = document.createElement("div");
-    modalContent.className = "modal-content";
-
-    let modalSpan = document.createElement("span");
-    modalSpan.className = "close";
-    modalSpan.innerHTML = "&times;";
-
-    let modalInfo = document.createElement("div");
-    modalInfo.className = "modal-info";
+/*
+    // Generación de los elementos de la tarjeta emergente
+    let pokemonRarity = document.createElement("div");
+    pokemonRarity.innerHtml = data.pokemon[i].num;
+  */
+    // Modelación de la tarjeta emergente (agrego la información)
     modalInfo.innerHTML += pokemonName.outerHTML + pokemonNumber.outerHTML + pokemonImage.outerHTML;
-
-
+  
+    // Append all teh cards 
     modalContent.appendChild(modalSpan);
     modalContent.appendChild(modalInfo);
     modal1.appendChild(modalContent);
@@ -146,31 +156,23 @@ for (let ii = 0; ii < data.pokemon.length; ii++) {
     span[ii].onclick = function () {
         modals[ii].style.display = "none";
     }
-    window.onclick = function(event) {
-        if(event.target.classList.contains('modal') ) {
-            for(let modal of modals) {
-                if(typeof modal.style !== 'undefined') {
-                    modal.style.display = 'none';    
+    window.onclick = function (event) {
+        if (event.target.classList.contains('modal')) {
+            for (let modal of modals) {
+                if (typeof modal.style !== 'undefined') {
+                    modal.style.display = 'none';
                 }
             }
         }
     }
-    
-    window.onkeydown = function(event) {
+
+    window.onkeydown = function (event) {
         if (event.key == 'Escape') {
-            for(let modal of modals) {
+            for (let modal of modals) {
                 modal.style.display = 'none';
             }
         }
     }
-/*
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal[ii]) {
-            modal[ii].style.display = "none";
-        }
-    }
-*/
 }
 
 
