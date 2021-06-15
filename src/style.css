@@ -116,13 +116,13 @@ Manipulacion de las tarjetas del pokemon*/
     box-shadow: 2px 2px 4px 1px #000000;
     font-family: DyslexicFont;
     font-size: 28px;
-    font-weight: 400;
     margin-top: 5px;
     margin-left: 8px;
     padding: 5px;
     border-radius: 10px;
     color: #000000;
 }
+
 
 #pokemon-type-grass {
     background-color: #2BD03B;
