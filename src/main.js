@@ -9,6 +9,7 @@ const start =  document.getElementById('start');
 const togo = () => {
     document.getElementById('home').className = " hide container " 
     document.getElementById('second-window').className = "second-window "
+    document.getElementById("logo").className = "hide"
 }
 
 start.addEventListener("click", togo, false);
