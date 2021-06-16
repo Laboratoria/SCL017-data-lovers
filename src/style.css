@@ -45,6 +45,12 @@ background-size: cover;
     background-color:	#4682B4;
 }
 
+.pokedex{
+    margin: 12px;
+    text-align: left;
+    
+}
+
 /*.firstDiv{
     display: flex ;
     opacity: 50px;
