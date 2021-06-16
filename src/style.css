@@ -1,0 +1,228 @@
+
+.container {
+    background-color:rgba(240, 240, 240, 0.913);
+    width: 50%;
+    padding: 1.5rem;
+    text-align:left;
+    margin-left: auto;
+    margin-right:auto ;
+    border: 2px solid #9900FF;
+    border-radius: 30px;
+    }
+
+.introduction{
+    font-family:'Play', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    width: 70%;
+    float:left;
+
+    }
+
+
+.begin{
+    text-align: center;
+    display: block;
+    border-radius: 15px;
+    text-decoration:none;
+    cursor:pointer;
+    color:black;
+    font-size: 25px;
+    width: 200px;
+    padding: 15px;
+    background-color:#FFCC01;
+    margin: 320px auto 0 auto;
+    border: 4px solid black;
+    
+}
+.begin:hover {
+background-color:#2575BC;
+color:white;
+border: 4px solid white;
+}
+
+.picture{
+float:right;
+justify-content: flex-start;
+}
+
+body{
+    background-image: url("img/01-pokemon.jpeg");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    
+}
+
+
+.logo{
+    width: 35%;
+    margin-left: 30%;
+
+}
+
+.second-window{
+    height:auto;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgba(240, 240, 240, 0.913);
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border: 2px solid #9900FF;
+    border-radius: 25px;
+    
+}
+.hide{
+    display: none;
+}
+
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.input{
+    margin: 2%;
+    text-align: center;
+}
+.select-dues{
+    width: 30%;
+    margin: 2%;
+   
+}
+.footer{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(240, 240, 240, 0.913);
+    border: 2px solid black;
+    position: fixed;
+    bottom:0;
+    font-size: 20px;
+}
+/* .contacts{
+    display: inline-block;
+    object-fit: cover;
+    background-repeat: no-repeat;  
+} */
+.img-footer{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    display: inline-block;
+    object-fit: cover;
+    background-repeat: no-repeat;  
+
+}
+.img-squir{
+  width: 70px;
+  height: 70px;
+  margin: 10px 10px;
+  background-size: 60px 60px;
+  
+}
+.img-pica{
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px;
+    background-size: 60px 60px;
+}
+.img-poke{
+  width: 50px;
+  height: 50px;
+  margin: 10px 10px;
+  padding-right: 20px;
+  background-size: 60px 60px;
+}
+
+.imgFooter{
+    float: right;
+}
+
+.informationFooter{
+    float: left;
+}
+/*
+ ##dispositivos = laptos, dektops
+ */
+
+ @media screen and (min-width: 1025px) and (max-width: 1280px) { 
+
+}
+/* 
+  ##Dispositivo = Tablets, Ipads (vertical)
+*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   
+    .container{
+        width: 80%;
+        height: 700px;
+    }
+    .introduction{
+        font-size: 3rem;
+        text-align: center;
+        width: 70%;
+        float: left;
+
+    }
+    .body{
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: unset;
+        margin: 0;
+ }
+ .footer{
+    font-size: 18px;
+ }
+
+ .informationFooter{
+    width: 50%;
+ }
+  }
+ /* 
+  ##Dispositivo = Mayoria de telefonos moviles (vertical)
+*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
+.container{
+    width: 60%;
+    height: auto;
+}
+.introduction{
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    float: initial;  
+}
+.body{
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: unset;
+    margin: 0;
+}
+.footer{
+    font-size: 10px;
+}
+.informationFooter{
+   width: 50%;
+}
+.img-squir{
+width: 30px;
+height: 30px;
+ }
+ .img-pica{
+    width: 30px;
+    height: 30px;
+ }
+
+ .img-poke{
+    width: 30px;
+    height: 30px;
+ }
+
+ }
