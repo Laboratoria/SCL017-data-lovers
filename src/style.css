@@ -195,16 +195,82 @@ body{
 .informationFooter{
     float: left;
 }
+/*
+ ##dispositivos = laptos, dektops
+ */
 
-@media screen and (max-width:1024px){
-
-}
-@media screen and (max-width:767px){
-
-}
-@media screen and (max-width:480px){
+ @media screen and (min-width: 1025px) and (max-width: 1280px) { 
 
 }
-@media screen and (max-width:320px){
+/* 
+  ##Dispositivo = Tablets, Ipads (vertical)
+*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   
+    .container{
+        width: 80%;
+        height: 700px;
+    }
+    .introduction{
+        font-size: 3rem;
+        text-align: center;
+        width: 70%;
+        float: left;
 
+    }
+    .body{
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: unset;
+        margin: 0;
+ }
+ .footer{
+    font-size: 18px;
+ }
+
+ .informationFooter{
+    width: 50%;
+ }
+  }
+ /* 
+  ##Dispositivo = Mayoria de telefonos moviles (vertical)
+*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
+.container{
+    width: 60%;
+    height: auto;
 }
+.introduction{
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    float: initial;  
+}
+.body{
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: unset;
+    margin: 0;
+}
+.footer{
+    font-size: 10px;
+}
+.informationFooter{
+   width: 50%;
+}
+.img-squir{
+width: 30px;
+height: 30px;
+ }
+ .img-pica{
+    width: 30px;
+    height: 30px;
+ }
+
+ .img-poke{
+    width: 30px;
+    height: 30px;
+ }
+
+ }
