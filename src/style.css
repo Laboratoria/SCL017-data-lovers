@@ -12,7 +12,7 @@ body {
 }
 .root {
   display:flex;
-  flex-flow:column nowrap;
+  /*flex-flow:column nowrap;*/
 }
 .header {
   display:flex;
@@ -20,7 +20,7 @@ body {
   background:rgba(107, 190, 242, 0.8);
   justify-content: space-around;
   padding: 10px;
-  width: 100%;
+  width: auto;
 }
 .logo img {
   margin: 10px 0px 10px 10px;
@@ -88,12 +88,13 @@ body {
   margin: auto;
   justify-content: space-between;
   padding: 10px;
-  width: 100%;
+  width:auto;
   background: rgba(242, 183, 5, 0.8);
 }
 .logofooter {
   max-width: 1000px;
   margin-top: 20px;
+  align-self: flex-start;
 }
 .logofooter img {
   width: 100px;
@@ -115,6 +116,7 @@ body {
 .row img {
   width: 20px;
   height: 20px;
+  text-align: center;
 }
 .row label {
   margin-top: -2px;
@@ -126,7 +128,6 @@ body {
 .download h1{
   font-size: 15px;
   color: #0E1426;
-  text-align: center;
 }
 .row2 {
   margin-top: 10px;
@@ -144,10 +145,6 @@ body {
   }
   
   .social, .download, .tab, .tab2, .tab3{
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }      
-
-
-
-         
