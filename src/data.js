@@ -1,9 +1,5 @@
-// estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
+//Funcion para elegir pokemon
+filteredByType = (pokemonData, type) => pokemonData.filter(x => x.type.includes(type));
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export {filterByGeneration};

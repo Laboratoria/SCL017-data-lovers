@@ -1,6 +1,9 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import  {filterByGeneration}  from './data.js';
 
-console.log(example, data);
+//Variable para guardar la data
+const listaPokemon = data.pokemon;
+
+console.log(filterByGeneration(listaPokemon, ))
+
+
