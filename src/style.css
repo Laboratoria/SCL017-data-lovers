@@ -1,106 +1,112 @@
 *{
-  margin:0px;
-  padding:0px;
-  box-sizing:border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body {
-  background-color: grey;
-  background-image: url(img/lab.png);
-  background-repeat: no-repeat;
-  background-size:cover;
+
+html{
+  font-size: 62.5%;
+  font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
-.root {
-  display:flex;
-  /*flex-flow:column nowrap;*/
+body{
+  background-image: url(img/lab-mobile.png);
 }
-.header {
-  display:flex;
-  margin: auto;
-  background:rgba(107, 190, 242, 0.8);
-  justify-content: space-around;
-  padding: 10px;
-  width: auto;
-}
-.logo img {
-  margin: 10px 0px 10px 10px;
-  width: 155px;
-  height: 60px;
-  max-width: 750px;
-}
-.tab h1 {
-  font-size: 18px;
-  color: #0E1426;
-  max-width: 750px;
-}
-.tab2 h1 {
-  font-size: 18px;
-  color: #0E1426;
-  max-width: 750px;
-}
-.tab3 h1 {
-  font-size: 18px;
-  color: #0E1426;
-  max-width: 750px;
- }
-.square {
+header{
+  position: relative;
   display: flex;
-  margin: auto;
   flex-direction: column;
-  align-content: space-around;
-}
-.main {
-  background: rgba(14, 20, 38, 0.3);
-  align-self: flex-end;
-  border-radius: 20px;
-  padding: 25px 35px 25px 35px;
+  width: 100%;
+  min-width: 320px;
+  height: 110px;
   text-align: center;
-  margin: 20px 20px 20px 0px;
+  justify-content: center;
+  background:rgba(107, 190, 242, 0.8);
 }
-.text {
+header img{
+  width: 180px;
+  height: 70px;
+  align-self: center;
+  margin-top: 12px;
+}
+.nav-menu {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  text-align: center;
+  align-self: center;
+}
+.nav-menu ul li{
+  display: inline-block;
+  align-self: center;
+  text-align: center;
+  margin: 5px;
+  
+}
+.nav-menu ul li a{
+  font-size: 16px;
+  color: #0E1426;
+  text-decoration: none;
+  line-height: 30px;
+  align-self: center;
+  text-align: center;
+}
+main {
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  align-content: center;
+}
+.square{
+  background: rgba(14, 20, 38, 0.3);
+  align-self: center;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  margin: 40px 20px 20px 20px;
+}
+main section h3{
+    color: navy;
+    font-size: 20px;
+    text-align: center;
+}
+main section p {
   text-align: center;
   color: white;
-  font-size: 30px;
-  margin: 20px 0px 60px 0px;
+  font-size: 17px;
+  margin: 10px;
 }
 #searchpokemon {
-  width: 680px;
-  height: 50px;
+  width: 230px;
+  height: 30px;
   border-radius: 10px;
   border: 0px;
 }
 ::placeholder{
   color: #0E1426;
-  font-size: 18px;
+  font-size: 13px;
   background: white;
 }
 .btn {
-  width: 200px;
-  height: 42px;
-  margin: 50px 0px 30px 0px;
-  border-radius: 20px;
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 18px;
   color: white;
-  font-size: 18px;
+  font-size: 13px;
   background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
-.footer {
+footer {
   display:flex;
-  margin: auto;
+  height: 150px;
   justify-content: space-between;
   padding: 10px;
   width:auto;
   background: rgba(242, 183, 5, 0.8);
 }
-.logofooter {
-  max-width: 1000px;
-  margin-top: 20px;
-  align-self: flex-start;
+footer section img{
+  width: 48px;
+  height: 30px;
 }
-.logofooter img {
-  width: 100px;
-  height: 55px;
-  margin-left: 10px;
-}        
 .social {
   max-width: 1000px;
   margin-bottom: 10px;
@@ -138,13 +144,3 @@ body {
   height: 25px;
   margin-right: 10px;
 }
-
-@media screen and (max-width:1100px) {
-  .footer, .header, .square {
-    flex-wrap: wrap;
-  }
-  
-  .social, .download, .tab, .tab2, .tab3{
-    margin-top: 20px;
-  }
-}      
