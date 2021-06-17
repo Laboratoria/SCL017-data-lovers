@@ -10,6 +10,8 @@ html{
 }
 body{
   background-image: url(img/lab-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header{
   position: relative;
