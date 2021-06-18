@@ -3,10 +3,92 @@ import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
+
 console.log(example, data);
 console.log("correcto");
 const pokemon= data.pokemon;
-//document.querySelector("#boton").addEventListener("click", bringData);
+
+
+
+    document.getElementById("boton").addEventListener("click",bringData);
+    const containerRoot= document.getElementById("root");
+    function bringData(){
+        
+        
+
+     console.log(pokemon)
+
+
+    for (let i=0; i<pokemon.length; i++){
+        console.log(pokemon[i].name)
+        containerRoot.innerHTML += `       <div class="containerPokemon" id= ${pokemon[i].name}> 
+                                            <img src=${pokemon[i].img}>
+                                            <p class="pokedex">#${pokemon[i].num}</p>
+                                            <p>${pokemon[i].name}</p>
+                                            <p>${pokemon[i].type}</p>
+                                            <p>${pokemon[i].generation.name}</p>
+                                            
+                                        
+
+                                        </div>
+                                    `;
+
+                                    const query = document.querySelector(`#${pokemon[i].name}`);
+                                    console.log(query);                 
+                                                  
+                                    
+    };
+    
+    const flipCard = document.createElement("div");
+    flipCard.classList.add("flip-card");
+
+     const cardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container");
+
+    flipCard.appendChild(cardContainer);
+
+    console.log(pokemon)
+
+    const cardBack = document.createElement("div");
+    cardBack.classList.add("pokemon-block-back");
+    cardBack.textContent = "Super poder";
+
+    cardContainer.appendChild(containerPokemon);
+        cardContainer.appendChild(cardBack);
+        containerRoot.appendChild(flipCard);  
+
+
+
+
+
+
+
+
+    /*const flipCard = document.createElement("div");
+    flipCard.classList.add("flip-card");
+
+     const cardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container");
+
+    flipCard.appendChild(cardContainer);
+
+    console.log(pokemon)
+
+    const cardBack = document.createElement("div");
+    cardBack.classList.add("pokemon-block-back");
+    cardBack.textContent = "Super poder";
+
+    cardContainer.appendChild(card);
+    cardContainer.appendChild(cardBack);
+    containerRoot.appendChild(flipCard); */
+    
+
+
+
+
+
+
+    //document.querySelector("#boton").addEventListener("click", bringData);
 
 //function bringData(){
  //   console.log("dentro de la funcion")
@@ -15,24 +97,8 @@ const pokemon= data.pokemon;
 //div.innetHTML= "";
 
 //document.getElementById("boton").addEventListener("click", () => {
-    document.getElementById("boton").addEventListener("click",bringData);
-    const containerRoot= document.getElementById("root");
-    function bringData(){
-    console.log(pokemon)
-        //containerRoot.innerHTML="";
-
-    for (let i=0; i<pokemon.length; i++){
-        console.log(pokemon[i].name)
-        containerRoot.innerHTML += `       <div id= "containerPokemon">
-                                           <img src=${pokemon[i].img}>  
-                                           <p class="pokedex">#${pokemon[i].num}</p>                                     
-                                           <p>${pokemon[i].name}</p>
-                                        </div>
-                                    `;
-
-    };
-
 //const show = document.getElementById("ddiv");
+ //containerRoot.innerHTML="";
 
 
 // for(let item of pokemon){
@@ -51,6 +117,7 @@ const pokemon= data.pokemon;
 //show.appendChild(li)
 //console.log(li)
 
+    }
 
 
-}
+
