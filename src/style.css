@@ -30,21 +30,29 @@ background-size: cover;
 #root{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
 
 }
 
-#containerPokemon{
+.containerPokemon{
 
     opacity: 50px;
     padding: 60px;
     flex-direction: row;
-    justify-content: center;
     margin: 50px;
     width: 210px;
     /*height: 209px;*/
     background-color:	#4682B4;
 }
 
+.pokedex{
+    /*text-align: left; */
+    margin-bottom: 10px;
+    float:left; 
+    
+} 
 
 /*.firstDiv{
     display: flex ;
@@ -77,4 +85,29 @@ background-size: cover;
     overflow: hidden;
 }
 
-
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .card-container {
+    transform: rotateY(180deg);
+  }
+  
+  .pokemon-block,
+  .pokemon-block-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0%;
+  }
+  
