@@ -13,15 +13,11 @@ const pokemon= data.pokemon;
     document.getElementById("boton").addEventListener("click",bringData);
     const containerRoot= document.getElementById("root");
     function bringData(){
-        
-        
-
-     console.log(pokemon)
 
 
     for (let i=0; i<pokemon.length; i++){
         console.log(pokemon[i].name)
-        containerRoot.innerHTML += `       <div class="containerPokemon" id= ${pokemon[i].name}> 
+        containerRoot.innerHTML += `       <div class="containerPokemon" id= "pokemon"+ ${pokemon[i].num}> 
                                             <img src=${pokemon[i].img}>
                                             <p class="pokedex">#${pokemon[i].num}</p>
                                             <p>${pokemon[i].name}</p>
@@ -33,12 +29,11 @@ const pokemon= data.pokemon;
                                         </div>
                                     `;
 
-                                    const query = document.querySelector(`#${pokemon[i].name}`);
-                                    console.log(query);                 
-                                                  
-                                    
-    };
-    
+                                    const query = document.querySelector("#pokemon" + `${pokemon[i].num}`);
+                                                    
+ };                                          
+            
+    const pokemonContainer = query;
     const flipCard = document.createElement("div");
     flipCard.classList.add("flip-card");
 
@@ -49,13 +44,19 @@ const pokemon= data.pokemon;
 
     console.log(pokemon)
 
+    const card = document.createElement("div");
+    card.classList.add ("pokemon-block");
+
     const cardBack = document.createElement("div");
     cardBack.classList.add("pokemon-block-back");
     cardBack.textContent = "Super poder";
 
-    cardContainer.appendChild(containerPokemon);
+    
+
+    cardContainer.appendChild(card);
         cardContainer.appendChild(cardBack);
-        containerRoot.appendChild(flipCard);  
+        pokemonContainer.appendChild(flipCard); 
+
 
 
 
