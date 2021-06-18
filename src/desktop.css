@@ -1,4 +1,73 @@
-body{
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
     background-image: url(img/lab-desktop.jpg);
     background-size: cover;
-}
+  }
+  header{
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+  }
+  header img{
+    margin: 0px 0px 10px 0px;
+  }
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-menu ul li{
+    margin: 0px 130px 0px 130px;
+  }
+  .nav-menu ul li a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  main {
+    width: 50%;
+    margin: -20px 0px 20px 450px;  
+  }
+  main section h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  main section p {
+    font-size: 20px;
+    margin: 10px;
+  }
+  #searchpokemon {
+    width: 550px;
+    height: 30px;
+    margin: 30px 0px 30px 0px;
+  }
+  .btn {
+      margin: 10px 0px 10px 0px;
+  }
+  footer {
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: max-content;
+  }
+  footer section img {
+    width: 100px;
+    height: 50px;
+  }
+  footer section h3 {
+    font-size: 15px;
+    margin: 5px 0px 15px 0px;
+  }
+  .logo-footer {
+    margin: 30px 0px 0px 20px;
+  }
+  .row label {
+    margin: 3px 0px 0px 5px;
+  }
+
+
