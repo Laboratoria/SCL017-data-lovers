@@ -1,4 +1,75 @@
 body{
     background-image: url(img/lab-tablet.png);
-    background-size: cover;
+    background-size: cover; 
 }
+header{
+    height: 160px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+header img{
+    width: 200px;
+    height: 80px;
+    margin-top: 15px; 
+}
+.nav-menu{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.nav-menu ul li{
+    margin: 5px 35px;
+}
+.nav-menu ul li a{
+    font-size: 20px;
+}
+
+.square{
+    margin: 180px auto;
+    height: 350px;
+    width: 650px;
+}
+.square h3{
+    font-size: 25px;
+}
+.square p {
+margin: 50px 20px;
+font-size: 20px;
+}
+#searchpokemon {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0px;
+}
+.btn{
+    width: 230px;
+  height: 40px;
+  margin: 15px;
+  font-size: 18px;
+}
+footer{
+    display: flex;
+    height: 250px;
+    padding: 23px 15px;
+}
+footer section img{
+    width: 135px;
+    height: 80px;
+  }
+  .social h3 {
+    font-size: 18px;
+  }
+  .row img {
+    width: 25px;
+    height: 25px;
+  }
+  .descargas h3{
+      font-size: 18px;
+      text-align: center;
+  }
+  .row2 img {
+    width: 130px;
+    height: 44px;
+   
