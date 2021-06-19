@@ -1,0 +1,238 @@
+@font-face {
+    font-family: DyslexicFont;
+    src: url("../font/OpenDyslexic-Regular.otf");
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .pokemon-type {
+        font-size: 20px;
+    }
+}
+
+/*----------------------------------------------------
+Manipulacion de las tarjetas del pokemon*/
+
+.myBtn {
+    background-color: rgba(21, 25, 42, 0);
+    color: #e5d549;
+    font-family: DyslexicFont;
+    border: none;
+    float: right;
+}
+
+.pokemon-card {
+    float: left;
+    height: 305px;
+    background: rgba(21, 25, 42, 0.6);
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 8%;
+    margin: 0 0 0.5rem 0;
+    padding: 0.5em 10px;
+    box-sizing: border-box;
+    flex-basis: 32%;
+    margin-left: 0.6%;
+    box-shadow: 2px 1px 2px 1px #0a0a0a;
+}
+
+.pokemon-name, .pokemon-number {
+    font-family: DyslexicFont;
+    color: #FFFFFF;
+    vertical-align: bottom;
+}
+
+.pokemon-name {
+    font-size: 25px;
+}
+
+.pokemon-number {
+    font-size: 18px;
+    float: left;
+}
+
+.pokemon-image {
+    vertical-align: bottom;
+    margin-top: 5px;
+    margin-block-end: 5px;
+}
+
+.pokemon-type {
+    display: inline-block;
+    box-shadow: 2px 2px 4px 1px #000000;
+    font-family: DyslexicFont;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-left: 8px;
+    padding: 2px;
+    border-radius: 10px;
+    color: #000000;
+}
+
+#pokemon-type-grass {
+    background-color: #2BD03B;
+}
+
+#pokemon-type-fire {
+    background-color: #FE6E1D;
+}
+
+#pokemon-type-flying {
+    background-color: #BCA8E4;
+}
+
+#pokemon-type-water {
+    background-color: #108CFF;
+}
+
+#pokemon-type-bug {
+    background-color: #83EA8D;
+}
+
+#pokemon-type-normal {
+    background-color: #EAAB90;
+}
+
+#pokemon-type-electric {
+    background-color: #E7F635;
+}
+
+#pokemon-type-ground {
+    background-color: #A6582C;
+}
+
+#pokemon-type-ice {
+    background-color: #86E1E1;
+}
+
+#pokemon-type-fighting {
+    background-color: #DC2E2E;
+}
+
+#pokemon-type-steel {
+    background-color: #ADBDCC;
+}
+
+#pokemon-type-psychic {
+    background-color: #FA14FF;
+}
+
+#pokemon-type-fairy {
+    background-color: #F199D8;
+}
+
+#pokemon-type-dragon {
+    background-color: #9654EB;
+}
+
+#pokemon-type-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#pokemon-type-ghost {
+    background-color: #2C214E;
+    color: #FFFFFF;
+}
+
+#pokemon-type-poison {
+    background-color: #9200EB;
+    color: #FFFFFF;
+}
+
+#pokemon-type-rock {
+    background-color: #682804;
+    color: #FFFFFF;
+}
+
+/* Manipulacion del Tarjeta Emergente -------------------------------------------*/
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 7.5%;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: rgba(3, 37, 108, 1);
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    font-family: DyslexicFont;
+    color: #FFFFFF;
+}
+
+/* The Close Button */
+
+.close {
+    color: #e5d549;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#newBtn {
+    background-color: rgba(21, 25, 42, 0);
+    color: #e5d549;
+    font-family: DyslexicFont;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#new-btn-img {
+    height: 100px;
+}
+
+.div-pokemon-info {
+    text-align: left;
+    width: 40%;
+    margin: 5px;
+    padding: 5px
+}
+
+.div-more-info {
+    text-align: left;
+    width: 50%;
+    margin: 2px;
+    font-size: 20px;
+}
+
+.div-evolutions {
+    vertical-align: bottom;
+    margin: 2px;
+    background-color: #9654EB;
+}
+
+.modal-more {
+    display: flex;
+    flex-wrap: wrap;
+}
