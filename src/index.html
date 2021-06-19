@@ -20,78 +20,83 @@
 
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" id="close-btn">×</a>
-    <div id="menu">
+
+    <div id="menu" >
       <h2 id="order">Ordenar por</h2>
       <h3>Nombre</h3>
-      <ul>
-        <li>Ascendente</li>
-        <li>Descendente</li>
-      </ul>
+     <ul>
+       <input class="upwardFilter" type= "radio" name="filter" value="name">Ascendente<br>
+       <input class="downwardFilter" type= "radio" name="filter" value="name">Descendente<br>
+     </ul>
       <h3>Número</h3>
       <ul>
-        <li>Ascendente</li>
-        <li>Descendente</li>
-      </ul>
-      <h2 id="filter">Filtrar por</h2>
-      <details>
-        <summary>Generación</summary>
-        <ul>
-          <li>Kanto</li>
-          <li>Jhoto</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Tipo</summary>
-        <ul>
-          <li>Hierba</li>
-          <li>Veneno</li>
-          <li>Fuego</li>
-          <li>Volador</li>
-          <li>Agua</li>
-          <li>Bicho</li>
-          <li>Normal</li>
-          <li>Eléctrico</li>
-          <li>Tierra</li>
-          <li>Luchador</li>
-          <li>Hierba</li>
-          <li>Psíquico</li>
-          <li>Roca</li>
-          <li>Hielo</li>
-          <li>Fantasma</li>
-          <li>Dragón</li>
-          <li>Hada</li>
-          <li>Siniestro</li>
-          <li>Metal</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>Tipo de debilidad</summary>
-        <ul>
-          <li>Hierba</li>
-          <li>Veneno</li>
-          <li>Fuego</li>
-          <li>Volador</li>
-          <li>Agua</li>
-          <li>Bicho</li>
-          <li>Normal</li>
-          <li>Eléctrico</li>
-          <li>Tierra</li>
-          <li>Luchador</li>
-          <li>Hierba</li>
-          <li>Psíquico</li>
-          <li>Roca</li>
-          <li>Hielo</li>
-          <li>Fantasma</li>
-          <li>Dragón</li>
-          <li>Hada</li>
-          <li>Siniestro</li>
-          <li>Metal</li>
-        </ul>
-      </details>
+       <input class="upwardFilter" type= "radio" name="filter" value="num">Ascendente<br>
+       <input class="downwardFilter" type= "radio" name="filter" value="num">Descendente<br>
+       </ul>
+       <h2 id="filter">Filtrar por</h2>
+     <details>
+       <summary>Generación</summary>
+       <ul>
+         <input id="filterKanto" type="checkbox" name="Kanto">Kanto <br>
+         <input id="filterJhoto" type="checkbox" name="Jhoto">Jhoto <br>
+ 
+       </ul>
+     </details>
+ 
+     <details>
+       <summary>Tipo</summary>
+       <ul>
+         <input value="grass" type="checkbox" name="type1" >Hierba <br>
+         <input value="poison" type="checkbox" name="type1" >Veneno <br>
+         <input value="fire" type="checkbox" name="type1" >Fuego <br>
+         <input value="flying" type="checkbox" name="type1" >Volador <br>
+         <input value="water" type="checkbox" name="type1" >Agua <br>
+         <input value="bug" type="checkbox" name="type1" >Bicho <br>
+         <input value="normal" type="checkbox" name="type1" > Normal <br>
+         <input value="electric" type="checkbox" name="type1" > Eléctrico <br>
+         <input value="ground" type="checkbox" name="type1" > Tierra <br>
+         <input value="fighting" type="checkbox" name="type1" >Luchador <br>
+         <input value="psychic" type="checkbox" name="type1" >Psíquico <br>
+         <input value="rock" type="checkbox" name="type1" >Roca <br>
+         <input value="ice" type="checkbox" name="type1" >Hielo <br>
+         <input value="ghost" type="checkbox" name="type1" > Fantasma<br>
+         <input value="dragon" type="checkbox" name="type1" > Dragón <br>
+         <input value="fairy" type="checkbox" name="type1" > Hada <br>
+         <input value="dark" type="checkbox" name="type1" >Siniestro <br>
+         <input value="steel" type="checkbox" name="type1" > Metal <br>
+ 
+       </ul>
+     </details>
+ 
+     <details>
+       <summary>Tipo de debilidad</summary>
+ 
+       <ul>
+         <input value="grass" type="checkbox" name="type2" >Hierba <br>
+         <input value="poison" type="checkbox" name="type2" >Veneno <br>
+         <input value="fire" type="checkbox" name="type2" >Fuego <br>
+         <input value="flying" type="checkbox" name="type2" >Volador <br>
+         <input value="water" type="checkbox" name="type2" >Agua <br>
+         <input value="bug" type="checkbox" name="type2" >Bicho <br>
+         <input value="normal" type="checkbox" name="type2" > Normal <br>
+         <input value="electric" type="checkbox" name="type2" > Eléctrico <br>
+         <input value="ground" type="checkbox" name="type2" > Tierra <br>
+         <input value="fighting" type="checkbox" name="type2" >Luchador <br>
+         <input value="psychic" type="checkbox" name="type2" >Psíquico <br>
+         <input value="rock" type="checkbox" name="type2" >Roca <br>
+         <input value="ice" type="checkbox" name="type2" >Hielo <br>
+         <input value="ghost" type="checkbox" name="type2" > Fantasma<br>
+         <input value="dragon" type="checkbox" name="type2" > Dragón <br>
+         <input value="fairy" type="checkbox" name="type2" > Hada <br>
+         <input value="dark" type="checkbox" name="type2" >Siniestro <br>
+         <input value="steel" type="checkbox" name="type2" > Metal <br>
+ 
+       </ul>
+     </details>
+ 
     </div>
-  </div>
-
+   </div>
+   
   <main id="main">
 
     <!-- <button id="newBtn">
