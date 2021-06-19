@@ -18,14 +18,14 @@ start.addEventListener("click", togo, false);
 let pokemonList = document.getElementById('pokemonList');
 
 
-let poke = function(dataPokemon){
+let createPokemonDiv = function(dataPokemon){
     let newDiv = document.createElement('div');
     let newBtnId = document.createElement('button');
     let newImg = document.createElement('img');
-    let newBtntype = document.createElement('button');
+    let newBtnType = document.createElement('button');
     let newBtnPower = document.createElement('button');
     newBtnId.innerText = dataPokemon.num;
-    newImg.innerHTML = dataPokemon.img;
+    newImg.src = dataPokemon.img;
     newBtnType.innerText = dataPokemon.type;
     newBtnPower.innerText = dataPokemon.type;
     newDiv.appendChild(newBtnId);
@@ -37,6 +37,7 @@ let poke = function(dataPokemon){
 
 }
 
-for(let i = 0; i < dataPokemon.length; i++){
-    poke(pokemonList[i]);
+for(let i = 0; i < dataPokemon.pokemon.length; i++){
+    createPokemonDiv(dataPokemon.pokemon[i]);
 }
+console.log(dataPokemon.pokemon);
