@@ -1,0 +1,18 @@
+.personaje {
+    float: left;
+}
+.nombre {
+    color: #123A43;
+    font-family: Battambang;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 42px;
+}
+
+.imagen {
+
+    left: 56px;
+    top: 52px;
+
+}
