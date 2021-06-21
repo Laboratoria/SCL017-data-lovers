@@ -1,9 +1,18 @@
 import data from './data/pokemon/pokemon.js';
-import  {filterByGeneration}  from './data.js';
-
-//Variable para guardar la data
-const listaPokemon = data.pokemon;
-
-console.log(filterByGeneration(listaPokemon, ))
+import  {}  from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 
 
+const dataPokemon = data.pokemon;
+console.log(dataPokemon);
+
+dataPokemon.forEach(function(pokemon){
+    console.log(pokemon.name);
+});
+
+//Funcion para que boton buscar cambie de pagina
+document.getElementById("btn-buscar").addEventListener("click", PokemonPage);
+function PokemonPage(){
+    document.getElementById("infoPokemonPage").style.display = "block";
+    document.getElementById("firstPage").style.display = "none";
+    };

@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Pantalla de bienvenida con barra de búsqueda -->
-    <div>
+    <div id="firstPage">
         <header>
             <img src="./img/logoheader.png" alt="logo pokemon header">
             <nav class="nav-menu">
@@ -28,7 +28,8 @@
                      <form id="form">
                         <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
                           <br />
-                        <button type="submit" class="btn" id="btn">¡Quiero verlos todos!</button>
+                          <button type="button" class="btn" id="btn-buscar">Buscar</button>
+                        <button type="submit" class="btn" id="btn-verlosTodos">¡Quiero verlos todos!</button>
                     </form>
             </section>
         </main>
@@ -61,5 +62,11 @@
          </section>
         </footer>
     </div>
+
+    <!-- Pantalla donde aparece info del Pokemon ingresado en barra de búsqueda -->
+    <div id="infoPokemonPage" style="display: none;">
+
+    </div>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
