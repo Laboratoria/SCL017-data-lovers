@@ -24,15 +24,21 @@ let createPokemonDiv = function(dataPokemon){
     let newImg = document.createElement('img');
     let newBtnType = document.createElement('button');
     let newBtnPower = document.createElement('button');
+    newDiv.classList = ('section-pokemon')
     newBtnId.innerText = dataPokemon.num;
+    newBtnId.classList = ('pokemon-identifier');
     newImg.src = dataPokemon.img;
+    newImg.classList = ('img-pokemon')
     newBtnType.innerText = dataPokemon.type;
+    newBtnType.classList = ('type-pokemon')
     newBtnPower.innerText = dataPokemon.type;
+    newBtnPower.classList = ('attack')
     newDiv.appendChild(newBtnId);
     newDiv.appendChild(newImg);
     newDiv.appendChild(newBtnType);
     newDiv.appendChild(newBtnPower);
     pokemonList.appendChild(newDiv);
+    
 
 
 }

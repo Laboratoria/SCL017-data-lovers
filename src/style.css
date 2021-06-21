@@ -77,7 +77,7 @@ body{
 .pokemon-list{
     margin: 20px;
     justify-content: center;
-    display: flex;
+    display: flexbox;
     
 
     
@@ -91,20 +91,20 @@ body{
 
     
 }
-.id{
+.pokemon-identifier{
     background-color: yellow;
     border-radius: 10%;
     color: tomato;
     
     
 }
-.img-poke{
+.img-pokemon{
     height: 80px;
     width: 80px;
     align-self: center;
     
 }
-.type{
+.type-pokemon{
     background-color: green;
     border-radius: 10%;
     color:cornsilk;
