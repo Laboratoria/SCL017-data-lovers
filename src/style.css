@@ -140,7 +140,7 @@ body{
 .select-dues{
     width: 30%;
     margin: 2%;
-   
+    
 }
 .footer{
     width: 100%;
@@ -150,6 +150,16 @@ body{
     position: fixed;
     bottom:0;
     font-size: 20px;
+}
+.SuggestionsParagraph {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 100%;
+}
+
+.infoDeveloper {
+    margin-left: 2%;
+    width: 100%;
 }
 /* .contacts{
     display: inline-block;
@@ -165,31 +175,31 @@ body{
     display: inline-block;
     object-fit: cover;
     background-repeat: no-repeat;  
-
 }
 .img-squir{
   width: 70px;
   height: 70px;
-  margin: 10px 10px;
+  margin: 10px 5px;
   background-size: 60px 60px;
   
 }
 .img-pica{
     width: 70px;
     height: 70px;
-    margin: 10px 10px;
+    margin: 10px 8px ;
     background-size: 60px 60px;
 }
 .img-poke{
   width: 50px;
   height: 50px;
-  margin: 10px 10px;
-  padding-right: 20px;
+  margin: 20px 4px;
+  
   background-size: 60px 60px;
 }
 
 .imgFooter{
     float: right;
+    margin-right: 5%
 }
 
 .informationFooter{
@@ -199,24 +209,21 @@ body{
  ##dispositivos = laptos, dektops
  */
 
- @media screen and (min-width: 1025px) and (max-width: 1280px) { 
-
-}
+ @media (max-width: 1280px) { 
 /* 
   ##Dispositivo = Tablets, Ipads (vertical)
 */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
    
     .container{
         width: 80%;
-        height: 700px;
     }
     .introduction{
         font-size: 3rem;
         text-align: center;
         width: 70%;
         float: left;
-
+    }
     }
     .body{
         background-attachment: fixed;
@@ -225,21 +232,27 @@ body{
         margin: 0;
  }
  .footer{
-    font-size: 18px;
+    font-size:1em;
  }
 
  .informationFooter{
     width: 50%;
+    font-size: 18px;
+ }
+ .begin {
+ margin-left: 35%;
+ display: initial;
+ margin-top: 30%;
  }
   }
  /* 
   ##Dispositivo = Mayoria de telefonos moviles (vertical)
 */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
     
 .container{
     width: 60%;
-    height: auto;
+    height: 450px;
 }
 .introduction{
     font-size: 1rem;
@@ -253,8 +266,13 @@ body{
     background-repeat: unset;
     margin: 0;
 }
+.begin {
+    margin-left: 5%;
+    display: initial;
+    margin-top: 35%;
+}
 .footer{
-    font-size: 10px;
+    font-size:1em;
 }
 .informationFooter{
    width: 50%;
