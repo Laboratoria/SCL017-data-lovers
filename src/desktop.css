@@ -1,31 +1,20 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
   body {
     background-image: url(img/lab-desktop.jpg);
-    background-size: cover;
   }
   header{
-    flex-direction: row;
-    justify-content: space-around;
-    width: auto;
+    min-width: 1200px;
   }
   header img{
-    margin: 0px 0px 10px 0px;
-  }
-  .nav-menu{
-    display: flex;
-    justify-content: space-between;
+    width: 250px;
+    height: 90px;
+    margin: 3%;   
   }
   .nav-menu ul li{
-    margin: 0px 130px 0px 130px;
+    margin: 90px 65px 0px 130px;
+    align-self: flex-end;
   }
   .nav-menu ul li a{
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
   }
   main {
     width: 50%;
@@ -41,33 +30,33 @@
   }
   #searchpokemon {
     width: 550px;
-    height: 30px;
+    height: 40px;
     margin: 30px 0px 30px 0px;
   }
   .btn {
-      margin: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    font-size: 100%;
   }
   footer {
-    display:flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: max-content;
+    min-width: 1200px;
+   }
+   .social h3 {
+    font-size: 30px;
   }
-  footer section img {
-    width: 100px;
-    height: 50px;
-  }
-  footer section h3 {
-    font-size: 15px;
-    margin: 5px 0px 15px 0px;
-  }
-  .logo-footer {
-    margin: 30px 0px 0px 20px;
+  .row img {
+    width: 40px;
+    height: 40px;
   }
   .row label {
-    margin: 3px 0px 0px 5px;
+    font-size: x-large;
   }
+  .download h3{
+    font-size: 30px;
+  }
+  .row2 img {
+    width: 120px;
+    height: 40px;
+  }
+  
 
 

@@ -12,6 +12,7 @@ body{
   background-image: url(img/lab-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color:rgba(242, 183, 5, 0.8);
 }
 header{
   position: relative;
@@ -19,42 +20,28 @@ header{
   flex-direction: column;
   width: 100%;
   min-width: 320px;
-  height: 110px;
-  text-align: center;
-  justify-content: center;
+  height: auto;
   background:rgba(107, 190, 242, 0.8);
 }
 header img{
-  width: 180px;
-  height: 70px;
+  width: 160px;
+  height: 60px;
   align-self: center;
-  margin-top: 12px;
-}
-.nav-menu {
-  width: 90%;
-  min-width: 288px;
-  max-width: 900px;
-  text-align: center;
-  align-self: center;
+  margin: 5%;
 }
 .nav-menu ul li{
-  display: inline-block;
-  align-self: center;
   text-align: center;
   margin: 5px;
-  
 }
 .nav-menu ul li a{
   font-size: 16px;
   color: #0E1426;
   text-decoration: none;
   line-height: 30px;
-  align-self: center;
-  text-align: center;
+  font-weight: bold;
 }
 main {
   display: flex;
-  margin: 10px;
   flex-direction: column;
   align-content: center;
 }
@@ -62,23 +49,23 @@ main {
   background: rgba(14, 20, 38, 0.3);
   align-self: center;
   border-radius: 20px;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
-  margin: 40px 20px 20px 20px;
+  margin: 10%;
 }
 main section h3{
-    color: navy;
-    font-size: 20px;
-    text-align: center;
+  color: navy;
+  font-size: 20px;
+  margin: 5%;
 }
 main section p {
-  text-align: center;
   color: white;
   font-size: 17px;
-  margin: 10px;
+  line-height: 2em;
+  margin: 5%;
 }
 #searchpokemon {
-  width: 230px;
+  width: 90%;
   height: 30px;
   border-radius: 10px;
   border: 0px;
@@ -91,30 +78,33 @@ main section p {
 .btn {
   width: 80px;
   height: 30px;
-  margin: 10px;
+  margin: 10%;
   border-radius: 18px;
   color: white;
-  font-size: 13px;
+  font-size: 110%;
   background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
 footer {
-  display:flex;
-  height: 150px;
-  justify-content: space-between;
+  position:relative; 
+  width: 100%;
   padding: 10px;
-  width:auto;
+  min-width: 320px;
   background: rgba(242, 183, 5, 0.8);
 }
+.container{
+  display: flex;
+  flex-direction: column;
+}
 footer section img{
-  width: 48px;
-  height: 30px;
+  width: 70px;
+  height: 35px;
+  margin: 2%;
 }
 .social {
-  max-width: 1000px;
-  margin-bottom: 10px;
+  margin: 2%;
 }
 .social h3 {
-  font-size: 11px;
+  font-size: 15px;
   color: #0E1426;
 }
 .row {
@@ -127,13 +117,13 @@ footer section img{
   text-align: center;
 }
 .row label {
-  margin-top: -2px;
+  margin-top: 3px;
   margin-left: 5px;
 }
 .download {
-  max-width: 1000px;
+  margin: 2%;
 }
-.download h1{
+.download h3{
   font-size: 15px;
   color: #0E1426;
 }
