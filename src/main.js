@@ -1,4 +1,4 @@
-import { returnElements } from './data.js';
+import { filterTypePokemon } from './data.js';
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -50,5 +50,6 @@ for(let i = 0; i < dataPokemon.pokemon.length; i++){
     createPokemonDiv(dataPokemon.pokemon[i]);
 }
 console.log(dataPokemon.pokemon);
+
 
 
