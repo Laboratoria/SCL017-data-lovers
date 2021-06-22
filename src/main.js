@@ -1,17 +1,8 @@
-import { example } from './data.js';
+import { returnElements } from './data.js';
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 console.log(dataPokemon);
-let plantas = [];
-
-
-let eject = function(nombre){
-    console.log("hola" + nombre);
-}
-eject('nicole');
-
-
 
 const start =  document.getElementById('start');
 
@@ -60,35 +51,4 @@ for(let i = 0; i < dataPokemon.pokemon.length; i++){
 }
 console.log(dataPokemon.pokemon);
 
-// for(let i = 0; i < dataPokemon.pokemon.length; i++){
-//     if(dataPokemon.pokemon[i].type.indexOf('grass') != -1 ){
-//        plantas.push(dataPokemon.pokemon[i]); 
-       
-//     }
-   
-// }
-// console.log(plantas); 
 
-
-
-let filterPlants = function(typeElement){
-    const elements = dataPokemon.pokemon.filter((pokemon) =>  {
-        return pokemon.type.indexOf(typeElement) != -1;
-    });  
-    console.log(elements);
-    console.log(typeElement); 
-}
-
- 
-const selectElementPlants = document.querySelector('.select-dues');
-
-selectElementPlants.addEventListener('change', (event) => {
-    filterPlants(event.target.value);
-
-    eject(event.target.value);
-    
-    
-
-    
-}
-)
