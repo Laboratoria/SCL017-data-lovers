@@ -8,17 +8,13 @@
     flex-wrap: wrap;
 }
 
+/* 
 @media (min-width: 1200px) {
     .container {
         max-width: 1440px;
     }
 }
-
-@media only screen and (min-width: 768px) {
-    .pokemon-type {
-        font-size: 20px;
-    }
-}
+ */
 
 /*----------------------------------------------------
 Manipulacion de las tarjetas del pokemon*/
@@ -33,18 +29,22 @@ Manipulacion de las tarjetas del pokemon*/
 
 .pokemon-card {
     float: left;
-    height: 305px;
+    height: 250px;
+    width: 270px;
+    /* width: 30%; */
     background: rgba(21, 25, 42, 0.6);
-    border-radius: 10px;
-    margin: 10px;
-    text-align: center;
-    flex: 1 1 8%;
-    margin: 0 0 0.5rem 0;
-    padding: 0.5em 10px;
-    box-sizing: border-box;
-    flex-basis: 32%;
-    margin-left: 0.6%;
     box-shadow: 2px 1px 2px 1px #0a0a0a;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0.5%;
+    padding: 1%;
+    /* margin: 0 0 0.5rem 0; */
+    /* margin: 10px; */
+    /* flex: 1 1 8%; */
+    /* padding: 0.5em 10px; */
+    /* box-sizing: border-box; */
+    /* flex-basis: 30%; */
+    /* margin-left: 0.6%; */
 }
 
 .pokemon-name, .pokemon-number {
@@ -54,11 +54,11 @@ Manipulacion de las tarjetas del pokemon*/
 }
 
 .pokemon-name {
-    font-size: 25px;
+    font-size: 150%;
 }
 
 .pokemon-number {
-    font-size: 18px;
+    font-size: 1rem;
     float: left;
 }
 
@@ -72,12 +72,16 @@ Manipulacion de las tarjetas del pokemon*/
     display: inline-block;
     box-shadow: 2px 2px 4px 1px #000000;
     font-family: DyslexicFont;
-    font-size: 28px;
+    font-size: 120%;
     margin-top: 5px;
     margin-left: 8px;
     padding: 2px;
     border-radius: 10px;
     color: #000000;
+}
+
+#pokemon-type-dark, #pokemon-type-ghost, #pokemon-type-poison, #pokemon-type-rock {
+    color: #FFFFFF;
 }
 
 #pokemon-type-grass {
@@ -138,27 +142,35 @@ Manipulacion de las tarjetas del pokemon*/
 
 #pokemon-type-dark {
     background-color: #000000;
-    color: #FFFFFF;
 }
 
 #pokemon-type-ghost {
     background-color: #2C214E;
-    color: #FFFFFF;
 }
 
 #pokemon-type-poison {
     background-color: #9200EB;
-    color: #FFFFFF;
 }
 
 #pokemon-type-rock {
     background-color: #682804;
-    color: #FFFFFF;
 }
 
 /* Manipulacion del Tarjeta Emergente -------------------------------------------*/
 
 /* The Modal (background) */
+
+@media (max-width: 800px) {
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .close{
+        position: absolute;
+        float: right;
+    }
+    
+}
 
 .modal {
     display: none;
@@ -191,6 +203,7 @@ Manipulacion de las tarjetas del pokemon*/
     float: right;
     font-size: 28px;
     font-weight: bold;
+   
 }
 
 .close:hover, .close:focus {

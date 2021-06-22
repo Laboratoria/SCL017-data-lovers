@@ -2,11 +2,11 @@ const initiator = {
     loadData: (datapokemon) => {
         for (let i = 0; i < datapokemon.length; i++) {
 
-//Generación de la tarjeta pokemon (página principal)
+            //Generación de la tarjeta pokemon (página principal)
             let card = document.createElement("article");
             card.className = "pokemon-card";
 
-// Generación de los elementos de la tarjeta pokemon (página principal)
+            // Generación de los elementos de la tarjeta pokemon (página principal)
             let pokemonName = document.createElement("div");
             let capitalizedName = datapokemon[i].name.charAt(0).toUpperCase() + datapokemon[i].name.slice(1);
             pokemonName.innerHTML = capitalizedName;
@@ -24,7 +24,7 @@ const initiator = {
             pokemonImagediv.appendChild(pokemonNumber);
             pokemonImagediv.appendChild(pokemonImage);
 
-// Generación de la tarjeta emergente de los pokemon 
+            // Generación de la tarjeta emergente de los pokemon (modal)
             let imgBtn = document.createElement("img");
             imgBtn.id = "new-btn-img";
             imgBtn.src = ("/img/pokestop_fix.png");
@@ -33,7 +33,7 @@ const initiator = {
             modalBtn.className = "myBtn";
             modalBtn.innerHTML = "Más";
 
-//modalBtn.appendChild(imgBtn);
+            //modalBtn.appendChild(imgBtn);
             let modal1 = document.createElement("div");
             modal1.id = "myModal";
             modal1.className = "modal";
@@ -59,7 +59,7 @@ const initiator = {
 
             })
 
-// Generación de los elementos de la tarjeta emergente
+            // Generación de los elementos de la tarjeta emergente
             let modal11 = document.createElement("div");
             modal11.className = "modal-more";
             let modalInfoPokemon = document.createElement("div");
@@ -78,10 +78,10 @@ const initiator = {
             pokeBuddy.textContent = "Buddy distance: " + datapokemon[i]["buddy-distance-km"] + "km";
             let fleeRate = document.createElement("p");
             let flee = datapokemon[i].encounter["base-flee-rate"];
-            fleeRate.textContent = "Tasa de escape: " + Math.floor(flee*100) + "%";
+            fleeRate.textContent = "Tasa de escape: " + Math.floor(flee * 100) + "%";
             let captureRate = document.createElement("p");
             let capture = datapokemon[i].encounter["base-capture-rate"];
-            captureRate.textContent = "Tasa de captura: " + Math.floor(capture*100) + "%";
+            captureRate.textContent = "Tasa de captura: " + Math.floor(capture * 100) + "%";
 
             modalInfoPokemon.appendChild(modalImg);
             modalInfoPokemon.appendChild(modalName);
@@ -119,23 +119,33 @@ const initiator = {
                 modalMoreInfo.appendChild(pokemonResistant);
             })
 
+            // EVOLUCIONES
+            // let pokemon = datapokemon[i].evolution;
+            // let firstPokemon = firstEvolution(pokemon);
+            // let secondPokemon = secondEvolution(pokemon);
+
             let modalInfoEvolutions = document.createElement("div");
             modalInfoEvolutions.className = "div-evolutions";
+            // let pokeFirst = document.createElement("p")
+            // pokeFirst.innerHTML = firstPokemon;
+            // let pokeSecond = document.createElement("p");
+            // pokeSecond.innerHTML = secondPokemon;
+            // modalInfoEvolutions.appendChild(pokeFirst);
+            // modalInfoEvolutions.appendChild(pokeSecond);
             let firstpoke = pokemonImage.cloneNode(true);
             modalInfoEvolutions.appendChild(firstpoke);
-            let pokeEvol = document.createElement("p");
 
             modal11.appendChild(modalInfoPokemon);
             modal11.appendChild(modalMoreInfo);
             modalInfo.appendChild(modal11);
             modalInfo.appendChild(modalInfoEvolutions);
-            
- // Append all teh cards 
+
+            // Append all teh cards 
             modalContent.appendChild(modalSpan);
             modalContent.appendChild(modalInfo);
             modal1.appendChild(modalContent);
 
-//  card.appendChild(pokemonNumber);
+            //  card.appendChild(pokemonNumber);
             card.appendChild(pokemonImagediv);
 
             card.appendChild(pokemonName);
@@ -143,67 +153,101 @@ const initiator = {
             card.appendChild(modal1);
 
             document.getElementById("container").appendChild(card);
-
-// Cambio de nombre de los tipos en español
-            function translateType(capitalized){
-                switch (capitalized) {
-                    case "Water":
-                        capitalized = "Agua";
-                        break;
-                    case "Grass":
-                        capitalized = "Hierba";
-                        break;
-                    case "Poison":
-                        capitalized = "Veneno";
-                        break;
-                    case "Fire":
-                        capitalized = "Fuego";
-                        break;
-                    case "Flying":
-                        capitalized = "Volador";
-                        break;
-                    case "Bug":
-                        capitalized = "Bicho";
-                        break;
-                    case "Electric":
-                        capitalized = "Eléctrico";
-                        break;
-                    case "Ground":
-                        capitalized = "Tierra";
-                        break;
-                    case "Fighting":
-                        capitalized = "Luchador";
-                        break;
-                    case "Psychic":
-                        capitalized = "Psíquico";
-                        break;
-                    case "Rock":
-                        capitalized = "Roca";
-                        break;
-                    case "Ice":
-                        capitalized = "Hielo";
-                        break;
-                    case "Ghost":
-                        capitalized = "Fantasma";
-                        break;
-                    case "Dragon":
-                        capitalized = "Dragón";
-                        break;
-                    case "Fairy":
-                        capitalized = "Hada";
-                        break;
-                    case "Dark":
-                        capitalized = "Siniestro";
-                        break;
-                    case "Steel":
-                        capitalized = "Metal";
-                        break;
-                    default: capitalized;
-                }
-            return capitalized;
-            }
-            
         };
+        //FUNCIONES-------------------------------------------------------------
+            // // Evoluciones de los pokemon 
+            // function firstEvolution(pokemon) {
+            //     let firstPokemon = " ";
+            //     if (pokemon["next-evolution"]) {
+            //         firstPokemon = pokemon["next-evolution"][0];
+            //         // console.log(firstEvolution["next-evolution"][0].num);
+            //         // console.log(firstEvolution["next-evolution"][0].name);
+            //         // console.log(firstEvolution["next-evolution"][0]["candy-cost"]);
+            //     }
+            //     if (pokemon["prev-evolution"]) {
+            //         firstPokemon = pokemon["prev-evolution"][0];
+            //         // console.log(firstEvolution["prev-evolution"][0].num);
+            //         // console.log(firstEvolution["prev-evolution"][0].name);
+            //         // console.log(firstEvolution["prev-evolution"][0]["candy-cost"]);
+            //     }
+            //     return firstPokemon;
+            // }
+
+            // function secondEvolution(pokemon) {
+            //     let secondPokemon = " ";
+            //     if (pokemon["next-evolution"][0]["next-evolution"]) {
+            //         secondPokemon = pokemon["next-evolution"][0]["next-evolution"][0];
+            //         // console.log(pokemon["next-evolution"][0]["next-evolution"][0].num);
+            //         // console.log(pokemon["next-evolution"][0]["next-evolution"][0].name);
+            //         // console.log(pokemon["next-evolution"][0]["next-evolution"][0]["candy-cost"]);
+            //     }
+            //     if (pokemon["prev-evolution"][0]["prev-evolution"]) {
+            //         secondPokemon = pokemon["prev-evolution"][0]["prev-evolution"][0];
+            //         // console.log(pokemon["prev-evolution"][0]["prev-evolution"][0].num);
+            //         // console.log(pokemon["prev-evolution"][0]["prev-evolution"][0].name);
+            //         // console.log(pokemon["prev-evolution"][0]["prev-evolution"][0]["candy-cost"]);
+            //     }
+
+            //     return secondPokemon;
+            // }
+        // Cambio de nombre de los tipos en español
+        function translateType(capitalized) {
+            switch (capitalized) {
+                case "Water":
+                    capitalized = "Agua";
+                    break;
+                case "Grass":
+                    capitalized = "Hierba";
+                    break;
+                case "Poison":
+                    capitalized = "Veneno";
+                    break;
+                case "Fire":
+                    capitalized = "Fuego";
+                    break;
+                case "Flying":
+                    capitalized = "Volador";
+                    break;
+                case "Bug":
+                    capitalized = "Bicho";
+                    break;
+                case "Electric":
+                    capitalized = "Eléctrico";
+                    break;
+                case "Ground":
+                    capitalized = "Tierra";
+                    break;
+                case "Fighting":
+                    capitalized = "Luchador";
+                    break;
+                case "Psychic":
+                    capitalized = "Psíquico";
+                    break;
+                case "Rock":
+                    capitalized = "Roca";
+                    break;
+                case "Ice":
+                    capitalized = "Hielo";
+                    break;
+                case "Ghost":
+                    capitalized = "Fantasma";
+                    break;
+                case "Dragon":
+                    capitalized = "Dragón";
+                    break;
+                case "Fairy":
+                    capitalized = "Hada";
+                    break;
+                case "Dark":
+                    capitalized = "Siniestro";
+                    break;
+                case "Steel":
+                    capitalized = "Metal";
+                    break;
+                default: capitalized;
+            }
+            return capitalized;
+        }
     }
 }
 export default initiator;
