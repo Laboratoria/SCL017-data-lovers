@@ -20,10 +20,11 @@ let pokemonList = document.getElementById('pokemonList');
 
 let createPokemonDiv = function(dataPokemon){
     let newDiv = document.createElement('div');
-    let newBtnId = document.createElement('button');
+    let newBtnId = document.createElement('section');
     let newImg = document.createElement('img');
-    let newBtnType = document.createElement('button');
-    let newBtnPower = document.createElement('button');
+    let newBtnType = document.createElement('section');
+    let newBtnPower = document.createElement('section');
+    let newName = document.createElement('section');
     newDiv.classList = ('section-pokemon')
     newBtnId.innerText = dataPokemon.num;
     newBtnId.classList = ('pokemon-identifier');
@@ -33,10 +34,13 @@ let createPokemonDiv = function(dataPokemon){
     newBtnType.classList = ('type-pokemon')
     newBtnPower.innerText = dataPokemon.type;
     newBtnPower.classList = ('attack')
+    newName.innerText = dataPokemon.name;
+    newName.classList = ('namePokemon');
     newDiv.appendChild(newBtnId);
     newDiv.appendChild(newImg);
     newDiv.appendChild(newBtnType);
     newDiv.appendChild(newBtnPower);
+    newDiv.appendChild(newName);
     pokemonList.appendChild(newDiv);
     
 

@@ -52,6 +52,7 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0;
+    font-family: 'Prompt', sans-serif;
     
 }
 
@@ -69,6 +70,7 @@ body{
     background-color: rgba(240, 240, 240, 0.913);
     border: 1px solid black;
     margin-bottom: 20px;
+    margin-top: 50px;
     border: 2px solid #9900FF;
     border-radius: 25px;
     
@@ -77,7 +79,9 @@ body{
 .pokemon-list{
     margin: 20px;
     justify-content: center;
-    display: flexbox;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
     
 
     
@@ -85,40 +89,92 @@ body{
 .section-pokemon{
     border: 2px solid black;
     margin: 10px;
-    height:150px;
-    width: 300px;
+    height:200px;
+    width: 230px;
     display: flexbox;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    font-size: 13px;
 
     
 }
 .pokemon-identifier{
-    background-color: yellow;
-    border-radius: 10%;
-    color: tomato;
+    background-color: #FFCC01;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px 8px 2px 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid black;
+    color: black;
+    grid-row-start:  1;
+    grid-column-start: 1;
+
+
     
     
 }
 .img-pokemon{
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     align-self: center;
+    grid-column-start: span 4;
+    grid-row-start: 2;
     
 }
 .type-pokemon{
-    background-color: green;
-    border-radius: 10%;
-    color:cornsilk;
+    background-color: #6AA84F;
+    text-align: center;
+    color:black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    width: 80px;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 2px 8px 2px 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 8px;
+    text-transform: capitalize;
+
 }
 
-.name{
-    background-color:blue;
-    border-radius: 10%;
-    color:white; 
+.namePokemon{
+    background-color:#2B6DB6;
+    text-align: center;
+    color:black; 
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    width: 130px;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 2px 8px 2px 5px;
+    margin-left: 30px;
+    margin-top: 5px;
+    text-transform: uppercase;
+
+    
 }
 .attack{
-    background-color:indigo;
+    background-color:#9900FF;
+    text-align: center;
     border-radius: 10%;
-    color:white; 
+    color:black; 
+    grid-column-start: span ;
+    grid-row-start: 3;
+    width: 80px;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 2px 8px 2px 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 8px;
+    text-transform: capitalize;
 }
 
 .hide{
