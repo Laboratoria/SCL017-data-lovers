@@ -1,7 +1,10 @@
 import { filterTypePokemon } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
+
+let pokemons = dataPokemon.pokemon
 console.log(dataPokemon);
 
 const start =  document.getElementById('start');
@@ -45,11 +48,30 @@ let createPokemonDiv = function(dataPokemon){
 
 
 }
-
-for(let i = 0; i < dataPokemon.pokemon.length; i++){
-    createPokemonDiv(dataPokemon.pokemon[i]);
+const clearDiv = () => {
+    const selector = document.querySelectorAll('.section-pokemon');
+    selector.forEach(element => {
+        element.remove()
+      });
+    
 }
 
 
+const selectElementPlants = document.querySelector('.select-dues');
+
+selectElementPlants.addEventListener('change', (event) => {
+    clearDiv()
+pokemons = filterTypePokemon(event.target.value);
+  //returnElements(event.target.value);
+  console.log(pokemons);
+  
+  for(let i = 0; i < pokemons.length; i++){
+    createPokemonDiv(pokemons[i]);
+}
+}
+);
+for(let i = 0; i < pokemons.length; i++){
+    createPokemonDiv(pokemons[i]);
+}
 
 
