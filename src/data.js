@@ -34,21 +34,13 @@ const pokemons = {
     return compareObjects(object1, object2, sortBy, sortDirection)
   
   })
+  },
+  
+  filterData: (data,condition) => {
+    const r = data.filter(d => d.type.some(c => condition.includes(c)));
+    return r
+
   }
   }
-
-  // filterData: (data,condition) => {
-  //   var PATTERN = condition ;
-  //   filtered = myArray.filter(function (str) { return str.indexOf(PATTERN) === -1; });
-
-  // }
-
-  // }
-
-
-
-
-
-
 
  export default pokemons
