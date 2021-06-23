@@ -4,19 +4,47 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
-console.log(example, data);
-console.log("correcto");
-const pokemon= data.pokemon;
 
+const pokemon= data.pokemon;
+const pokemonSearch = "";
+
+
+//FUNCTION DE BUSCAR//
+const containerRoot= document.getElementById("root");
+const searchPo = document.getElementById("searchPo");
+searchPo.addEventListener("keyup",(e)=> {
+    //containerRoot.innerHTML= ""
+   const searchString= e.target.value.toLowerCase();
+console.log(searchString);
+const filteredPokemon = pokemon.filter(element=>{
+  //  console.log(element.name)
+    return element.name.toLowerCase().includes(searchString);
+});
+//console.log(filteredPokemon);//que imprima en html//
+for (let i=0; i<filteredPokemon.length; i++){
+containerRoot.innerHTML =`<p>${filteredPokemon[i].name}</p>
+<img src=${filteredPokemon[i].img}>`
+
+}
+//containerRoot.innerHTML= filteredPokemon;
+
+   /*const filteredPokemon= pokemon.filter((element) =>{
+     return (
+         element.name.toLowerCase().includes(searchString)
+     );
+
+    });
+ console.log(filteredPokemon); 
+ */
+});
 
 
     document.getElementById("boton").addEventListener("click",bringData);
-    const containerRoot= document.getElementById("root");
+    //const containerRoot= document.getElementById("root");
     function bringData(){
-
-
+       // const displayPoke=(Characters) =>{
+       // const pokePoke = Characters
     for (let i=0; i<pokemon.length; i++){
-        console.log(pokemon[i].name)
         containerRoot.innerHTML += `       <div class="containerPokemon" id= "pokemon"+ ${pokemon[i].num}> 
                                             <img src=${pokemon[i].img}>
                                             <p class="pokedex">#${pokemon[i].num}</p>
@@ -28,12 +56,18 @@ const pokemon= data.pokemon;
 
                                         </div>
                                     `;
+                                
+                            
+                                //containerRoot.innerHTML = pokePoke;
 
-                                    const query = document.querySelector("#pokemon" + `${pokemon[i].num}`);
+
+                                //   const query = document.querySelector("#pokemon" + `${pokemon[i].num}`);//
                                                     
- };                                          
-            
-    const pokemonContainer = query;
+        
+ 
+}
+         
+  /*  const pokemonContainer = query;
     const flipCard = document.createElement("div");
     flipCard.classList.add("flip-card");
 
@@ -85,7 +119,7 @@ const pokemon= data.pokemon;
     
 
 
-
+};  
 
 
 
@@ -118,7 +152,7 @@ const pokemon= data.pokemon;
 //show.appendChild(li)
 //console.log(li)
 
-    }
+
 
 
 
