@@ -21,6 +21,9 @@ selectElementPlants.addEventListener('change', (event) => {
   let elements = filterTypePokemon(event.target.value);
   returnElements(event.target.value);
   console.log(elements);
+  return elements;
+  
+
   
 }
 );

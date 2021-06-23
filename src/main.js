@@ -49,7 +49,7 @@ let createPokemonDiv = function(dataPokemon){
 for(let i = 0; i < dataPokemon.pokemon.length; i++){
     createPokemonDiv(dataPokemon.pokemon[i]);
 }
-console.log(dataPokemon.pokemon);
+
 
 
 
