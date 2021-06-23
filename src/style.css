@@ -1,0 +1,89 @@
+body {
+    background-image: url(image.png);
+}
+#paginaDos h1 {
+    position: absolute;
+    text-align: left;
+    margin-left: 150px;
+    margin-bottom: 0px;
+    margin-top: -30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 80px;
+    color: #FFFFFF;
+
+}
+#paginaDos h2 {
+    position: 200px;
+    text-align: left;
+    margin-left: 150px;
+    margin-bottom: -10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 80px;
+    color: #FFFFFF;
+
+}
+.personaje {
+    
+    background: #FFFFFF;
+    width: 280px; 
+    height: 360px;
+    left: 407px;
+    float: left;
+    border: inset;
+    margin: 18px;
+    box-shadow: 1px 1px 1px #999;
+    border-radius: 10px;
+    border-top: 10px solid hsl(90, 60%, 42%);
+    border-bottom: 5px solid #6BAC2B ;
+   
+}
+.nombre {
+    color: #123A43;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 42px;
+    margin-left: 55px;
+    
+}
+
+.imagen {
+     
+    width: 175px; 
+    height: 175px;
+    left: 76px;
+    top: 52px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px #999;
+}
+.button {
+    width: 200px;
+    height: 35px;
+    right: 17px;
+    bottom: 21px;
+    margin-left: 45px;
+
+    background: #C4C4C4;
+    border-radius: 6px;
+    border-style: none;
+    border-bottom: 6px solid hsl(90, 60%, 42%);
+    box-shadow: 3px 3px 3px #999;
+
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal ;
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+    color: #123A43;
+ }
