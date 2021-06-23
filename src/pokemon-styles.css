@@ -245,7 +245,7 @@ Manipulacion de las tarjetas del pokemon*/
     background-color: #9654EB;
 }
 
-.modal-more {
+.modal-info-div {
     display: flex;
     flex-wrap: wrap;
 }
