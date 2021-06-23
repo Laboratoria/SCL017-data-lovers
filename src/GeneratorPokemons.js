@@ -2,87 +2,133 @@ const initiator = {
     loadData: (datapokemon) => {
         for (let i = 0; i < datapokemon.length; i++) {
 
-//Generación de la tarjeta pokemon (página principal)
+            //---------------------------------------------------------------------
+            //Generación de la tarjeta pokemon (página principal)
+            //---------------------------------------------------------------------
             let card = document.createElement("article");
             card.className = "pokemon-card";
 
-// Generación de los elementos de la tarjeta pokemon (página principal)
+            //---------------------------------------------------------------------            
+            // Generación de los elementos de la tarjeta pokemon (página principal)
+
+            // Generación del nombre del pokemon
             let pokemonName = document.createElement("div");
-            let capitalizedName = datapokemon[i].name.charAt(0).toUpperCase() + datapokemon[i].name.slice(1);
+            let capitalizedName = datapokemon[i].name.charAt(0).toUpperCase() + datapokemon[i].name.slice(1); // Primera letra mayuscula
             pokemonName.innerHTML = capitalizedName;
             pokemonName.className = "pokemon-name";
 
+            //Generación del numero del pokemon
             let pokemonNumber = document.createElement("div");
             pokemonNumber.innerHTML = datapokemon[i].num;
             pokemonNumber.className = "pokemon-number";
 
+            //Generación de la imagen del pokemon 
             let pokemonImagediv = document.createElement("div");
             let pokemonImage = document.createElement("img");
             pokemonImage.src = datapokemon[i].img;
             pokemonImage.className = "pokemon-image";
             pokemonImagediv.className = "pokemon-image-div";
-            pokemonImagediv.appendChild(pokemonNumber);
+            pokemonImagediv.appendChild(pokemonNumber); //append el numero a la imagen del pokemon
             pokemonImagediv.appendChild(pokemonImage);
 
-// Generación de la tarjeta emergente de los pokemon 
-            let imgBtn = document.createElement("img");
-            imgBtn.id = "new-btn-img";
-            imgBtn.src = ("/img/pokestop_fix.png");
+            // Generación de los tipos de pokemon 
+            datapokemon[i].type.forEach(function (value) {
+                let pokemonType = document.createElement("div");
+                let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1); // Primera letra mayuscula
+                capitalizedType = translateType(capitalizedType); // Traduzco el tipo del pokemon esta en ingles en la data 
+                pokemonType.innerHTML = capitalizedType;
+                pokemonType.className = "pokemon-type";
+                pokemonType.id = "pokemon-type-" + value;
+                card.appendChild(pokemonType); // agrego los tipos a la tarjeta pokemon
 
+            })
+
+            //---------------------------------------------------------------------
+            // Generación de la tarjeta emergente de los pokemon (modal)
+            //---------------------------------------------------------------------
+
+            // // Generación de una imagen para el boton que abre el modal
+            // let imgBtn = document.createElement("img");
+            // imgBtn.id = "new-btn-img";
+            // imgBtn.src = ("/img/pokestop_fix.png");
+
+            // Genero el boton para abrir el modal
             let modalBtn = document.createElement("button");
             modalBtn.className = "myBtn";
             modalBtn.innerHTML = "Más";
+            //modalBtn.appendChild(imgBtn); // Agrego la imagen al boton
 
-//modalBtn.appendChild(imgBtn);
-            let modal1 = document.createElement("div");
-            modal1.id = "myModal";
-            modal1.className = "modal";
+            // Genero mi tarjeta emergente
+            let modalCard = document.createElement("div");
+            modalCard.id = "myModal";
+            modalCard.className = "modal";
 
+            // Genero donde ira el contenido 
             let modalContent = document.createElement("div");
             modalContent.className = "modal-content";
 
+            // Genero el boton de cerrado 
             let modalSpan = document.createElement("span");
             modalSpan.className = "close";
             modalSpan.innerHTML = "&times;";
 
+            // Genero donde irá la información 
             let modalInfo = document.createElement("div");
             modalInfo.className = "modal-info";
 
-            datapokemon[i].type.forEach(function (value) {
-                let pokemonType = document.createElement("div");
-                let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1);
-                capitalizedType = translateType(capitalizedType);
-                pokemonType.innerHTML = capitalizedType;
-                pokemonType.className = "pokemon-type";
-                pokemonType.id = "pokemon-type-" + value;
-                card.appendChild(pokemonType);
+            //-------------------------------------------------------------
+            // Generación de los elementos de la tarjeta emergente
 
-            })
+            // Generacion del div que contiene el modalInfo y el modalMoreInfo
+            let modalInfoDiv = document.createElement("div");
+            modalInfoDiv.className = "modal-info-div";
 
-// Generación de los elementos de la tarjeta emergente
-            let modal11 = document.createElement("div");
-            modal11.className = "modal-more";
+            // Generacion del div de la info general
             let modalInfoPokemon = document.createElement("div");
             modalInfoPokemon.className = "div-pokemon-info";
 
-            let modalImg = document.createElement("img");
-            modalImg.src = datapokemon[i].img;
-            modalImg.className = "modal-img";
+            // Generacion del div de la resistencia y debilidad de los pokes
+            let modalMoreInfo = document.createElement("div");
+            modalMoreInfo.className = "div-more-info";
+
+            // Generacion del div de evoluciones 
+            let modalInfoEvolutions = document.createElement("div");
+            modalInfoEvolutions.className = "div-evolutions";
+
+            // Clono la imagen del pokemon
+            let modalImg = pokemonImage.cloneNode(true);
+
+            // Clono el nombre del pokemon
             let modalName = pokemonName.cloneNode(true);
 
+            // Genero la informacion de la rareza del pokemon
             let pokemonRarity = document.createElement("div");
             pokemonRarity.textContent = "Rareza: " + datapokemon[i]["pokemon-rarity"];
+
+            // Genero la informacion de cuanto caminar con los huevos
             let pokemonEgg = document.createElement("p");
-            pokemonEgg.innerHTML = "Egg km: " + datapokemon[i].egg;
+            let pokemonEggInfo = datapokemon[i].egg;
+            if(pokemonEggInfo == "not in eggs"){
+                pokemonEggInfo = "No encontrado en huevos";
+            }
+            pokemonEgg.innerHTML = "Egg km: " + pokemonEggInfo;
+
+
+            // Genero la informacion de cuanto caminar con el pokeBuddy para obtener los candies
             let pokeBuddy = document.createElement("p");
             pokeBuddy.textContent = "Buddy distance: " + datapokemon[i]["buddy-distance-km"] + "km";
+
+            // Genero la informacion de la tasa de escape
             let fleeRate = document.createElement("p");
             let flee = datapokemon[i].encounter["base-flee-rate"];
-            fleeRate.textContent = "Tasa de escape: " + Math.floor(flee*100) + "%";
+            fleeRate.textContent = "Tasa de escape: " + Math.floor(flee * 100) + "%";
+
+            // Genero la informacion de la tasa de captura
             let captureRate = document.createElement("p");
             let capture = datapokemon[i].encounter["base-capture-rate"];
-            captureRate.textContent = "Tasa de captura: " + Math.floor(capture*100) + "%";
+            captureRate.textContent = "Tasa de captura: " + Math.floor(capture * 100) + "%";
 
+            // Agrego al div de informacion inicial
             modalInfoPokemon.appendChild(modalImg);
             modalInfoPokemon.appendChild(modalName);
             modalInfoPokemon.appendChild(pokemonRarity);
@@ -91,8 +137,7 @@ const initiator = {
             modalInfoPokemon.appendChild(fleeRate);
             modalInfoPokemon.appendChild(captureRate);
 
-            let modalMoreInfo = document.createElement("div");
-            modalMoreInfo.className = "div-more-info";
+            //Genero la informacion de las debilidades del pokemon
             let modalWeak = document.createElement("p");
             modalWeak.innerHTML = "Débil contra: ";
             modalMoreInfo.appendChild(modalWeak);
@@ -105,7 +150,8 @@ const initiator = {
                 pokemonWeak.id = "pokemon-type-" + value;
                 modalMoreInfo.appendChild(pokemonWeak);
             })
-
+            
+            // Generalo la informacion de las debilidades del pokemon
             let modalResistant = document.createElement("p");
             modalResistant.innerHTML = "Resistente a: ";
             modalMoreInfo.appendChild(modalResistant);
@@ -119,91 +165,116 @@ const initiator = {
                 modalMoreInfo.appendChild(pokemonResistant);
             })
 
-            let modalInfoEvolutions = document.createElement("div");
-            modalInfoEvolutions.className = "div-evolutions";
-            let firstpoke = pokemonImage.cloneNode(true);
-            modalInfoEvolutions.appendChild(firstpoke);
-            let pokeEvol = document.createElement("p");
 
-            modal11.appendChild(modalInfoPokemon);
-            modal11.appendChild(modalMoreInfo);
-            modalInfo.appendChild(modal11);
+
+            // // Generacion de la informacion de evoluciones de los pokemon
+            // let pokemon = datapokemon[i].evolution;
+            // let firstPokemon = firstEvolution(pokemon);
+            // let secondPokemon = secondEvolution(pokemon);
+
+
+            // let pokeFirst = document.createElement("p")
+            // pokeFirst.innerHTML = firstPokemon;
+            // let pokeSecond = document.createElement("p");
+            // pokeSecond.innerHTML = secondPokemon;
+            // modalInfoEvolutions.appendChild(pokeFirst);
+            // modalInfoEvolutions.appendChild(pokeSecond);
+
+            // // Imagen del pokemon del i
+            // let firstpoke = pokemonImage.cloneNode(true);
+            // modalInfoEvolutions.appendChild(firstpoke);
+
+            //Agrego la informacion al div de informacion general (contiene al modalInfoPokemon y el modalMoreInfo)
+            modalInfoDiv.appendChild(modalInfoPokemon);
+            modalInfoDiv.appendChild(modalMoreInfo);
+            //Aggrego la informacion de los modales de informacion y evolucion 
+            modalInfo.appendChild(modalInfoDiv);
             modalInfo.appendChild(modalInfoEvolutions);
-            
- // Append all teh cards 
+
+            // Agrego las cosas al div de contenido del modal
             modalContent.appendChild(modalSpan);
             modalContent.appendChild(modalInfo);
-            modal1.appendChild(modalContent);
+            modalCard.appendChild(modalContent);
 
-//  card.appendChild(pokemonNumber);
+            // Agrego todo a las tarjetas de pokemon (de la pagina principal)
+            // El tipo de los pokemones esta agregado antes
             card.appendChild(pokemonImagediv);
-
             card.appendChild(pokemonName);
-            card.appendChild(modalBtn);
-            card.appendChild(modal1);
+            card.appendChild(modalBtn);   // boton para ingresar a la tarjeta emergente  
+            card.appendChild(modalCard); // tarjeta emergente
 
+            // Envia las tarjetas al contenedor de tarjetas del HTML
             document.getElementById("container").appendChild(card);
-
-// Cambio de nombre de los tipos en español
-            function translateType(capitalized){
-                switch (capitalized) {
-                    case "Water":
-                        capitalized = "Agua";
-                        break;
-                    case "Grass":
-                        capitalized = "Hierba";
-                        break;
-                    case "Poison":
-                        capitalized = "Veneno";
-                        break;
-                    case "Fire":
-                        capitalized = "Fuego";
-                        break;
-                    case "Flying":
-                        capitalized = "Volador";
-                        break;
-                    case "Bug":
-                        capitalized = "Bicho";
-                        break;
-                    case "Electric":
-                        capitalized = "Eléctrico";
-                        break;
-                    case "Ground":
-                        capitalized = "Tierra";
-                        break;
-                    case "Fighting":
-                        capitalized = "Luchador";
-                        break;
-                    case "Psychic":
-                        capitalized = "Psíquico";
-                        break;
-                    case "Rock":
-                        capitalized = "Roca";
-                        break;
-                    case "Ice":
-                        capitalized = "Hielo";
-                        break;
-                    case "Ghost":
-                        capitalized = "Fantasma";
-                        break;
-                    case "Dragon":
-                        capitalized = "Dragón";
-                        break;
-                    case "Fairy":
-                        capitalized = "Hada";
-                        break;
-                    case "Dark":
-                        capitalized = "Siniestro";
-                        break;
-                    case "Steel":
-                        capitalized = "Metal";
-                        break;
-                    default: capitalized;
-                }
-            return capitalized;
-            }
-            
         };
+
+        //-------------------------------------------------------------------------------------
+        // FUNCIONES
+        //-------------------------------------------------------------------------------------
+       
+        // Funcion que hace el cambio de nombre de los tipos al español
+        function translateType(capitalized) {
+            switch (capitalized) {
+                case "Water":
+                    capitalized = "Agua";
+                    break;
+                case "Grass":
+                    capitalized = "Hierba";
+                    break;
+                case "Poison":
+                    capitalized = "Veneno";
+                    break;
+                case "Fire":
+                    capitalized = "Fuego";
+                    break;
+                case "Flying":
+                    capitalized = "Volador";
+                    break;
+                case "Bug":
+                    capitalized = "Bicho";
+                    break;
+                case "Electric":
+                    capitalized = "Eléctrico";
+                    break;
+                case "Ground":
+                    capitalized = "Tierra";
+                    break;
+                case "Fighting":
+                    capitalized = "Luchador";
+                    break;
+                case "Psychic":
+                    capitalized = "Psíquico";
+                    break;
+                case "Rock":
+                    capitalized = "Roca";
+                    break;
+                case "Ice":
+                    capitalized = "Hielo";
+                    break;
+                case "Ghost":
+                    capitalized = "Fantasma";
+                    break;
+                case "Dragon":
+                    capitalized = "Dragón";
+                    break;
+                case "Fairy":
+                    capitalized = "Hada";
+                    break;
+                case "Dark":
+                    capitalized = "Siniestro";
+                    break;
+                case "Steel":
+                    capitalized = "Metal";
+                    break;
+                default: capitalized;
+            }
+            return capitalized;
+        }
+
+       
     }
 }
 export default initiator;
+
+
+
+
