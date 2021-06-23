@@ -65,14 +65,14 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
+let oldcards = document.getElementsByClassName("pokemon-card");
 
 // manipulación del filtro 
 for (let e=0; e<4; e++){
     let filter = document.getElementsByName("filter")[e]
     filter.addEventListener('click',function(){
         if ( filter.checked){
-            let oldcards = document.getElementsByClassName("pokemon-card");
-
+            oldcards = document.getElementsByClassName("pokemon-card");
             while(oldcards[0]){
                 oldcards[0].parentNode.removeChild(oldcards[0]);
             }
@@ -82,21 +82,43 @@ for (let e=0; e<4; e++){
        };
     })
 }
+
 let listTypes = [];
+let filteredPokemons;
+let counter = 18;
 
 for (let c=0; c<18; c++){
     let filterTypes = document.getElementsByName("type1")[c]
     filterTypes.addEventListener('click',function(){
 
+        if (!filterTypes.checked){
+            const index = listTypes.indexOf(filterTypes.value);
+            if (index > -1) {
+                listTypes.splice(index, 1);
+            }   
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while(oldcards[0]){
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+
+            filteredPokemons = pokemons.filterData(newOrder,listTypes)
+            initiator.loadData(filteredPokemons);
+            counter+=1
+            if (counter==18){
+                initiator.loadData(newOrder)
+            }
+
+        }
+
     if (filterTypes.checked){
-         listTypes.push(String(filterTypes.value));
-        console.log(listTypes);
-
-        // let oldcards = document.getElementsByClassName("pokemon-card");
-
-        //     while(oldcards[0]){
-        //         oldcards[0].parentNode.removeChild(oldcards[0]);
-            // }
+         listTypes.push(filterTypes.value);
+         oldcards = document.getElementsByClassName("pokemon-card");
+            while(oldcards[0]){
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter-=1
+            filteredPokemons = pokemons.filterData(newOrder,listTypes)
+            initiator.loadData(filteredPokemons);
 
         }
     })
