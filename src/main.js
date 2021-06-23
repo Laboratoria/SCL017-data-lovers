@@ -22,8 +22,19 @@ const filteredPokemon = pokemon.filter(element=>{
 });
 //console.log(filteredPokemon);//que imprima en html//
 for (let i=0; i<filteredPokemon.length; i++){
-containerRoot.innerHTML =`<p>${filteredPokemon[i].name}</p>
-<img src=${filteredPokemon[i].img}>`
+containerRoot.innerHTML =`<div class="flip-card" id= "pokemon${pokemon[i].num}">
+<div class ="flip-card-inner">
+<div class ="flip-card-front"> 
+    <img src=${pokemon[i].img}>
+    <p class="pokedex">#${pokemon[i].num}</p>
+    <p>${pokemon[i].name}</p>
+</div>
+<div class="flip-card-back">
+<p>${pokemon[i].type}</p>
+<p>${pokemon[i].generation.name}</p>
+</div>
+</div>
+</div>`
 
 }
 //containerRoot.innerHTML= filteredPokemon;
@@ -45,15 +56,18 @@ containerRoot.innerHTML =`<p>${filteredPokemon[i].name}</p>
        // const displayPoke=(Characters) =>{
        // const pokePoke = Characters
     for (let i=0; i<pokemon.length; i++){
-        containerRoot.innerHTML += `       <div class="containerPokemon" id= "pokemon"+ ${pokemon[i].num}> 
-                                            <img src=${pokemon[i].img}>
-                                            <p class="pokedex">#${pokemon[i].num}</p>
-                                            <p>${pokemon[i].name}</p>
+        containerRoot.innerHTML += `       <div class="flip-card" id= "pokemon${pokemon[i].num}">
+                                            <div class ="flip-card-inner">
+                                            <div class ="flip-card-front"> 
+                                                <img src=${pokemon[i].img}>
+                                                <p class="pokedex">#${pokemon[i].num}</p>
+                                                <p>${pokemon[i].name}</p>
+                                            </div>
+                                            <div class="flip-card-back">
                                             <p>${pokemon[i].type}</p>
                                             <p>${pokemon[i].generation.name}</p>
-                                            
-                                        
-
+                                            </div>
+                                        </div>
                                         </div>
                                     `;
                                 
