@@ -28,4 +28,4 @@ for (let i = 0; i <results.length; i++) {
     document.getElementById("root").appendChild(caja)
 }
 
-console.log(example, data);
+console.log(example, data.results);
