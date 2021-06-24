@@ -7,6 +7,7 @@ import dataPokemon from './data/pokemon/pokemon.js';
 let pokemons = dataPokemon.pokemon
 console.log(dataPokemon);
 
+
 const start =  document.getElementById('start');
 
 const togo = () => {
@@ -73,5 +74,6 @@ pokemons = filterTypePokemon(event.target.value);
 for(let i = 0; i < pokemons.length; i++){
     createPokemonDiv(pokemons[i]);
 }
+
 
 
