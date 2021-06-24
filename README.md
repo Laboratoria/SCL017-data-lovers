@@ -5,6 +5,13 @@
 
 ## Definición del producto
 
+Este producto esta hecho para los jugadores del juego "Pokemon Go", los cuales puedan necesitar mayor infomación de los pokemones con los que juegan.
+
+En el producto podemos observar información de los primeros 251 pokemon del juego, además podemos ordenar de manera ascendente y descendente los nombres y los numeros de los pokemones. 
+
+Tambien se puede filtrar por tipo de pokemon, sus debilidades y resistencias. 
+
+
 ## Historias de usuario (Sprint 1)
 Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de baja y mediana fidelidad respectivos. 
 
