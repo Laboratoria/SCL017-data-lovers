@@ -27,9 +27,8 @@
                 <p>En el laboratorio del Profesor Oak están todos los  pokémon de las regiones Kanto y Johto. Conocen sus características y arma el mejor equipo para tus batallas.</p>   
                      <form id="form">
                         <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
-                          <br />
-                          <button type="button" class="btn" id="btn-buscar">Buscar</button>
-                        <button type="submit" class="btn" id="btn-verlosTodos">¡Quiero verlos todos!</button>
+                        <button type="button" class="btn" id="btn-buscar">Buscar</button>
+                        <button type="button" class="btn" id="btn-verlosTodos">¡Quiero verlos todos!</button>
                     </form>
             </section>
         </main>
@@ -63,10 +62,22 @@
          </section>
         </div> 
         </footer>
-    </div>
+      </div>
+
+    <div id="root">
 
     <!-- Pantalla donde aparece info del Pokemon ingresado en barra de búsqueda -->
-    <div id="infoPokemonPage" style="display: none;">
+      <div id="paginaPokemon" style="display: none;">
+      <div id="resultado"> </div>
+      </div>
+
+    <!-- Pantalla donde aparecen desplegados todos -->
+      <div id="paginaVerTodos" style="display:none;">
+        <header>
+        </header>
+        <main> </main>
+        <footer></footer>   
+      </div>
 
     </div>
     <script src="main.js" type="module"></script>
