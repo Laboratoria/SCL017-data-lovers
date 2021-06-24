@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Pantalla de bienvenida con barra de búsqueda -->
-    <div>
+    <div id="firstPage">
         <header>
             <img src="./img/logoheader.png" alt="logo pokemon header">
             <nav class="nav-menu">
@@ -27,8 +27,9 @@
                 <p>En el laboratorio del Profesor Oak están todos los  pokémon de las regiones Kanto y Johto. Conocen sus características y arma el mejor equipo para tus batallas.</p>   
                      <form id="form">
                         <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
+                        <div id="matching"></div>
                           <br />
-                        <button type="submit" class="btn" id="btn">¡Quiero verlos todos!</button>
+                        <button type="button" class="btn" id="btn">¡Quiero verlos todos!</button>
                     </form>
             </section>
         </main>
@@ -63,5 +64,13 @@
         </div> 
         </footer>
     </div>
+    <!-- Pantalla de ver todos los pokemon -->
+    <div id="showAllPokemon" style="display: none">
+      <ul></ul>
+      <div id="allPokeContainer"></div>
+    </div>
+    <!-- Pantalla de estadisticas de pokemon seleccionado -->
+    <div id="pokeStatsContainer"></div>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
