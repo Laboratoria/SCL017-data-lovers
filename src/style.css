@@ -8,7 +8,7 @@ html{
   font-size: 62.5%;
   font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
-body{
+#firstPage{
   background-image: url(img/lab-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,22 +140,14 @@ footer section img{
   align-items: left;
   background-color: white;
   display: flex;
-  flex-flow: nowrap row;
 }
 .pokeNameStyle:hover {
   background-color: lightgoldenrodyellow;
 }
-#matching {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-radius: 10px;
-  min-height: 200px;
-  height: 200px;
-  max-height: auto;
-  overflow: hidden;
-  overflow-y: auto;
+.pokeTxtDisplay {
+  color: black;
+}
+.pokeListStyle {
+  background-color: cyan;
+  padding: 10px;
 }
