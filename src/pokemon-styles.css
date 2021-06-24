@@ -8,16 +8,8 @@
     flex-wrap: wrap;
 }
 
-/* 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1440px;
-    }
-}
- */
-
 /*----------------------------------------------------
-Manipulacion de las tarjetas del pokemon*/
+Manipulacion de las tarjetas del pokemon */
 
 .myBtn {
     background-color: rgba(21, 25, 42, 0);
@@ -31,20 +23,12 @@ Manipulacion de las tarjetas del pokemon*/
     float: left;
     height: 250px;
     width: 270px;
-    /* width: 30%; */
     background: rgba(21, 25, 42, 0.6);
     box-shadow: 2px 1px 2px 1px #0a0a0a;
     border-radius: 10px;
     text-align: center;
     margin: 0.5%;
     padding: 1%;
-    /* margin: 0 0 0.5rem 0; */
-    /* margin: 10px; */
-    /* flex: 1 1 8%; */
-    /* padding: 0.5em 10px; */
-    /* box-sizing: border-box; */
-    /* flex-basis: 30%; */
-    /* margin-left: 0.6%; */
 }
 
 .pokemon-name, .pokemon-number {
@@ -158,18 +142,17 @@ Manipulacion de las tarjetas del pokemon*/
 
 /* Manipulacion del Tarjeta Emergente -------------------------------------------*/
 
-/* The Modal (background) */
+/* El Modal */
 
 @media (max-width: 800px) {
     .modal-content {
         display: flex;
         flex-direction: column;
     }
-    .close{
+    .close {
         position: absolute;
         float: right;
     }
-    
 }
 
 .modal {
@@ -184,7 +167,7 @@ Manipulacion de las tarjetas del pokemon*/
     overflow: auto;
 }
 
-/* Modal Content */
+/* Contenido del modal (tarjeta emergente) */
 
 .modal-content {
     background-color: rgba(3, 37, 108, 1);
@@ -196,14 +179,13 @@ Manipulacion de las tarjetas del pokemon*/
     color: #FFFFFF;
 }
 
-/* The Close Button */
+/* Boton para cerrar el modal */
 
 .close {
     color: #e5d549;
     float: right;
     font-size: 28px;
     font-weight: bold;
-   
 }
 
 .close:hover, .close:focus {
@@ -211,6 +193,8 @@ Manipulacion de las tarjetas del pokemon*/
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Boton para abrir el modal */
 
 #newBtn {
     background-color: rgba(21, 25, 42, 0);
@@ -225,27 +209,54 @@ Manipulacion de las tarjetas del pokemon*/
     height: 100px;
 }
 
+@media(max-width:600px) {
+    .modal-more{
+        width: 100%;
+    }
+    .div-pokemon-info {
+        width: 100%;
+    }
+    .div-more-info {
+        width: 100%;
+    }
+    .modal-info-div{
+        width: 100%;
+    }
+}
+
+/* Informacion dentro del modal (contenido) */
+
 .div-pokemon-info {
     text-align: left;
-    width: 40%;
+    width: 50%;
     margin: 5px;
-    padding: 5px
+    padding: 5px;
+    font-size: 100%;
+    background-color: #108CFF;
 }
 
 .div-more-info {
     text-align: left;
-    width: 50%;
+    width: 40%;
     margin: 2px;
-    font-size: 20px;
+    font-size: 90%;
+    background-color: #2BD03B;
 }
 
 .div-evolutions {
     vertical-align: bottom;
     margin: 2px;
-    background-color: #9654EB;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .modal-info-div {
     display: flex;
     flex-wrap: wrap;
 }
+
+.name-evol {
+    margin-left: 20px;
+}
+

@@ -13,7 +13,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
-    /* font-family: Arial; */
 }
 
 header {
@@ -36,18 +35,38 @@ header {
 }
 
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     #header-logo {
-        margin-top: 25px;
-        height: 80%;
+        display: none;
+        /* margin-top: 25px;
+        height: 80%; 
     }
 
     #header-text {
         width: 60%;
         height: auto;
-        margin: 2%;
+        margin-top: 0;
     }
 
+} */
+@media(max-width:800px){
+    #header-logo{
+        display:none;
+    }
+    #header-text{
+        width:55%;
+        height: auto;
+        margin: 0;
+        margin-top: 2%;
+    }
+}
+@media(max-width:600px){
+    #header-text{
+        width:80%;
+        height: auto;
+        margin: 0;
+        margin-top: 35px;
+    }
 }
 
 .navbar {
