@@ -263,11 +263,6 @@ body{
 .informationFooter{
     float: left;
 }
-/*
- ##dispositivos = laptos, dektops
- */
-
- @media (max-width: 1280px) { 
 /* 
   ##Dispositivo = Tablets, Ipads (vertical)
 */
@@ -282,7 +277,7 @@ body{
         width: 70%;
         float: left;
     }
-    }
+
     .body{
         background-attachment: fixed;
         background-size: 100%;
