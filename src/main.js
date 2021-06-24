@@ -3,6 +3,11 @@ import { example } from './data.js';
 // import data from './data/pokemon/pokemon.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
+document.getElementById("pasarPagina").addEventListener("click", function() {
+    document.getElementById("paginaUno").style.display = "none";
+    document.getElementById("paginaDos").style.display = "block";
+  });
+  
 const { info, results } = data;
 for (let i = 0; i < results.length; i++) {
     const personajes = results[i]
