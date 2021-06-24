@@ -136,3 +136,26 @@ footer section img{
   height: 25px;
   margin-right: 10px;
 }
+.pokeNameStyle {
+  align-items: left;
+  background-color: white;
+  display: flex;
+  flex-flow: nowrap row;
+}
+.pokeNameStyle:hover {
+  background-color: lightgoldenrodyellow;
+}
+#matching {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 10px;
+  min-height: 200px;
+  height: 200px;
+  max-height: auto;
+  overflow: hidden;
+  overflow-y: auto;
+}
