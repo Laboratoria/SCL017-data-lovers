@@ -1,5 +1,4 @@
 import { filterTypePokemon } from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -70,8 +69,19 @@ pokemons = filterTypePokemon(event.target.value);
 }
 }
 );
+
 for(let i = 0; i < pokemons.length; i++){
     createPokemonDiv(pokemons[i]);
 }
 
+ const orderingElements = document.getElementById('order') 
+
+ const getOrder= (event) => {
+
+ sortList() 
+
+
+ orderingElements.addEventListener('change' ,)
+}
+ 
 
