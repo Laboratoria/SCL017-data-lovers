@@ -170,6 +170,7 @@ const initiator = {
                 modalMoreInfo.appendChild(pokemonResistant);
             })
 
+
             // Generacion de la siguiente evolución de los pokemon (solo la siguiente)
             if (datapokemon[i].evolution["next-evolution"] !== undefined) {
                 // Genero el elemento de la lista para el nombre de la evolucion (puede haber mas de una evolucion siguiente)
@@ -186,6 +187,7 @@ const initiator = {
                 }
 
             }
+
             //Agrego la informacion al div de informacion general (contiene al modalInfoPokemon y el modalMoreInfo)
             modalInfoDiv.appendChild(modalInfoPokemon);
             modalInfoDiv.appendChild(modalMoreInfo);
