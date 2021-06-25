@@ -34,35 +34,21 @@ header {
     left: 0;
 }
 
-
-/* @media (max-width: 800px) {
+@media(max-width:800px) {
     #header-logo {
         display: none;
-        /* margin-top: 25px;
-        height: 80%; 
     }
-
     #header-text {
-        width: 60%;
-        height: auto;
-        margin-top: 0;
-    }
-
-} */
-@media(max-width:800px){
-    #header-logo{
-        display:none;
-    }
-    #header-text{
-        width:55%;
+        width: 55%;
         height: auto;
         margin: 0;
         margin-top: 2%;
     }
 }
-@media(max-width:600px){
-    #header-text{
-        width:80%;
+
+@media(max-width:600px) {
+    #header-text {
+        width: 80%;
         height: auto;
         margin: 0;
         margin-top: 35px;
@@ -91,7 +77,8 @@ footer {
     color: #FFFFFF;
     text-align: center;
 }
-#top-btn{
+
+#top-btn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -106,10 +93,11 @@ footer {
     padding: 15px;
     border-radius: 4px;
 }
- 
+
 #top-btn:hover {
     background-color: #555;
-  }
+}
+
 /*----------------------------------------------------
 Manipulacion del Menu Lateral */
 
@@ -126,7 +114,9 @@ Manipulacion del Menu Lateral */
 #filter {
     margin-left: 15%;
 }
-
+summary{
+    font-size: 130%;
+}
 .sidebar {
     height: 74%;
     width: 0;
@@ -140,6 +130,7 @@ Manipulacion del Menu Lateral */
     border-radius: 0px 10px 10px 0px;
     transition: 0.5s;
     font-family: Arial;
+    font-size: 120%;
 }
 
 .sidebar a {
@@ -178,6 +169,10 @@ Manipulacion del Menu Lateral */
     background-color: rgba(37, 65, 178, 1);
 }
 
+.filter-list{
+    margin-left: 5%;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 @media screen and (max-height: 450px) {
@@ -187,4 +182,10 @@ Manipulacion del Menu Lateral */
     .sidebar a {
         font-size: 18px;
     }
+}
+
+.short-break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 12px; /* change this to whatever height you want it */
 }
