@@ -9,26 +9,17 @@ initiator.loadData(newOrder);
 
 // Manipulación de la tarjeta emergente 
 
-// Get the modal
 let modals = document.getElementsByClassName("modal");
-
-// Get the button that opens the modal
 let btn = document.getElementsByClassName("myBtn");
-
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close");
 
-for (let ii = 0; ii < data.pokemon.length; ii++) {
-    // When the user clicks the button, open the modal 
+for (let ii = 0; ii < newOrder.length; ii++) {
     btn[ii].onclick = function () {
         modals[ii].style.display = "block";
     }
-
-    // When the user clicks on <span> (x), close the modal
     span[ii].onclick = function () {
         modals[ii].style.display = "none";
     }
-
     window.onclick = function (event) {
         if (event.target.classList.contains('modal')) {
             for (let modal of modals) {
@@ -38,7 +29,6 @@ for (let ii = 0; ii < data.pokemon.length; ii++) {
             }
         }
     }
-
     window.onkeydown = function (event) {
         if (event.key == 'Escape') {
             for (let modal of modals) {
@@ -65,9 +55,11 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
+
 let oldcards = document.getElementsByClassName("pokemon-card");
 
 // manipulación del filtro 
+// filtro para orden de nombre y número
 for (let e=0; e<4; e++){
     let filter = document.getElementsByName("filter")[e]
     filter.addEventListener('click',function(){
@@ -79,20 +71,48 @@ for (let e=0; e<4; e++){
 
             newOrder= pokemons.sortData(data,filter.value,filter.className);
             initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+            
        };
     })
 }
-
-let listTypes = [];
+//Filtro para tipos de pokemones
+let listTypes = ["type"];
 let filteredPokemons;
 let counter = 18;
-
+let index;
 for (let c=0; c<18; c++){
-    let filterTypes = document.getElementsByName("type1")[c]
+    let filterTypes = document.getElementsByName("type")[c]
     filterTypes.addEventListener('click',function(){
 
         if (!filterTypes.checked){
-            const index = listTypes.indexOf(filterTypes.value);
+            index = listTypes.indexOf(filterTypes.value);
             if (index > -1) {
                 listTypes.splice(index, 1);
             }   
@@ -101,11 +121,69 @@ for (let c=0; c<18; c++){
                 oldcards[0].parentNode.removeChild(oldcards[0]);
             }
 
-            filteredPokemons = pokemons.filterData(newOrder,listTypes)
-            initiator.loadData(filteredPokemons);
+            newOrder = pokemons.filterData(newOrder,listTypes)
+            initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
             counter+=1
+        
             if (counter==18){
+                newOrder = data.pokemon;
                 initiator.loadData(newOrder)
+                modals = document.getElementsByClassName("modal");
+                btn = document.getElementsByClassName("myBtn");
+                span = document.getElementsByClassName("close");
+                for (let ii = 0; ii < newOrder.length; ii++) {
+                    btn[ii].onclick = function () {
+                        modals[ii].style.display = "block";
+                    }
+                    span[ii].onclick = function () {
+                        modals[ii].style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target.classList.contains('modal')) {
+                            for (let modal of modals) {
+                                if (typeof modal.style !== 'undefined') {
+                                    modal.style.display = 'none';
+                                }
+                            }
+                        }
+                    }
+                    window.onkeydown = function (event) {
+                        if (event.key == 'Escape') {
+                            for (let modal of modals) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+    
             }
 
         }
@@ -117,12 +195,293 @@ for (let c=0; c<18; c++){
                 oldcards[0].parentNode.removeChild(oldcards[0]);
             }
             counter-=1
-            filteredPokemons = pokemons.filterData(newOrder,listTypes)
-            initiator.loadData(filteredPokemons);
+            newOrder = pokemons.filterData(newOrder,listTypes)
+            initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
 
         }
     })
     }
+//Filtro para tipo de debilidad de pokemones
+let listWeaknesses = ["weaknesses"];
+let filteredPokemons2;
+let counter2 = 18;
+
+for (let c=0; c<18; c++){
+    let filterWeaknesses = document.getElementsByName("weaknesses")[c]
+    filterWeaknesses.addEventListener('click',function(){
+
+        if (!filterWeaknesses.checked){
+            index = listWeaknesses.indexOf(filterWeaknesses.value);
+            if (index > -1) {
+                listWeaknesses.splice(index, 1);
+            }   
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while(oldcards[0]){
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+
+            newOrder = pokemons.filterData(newOrder,listWeaknesses)
+            initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+            counter2+=1
+            if (counter2==18){
+                newOrder = data.pokemon;
+                initiator.loadData(newOrder)
+                modals = document.getElementsByClassName("modal");
+                btn = document.getElementsByClassName("myBtn");
+                span = document.getElementsByClassName("close");
+                for (let ii = 0; ii < newOrder.length; ii++) {
+                    btn[ii].onclick = function () {
+                        modals[ii].style.display = "block";
+                    }
+                    span[ii].onclick = function () {
+                        modals[ii].style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target.classList.contains('modal')) {
+                            for (let modal of modals) {
+                                if (typeof modal.style !== 'undefined') {
+                                    modal.style.display = 'none';
+                                }
+                            }
+                        }
+                    }
+                    window.onkeydown = function (event) {
+                        if (event.key == 'Escape') {
+                            for (let modal of modals) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+    
+            }
+
+        }
+
+    if (filterWeaknesses.checked){
+        listWeaknesses.push(filterWeaknesses.value);
+         oldcards = document.getElementsByClassName("pokemon-card");
+            while(oldcards[0]){
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter2-=1
+            newOrder = pokemons.filterData(newOrder,listWeaknesses)
+            initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+
+        }
+    })
+    }
+
+// Filtro para las generaciones de pokemones 
+let listGeneration = ["generation"];
+let filteredPokemons3;
+let counter3 = 18;
+
+for (let c=0; c<2; c++){
+    let filterGeneration = document.getElementsByName("generation")[c]
+    filterGeneration.addEventListener('click',function(){
+        if (!filterGeneration.checked){
+            index = listGeneration.indexOf(filterGeneration.value);
+            if (index > -1) {
+                listGeneration.splice(index, 1);
+            }   
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while(oldcards[0]){
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            newOrder = pokemons.filterData(newOrder,listGeneration)
+            initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+            counter3+=1
+            if (counter3==18){
+                newOrder = data.pokemon;
+                initiator.loadData(newOrder)
+                modals = document.getElementsByClassName("modal");
+                btn = document.getElementsByClassName("myBtn");
+                span = document.getElementsByClassName("close");
+                for (let ii = 0; ii < newOrder.length; ii++) {
+                    btn[ii].onclick = function () {
+                        modals[ii].style.display = "block";
+                    }
+                    span[ii].onclick = function () {
+                        modals[ii].style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target.classList.contains('modal')) {
+                            for (let modal of modals) {
+                                if (typeof modal.style !== 'undefined') {
+                                    modal.style.display = 'none';
+                                }
+                            }
+                        }
+                    }
+                    window.onkeydown = function (event) {
+                        if (event.key == 'Escape') {
+                            for (let modal of modals) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+    
+            }
+
+        }
+
+    if (filterGeneration.checked){
+        listGeneration.push(filterGeneration.value);
+         oldcards = document.getElementsByClassName("pokemon-card");
+            while(oldcards[0]){
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter3-=1
+            newOrder= pokemons.filterData(newOrder,listGeneration)
+            initiator.loadData(newOrder);
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+        }
+    })
+    }
+
+
+
+
 
 //Scroll to top btn -----------------------------------------------------------------------------
 //Get the button

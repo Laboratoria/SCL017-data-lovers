@@ -46,12 +46,7 @@ const initiator = {
             //---------------------------------------------------------------------
             // Generación de la tarjeta emergente de los pokemon (modal)
             //---------------------------------------------------------------------
-
-            // // Generación de una imagen para el boton que abre el modal
-            // let imgBtn = document.createElement("img");
-            // imgBtn.id = "new-btn-img";
-            // imgBtn.src = ("/img/pokestop_fix.png");
-
+            
             // Genero el boton para abrir el modal
             let modalBtn = document.createElement("button");
             modalBtn.className = "myBtn";
@@ -164,25 +159,6 @@ const initiator = {
                 pokemonResistant.id = "pokemon-type-" + value;
                 modalMoreInfo.appendChild(pokemonResistant);
             })
-
-
-
-            // // Generacion de la informacion de evoluciones de los pokemon
-            // let pokemon = datapokemon[i].evolution;
-            // let firstPokemon = firstEvolution(pokemon);
-            // let secondPokemon = secondEvolution(pokemon);
-
-
-            // let pokeFirst = document.createElement("p")
-            // pokeFirst.innerHTML = firstPokemon;
-            // let pokeSecond = document.createElement("p");
-            // pokeSecond.innerHTML = secondPokemon;
-            // modalInfoEvolutions.appendChild(pokeFirst);
-            // modalInfoEvolutions.appendChild(pokeSecond);
-
-            // // Imagen del pokemon del i
-            // let firstpoke = pokemonImage.cloneNode(true);
-            // modalInfoEvolutions.appendChild(firstpoke);
 
             //Agrego la informacion al div de informacion general (contiene al modalInfoPokemon y el modalMoreInfo)
             modalInfoDiv.appendChild(modalInfoPokemon);

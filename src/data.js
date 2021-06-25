@@ -37,9 +37,21 @@ const pokemons = {
   },
   
   filterData: (data,condition) => {
-    const r = data.filter(d => d.type.some(c => condition.includes(c)));
-    return r
 
+    if (condition[0]== "type"){
+      const filteredTypesPokemon = data.filter(d => d.type.some(c => condition.includes(c)));
+      return filteredTypesPokemon
+  
+    }
+    if (condition[0]== "weaknesses"){
+      const filteredWeaknesses = data.filter(d => d.weaknesses.some(c => condition.includes(c)));
+      return filteredWeaknesses 
+  
+    }
+    if (condition[0]== "generation"){
+      const filteredGeneration = data.filter(fila =>condition.includes( fila.generation.name));
+      return filteredGeneration
+    }
   }
   }
 
