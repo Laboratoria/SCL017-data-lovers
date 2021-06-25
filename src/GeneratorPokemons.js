@@ -273,8 +273,6 @@ const initiator = {
             }
             return capitalized;
         }
-
-
     }
 }
 export default initiator;
