@@ -14,7 +14,16 @@ const initiator = {
             // Generación del nombre del pokemon
             let pokemonName = document.createElement("div");
             let capitalizedName = datapokemon[i].name.charAt(0).toUpperCase() + datapokemon[i].name.slice(1); // Primera letra mayuscula
+            
+            // Quito el parentesis del nombre de estos dos pokemons
+            if (capitalizedName=="Nidoran ♀ (female)"){
+                capitalizedName = "Nidoran ♀";
+            }else if (capitalizedName == "Nidoran ♂ (male)"){
+                capitalizedName = "Nidoran ♂"
+            }
+            
             pokemonName.innerHTML = capitalizedName;
+            
             pokemonName.className = "pokemon-name";
 
             //Generación del numero del pokemon
@@ -46,12 +55,11 @@ const initiator = {
             //---------------------------------------------------------------------
             // Generación de la tarjeta emergente de los pokemon (modal)
             //---------------------------------------------------------------------
-            
+
             // Genero el boton para abrir el modal
             let modalBtn = document.createElement("button");
             modalBtn.className = "myBtn";
             modalBtn.innerHTML = "Más";
-            //modalBtn.appendChild(imgBtn); // Agrego la imagen al boton
 
             // Genero mi tarjeta emergente
             let modalCard = document.createElement("div");
@@ -103,15 +111,15 @@ const initiator = {
             // Genero la informacion de cuanto caminar con los huevos
             let pokemonEgg = document.createElement("p");
             let pokemonEggInfo = datapokemon[i].egg;
-            if(pokemonEggInfo == "not in eggs"){
-                pokemonEggInfo = "No encontrado en huevos";
+            if (pokemonEggInfo == "not in eggs") {
+                pokemonEggInfo = "No en huevos";
             }
             pokemonEgg.innerHTML = "Egg km: " + pokemonEggInfo;
 
 
             // Genero la informacion de cuanto caminar con el pokeBuddy para obtener los candies
             let pokeBuddy = document.createElement("p");
-            pokeBuddy.textContent = "Buddy distance: " + datapokemon[i]["buddy-distance-km"] + "km";
+            pokeBuddy.textContent = "Buddy distance: " + datapokemon[i]["buddy-distance-km"] + " km";
 
             // Genero la informacion de la tasa de escape
             let fleeRate = document.createElement("p");
@@ -134,6 +142,7 @@ const initiator = {
 
             //Genero la informacion de las debilidades del pokemon
             let modalWeak = document.createElement("p");
+            modalWeak.nameClass ="modal-weakness";
             modalWeak.innerHTML = "Débil contra: ";
             modalMoreInfo.appendChild(modalWeak);
             datapokemon[i].weaknesses.forEach(function (value) {
@@ -145,10 +154,11 @@ const initiator = {
                 pokemonWeak.id = "pokemon-type-" + value;
                 modalMoreInfo.appendChild(pokemonWeak);
             })
-            
+
             // Generalo la informacion de las debilidades del pokemon
             let modalResistant = document.createElement("p");
             modalResistant.innerHTML = "Resistente a: ";
+            modalResistant.nameClass ="modal-resistant";
             modalMoreInfo.appendChild(modalResistant);
             datapokemon[i].resistant.forEach(function (value) {
                 let pokemonResistant = document.createElement("div");
@@ -159,6 +169,24 @@ const initiator = {
                 pokemonResistant.id = "pokemon-type-" + value;
                 modalMoreInfo.appendChild(pokemonResistant);
             })
+
+
+            // Generacion de la siguiente evolución de los pokemon (solo la siguiente)
+            if (datapokemon[i].evolution["next-evolution"] !== undefined) {
+                // Genero el elemento de la lista para el nombre de la evolucion (puede haber mas de una evolucion siguiente)
+                let contenidoEvolution = document.createElement("ul");
+                contenidoEvolution.nameClass ="name-evol";
+                contenidoEvolution.textContent = "Evoluciona a:";
+                modalInfoEvolutions.appendChild(contenidoEvolution);
+                // Busco la informacion de las evoluciones (1 o más) y las pongo en la lista (entrega nombre del pokemon y cuantos candies necesita para evolucionar)
+                for (let j = 0; j < datapokemon[i].evolution["next-evolution"].length; j++) {
+                    let evolution = document.createElement("li");
+                    let evoNamePoke = datapokemon[i].evolution["next-evolution"][j].name;
+                    evolution.innerHTML = evoNamePoke.charAt(0).toUpperCase() + evoNamePoke.slice(1) +" con " + datapokemon[i].evolution["next-evolution"][j]["candy-cost"] +" dulces";
+                    modalInfoEvolutions.appendChild(evolution);
+                }
+
+            }
 
             //Agrego la informacion al div de informacion general (contiene al modalInfoPokemon y el modalMoreInfo)
             modalInfoDiv.appendChild(modalInfoPokemon);
@@ -186,7 +214,7 @@ const initiator = {
         //-------------------------------------------------------------------------------------
         // FUNCIONES
         //-------------------------------------------------------------------------------------
-       
+
         // Funcion que hace el cambio de nombre de los tipos al español
         function translateType(capitalized) {
             switch (capitalized) {
@@ -246,7 +274,7 @@ const initiator = {
             return capitalized;
         }
 
-       
+
     }
 }
 export default initiator;
