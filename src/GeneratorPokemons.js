@@ -7,7 +7,7 @@ const initiator = {
             //---------------------------------------------------------------------
             let card = document.createElement("article");
             card.className = "pokemon-card";
-
+            card.id = datapokemon[i].name;
             //---------------------------------------------------------------------            
             // Generación de los elementos de la tarjeta pokemon (página principal)
 
