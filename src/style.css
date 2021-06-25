@@ -1,53 +1,3 @@
-
-.container {
-    background-color:rgba(240, 240, 240, 0.913);
-    /* height:auto;
-    margin: 10%; */
-    width: 50%;
-    padding: 1.5rem;
-    text-align:left;
-    margin-left: auto;
-    margin-right:auto ;
-    border: 2px solid #9900FF;
-    border-radius: 30px;
-    }
-
-.introduction{
-    font-family:'Play', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    width: 70%;
-    float:left;
-
-}
-
-.begin{
-    text-align: center;
-    display: block;
-    border-radius: 15px;
-    text-decoration:none;
-    cursor:pointer;
-    color:black;
-    font-size: 25px;
-    width: 40%;
-    padding: 15px;
-    background-color:#FFCC01;
-    margin: 20% auto 0 auto;
-    border: 4px solid black;
-    
-}
-.begin:hover {
-background-color:#2575BC;
-color:white;
-border: 4px solid white;
-}
-
-.picture{
-float:right;
-justify-content: flex-start;
-
-}
-
 body{
     background-image: url("img/01-pokemon.jpeg");
     background-attachment: fixed;
@@ -57,11 +7,57 @@ body{
     font-family: 'Prompt', sans-serif;
     
 }
+.container {
+    background-color:rgba(240, 240, 240, 0.913);
+    width: 60%;
+    height: 200px;
+    padding: 1.5rem;
+    text-align:left;
+    margin-left: auto;
+    margin-right:auto ;
+    border: 2px solid #9900FF;
+    border-radius: 30px;
+        
+    }
 
+.introduction{
+    font-family:'Play', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    width: 70%;
+    float:left;
+
+}
+
+.picture{
+    float:center;
+    
+    
+}
+
+.begin{
+    text-align: center;
+    border-radius: 15px;
+    text-decoration:none;
+    cursor:pointer;
+    color:black;
+    font-size: 1.2rem;
+    width: 30%;
+    padding: 1rem;
+    background-color:#FFCC01;
+    border: 4px solid black;
+    
+}
+.begin:hover {
+    background-color:#2575BC;
+    color:white;
+    border: 4px solid white;
+}
 
 .logo{
     width: 35%;
     margin-left: 30%;
+    width: 30%;
 
 }
 
@@ -267,82 +263,326 @@ body{
 }
 
 /* 
+  ##Dispositivo = Mayoria de telefonos moviles (vertical)
+*/
+@media (min-width: 480px) {
+    
+    .container{
+        width: 60%;
+        height: 480px;
+    }
+    .introduction{
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        float: initial;  
+    }
+    .logo{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .body{
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat:unset;
+        margin: 0;
+    }
+    .begin {
+        margin-left: 30%;
+        display: inherit;
+        width: fit-content;
+        margin-top: 10%;
+        font-size: 1rem;
+    }
+    .begin:hover {
+        background-color:#2575BC;
+        color:white;
+        border: 4px solid white;
+    }
+    .picture{
+        align-items: center;
+        margin-left: 33%;
+
+    }
+    .img-hash{
+        width: 120px;
+       
+    }
+    .footer{
+        font-size:1rem;
+    }
+    .informationFooter{
+    width: 50%;
+    }
+    .img-squir{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 3px;
+    }
+    .img-pica{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 3px;
+    }
+
+    .img-poke{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 780px) {
+    
+    .container{
+        width: 60%;
+        height: 480px;
+    }
+    .introduction{
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        float: initial;  
+    }
+    .logo{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .body{
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat:unset;
+        margin: 0;
+    }
+    .begin {
+        margin-left: 35%;
+        display: inherit;
+        width: fit-content;
+        margin-top: 10%;
+        font-size: 1rem;
+        border: 1px solid black;
+    }
+    .begin:hover {
+        background-color:#2575BC;
+        color:white;
+        border: 4px solid white;
+    }
+    .picture{
+        align-items: center;
+        margin-left: 33%;
+
+    }
+    .img-hash{
+        width: 150px;
+       
+    }
+    .footer{
+        font-size:1rem;
+    }
+    .informationFooter{
+    width: 60%;
+    }
+    .img-squir{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0px;
+    }
+    .img-pica{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0px;
+    }
+
+    .img-poke{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+}
+/* 
   ##Dispositivo = Tablets, Ipads (vertical)
 */
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
    
     .container{
-        width: 80%;
+        width: 60%;
+        height: 320px;
+        margin-bottom: 50px;
     }
     .introduction{
-        font-size: 3rem;
-        text-align: center;
+        font-size: 2rem;
+        margin-left: 5%;
         width: 70%;
-        float: left;
+       
     }
     .body{
         background-attachment: fixed;
         background-size: 100%;
         background-repeat: unset;
         margin: 0;
- }
- .footer{
-    font-size:1em;
- }
+     }
+     .picture{
+        margin-top: -20%;
+        margin-left: 70%;
 
- .informationFooter{
+    }
+    .img-hash{
+        width: 150px;
+       
+    }
+    .footer{
+    font-size:1em;
+    }
+
+    .informationFooter{
     width: 50%;
     font-size: 18px;
- }
- .begin {
- margin-left: 35%;
- display: initial;
- margin-top: 30%;
- }
-
- /* 
-  ##Dispositivo = Mayoria de telefonos moviles (vertical)
-*/
-@media (max-width: 480px) {
-    
-.container{
-    width: 60%;
-    height: 450px;
-}
-.introduction{
-    font-size: 1rem;
-    text-align: center;
-    width: 100%;
-    float: initial;  
-}
-.body{
-    background-attachment: fixed;
-    background-size: 100%;
-    background-repeat: unset;
-    margin: 0;
-}
-.begin {
-    margin-left: 5%;
+    }
+    .begin {
+    margin-left: 35%;
     display: initial;
-    margin-top: 35%;
+    margin-top: -30%;
+    border: 2px solid black;
+    
+        }
 }
-.footer{
-    font-size:1em;
-}
-.informationFooter{
-   width: 50%;
-}
-.img-squir{
-width: 30px;
-height: 30px;
- }
- .img-pica{
-    width: 30px;
-    height: 30px;
- }
 
- .img-poke{
-    width: 30px;
-    height: 30px;
- }
+@media (min-width: 1440px) {
+   
+    .container{
+        width: 60%;
+        height: 430px;
+        margin-top: 5%;
+    }
+    .introduction{
+        font-size: 2.5rem;
+        margin-left: 5%;
+        margin-top: 70px;
+        width: 70%;
+       
+    }
+    .logo{
+        width: 40%;
+        margin-left: 30%;
+    }
+    .body{
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: unset;
+        margin: 0;
+     }
+     .picture{
+        margin-top: -20%;
+        margin-left: 75%;
+
+    }
+    .img-hash{
+        width: 200px;
+       
+    }
+    .footer{
+    font-size:1em;
+    }
+
+    .informationFooter{
+    width: 60%;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    .begin {
+    margin-left: 35%;
+    display: initial;
+    margin-top: -30%;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    
+    }
+    .img-squir{
+    width: 60px;
+    height: 60px;
+    margin-top: 25px;
+    }
+    .img-pica{
+        width: 60px;
+        height: 60px;
+        margin-top: 25px;
+    }
+
+    .img-poke{
+        width: 50px;
+        height: 50px;
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 1920px) {
+   
+    .container{
+        width: 50%;
+        height: 480px;
+        margin-top: 2%;
+        
+    }
+    .introduction{
+        font-size: 3rem;
+        margin-left: 5%;
+        margin-top: 70px;
+        width: 70%;
+       
+    }
+    .logo{
+        width: 40%;
+        margin-left: 30%;
+    }
+    .body{
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: unset;
+        margin: 0;
+     }
+     .picture{
+        margin-top: -25%;
+        margin-left: 70%;
+
+    }
+    .img-hash{
+        width: 240px;
+       
+    }
+    .footer{
+    font-size:1em;
+    }
+
+    .informationFooter{
+    width: 60%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    .begin {
+    margin-left: 35%;
+    display: initial;
+    margin-top: -30%;
+    border: 2px solid black;
+    font-size: 1.8rem;
+    
+    }
+    .img-squir{
+    width: 70px;
+    height: 70px;
+    margin-top: 25px;
+    }
+    .img-pica{
+        width: 70px;
+        height: 70px;
+        margin-top: 25px;
+    }
+
+    .img-poke{
+        width: 60px;
+        height: 60px;
+        margin-top: 25px;
+    }
+}
