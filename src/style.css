@@ -26,6 +26,18 @@ background-size: cover;
 
 }
 
+/* boton ir hacia arriba */ 
+.ir-arriba {
+	display:inline-block;
+	padding:20px;
+	background:		#4169E1;
+	font-size:20px;
+	color: 	#FFFF00;
+	cursor:pointer;
+	position: fixed;
+	bottom: 10px;;
+	right:10px;
+}
 
 #root{
     display: flex;
@@ -181,7 +193,7 @@ background-size: cover;
   }
   
   .flip-card-back {
-    background-color:	#87CEEB;
+    background-color:			#87CEEB;
     color:black;
     transform: rotateY(180deg);
   }
