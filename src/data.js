@@ -17,28 +17,37 @@ elements = dataPokemon.pokemon
   return elements;
    
 } 
+// ordenar la data pokemon 
+export const sortData = (orderValue) => {
 
-export const sortList = (orderValue) => {
-
+  // Ordenando alfabeticamente de forma ascendente A-Z
 const sortNameAlphabetically = dataPokemon.pokemon.sort((a, b) => {
   if(a.name < b.name) return 1;
   if(a.name > b.name) return -1;
 
-  return 0;
+  else return 0;
 })
 
-const sortAlphabeticallyInReverse= dataPokemon.pokemon.sort((a, b) => {
+
+// Ordenando alfabeticamente de forma descendente Z-A
+const sortAlphabeticallyInReverse= dataPokemon.pokemon.sort((b, a) => {
 
   if(a.name < b.name) return -1;
   if(a.name > b.name) return 1;
 
-  return 0; 
+  else return 0; 
 })
 
+// Ordenando por numero de ID numero inferior 
 const pokemonNumber = dataPokemon.pokemon.sort((a, b) => a.num - b.num)
 
+
+
+// Ordenando por numero de ID numero superior
 const pokemonNumberReverse = dataPokemon.pokemon.sort((a, b) => b.num - a.num) 
-
+ 
+if ( orderValue === "ordenarAZ") {
+  return sortAlphabeticallyInReverse
+    } 
+    console.log(orderValue)
 }
-
-
