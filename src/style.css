@@ -9,8 +9,8 @@ body{
 }
 .container {
     background-color:rgba(240, 240, 240, 0.913);
-    width: 60%;
-    height: 200px;
+    width: 50%;
+    height: 50px;
     padding: 1.5rem;
     text-align:left;
     margin-left: auto;
@@ -57,7 +57,7 @@ body{
 .logo{
     width: 35%;
     margin-left: 30%;
-    width: 30%;
+   
 
 }
 
@@ -89,8 +89,8 @@ body{
     width: fit-content;
     background-color: white;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% 1fr 1fr;
     font-size: 13px;
 
     
@@ -113,12 +113,11 @@ body{
     
 }
 .img-pokemon{
-    height: 100px;
-    width: 100px;
     align-self: center;
-    grid-column-start: span 4;
+    grid-column-start: 2;
     grid-row-start: 2;
-    padding-left: 60px;
+    padding-left: 20px;
+  
     
 }
 .type-pokemon{
@@ -126,13 +125,13 @@ body{
     text-align: center;
     color:black;
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 3;
     width: 80px;
     height: fit-content;
     border: 1px solid black;
     padding: 2px 8px 2px 5px;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-right: 10px;
     margin-top: 5px;
     border-radius: 8px;
@@ -147,15 +146,14 @@ body{
     background-color:#2B6DB6;
     text-align: center;
     color:black; 
-    grid-column-start: 1;
-    grid-column-end: 12;
-    grid-row-start: 5;
+    grid-column-start: 2;
+    grid-row-start: 3;
     width: 130px;
     height: fit-content;
     border: 1px solid black;
     padding: 2px 8px 2px 5px;
     margin-left: 30px;
-    margin-top: 5px;
+    margin-top: 30%;
     text-transform: uppercase;
 
     
@@ -165,13 +163,13 @@ body{
     text-align: center;
     border-radius: 10%;
     color:black; 
-    grid-column-start: span ;
+    grid-column-start: 3 ;
     grid-row-start: 3;
     width: 80px;
     height: fit-content;
     border: 1px solid black;
     padding: 2px 8px 2px 5px;
-    margin-left: 5px;
+    margin-left: -70px;
     margin-top: 5px;
     border-radius: 8px;
     text-transform: capitalize;
@@ -406,8 +404,8 @@ body{
 @media (min-width: 1024px) {
    
     .container{
-        width: 60%;
-        height: 320px;
+        width: 50%;
+        height: 250px;
         margin-bottom: 50px;
     }
     .introduction{
@@ -416,6 +414,10 @@ body{
         width: 70%;
        
     }
+    .logo{
+        width: 35%;
+        margin-left: 30%;
+    }
     .body{
         background-attachment: fixed;
         background-size: 100%;
@@ -423,8 +425,8 @@ body{
         margin: 0;
      }
      .picture{
-        margin-top: -20%;
-        margin-left: 70%;
+        margin-top: -25%;
+        margin-left: 75%;
 
     }
     .img-hash{
@@ -432,17 +434,21 @@ body{
        
     }
     .footer{
-    font-size:1em;
+    font-size:1rem;
+    height: 15%;
+
     }
 
     .informationFooter{
-    width: 50%;
-    font-size: 18px;
+    width: 80%;
+    
+   
     }
+
     .begin {
     margin-left: 35%;
     display: initial;
-    margin-top: -30%;
+    margin-top: -50%;
     border: 2px solid black;
     
         }
