@@ -1,4 +1,4 @@
-import { filterTypePokemon, sortData } from './data.js';
+import { filterTypePokemon } from './data.js';
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -95,5 +95,8 @@ showPokemons(pokemons)
 orderingElements.addEventListener('change' , showPokemonSorted , false)
 
 
+ orderingElements.addEventListener('change' ,)
+}
+ 
 
 
