@@ -1,4 +1,4 @@
-import { filterTypePokemon, sortData } from './data.js';
+import { filterTypePokemon } from './data.js';
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -59,34 +59,31 @@ const clearDiv = () => {
 
 const selectElementPlants = document.querySelector('.select-dues');
 
-const route = (start) => {
-
- start.forEach(pokemon => createPokemonDiv(pokemon)) ;
-     
-}
-
 selectElementPlants.addEventListener('change', (event) => {
     clearDiv()
 pokemons = filterTypePokemon(event.target.value);
   //returnElements(event.target.value);
   console.log(pokemons);
   
-route(pokemons) 
+  for(let i = 0; i < pokemons.length; i++){
+    createPokemonDiv(pokemons[i]);
+}
 }
 );
 
-route(pokemons) 
+for(let i = 0; i < pokemons.length; i++){
+    createPokemonDiv(pokemons[i]);
+}
 
  const orderingElements = document.getElementById('order') 
 
  const getOrder= (event) => {
-     
-pokemons = sortData(event.target.value);  
- 
+
+ sortList() 
+
+
+ orderingElements.addEventListener('change' ,)
 }
  
-orderingElements.addEventListener('change' , getOrder)
-
-
 
 
