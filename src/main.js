@@ -3,10 +3,6 @@ import { filterTypePokemon } from './data.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-let pokemons = dataPokemon.pokemon
-console.log(dataPokemon);
-
-
 const start =  document.getElementById('start');
 
 const togo = () => {
@@ -59,27 +55,44 @@ const clearDiv = () => {
 
 const selectElementPlants = document.querySelector('.select-dues');
 
+// se crea esta función para mostrar los pokemos show es "mostrar" , y decimos que :
+// showPokemons , recibe un parametro (pokemonsList) que ese parametro se esta mandando a recorrer con el forEach.
+const showPokemons = (pokemonList) => { 
+    //clearDiv es para limpiar la lista completa de los pokemons , y por eso se le agregar el createPokemonDiv para que los vaya creando uno a uno.
+    clearDiv() 
+    // a pokemonList, se le hace el recorrido con un forEach donde se crea un nuevo div de cada pokemon.
+    pokemonList.forEach(pokemon => createPokemonDiv(pokemon)) ;
+     
+}
+
 selectElementPlants.addEventListener('change', (event) => {
-    clearDiv()
-pokemons = filterTypePokemon(event.target.value);
+    
+const pokemons = filterTypePokemon(event.target.value);
   //returnElements(event.target.value);
   console.log(pokemons);
   
-  for(let i = 0; i < pokemons.length; i++){
-    createPokemonDiv(pokemons[i]);
-}
+  showPokemons(pokemons) 
 }
 );
-
-for(let i = 0; i < pokemons.length; i++){
-    createPokemonDiv(pokemons[i]);
-}
-
+// aqui llamamos la función y le decimos que nos muestre los pokemon de la dataPokemon.Pokemon 
+showPokemons(dataPokemon.pokemon) 
+ 
+//Creamos esta función para ordenar los elementos , que estamos llamando del html de id order
  const orderingElements = document.getElementById('order') 
 
- const getOrder= (event) => {
+// permite mostrar los pokemon ordenados en la pantalla, y le pasamos el parametro del event que es el cambio 'change' que el usuario quiere ver.
+const showPokemonSorted = (event) => {
 
- sortList() 
+// en esta función le decimos a sortData que nos ordene, en este caso el event es cuando cada vez que hago click  me cambie a lo que quiero ordenar
+// el target es el objetivo que quiero que me traiga desde el html con su value que es el orden que quiere ver el usuario . ejemplo "ordenarAZ"
+const pokemons = sortData(event.target.value);  
+
+console.log(pokemons)
+showPokemons(pokemons)
+}
+
+ 
+orderingElements.addEventListener('change' , showPokemonSorted , false)
 
 
  orderingElements.addEventListener('change' ,)
