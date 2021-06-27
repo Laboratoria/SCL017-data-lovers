@@ -14,40 +14,82 @@ elements = dataPokemon.pokemon
   } 
   
   console.log(typeElement);
-  return elements;
-   
+  return elements; 
 } 
-// ordenar la data pokemon 
-export const sortData = (orderValue) => {
 
-  // Ordenando alfabeticamente de forma ascendente A-Z
-const sortNameAlphabetically = dataPokemon.pokemon.sort((a, b) => {
-  if(a.name < b.name) return 1;
-  if(a.name > b.name) return -1;
+// creando función para ordenar alfabeticamente de forma ascendente A-Z
+const sortNameAlphabetically = (dataList) => {
 
-  else return 0;
-})
-
-
-// Ordenando alfabeticamente de forma descendente Z-A
-const sortAlphabeticallyInReverse= dataPokemon.pokemon.sort((b, a) => {
-
+  //creamos otra constante para guardar el resultado de la función
+  const result = dataList.sort((a, b) => {
   if(a.name < b.name) return -1;
   if(a.name > b.name) return 1;
 
-  else return 0; 
-})
+  else return 0;
+});
+return result; 
 
-// Ordenando por numero de ID numero inferior 
-const pokemonNumber = dataPokemon.pokemon.sort((a, b) => a.num - b.num)
-
-
-
-// Ordenando por numero de ID numero superior
-const pokemonNumberReverse = dataPokemon.pokemon.sort((a, b) => b.num - a.num) 
- 
-if ( orderValue === "ordenarAZ") {
-  return sortAlphabeticallyInReverse
-    } 
-    console.log(orderValue)
 }
+
+ // creando función para ordenar alfabeticamente de forma descendente Z-A
+const sortAlphabeticallyInReverse = (dataList) => {
+
+//creamos otra constante para guardar el resultado de la función
+ const result = dataList.sort((a, b) => {
+  if(a.name < b.name) return 1;
+  if(a.name > b.name) return -1;
+
+  else return 0; 
+  
+});
+return result; 
+}
+
+// creando función para Ordenar por numero de ID numero inferior 
+const pokemonNumber = (dataList) => {
+
+  //creamos otra constante para guardar el resultado de la función
+const result = dataList.sort((a, b) => a.num - b.num);
+
+return result;
+}
+
+// creando función para ordenar por numero de ID numero superior
+const pokemonNumberReverse = (dataList) => {
+
+//creamos otra constante para guardar el resultado de la función
+const result = dataList.sort((a, b) => b.num - a.num);
+
+return result;
+}
+
+// sortData ordenar la data pokemon 
+export const sortData = (orderValue) => {
+ 
+// Creamos estos if (para decir que si orderValue)  que es el parametro que se le esta dando a "sortData" es === a "ordenarAZ"
+// que son mis value que estan en el html , eso me va a retornar el sortNameAlphabetically que son las funicones que se crearon anteriormente.
+// y asi con cada uno de los if que siguen 
+
+  if (orderValue === "ordenarAZ") {
+  return sortNameAlphabetically(dataPokemon.pokemon)
+    } 
+
+
+  else if (orderValue === "ordenarZA") { 
+    return sortAlphabeticallyInReverse(dataPokemon.pokemon)
+   }
+
+
+   else if (orderValue === "NumeroDeIdinferior") {
+   return pokemonNumber(dataPokemon.pokemon)
+   } 
+   
+   else if (orderValue === "NumeroDeIdsuperior") {
+    return pokemonNumberReverse(dataPokemon.pokemon)
+   }
+   
+
+}
+
+
+
