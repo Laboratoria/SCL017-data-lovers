@@ -1,18 +1,27 @@
 // ----------------------------------------------------------
 // Manipulacion de la data de Pokemon 
+//----------------------------------------------------
 import data from './data/pokemon/pokemon.js';
 import initiator from './GeneratorPokemons.js';
 import pokemons from './data.js';
 
-let newOrder = data.pokemon;
-initiator.loadData(newOrder);
 
+
+let newOrder = data.pokemon; // obtenemos data desde el archivo de datos .js
+// Generamos las tarjetas de los pokemon
+for (let i = 0; i < data.pokemon.length; i++) {
+    initiator.loadData(newOrder[i]); 
+}
+
+
+//----------------------------------------------------
 // Manipulación de la tarjeta emergente 
-
+//----------------------------------------------------
 let modals = document.getElementsByClassName("modal");
 let btn = document.getElementsByClassName("myBtn");
 let span = document.getElementsByClassName("close");
-
+// Por cada tarjeta emergente que esta aparezca y desaparezca al hacer click
+// Tambien cerrar si apretamos escape y si tocamos fuera de la tarjeta
 for (let ii = 0; ii < newOrder.length; ii++) {
     btn[ii].onclick = function () {
         modals[ii].style.display = "block";
@@ -38,6 +47,7 @@ for (let ii = 0; ii < newOrder.length; ii++) {
     }
 }
 
+//-------------------------------------------------------
 // Manipulacion del menu lateral 
 
 const openNavBtn = document.getElementById("open-btn");
@@ -56,10 +66,35 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
+//------------------------------------------------------------------------
+//Scroll to top button 
+const mybutton = document.getElementById("top-btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+mybutton.addEventListener("click", topFunction);
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+}
+
+
+//-----------------------------------------------------------------------------
+// Manipulacion de filtros (separamos entre las tarjetas nuevas y antiguas)
+//-----------------------------------------------------------------------------
 let oldcards = document.getElementsByClassName("pokemon-card");
 
-// manipulación del filtro 
-// filtro para orden de nombre y número
+//-----------------------------------------------------------------------------
+// Filtro para ordenar por nombre y numero del pokemon
 for (let e = 0; e < 4; e++) {
     let filter = document.getElementsByName("filter")[e]
     filter.addEventListener('click', function () {
@@ -70,133 +105,10 @@ for (let e = 0; e < 4; e++) {
             }
 
             newOrder = pokemons.sortData(data, filter.value, filter.className);
-            initiator.loadData(newOrder);
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
 
-        };
-    })
-}
-//Filtro para tipos de pokemones
-let listTypes = ["type"];
-let filteredPokemons;
-let counter = 18;
-let index;
-for (let c = 0; c < 18; c++) {
-    let filterTypes = document.getElementsByName("type")[c]
-    filterTypes.addEventListener('click', function () {
-
-        if (!filterTypes.checked) {
-            index = listTypes.indexOf(filterTypes.value);
-            if (index > -1) {
-                listTypes.splice(index, 1);
-            }
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-
-            newOrder = pokemons.filterData(newOrder, listTypes)
-            initiator.loadData(newOrder);
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
-
-            counter += 1
-
-            if (counter == 18) {
-                newOrder = data.pokemon;
-                initiator.loadData(newOrder)
-                modals = document.getElementsByClassName("modal");
-                btn = document.getElementsByClassName("myBtn");
-                span = document.getElementsByClassName("close");
-                for (let ii = 0; ii < newOrder.length; ii++) {
-                    btn[ii].onclick = function () {
-                        modals[ii].style.display = "block";
-                    }
-                    span[ii].onclick = function () {
-                        modals[ii].style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target.classList.contains('modal')) {
-                            for (let modal of modals) {
-                                if (typeof modal.style !== 'undefined') {
-                                    modal.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    window.onkeydown = function (event) {
-                        if (event.key == 'Escape') {
-                            for (let modal of modals) {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-
-            }
-
-        }
-
-        if (filterTypes.checked) {
-            listTypes.push(filterTypes.value);
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-            counter -= 1
-            newOrder = pokemons.filterData(newOrder, listTypes)
-            initiator.loadData(newOrder);
             modals = document.getElementsByClassName("modal");
             btn = document.getElementsByClassName("myBtn");
             span = document.getElementsByClassName("close");
@@ -228,136 +140,9 @@ for (let c = 0; c < 18; c++) {
         }
     })
 }
-//Filtro para tipo de debilidad de pokemones
-let listWeaknesses = ["weaknesses"];
-let filteredPokemons2;
-let counter2 = 18;
-
-for (let c = 0; c < 18; c++) {
-    let filterWeaknesses = document.getElementsByName("weaknesses")[c]
-    filterWeaknesses.addEventListener('click', function () {
-
-        if (!filterWeaknesses.checked) {
-            index = listWeaknesses.indexOf(filterWeaknesses.value);
-            if (index > -1) {
-                listWeaknesses.splice(index, 1);
-            }
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-
-            newOrder = pokemons.filterData(newOrder, listWeaknesses)
-            initiator.loadData(newOrder);
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
-
-            counter2 += 1
-            if (counter2 == 18) {
-                newOrder = data.pokemon;
-                initiator.loadData(newOrder)
-                modals = document.getElementsByClassName("modal");
-                btn = document.getElementsByClassName("myBtn");
-                span = document.getElementsByClassName("close");
-                for (let ii = 0; ii < newOrder.length; ii++) {
-                    btn[ii].onclick = function () {
-                        modals[ii].style.display = "block";
-                    }
-                    span[ii].onclick = function () {
-                        modals[ii].style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target.classList.contains('modal')) {
-                            for (let modal of modals) {
-                                if (typeof modal.style !== 'undefined') {
-                                    modal.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    window.onkeydown = function (event) {
-                        if (event.key == 'Escape') {
-                            for (let modal of modals) {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-
-            }
-
-        }
-
-        if (filterWeaknesses.checked) {
-            listWeaknesses.push(filterWeaknesses.value);
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-            counter2 -= 1
-            newOrder = pokemons.filterData(newOrder, listWeaknesses)
-            initiator.loadData(newOrder);
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
-
-
-        }
-    })
-}
-
-// Filtro para las generaciones de pokemones 
+//-----------------------------------------------------------------------------
+// Filtrando por las generaciones 
 let listGeneration = ["generation"];
-let filteredPokemons3;
 let counter3 = 18;
 
 for (let c = 0; c < 2; c++) {
@@ -372,8 +157,13 @@ for (let c = 0; c < 2; c++) {
             while (oldcards[0]) {
                 oldcards[0].parentNode.removeChild(oldcards[0]);
             }
+            
             newOrder = pokemons.filterData(newOrder, listGeneration)
-            initiator.loadData(newOrder);
+            
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+
             modals = document.getElementsByClassName("modal");
             btn = document.getElementsByClassName("myBtn");
             span = document.getElementsByClassName("close");
@@ -405,7 +195,9 @@ for (let c = 0; c < 2; c++) {
             counter3 += 1
             if (counter3 == 18) {
                 newOrder = data.pokemon;
-                initiator.loadData(newOrder)
+                for (let i = 0; i < newOrder.length; i++) {
+                    initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+                }
                 modals = document.getElementsByClassName("modal");
                 btn = document.getElementsByClassName("myBtn");
                 span = document.getElementsByClassName("close");
@@ -446,7 +238,9 @@ for (let c = 0; c < 2; c++) {
             }
             counter3 -= 1
             newOrder = pokemons.filterData(newOrder, listGeneration)
-            initiator.loadData(newOrder);
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
             modals = document.getElementsByClassName("modal");
             btn = document.getElementsByClassName("myBtn");
             span = document.getElementsByClassName("close");
@@ -478,80 +272,448 @@ for (let c = 0; c < 2; c++) {
         }
     })
 }
+//-----------------------------------------------------------------------------
+//Filtramos por tipo de pokemon
+let listTypes = ["type"];
+let counter = 18;
+let index;
+for (let c = 0; c < 18; c++) {
+    let filterTypes = document.getElementsByName("type")[c]
+    filterTypes.addEventListener('click', function () {
 
+        if (!filterTypes.checked) {
+            index = listTypes.indexOf(filterTypes.value);
+            if (index > -1) {
+                listTypes.splice(index, 1);
+            }
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
 
+            newOrder = pokemons.filterData(newOrder, listTypes)
 
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
 
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
 
-//Scroll to top btn -----------------------------------------------------------------------------
-//Get the button
-const mybutton = document.getElementById("top-btn");
+            counter += 1
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
+            if (counter == 18) {
+                newOrder = data.pokemon;
+                for (let i = 0; i < newOrder.length; i++) {
+                    initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+                }
+                modals = document.getElementsByClassName("modal");
+                btn = document.getElementsByClassName("myBtn");
+                span = document.getElementsByClassName("close");
+                for (let ii = 0; ii < newOrder.length; ii++) {
+                    btn[ii].onclick = function () {
+                        modals[ii].style.display = "block";
+                    }
+                    span[ii].onclick = function () {
+                        modals[ii].style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target.classList.contains('modal')) {
+                            for (let modal of modals) {
+                                if (typeof modal.style !== 'undefined') {
+                                    modal.style.display = 'none';
+                                }
+                            }
+                        }
+                    }
+                    window.onkeydown = function (event) {
+                        if (event.key == 'Escape') {
+                            for (let modal of modals) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
+            }
+
+        }
+
+        if (filterTypes.checked) {
+            listTypes.push(filterTypes.value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter -= 1
+            newOrder = pokemons.filterData(newOrder, listTypes)
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+        }
+    })
 }
+//-----------------------------------------------------------------------------
+//Filtrando por tipo de debilidades
+let listWeaknesses = ["weaknesses"];
+let counter2 = 18;
 
-mybutton.addEventListener("click", topFunction);
+for (let c = 0; c < 18; c++) {
+    let filterWeaknesses = document.getElementsByName("weaknesses")[c]
+    filterWeaknesses.addEventListener('click', function () {
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+        if (!filterWeaknesses.checked) {
+            index = listWeaknesses.indexOf(filterWeaknesses.value);
+            if (index > -1) {
+                listWeaknesses.splice(index, 1);
+            }
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
 
+            newOrder = pokemons.filterData(newOrder, listWeaknesses)
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
 
-// // //Filtrar por nombre
-// //-----------------------------------------------------
-// const input1 = document.getElementById("find-pokemon");
-// const pokename = document.getElementById("pokemon-name");
-// const contenedor = document.getElementById("container");
-
-// let pokeArrayName = [];
-// for (let x = 0; x < data.pokemon.length; x++) {
-//     pokeArrayName[x] = (data.pokemon[x].name);
-// }
-
-// // console.log(pokeArrayName);
-
-// input1.addEventListener("keyup", (event) => {
-//     contenedor.innerHTML = ""
-//     const nombrePoke = event.target.value;
-
-//     const filterPoke = pokeArrayName.filter(pokeArrayName => pokeArrayName.toLowerCase().includes(nombrePoke.toLowerCase()));
-
-//     console.log(filterPoke);
-
-//     for (let j = 0; j < data.pokemon.length; j++) {
-
-//         let idEachPoke = (pokeArrayName[j]);
-
-//         // console.log(idEachPoke);
-        
-//         for (let jj = 0; jj < filterPoke.length; jj++) {
-//             // console.log(filterPoke[jj]);
-//             // console.log(typeof filterPoke[jj]);
-//             if(idEachPoke==filterPoke[jj]){
-//                 console.log("1");
-//                 // document.getElementById(idEachPoke).style.display="block";
+            counter2 += 1
+            if (counter2 == 18) {
+                newOrder = data.pokemon;
+                for (let i = 0; i < newOrder.length; i++) {
+                    initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+                } 
                 
-//             }else{
-//                 console.log(2);
-//                 // document.getElementById(idEachPoke).style.display="none";
-//             }
-//         }
+                modals = document.getElementsByClassName("modal");
+                btn = document.getElementsByClassName("myBtn");
+                span = document.getElementsByClassName("close");
+                for (let ii = 0; ii < newOrder.length; ii++) {
+                    btn[ii].onclick = function () {
+                        modals[ii].style.display = "block";
+                    }
+                    span[ii].onclick = function () {
+                        modals[ii].style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target.classList.contains('modal')) {
+                            for (let modal of modals) {
+                                if (typeof modal.style !== 'undefined') {
+                                    modal.style.display = 'none';
+                                }
+                            }
+                        }
+                    }
+                    window.onkeydown = function (event) {
+                        if (event.key == 'Escape') {
+                            for (let modal of modals) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        if (filterWeaknesses.checked) {
+            listWeaknesses.push(filterWeaknesses.value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter2 -= 1
+            
+            newOrder = pokemons.filterData(newOrder, listWeaknesses);
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+            
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
 
 
-        
-//     }
+        }
+    })
+}
 
-// });
-// // document.getElementById("bulbasaur").style.display="none";
+//-----------------------------------------------------------------------------
+//Filtrando por tipo de resistencias
+let listResistant = ["resistant"];
+let counter4 = 18;
+
+for (let c = 0; c < 18; c++) {
+    let filterResistant = document.getElementsByName("resistant")[c]
+    
+    filterResistant.addEventListener('click', function () {
+
+        if (!filterResistant.checked) {
+            index = listResistant.indexOf(filterResistant.value);
+            if (index > -1) {
+                listResistant.splice(index, 1);
+            }
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+
+            newOrder = pokemons.filterData(newOrder, listResistant)
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+            counter4 += 1
+            if (counter4 == 18) {
+                newOrder = data.pokemon;
+
+                for (let i = 0; i < newOrder.length; i++) {
+                    initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+                }
+
+                modals = document.getElementsByClassName("modal");
+                btn = document.getElementsByClassName("myBtn");
+                span = document.getElementsByClassName("close");
+                for (let ii = 0; ii < newOrder.length; ii++) {
+                    btn[ii].onclick = function () {
+                        modals[ii].style.display = "block";
+                    }
+                    span[ii].onclick = function () {
+                        modals[ii].style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target.classList.contains('modal')) {
+                            for (let modal of modals) {
+                                if (typeof modal.style !== 'undefined') {
+                                    modal.style.display = 'none';
+                                }
+                            }
+                        }
+                    }
+                    window.onkeydown = function (event) {
+                        if (event.key == 'Escape') {
+                            for (let modal of modals) {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        if (filterResistant.checked) {
+            listResistant.push(filterResistant.value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter4 -= 1
+            newOrder = pokemons.filterData(newOrder, listResistant)
+
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+
+            modals = document.getElementsByClassName("modal");
+            btn = document.getElementsByClassName("myBtn");
+            span = document.getElementsByClassName("close");
+            for (let ii = 0; ii < newOrder.length; ii++) {
+                btn[ii].onclick = function () {
+                    modals[ii].style.display = "block";
+                }
+                span[ii].onclick = function () {
+                    modals[ii].style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target.classList.contains('modal')) {
+                        for (let modal of modals) {
+                            if (typeof modal.style !== 'undefined') {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                window.onkeydown = function (event) {
+                    if (event.key == 'Escape') {
+                        for (let modal of modals) {
+                            modal.style.display = 'none';
+                        }
+                    }
+                }
+            }
+
+
+        }
+    })
+}
+
+
+
+//-----------------------------------------------------------------------------
+// Filtrar por nombre
+
+const input1 = document.getElementById("find-pokemon");
+const contenedor = document.getElementById("container");
+
+let pokeArrayName = [];
+for (let x = 0; x < data.pokemon.length; x++) {
+    pokeArrayName[x] = (data.pokemon[x].name);
+}
+
+input1.addEventListener("keyup", (event) => {
+    contenedor.innerHTML = ""
+
+    const nombrePoke = event.target.value;
+
+    const filterPoke = pokemons.findData(pokeArrayName, nombrePoke);
+    // const filterPoke = pokeArrayName.filter(pokeArrayName => pokeArrayName.toLowerCase().includes(nombrePoke.toLowerCase()));
+
+    for (let j = 0; j < data.pokemon.length; j++) {
+
+        let idEachPoke = (pokeArrayName[j]);
+
+        for (let jj = 0; jj < filterPoke.length; jj++) {
+            if (idEachPoke == filterPoke[jj]) {
+                initiator.loadData(newOrder[j]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+                
+            }
+        }
+    }
+});
 
 
 

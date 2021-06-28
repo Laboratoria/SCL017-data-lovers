@@ -11,7 +11,6 @@ En el producto podemos observar información de los primeros 251 pokemon del jue
 
 Tambien se puede filtrar por tipo de pokemon, sus debilidades y resistencias. 
 
-
 ## Historias de usuario (Sprint 1)
 Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de baja y mediana fidelidad respectivos. 
 
@@ -38,7 +37,11 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 * Nos dimos el objetivo de terminar la primera historia de usuario.
 * También maquetamos y pusimos en la página donde estaría la historia de usuario de los filtros de la pagina. 
 * Al quedar con tiempo en el día jueves decidimos investigar lo referente a la historia de usuario referida a como hacer los filtros y también la de la tarjeta emergente con más información. 
-
+## Sprint 3
+* Durante el tercer sprint decidimos hacer los primeros filtros, ademas de asegurar que la tarjeta emergente tuviera toda la informacion. Arreglar lo necesario para que la pagina fuera Responsive.
+## Sprint 4
+* Terminamos el responsive de la página, asegurando que la tarjeta emergente fuera responsive tambien. 
+* Ademas vimos que todos los filtros necesarios estuvieran hechos, además de hacer algunos test y paso del linter.
 
 ***
 

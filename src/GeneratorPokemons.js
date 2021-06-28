@@ -1,19 +1,18 @@
 const initiator = {
     loadData: (datapokemon) => {
-        for (let i = 0; i < datapokemon.length; i++) {
 
             //---------------------------------------------------------------------
             //Generación de la tarjeta pokemon (página principal)
             //---------------------------------------------------------------------
             let card = document.createElement("article");
             card.className = "pokemon-card";
-            card.id = datapokemon[i].name;
+            card.id = datapokemon.name;
             //---------------------------------------------------------------------            
             // Generación de los elementos de la tarjeta pokemon (página principal)
 
             // Generación del nombre del pokemon
             let pokemonName = document.createElement("div");
-            let capitalizedName = datapokemon[i].name.charAt(0).toUpperCase() + datapokemon[i].name.slice(1); // Primera letra mayuscula
+            let capitalizedName = datapokemon.name.charAt(0).toUpperCase() + datapokemon.name.slice(1); // Primera letra mayuscula
             
             // Quito el parentesis del nombre de estos dos pokemons
             if (capitalizedName=="Nidoran ♀ (female)"){
@@ -28,20 +27,20 @@ const initiator = {
 
             //Generación del numero del pokemon
             let pokemonNumber = document.createElement("div");
-            pokemonNumber.innerHTML = datapokemon[i].num;
+            pokemonNumber.innerHTML = datapokemon.num;
             pokemonNumber.className = "pokemon-number";
 
             //Generación de la imagen del pokemon 
             let pokemonImagediv = document.createElement("div");
             let pokemonImage = document.createElement("img");
-            pokemonImage.src = datapokemon[i].img;
+            pokemonImage.src = datapokemon.img;
             pokemonImage.className = "pokemon-image";
             pokemonImagediv.className = "pokemon-image-div";
             pokemonImagediv.appendChild(pokemonNumber); //append el numero a la imagen del pokemon
             pokemonImagediv.appendChild(pokemonImage);
 
             // Generación de los tipos de pokemon 
-            datapokemon[i].type.forEach(function (value) {
+            datapokemon.type.forEach(function (value) {
                 let pokemonType = document.createElement("div");
                 let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1); // Primera letra mayuscula
                 capitalizedType = translateType(capitalizedType); // Traduzco el tipo del pokemon esta en ingles en la data 
@@ -106,11 +105,11 @@ const initiator = {
 
             // Genero la informacion de la rareza del pokemon
             let pokemonRarity = document.createElement("div");
-            pokemonRarity.textContent = "Rareza: " + datapokemon[i]["pokemon-rarity"];
+            pokemonRarity.textContent = "Rareza: " + datapokemon["pokemon-rarity"];
 
             // Genero la informacion de cuanto caminar con los huevos
             let pokemonEgg = document.createElement("p");
-            let pokemonEggInfo = datapokemon[i].egg;
+            let pokemonEggInfo = datapokemon.egg;
             if (pokemonEggInfo == "not in eggs") {
                 pokemonEggInfo = "No en huevos";
             }
@@ -119,16 +118,16 @@ const initiator = {
 
             // Genero la informacion de cuanto caminar con el pokeBuddy para obtener los candies
             let pokeBuddy = document.createElement("p");
-            pokeBuddy.textContent = "Buddy distance: " + datapokemon[i]["buddy-distance-km"] + " km";
+            pokeBuddy.textContent = "Buddy distance: " + datapokemon["buddy-distance-km"] + " km";
 
             // Genero la informacion de la tasa de escape
             let fleeRate = document.createElement("p");
-            let flee = datapokemon[i].encounter["base-flee-rate"];
+            let flee = datapokemon.encounter["base-flee-rate"];
             fleeRate.textContent = "Tasa de escape: " + Math.floor(flee * 100) + "%";
 
             // Genero la informacion de la tasa de captura
             let captureRate = document.createElement("p");
-            let capture = datapokemon[i].encounter["base-capture-rate"];
+            let capture = datapokemon.encounter["base-capture-rate"];
             captureRate.textContent = "Tasa de captura: " + Math.floor(capture * 100) + "%";
 
             // Agrego al div de informacion inicial
@@ -145,7 +144,7 @@ const initiator = {
             modalWeak.nameClass ="modal-weakness";
             modalWeak.innerHTML = "Débil contra: ";
             modalMoreInfo.appendChild(modalWeak);
-            datapokemon[i].weaknesses.forEach(function (value) {
+            datapokemon.weaknesses.forEach(function (value) {
                 let pokemonWeak = document.createElement("div");
                 let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1);
                 capitalizedType = translateType(capitalizedType);
@@ -160,7 +159,7 @@ const initiator = {
             modalResistant.innerHTML = "Resistente a: ";
             modalResistant.nameClass ="modal-resistant";
             modalMoreInfo.appendChild(modalResistant);
-            datapokemon[i].resistant.forEach(function (value) {
+            datapokemon.resistant.forEach(function (value) {
                 let pokemonResistant = document.createElement("div");
                 let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1);
                 capitalizedType = translateType(capitalizedType);
@@ -172,17 +171,17 @@ const initiator = {
 
 
             // Generacion de la siguiente evolución de los pokemon (solo la siguiente)
-            if (datapokemon[i].evolution["next-evolution"] !== undefined) {
+            if (datapokemon.evolution["next-evolution"] !== undefined) {
                 // Genero el elemento de la lista para el nombre de la evolucion (puede haber mas de una evolucion siguiente)
                 let contenidoEvolution = document.createElement("ul");
                 contenidoEvolution.nameClass ="name-evol";
                 contenidoEvolution.textContent = "Evoluciona a:";
                 modalInfoEvolutions.appendChild(contenidoEvolution);
                 // Busco la informacion de las evoluciones (1 o más) y las pongo en la lista (entrega nombre del pokemon y cuantos candies necesita para evolucionar)
-                for (let j = 0; j < datapokemon[i].evolution["next-evolution"].length; j++) {
+                for (let j = 0; j < datapokemon.evolution["next-evolution"].length; j++) {
                     let evolution = document.createElement("li");
-                    let evoNamePoke = datapokemon[i].evolution["next-evolution"][j].name;
-                    evolution.innerHTML = evoNamePoke.charAt(0).toUpperCase() + evoNamePoke.slice(1) +" con " + datapokemon[i].evolution["next-evolution"][j]["candy-cost"] +" dulces";
+                    let evoNamePoke = datapokemon.evolution["next-evolution"][j].name;
+                    evolution.innerHTML = evoNamePoke.charAt(0).toUpperCase() + evoNamePoke.slice(1) +" con " + datapokemon.evolution["next-evolution"][j]["candy-cost"] +" dulces";
                     modalInfoEvolutions.appendChild(evolution);
                 }
 
@@ -209,7 +208,7 @@ const initiator = {
 
             // Envia las tarjetas al contenedor de tarjetas del HTML
             document.getElementById("container").appendChild(card);
-        };
+
 
         //-------------------------------------------------------------------------------------
         // FUNCIONES
