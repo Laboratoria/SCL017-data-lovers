@@ -157,7 +157,7 @@ Manipulacion de las tarjetas del pokemon */
 
 .modal {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     padding-top: 100px;
     left: 7.5%;
