@@ -33,8 +33,9 @@ buttonClick.addEventListener("click", (event) => {
       matchingPoke.onclick = function () {
         pokeStats(poke);
       };
-      matchingPoke.innerHTML = `<p class= "pokeNumber">${poke.num}</p>
-                              <img class="pokeImgList" src="${poke.img}">`;
+      matchingPoke.innerHTML = `<p class= "pokeNumber"> <img class="pokeballImg" src="img/pokeball.png">  N° ${poke.num}</p>
+                                <img class="pokeImgList" src="${poke.img}">
+                                <p class= "pokeName">${poke.name}</p>`;
       document.getElementById("allPokeContainer").appendChild(matchingPoke);
     });
 });

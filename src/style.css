@@ -164,7 +164,50 @@ footer section img{
   overflow: hidden;
   overflow-y: auto;
 }
+#showAllPokemon {
+  background-color: rgba(107, 190, 242, 0.2);
+  display: flex;
+}
+#allPokeContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 10px;
+  max-height: auto;
+  overflow: hidden;
+  overflow-y: auto;
+}
 .pokeListStyle {
-  background-color: cyan;
-  padding: 10px;
+  background: linear-gradient(0deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
+  padding: 20px;
+  margin: 1%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px #0E1426;
+  overflow-x: visible;
+  align-items: center;
+}
+.pokeNumber {
+  background: #03A688;
+  padding: 5px;
+  color: white;
+  font-size: medium;
+  margin: 0px 0px 0px 5px;
+} 
+.pokeName {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: medium;
+  color: white;
+  margin-bottom: 5px;
+}
+.pokeImgList {
+  width: 100px;
+  height: auto;
+  padding-top: 10px;
+  justify-content: center;
+  margin: 0px 0px 0px 15px;
+}
+.pokeballImg {
+  width: 20%;
 }
