@@ -5,17 +5,17 @@
 }
 
 html{
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
   body{
-    background-color:rgba(242, 183, 5, 0.8);
+    background-color:rgba(107, 190, 242, 0.8);
   }
 #firstPage{
   background-image: url(img/lab-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  /* height: 100%; */
 }
 header{
   position: relative;
@@ -24,7 +24,7 @@ header{
   width: 100%;
   min-width: 320px;
   height: auto;
-  background:rgba(107, 190, 242, 0.8);
+  background:rgba(153, 208, 243, 0.959);
 }
 header img{
   width: 160px;
@@ -223,8 +223,7 @@ footer section img{
 .pokemonCard{
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;           
+  align-items: center;         
   background: linear-gradient(0deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
   box-shadow: 4px 4px 4px #0E1426;
   overflow-x: visible;
@@ -244,11 +243,9 @@ footer section img{
   margin-top: 7px;
   width: 80%;
 }
-.card-pokeboll-img{
-  height: 10px;
-}
+
 .pokemonCard h2{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: white;
 
 }
@@ -272,7 +269,7 @@ footer section img{
   margin: 2%;
   font-size: 12px;
 }
-.btn-volver{
+.btn-back{
   width: 40%;
   height: 30px;
   margin: 10% 30%;
