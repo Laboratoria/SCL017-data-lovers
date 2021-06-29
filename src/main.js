@@ -6,7 +6,6 @@ import initiator from './GeneratorPokemons.js';
 import pokemons from './data.js';
 
 let newOrder = data.pokemon; // obtenemos data desde el archivo de datos .js
-
 // Generamos las tarjetas de los pokemon
 for (let i = 0; i < data.pokemon.length; i++) {
     initiator.loadData(newOrder[i]);
@@ -15,35 +14,40 @@ for (let i = 0; i < data.pokemon.length; i++) {
 //----------------------------------------------------
 // Manipulación de la tarjeta emergente 
 //----------------------------------------------------
-let modals = document.getElementsByClassName("modal");
-let btn = document.getElementsByClassName("myBtn");
-let span = document.getElementsByClassName("close");
-// Por cada tarjeta emergente que esta aparezca y desaparezca al hacer click
-// Tambien cerrar si apretamos escape y si tocamos fuera de la tarjeta
-for (let ii = 0; ii < newOrder.length; ii++) {
-    btn[ii].onclick = function () {
-        modals[ii].style.display = "block";
-    }
-    span[ii].onclick = function () {
-        modals[ii].style.display = "none";
-    }
-    window.onclick = function (event) {
-        if (event.target.classList.contains('modal')) {
-            for (let modal of modals) {
-                if (typeof modal.style !== 'undefined') {
+
+function loadModals(newOrder) {
+    let modals = document.getElementsByClassName("modal");
+    let btn = document.getElementsByClassName("myBtn");
+    let span = document.getElementsByClassName("close");
+    // Por cada tarjeta emergente que esta aparezca y desaparezca al hacer click
+    // Tambien cerrar si apretamos escape y si tocamos fuera de la tarjeta
+    for (let ii = 0; ii < newOrder.length; ii++) {
+        btn[ii].onclick = function () {
+            modals[ii].style.display = "block";
+        }
+        span[ii].onclick = function () {
+            modals[ii].style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                for (let modal of modals) {
+                    if (typeof modal.style !== 'undefined') {
+                        modal.style.display = 'none';
+                    }
+                }
+            }
+        }
+        window.onkeydown = function (event) {
+            if (event.key == 'Escape') {
+                for (let modal of modals) {
                     modal.style.display = 'none';
                 }
             }
         }
     }
-    window.onkeydown = function (event) {
-        if (event.key == 'Escape') {
-            for (let modal of modals) {
-                modal.style.display = 'none';
-            }
-        }
-    }
 }
+loadModals(newOrder);
+
 
 //-------------------------------------------------------
 // Manipulacion del menu lateral 
@@ -108,33 +112,7 @@ for (let e = 0; e < 4; e++) {
                 initiator.loadData(newOrder[i]);
             }
 
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
         }
     })
@@ -163,33 +141,7 @@ for (let c = 0; c < 2; c++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
 
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
             counter3 += 1
             if (counter3 == 18) {
@@ -197,33 +149,7 @@ for (let c = 0; c < 2; c++) {
                 for (let i = 0; i < newOrder.length; i++) {
                     initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
                 }
-                modals = document.getElementsByClassName("modal");
-                btn = document.getElementsByClassName("myBtn");
-                span = document.getElementsByClassName("close");
-                for (let ii = 0; ii < newOrder.length; ii++) {
-                    btn[ii].onclick = function () {
-                        modals[ii].style.display = "block";
-                    }
-                    span[ii].onclick = function () {
-                        modals[ii].style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target.classList.contains('modal')) {
-                            for (let modal of modals) {
-                                if (typeof modal.style !== 'undefined') {
-                                    modal.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    window.onkeydown = function (event) {
-                        if (event.key == 'Escape') {
-                            for (let modal of modals) {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
+                loadModals(newOrder);
 
             }
 
@@ -240,33 +166,7 @@ for (let c = 0; c < 2; c++) {
             for (let i = 0; i < newOrder.length; i++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
         }
     })
@@ -296,33 +196,7 @@ for (let c = 0; c < 18; c++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
 
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
             counter += 1
 
@@ -331,33 +205,7 @@ for (let c = 0; c < 18; c++) {
                 for (let i = 0; i < newOrder.length; i++) {
                     initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
                 }
-                modals = document.getElementsByClassName("modal");
-                btn = document.getElementsByClassName("myBtn");
-                span = document.getElementsByClassName("close");
-                for (let ii = 0; ii < newOrder.length; ii++) {
-                    btn[ii].onclick = function () {
-                        modals[ii].style.display = "block";
-                    }
-                    span[ii].onclick = function () {
-                        modals[ii].style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target.classList.contains('modal')) {
-                            for (let modal of modals) {
-                                if (typeof modal.style !== 'undefined') {
-                                    modal.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    window.onkeydown = function (event) {
-                        if (event.key == 'Escape') {
-                            for (let modal of modals) {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
+                loadModals(newOrder);
 
             }
 
@@ -374,33 +222,7 @@ for (let c = 0; c < 18; c++) {
             for (let i = 0; i < newOrder.length; i++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
         }
     })
@@ -428,33 +250,7 @@ for (let c = 0; c < 18; c++) {
             for (let i = 0; i < newOrder.length; i++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
             counter2 += 1
             if (counter2 == 18) {
@@ -463,33 +259,7 @@ for (let c = 0; c < 18; c++) {
                     initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
                 }
 
-                modals = document.getElementsByClassName("modal");
-                btn = document.getElementsByClassName("myBtn");
-                span = document.getElementsByClassName("close");
-                for (let ii = 0; ii < newOrder.length; ii++) {
-                    btn[ii].onclick = function () {
-                        modals[ii].style.display = "block";
-                    }
-                    span[ii].onclick = function () {
-                        modals[ii].style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target.classList.contains('modal')) {
-                            for (let modal of modals) {
-                                if (typeof modal.style !== 'undefined') {
-                                    modal.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    window.onkeydown = function (event) {
-                        if (event.key == 'Escape') {
-                            for (let modal of modals) {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
+                loadModals(newOrder);
 
             }
 
@@ -508,33 +278,7 @@ for (let c = 0; c < 18; c++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
 
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
 
         }
@@ -562,38 +306,12 @@ for (let c = 0; c < 18; c++) {
             }
 
             newOrder = pokemons.filterData(newOrder, listResistant);
-            
+
             for (let i = 0; i < newOrder.length; i++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
 
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
             counter4 += 1
             if (counter4 == 18) {
@@ -603,33 +321,7 @@ for (let c = 0; c < 18; c++) {
                     initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
                 }
 
-                modals = document.getElementsByClassName("modal");
-                btn = document.getElementsByClassName("myBtn");
-                span = document.getElementsByClassName("close");
-                for (let ii = 0; ii < newOrder.length; ii++) {
-                    btn[ii].onclick = function () {
-                        modals[ii].style.display = "block";
-                    }
-                    span[ii].onclick = function () {
-                        modals[ii].style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target.classList.contains('modal')) {
-                            for (let modal of modals) {
-                                if (typeof modal.style !== 'undefined') {
-                                    modal.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    window.onkeydown = function (event) {
-                        if (event.key == 'Escape') {
-                            for (let modal of modals) {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
+                loadModals(newOrder);
 
             }
 
@@ -648,33 +340,7 @@ for (let c = 0; c < 18; c++) {
                 initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
             }
 
-            modals = document.getElementsByClassName("modal");
-            btn = document.getElementsByClassName("myBtn");
-            span = document.getElementsByClassName("close");
-            for (let ii = 0; ii < newOrder.length; ii++) {
-                btn[ii].onclick = function () {
-                    modals[ii].style.display = "block";
-                }
-                span[ii].onclick = function () {
-                    modals[ii].style.display = "none";
-                }
-                window.onclick = function (event) {
-                    if (event.target.classList.contains('modal')) {
-                        for (let modal of modals) {
-                            if (typeof modal.style !== 'undefined') {
-                                modal.style.display = 'none';
-                            }
-                        }
-                    }
-                }
-                window.onkeydown = function (event) {
-                    if (event.key == 'Escape') {
-                        for (let modal of modals) {
-                            modal.style.display = 'none';
-                        }
-                    }
-                }
-            }
+            loadModals(newOrder);
 
 
         }
@@ -702,6 +368,8 @@ input1.addEventListener("keyup", (event) => {
     const filterPoke = pokemons.findData(pokeArrayName, nombrePoke);
     // const filterPoke = pokeArrayName.filter(pokeArrayName => pokeArrayName.toLowerCase().includes(nombrePoke.toLowerCase()));
 
+    let posicionPoke = [];
+
     for (let j = 0; j < data.pokemon.length; j++) {
 
         let idEachPoke = (pokeArrayName[j]);
@@ -709,11 +377,20 @@ input1.addEventListener("keyup", (event) => {
         for (let jj = 0; jj < filterPoke.length; jj++) {
             if (idEachPoke == filterPoke[jj]) {
 
-                initiator.loadData(newOrder[j]);
+                // initiator.loadData(newOrder[j]);
+                posicionPoke[jj] = j;
+
             }
-            
+
         }
     }
+
+    for (let jjj = 0; jjj < posicionPoke.length; jjj++) {
+        initiator.loadData(newOrder[posicionPoke[jjj]]);
+    }
+
+
+    loadModals(newOrder);
 });
 
 
