@@ -25,29 +25,29 @@
       <br>
       <input type="text" name="find" id="find-pokemon" autocomplete="off" placeholder="Buscar Pokemón"><br>
       <br>
-      <h2 id="order">Ordenar por</h2> <br>
-      <h3>Nombre</h3>
+      <h2 id="order">Ordenar por:</h2> <br>
+      <h3 class="order-type">Nombre</h3>
       <br>
       <ul class="filter-list" id="name-filter-list">
         <input class="upwardFilter" type="radio" name="filter" value="name"> Ascendente<br>
         <input class="downwardFilter" type="radio" name="filter" value="name"> Descendente<br>
       </ul>
       <br>
-      <h3>Número</h3>
+      <h3 class="order-type">Número</h3>
       <br>
       <ul class="filter-list" id="number-filter-list">
         <input class="upwardFilter" type="radio" name="filter" value="num"> Ascendente<br>
         <input class="downwardFilter" type="radio" name="filter" value="num"> Descendente<br>
       </ul>
       <br>
-      <h2 id="filter">Filtrar por</h2>
+      <h2 id="filter">Filtrar por:</h2>
       <br>
       <details>
         <summary>Generación</summary>
         <br>
         <ul class="filter-list" id="gen-filter-list">
-          <input value="kanto" type="radio" name="generation"> Gen I: Kanto <br>
-          <input value="johto" type="radio" name="generation"> Gen II: Johto <br>
+          <input value="kanto" type="checkbox" name="generation"> Gen I: Kanto <br>
+          <input value="johto" type="checkbox" name="generation"> Gen II: Johto <br>
         </ul>
       </details>
       <br>
@@ -55,29 +55,29 @@
         <summary>Tipo</summary>
         <br>
         <ul class="filter-list" id="type-filter-list">
-          <input value="water" type="radio" name="type"> Agua <br>
-          <input value="bug" type="radio" name="type"> Bicho <br>
-          <input value="dragon" type="radio" name="type"> Dragón <br>
+          <input value="water" type="checkbox" name="type"> Agua <br>
+          <input value="bug" type="checkbox" name="type"> Bicho <br>
+          <input value="dragon" type="checkbox" name="type"> Dragón <br>
           <br class="short-break">
-          <input value="electric" type="radio" name="type"> Eléctrico <br>
-          <input value="ghost" type="radio" name="type"> Fantasma<br>
-          <input value="fire" type="radio" name="type"> Fuego <br>
+          <input value="electric" type="checkbox" name="type"> Eléctrico <br>
+          <input value="ghost" type="checkbox" name="type"> Fantasma<br>
+          <input value="fire" type="checkbox" name="type"> Fuego <br>
           <br class="short-break">
-          <input value="fairy" type="radio" name="type"> Hada <br>
-          <input value="ice" type="radio" name="type"> Hielo <br>
-          <input value="grass" type="radio" name="type"> Hierba <br>
+          <input value="fairy" type="checkbox" name="type"> Hada <br>
+          <input value="ice" type="checkbox" name="type"> Hielo <br>
+          <input value="grass" type="checkbox" name="type"> Hierba <br>
           <br class="short-break">
-          <input value="fighting" type="radio" name="type"> Luchador <br>
-          <input value="steel" type="radio" name="type"> Metal <br>
-          <input value="normal" type="radio" name="type"> Normal <br>
+          <input value="fighting" type="checkbox" name="type"> Luchador <br>
+          <input value="steel" type="checkbox" name="type"> Metal <br>
+          <input value="normal" type="checkbox" name="type"> Normal <br>
           <br class="short-break">
-          <input value="psychic" type="radio" name="type"> Psíquico <br>
-          <input value="rock" type="radio" name="type"> Roca <br>
-          <input value="dark" type="radio" name="type"> Siniestro <br>
+          <input value="psychic" type="checkbox" name="type"> Psíquico <br>
+          <input value="rock" type="checkbox" name="type"> Roca <br>
+          <input value="dark" type="checkbox" name="type"> Siniestro <br>
           <br class="short-break">
-          <input value="ground" type="radio" name="type"> Tierra <br>
-          <input value="poison" type="radio" name="type"> Veneno <br>
-          <input value="flying" type="radio" name="type"> Volador <br>
+          <input value="ground" type="checkbox" name="type"> Tierra <br>
+          <input value="poison" type="checkbox" name="type"> Veneno <br>
+          <input value="flying" type="checkbox" name="type"> Volador <br>
         </ul>
       </details>
       <br>
@@ -85,29 +85,29 @@
         <summary> Debilidad </summary>
         <br>
         <ul class="filter-list" id="weaknesses-filter-list">
-          <input value="water" type="radio" name="weaknesses"> Agua <br>
-          <input value="bug" type="radio" name="weaknesses"> Bicho <br>
-          <input value="dragon" type="radio" name="weaknesses"> Dragón <br>
+          <input value="water" type="checkbox" name="weaknesses"> Agua <br>
+          <input value="bug" type="checkbox" name="weaknesses"> Bicho <br>
+          <input value="dragon" type="checkbox" name="weaknesses"> Dragón <br>
           <br class="short-break">
-          <input value="electric" type="radio" name="weaknesses"> Eléctrico <br>
-          <input value="ghost" type="radio" name="weaknesses"> Fantasma<br>
-          <input value="fire" type="radio" name="weaknesses"> Fuego <br>
+          <input value="electric" type="checkbox" name="weaknesses"> Eléctrico <br>
+          <input value="ghost" type="checkbox" name="weaknesses"> Fantasma<br>
+          <input value="fire" type="checkbox" name="weaknesses"> Fuego <br>
           <br class="short-break">
-          <input value="fairy" type="radio" name="weaknesses"> Hada <br>
-          <input value="ice" type="radio" name="weaknesses"> Hielo <br>
-          <input value="grass" type="radio" name="weaknesses"> Hierba <br>
+          <input value="fairy" type="checkbox" name="weaknesses"> Hada <br>
+          <input value="ice" type="checkbox" name="weaknesses"> Hielo <br>
+          <input value="grass" type="checkbox" name="weaknesses"> Hierba <br>
           <br class="short-break">
-          <input value="fighting" type="radio" name="weaknesses"> Luchador <br>
-          <input value="steel" type="radio" name="weaknesses"> Metal <br>
-          <input value="normal" type="radio" name="weaknesses"> Normal <br>
+          <input value="fighting" type="checkbox" name="weaknesses"> Luchador <br>
+          <input value="steel" type="checkbox" name="weaknesses"> Metal <br>
+          <input value="normal" type="checkbox" name="weaknesses"> Normal <br>
           <br class="short-break">
-          <input value="psychic" type="radio" name="weaknesses"> Psíquico <br>
-          <input value="rock" type="radio" name="weaknesses"> Roca <br>
-          <input value="dark" type="radio" name="weaknesses"> Siniestro <br>
+          <input value="psychic" type="checkbox" name="weaknesses"> Psíquico <br>
+          <input value="rock" type="checkbox" name="weaknesses"> Roca <br>
+          <input value="dark" type="checkbox" name="weaknesses"> Siniestro <br>
           <br class="short-break">
-          <input value="ground" type="radio" name="weaknesses"> Tierra <br>
-          <input value="poison" type="radio" name="weaknesses"> Veneno <br>
-          <input value="flying" type="radio" name="weaknesses"> Volador <br>
+          <input value="ground" type="checkbox" name="weaknesses"> Tierra <br>
+          <input value="poison" type="checkbox" name="weaknesses"> Veneno <br>
+          <input value="flying" type="checkbox" name="weaknesses"> Volador <br>
         </ul>
       </details>
       <br>
@@ -115,29 +115,29 @@
         <summary> Resistente </summary>
         <br>
         <ul class="filter-list" id="resistant-filter-list">
-          <input value="water" type="radio" name="resistant"> Agua <br>
-          <input value="bug" type="radio" name="resistant"> Bicho <br>
-          <input value="dragon" type="radio" name="resistant"> Dragón <br>
+          <input value="water" type="checkbox" name="resistant"> Agua <br>
+          <input value="bug" type="checkbox" name="resistant"> Bicho <br>
+          <input value="dragon" type="checkbox" name="resistant"> Dragón <br>
           <br class="short-break">
-          <input value="electric" type="radio" name="resistant"> Eléctrico <br>
-          <input value="ghost" type="radio" name="resistant"> Fantasma<br>
-          <input value="fire" type="radio" name="resistant"> Fuego <br>
+          <input value="electric" type="checkbox" name="resistant"> Eléctrico <br>
+          <input value="ghost" type="checkbox" name="resistant"> Fantasma<br>
+          <input value="fire" type="checkbox" name="resistant"> Fuego <br>
           <br class="short-break">
-          <input value="fairy" type="radio" name="resistant"> Hada <br>
-          <input value="ice" type="radio" name="resistant"> Hielo <br>
-          <input value="grass" type="radio" name="resistant"> Hierba <br>
+          <input value="fairy" type="checkbox" name="resistant"> Hada <br>
+          <input value="ice" type="checkbox" name="resistant"> Hielo <br>
+          <input value="grass" type="checkbox" name="resistant"> Hierba <br>
           <br class="short-break">
-          <input value="fighting" type="radio" name="resistant"> Luchador <br>
-          <input value="steel" type="radio" name="resistant"> Metal <br>
-          <input value="normal" type="radio" name="resistant"> Normal <br>
+          <input value="fighting" type="checkbox" name="resistant"> Luchador <br>
+          <input value="steel" type="checkbox" name="resistant"> Metal <br>
+          <input value="normal" type="checkbox" name="resistant"> Normal <br>
           <br class="short-break">
-          <input value="psychic" type="radio" name="resistant"> Psíquico <br>
-          <input value="rock" type="radio" name="resistant"> Roca <br>
-          <input value="dark" type="radio" name="resistant"> Siniestro <br>
+          <input value="psychic" type="checkbox" name="resistant"> Psíquico <br>
+          <input value="rock" type="checkbox" name="resistant"> Roca <br>
+          <input value="dark" type="checkbox" name="resistant"> Siniestro <br>
           <br class="short-break">
-          <input value="ground" type="radio" name="resistant"> Tierra <br>
-          <input value="poison" type="radio" name="resistant"> Veneno <br>
-          <input value="flying" type="radio" name="resistant"> Volador <br>
+          <input value="ground" type="checkbox" name="resistant"> Tierra <br>
+          <input value="poison" type="radcheckboxio" name="resistant"> Veneno <br>
+          <input value="flying" type="checkbox" name="resistant"> Volador <br>
         </ul>
       </details>
       <br>
