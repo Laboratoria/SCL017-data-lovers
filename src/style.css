@@ -180,7 +180,6 @@ footer section img{
 }
 .pokeListStyle {
   background: linear-gradient(0deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
-  padding: 20px;
   margin: 1%;
   border-radius: 10px;
   box-shadow: 4px 4px 4px #0E1426;
@@ -192,8 +191,9 @@ footer section img{
   padding: 5px;
   color: white;
   font-size: medium;
-  margin: 0px 0px 0px 5px;
-} 
+  margin: 0px 0px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+ } 
 .pokeName {
   text-transform: capitalize;
   text-align: center;
