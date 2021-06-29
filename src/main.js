@@ -20,7 +20,8 @@ inputValue.addEventListener("keyup", (event) => {
           pokeStatsContainer.innerHTML = `
         
             <div class="pokemonCard">
-              <p class="poke-card-num">#${poke.num}</p>
+            
+              <p class="poke-card-num"> <img class="card-pokeboll-img" src="img/pokeball.png"> #${poke.num}</p> 
               <h2>${poke.name}</h2>
               <img src="${poke.img}">
               <div class="card-square-info">
@@ -30,7 +31,7 @@ inputValue.addEventListener("keyup", (event) => {
                 <p class="poke-card-resistance"> Debil frente a: ${poke.weaknesses}</p>
               </div>
             </div>
-            <button type="button" class="btn" id="btn-volver">Vuelve a atrás</button>
+            <button type="button" class="btn-volver" id="btn-volver">Vuelve a atrás</button>
           
           `;
         };

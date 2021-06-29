@@ -1,5 +1,6 @@
   #firstPage {
     background-image: url(img/lab-desktop.jpg);
+    
   }
   header{
     min-width: 1200px;
@@ -18,7 +19,7 @@
   }
   main {
     width: 50%;
-    margin: -20px 0px 20px 450px;  
+   margin-left: 43%;
   }
   main section h3 {
     font-size: 25px;

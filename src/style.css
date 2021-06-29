@@ -45,11 +45,10 @@ header img{
 }
 main {
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  justify-items: right;
 }
 .square{
-  background: rgba(14, 20, 38, 0.3);
+  background: rgba(14, 20, 38, 0.4);
   align-self: center;
   border-radius: 20px;
   padding: 20px;
@@ -88,8 +87,8 @@ main section p {
   background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
 footer {
-  position:relative; 
-  width: 100%;
+  position:inherit;
+  height: 5%;
   padding: 10px;
   min-width: 320px;
   background: rgba(242, 183, 5, 0.8);
@@ -226,8 +225,9 @@ footer section img{
   flex-flow: column;
   align-items: center;
   justify-content: center;           
-  background-color:rgba(107, 190, 242);
-  border: 1px solid #000;
+  background: linear-gradient(0deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
+  box-shadow: 4px 4px 4px #0E1426;
+  overflow-x: visible;
   border-radius: 5px;
 }
 /* .pokemonCard img{
@@ -236,8 +236,16 @@ footer section img{
 } */
 .poke-card-num{
   font-size: 1.2em;
+  text-align: center;
   color: white;
   font-style: bold;
+  background: #03A688;
+  padding: 5px;
+  margin-top: 7px;
+  width: 80%;
+}
+.card-pokeboll-img{
+  height: 10px;
 }
 .pokemonCard h2{
   font-size: 2.5rem;
@@ -263,4 +271,13 @@ footer section img{
 .poke-card-resistance{
   margin: 2%;
   font-size: 12px;
+}
+.btn-volver{
+  width: 40%;
+  height: 30px;
+  margin: 10% 30%;
+  border-radius: 15px;
+  color: white;
+  font-size: 15px;
+  background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
