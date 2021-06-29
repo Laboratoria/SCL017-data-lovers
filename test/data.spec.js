@@ -34,10 +34,15 @@ describe('pokemons.findData', () => {
   });
 });
 
-const ArrayNameTest = ["bulbasaur", "charmander", "sunkern", "yanma"];
+// const ArrayNameTest = ["bulbasaur", "charmander", "sunkern", "yanma"];
+// describe('pokemons.findData', () => {
+//   it('should return "bulbasaur,charmander,yanma" when nombrePoke = a', () => {
+//     expect(pokemons.findData(ArrayNameTest, "a")).toStrictEqual(["bulbasaur","charmander","yanma"]);
+//   });
+// });
 
-describe('pokemons.findData', () => {
-  it('should return "bulbasaur,charmander,yanma" when nombrePoke = a', () => {
-    expect(pokemons.findData(ArrayNameTest, "a"));
-  });
-});
+// describe('pokemons.findData', () => {
+//   it('should return "charmander" when nombrePoke = char', () => {
+//     expect(pokemons.findData(ArrayNameTest, "char")).toStrictEqual(["charmander"]);
+//   });
+// });
