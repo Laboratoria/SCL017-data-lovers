@@ -1,9 +1,5 @@
 import dataPokemon from './data/pokemon/pokemon.js';
 
-export let returnElements = function(nombre){
-    
-}
-
 export let filterTypePokemon = function(typeElement){
   let elements = dataPokemon.pokemon.filter((pokemon) =>  {
       return pokemon.type.indexOf(typeElement) != -1;
@@ -88,6 +84,18 @@ export const sortData = (orderValue) => {
     return pokemonNumberReverse(dataPokemon.pokemon)
    }
    
+
+}
+
+export const calculator = (numberOfTypesOfPokemon) => {
+
+const totalPokemons = dataPokemon.pokemon.length 
+
+const base = 100;
+
+const ruleOfThree = base * numberOfTypesOfPokemon / totalPokemons; 
+
+return ruleOfThree.toFixed(2);
 
 }
 
