@@ -1,5 +1,6 @@
   #firstPage {
     background-image: url(img/lab-desktop.jpg);
+    
   }
   header{
     min-width: 1200px;
@@ -18,7 +19,7 @@
   }
   main {
     width: 50%;
-    margin: -20px 0px 20px 450px;  
+   margin-left: 43%;
   }
   main section h3 {
     font-size: 25px;
@@ -57,6 +58,40 @@
     width: 120px;
     height: 40px;
   }
+  .pokemonCard{
+    margin: 5% 10%;
+  }
+  .poke-card-num{
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
   
-
-
+  .pokemonCard h2{
+    font-size: 2.5rem;
+    color: white;
+  }
+ .pokemonCard img{
+   width: 250px;
+  }
+  .card-square-info{
+    margin: 1%;
+    padding: 2%;
+  }
+  .poke-card-type{
+    font-size: 40px;
+  }
+  .pokemon-card-about{
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .poke-card-resistance{
+    font-size: 38px;
+  }
+  .btn-back{
+    width: 40%;
+    height: 50px;
+    margin: 5% 30%;
+    border-radius: 15px;
+    color: white;
+    font-size: 38px;
+  }
