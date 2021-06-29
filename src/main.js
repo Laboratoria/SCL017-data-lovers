@@ -39,6 +39,12 @@ searchPo.addEventListener("keyup",(e)=> {
                 </div>
             </div>`
     }
+
+if(searchString==""){
+    return bringData; 
+
+}
+
 });
 
 
@@ -60,7 +66,8 @@ function bringData() {
                         <p>${ " Type : "  +  pokemon[i].type}</p>
                         <p>${ " Region : " + pokemon[i].generation.name}</p>
                         <p>${ " Eggs : " + pokemon[i].egg}<p>
-                        <p>${pokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>        
+                        <p>${ "Candys: " + pokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p> 
+                        <p>${ "Max CP: " + pokemon[i].stats['max-cp']}</p>       
                </div>; 
                 </div>
             
