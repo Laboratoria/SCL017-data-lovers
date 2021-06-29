@@ -13,6 +13,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
+    font-family: Arial;
 }
 
 header {
@@ -76,21 +77,23 @@ footer {
     background-color: rgba(37, 65, 178, 0.9);
     color: #FFFFFF;
     text-align: center;
+    font-size: 80%;
+    padding: 2px;
 }
 
 #top-btn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 35px;
+    right: 20px;
     z-index: 99;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     outline: none;
     background-color: red;
     color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 6px;
     border-radius: 4px;
 }
 

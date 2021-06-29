@@ -42,22 +42,29 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 * Ademas vimos que todos los filtros necesarios estuvieran hechos, además de hacer algunos test y paso del linter.
 
 ## Test de usabilidad #1
+### Cosas que decidimos no cambiar 
 * El título confunde, quizás poner "virtual pokedex" envés.
-* Cambiar "evoluciona a"  por "siguiente evolución".
-* Agregar la preevolución a las tarjetas emergentes y si este no tiene evolución siguiente o previa poner igual el dato, pero con "---".
+* En las pantallas más pequeñas se ve mal que este todo con margin left 0. 
+
+### Done
 * El boton "Más" debería tener un pointer o hover o algo más que indique que se pueda clickear.
 * No se ven bien los titulos del sidebar, poner alguno subrayado o con color diferente.
-* Agregar el disclaimer de la página.
-* Si tengo algun tipo o debilidad ya elegida, al hacer click en los orden me lo resetea todo (se sale la info del clickeo de tipo o debilidad). Si vuelvo a hacer click en un tipo o debilidad se suma a la puesta anteriormente. 
-* Las "x" para cerrar estan muy pequeñas.
-* En las pantallas más pequeñas se ve mal que este todo con margin left 0. 
-* La tarjeta emergente no baja en los celulares (responsivly).
+* Cambiar "evoluciona a"  por "siguiente evolución".
+* Agregar la preevolución a las tarjetas emergentes y si este no tiene evolución siguiente o previa poner igual el dato, pero con "---".
 * El botón "Top" es muy grande en los celulares y se sobrepone al "Más" del último pokemon.
 * La mitad del botón "Top" desaparece al poner motoG4 en opera. Pareciera que las pantallas de la app responsivly son unos cuantos pixeles más grandes que las que entrega opera.
-* Al hacer click fuera de la sidebar que esta se cierre. 
+* Agregar el disclaimer de la página.
+* El contenedor de la tarjeta emergente no deja que al hacer click fuera de la tarjeta esta se cierre, en los costados ocurre esto.
 * Aparece la tilde de la o de dragon a un lado de la vocal.
-* El contenedor de la tarjeta emergente no deja que al hacer click fuera de la tarjeta esta se cierre, en los costados ocurre esto. 
 * Cuando estoy en responsively app, no sale cuando pongo "más" en en CELEBI.
+
+### Cosas que se decidieron cambiar
+
+* Las "x" para cerrar estan muy pequeñas.
+* La tarjeta emergente no baja en los celulares (responsivly).
+ 
+* Si tengo algun tipo o debilidad ya elegida, al hacer click en los orden me lo resetea todo (se sale la info del clickeo de tipo o debilidad). Si vuelvo a hacer click en un tipo o debilidad se suma a la puesta anteriormente. 
+
 
 
 
