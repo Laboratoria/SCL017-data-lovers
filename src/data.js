@@ -91,5 +91,12 @@ export const sortData = (orderValue) => {
 
 }
 
+export let filterIdPokemon = function(idElement){
+  let elements = dataPokemon.pokemon.filter((pokemonData) => {
+   return idElement === pokemonData.num;
+  });
+  return elements;
+}
+
 
 

@@ -73,6 +73,19 @@ body{
     
     
 }
+.third-window{
+    height:auto;
+    margin: 10%;
+    background-color: rgba(240, 240, 240, 0.913);
+    border: 1px solid black;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border: 2px solid #9900FF;
+    border-radius: 25px;  
+}
+.button-return{
+    
+}
 .pokemon-list{
     margin: 20px;
     justify-content: center;
@@ -174,6 +187,79 @@ body{
     border-radius: 8px;
     text-transform: capitalize;
 }
+
+.pokemonListClick{
+    height: fit-content;
+    width: 30%;
+    background-color:  rgba(247, 229, 189, 0.913); 
+}
+
+.modal{
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content{
+    background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid lightgray;
+	border-top: 10px solid #58abb7;
+	width: 60%;
+}
+
+.pokemon-identifier-click{
+    background-color: #FFCC01;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px 8px 2px 5px;
+    border-radius: 8px;
+    border: 1px solid black;
+    color: black;
+    position: relative;
+
+}
+.new-img-pokemon{
+    align-self: center;
+
+}
+.new-name-pokemon{
+    background-color:#2B6DB6;
+    text-align: center;
+    color:black;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 2px 8px 2px 5px;
+    margin-left: 30px;
+    margin-top: 30%;
+    text-transform: uppercase;
+}
+.weight-pokemon{
+
+}
+.height-pokemon{
+
+}
+.resistant-pokemon{
+
+}
+.weaknesses-pokemon{
+
+}
+
+.special-attack-pokemon{
+
+}
+
+
 
 .hide{
     display: none;
