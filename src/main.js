@@ -42,7 +42,7 @@ searchPo.addEventListener("keyup",(e)=> {
 });
 
 
-document.getElementById("boton").addEventListener("click", bringData);
+window.onload=bringData()
 
 function bringData() {
 
@@ -60,7 +60,8 @@ function bringData() {
                         <p>${ " Type : "  +  pokemon[i].type}</p>
                         <p>${ " Region : " + pokemon[i].generation.name}</p>
                         <p>${ " Eggs : " + pokemon[i].egg}<p>
-                        <p>${pokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>        
+                        <p>${ "Candys : " + pokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                        <p>${ " Max CP : " + pokemon[i].stats['max-cp']}</p>        
                </div>; 
                 </div>
             
@@ -68,3 +69,23 @@ function bringData() {
     
 
  }}; 
+
+
+ 
+     //    for(let i = 0; i<tiposDelPokemonActual.length; i++){
+          //  containerRoot.innerHTML =   // 
+
+        // tipos = el arreglo de los tipos de un pokemon
+//function getTipos(types) {// 
+  //  types = tiposDePokemones.filter(tipoPokemon => {
+       // types.includes(tipoPokemon.types)
+   // })
+   // .map(tipoPokemon => {//
+      //  return {
+          //  type: tipoPokemon.tipo,//
+          //  img: tipoPokemon.img,
+      //  };//
+      
+  //  });// 
+
+   // return types;}  // 
