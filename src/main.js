@@ -102,5 +102,6 @@ showPokemons(pokemons)
 orderingElements.addEventListener('change' , showPokemonSorted , false)
 
 
+ 
 
 
