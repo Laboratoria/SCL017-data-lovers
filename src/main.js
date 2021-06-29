@@ -64,23 +64,23 @@ const eventClick = function(event) {
     newWeight.classList = ('weight-pokemon');
     newHeight.innerText = pokemonDetail[0].size.height;
     newHeight.classList = ('height-pokemon');
-    // nextEvolution.innerText = pokemonDetail[0].evolution.next-evolution[0].name;
-    // nextEvolution.classList = ('next-evolution');
+    nextEvolution.innerText = pokemonDetail[0].evolution[1];
+    nextEvolution.classList = ('next-evolution');
     resistant.innerText = pokemonDetail[0].resistant;
     resistant.classList = ('resistant-pokemon');
     weaknesses.innerText = pokemonDetail[0].weaknesses;
     weaknesses.classList = ('weaknesses-pokemon');
-    // specialAttack.innerText = pokemonDetail[0]["special-attack"];
+    specialAttack.innerText = pokemonDetail[0]["special-attack"];
     specialAttack.classList = ('special-attack-pokemon');
     
     newDivClick.appendChild(newImgPokemon);
     newDivClick.appendChild(newNamePokemon);
     newDivClick.appendChild(newWeight);
     newDivClick.appendChild(newHeight);
-    // newDivClick.appendChild(nextEvolution);
+    newDivClick.appendChild(nextEvolution);
     newDivClick.appendChild(resistant);
     newDivClick.appendChild(weaknesses);
-    // newDivClick.appendChild(specialAttack);
+    newDivClick.appendChild(specialAttack);
     contentThirdWindow.appendChild(newDivClick);
    
     
@@ -96,8 +96,8 @@ let createPokemonDiv = function(pokemonDetail){
     let newBtnId = document.createElement('section');
     let newImg = document.createElement('img');
     let newBtnType = document.createElement('section');
-    let newBtnPower = document.createElement('section');
-    let newName = document.createElement('section');
+    let newGeneration = document.createElement('section');
+    let newName = document.createElement('button');
     newDiv.classList = ('section-pokemon');
     newName.addEventListener('click',eventClick, false);
     newBtnId.innerText = pokemonDetail.num;
@@ -106,14 +106,14 @@ let createPokemonDiv = function(pokemonDetail){
     newImg.classList = ('img-pokemon')
     newBtnType.innerText = pokemonDetail.type;
     newBtnType.classList = ('type-pokemon')
-    newBtnPower.innerText = pokemonDetail.type;
-    newBtnPower.classList = ('attack')
+    newGeneration.innerText = pokemonDetail.generation.name;
+    newGeneration.classList = ('generation')
     newName.innerText = pokemonDetail.name;
     newName.classList = ('namePokemon');
     newDiv.appendChild(newBtnId);
     newDiv.appendChild(newImg);
     newDiv.appendChild(newBtnType);
-    newDiv.appendChild(newBtnPower);
+    newDiv.appendChild(newGeneration);
     newDiv.appendChild(newName);
     pokemonList.appendChild(newDiv);
     

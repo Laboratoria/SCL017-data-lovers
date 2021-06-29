@@ -84,7 +84,7 @@ body{
     border-radius: 25px;  
 }
 .button-return{
-    
+
 }
 .pokemon-list{
     margin: 20px;
@@ -159,6 +159,7 @@ body{
     background-color:#2B6DB6;
     text-align: center;
     color:black; 
+    cursor: pointer;
     grid-column-start: 2;
     grid-row-start: 3;
     width: 130px;
@@ -171,7 +172,12 @@ body{
 
     
 }
-.attack{
+.namePokemon:hover{
+    background-color:#FFCC01;
+    color:white;
+    border: 4px solid white;
+}
+.generation{
     background-color:#9900FF;
     text-align: center;
     border-radius: 10%;
@@ -187,6 +193,8 @@ body{
     border-radius: 8px;
     text-transform: capitalize;
 }
+
+
 
 .pokemonListClick{
     height: fit-content;
