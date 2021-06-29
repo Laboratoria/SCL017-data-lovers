@@ -96,8 +96,10 @@ const base = 100;
 const ruleOfThree = base * numberOfTypesOfPokemon / totalPokemons; 
 
 return ruleOfThree.toFixed(2);
-
+} 
+export let filterIdPokemon = function(idElement){
+  let elements = dataPokemon.pokemon.filter((pokemonData) => {
+   return idElement === pokemonData.num;
+  });
+  return elements;
 }
-
-
-

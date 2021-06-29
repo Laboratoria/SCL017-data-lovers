@@ -1,4 +1,5 @@
-import { filterTypePokemon, sortData , calculator } from './data.js';
+import { filterTypePokemon, sortData , calculator , filterIdPokemon} from './data.js';
+
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -14,25 +15,100 @@ const togo = () => {
 start.addEventListener("click", togo, false);
 
 let pokemonList = document.getElementById('pokemonList');
+let thirdWindow = document.getElementById('third-window');
+let contentThirdWindow =  document.getElementById('content-third-window');
+
+let buttonReturn = document.getElementById('buttonReturn');
+
+const hideWindow = () =>{
+    document.getElementById('third-window').classList.add('hide');
+    document.getElementById('second-window').classList.remove('hide');
+}
+buttonReturn.addEventListener('click', hideWindow, false );
 
 
-let createPokemonDiv = function(dataPokemon){
+
+const eventClick = function(event) {
+    
+    document.getElementById('third-window').classList.remove('hide');
+    document.getElementById('second-window').classList.add('hide');
+    contentThirdWindow.innerHTML="";
+
+ 
+    console.log(event.srcElement);
+    let saveId = event.srcElement.parentNode.firstChild.innerText;
+    console.log(saveId)
+    let pokemonDetail = filterIdPokemon(saveId);
+    console.log(pokemonDetail);
+
+
+    let newDivClick = document.createElement('div');
+    let newIdPokemon = document.createElement('section');
+    let newImgPokemon = document.createElement('img');
+    let newNamePokemon = document.createElement('section');
+    let newWeight = document.createElement('p');
+    let newHeight = document.createElement('p');
+    let nextEvolution = document.createElement('p');
+    let resistant = document.createElement('p');
+    let weaknesses = document.createElement('p');
+    let specialAttack = document.createElement('p');
+   
+    newDivClick.classList = ('pokemonListClick');
+    newIdPokemon.innerText = pokemonDetail[0].num;
+    newIdPokemon.classList = ('pokemon-identifier-click');
+    newImgPokemon.src = pokemonDetail[0].img;
+    newImgPokemon.classList = ('new-img-pokemon');
+    newNamePokemon.innerText = pokemonDetail[0].name;
+    newNamePokemon.classList = ('new-name-pokemon');
+    newWeight.innerText = pokemonDetail[0].size.weight;
+    newWeight.classList = ('weight-pokemon');
+    newHeight.innerText = pokemonDetail[0].size.height;
+    newHeight.classList = ('height-pokemon');
+    // nextEvolution.innerText = pokemonDetail[0].evolution.next-evolution[0].name;
+    // nextEvolution.classList = ('next-evolution');
+    resistant.innerText = pokemonDetail[0].resistant;
+    resistant.classList = ('resistant-pokemon');
+    weaknesses.innerText = pokemonDetail[0].weaknesses;
+    weaknesses.classList = ('weaknesses-pokemon');
+    // specialAttack.innerText = pokemonDetail[0]["special-attack"];
+    specialAttack.classList = ('special-attack-pokemon');
+    
+    newDivClick.appendChild(newImgPokemon);
+    newDivClick.appendChild(newNamePokemon);
+    newDivClick.appendChild(newWeight);
+    newDivClick.appendChild(newHeight);
+    // newDivClick.appendChild(nextEvolution);
+    newDivClick.appendChild(resistant);
+    newDivClick.appendChild(weaknesses);
+    // newDivClick.appendChild(specialAttack);
+    contentThirdWindow.appendChild(newDivClick);
+   
+    
+   
+    newDivClick.appendChild(newIdPokemon);
+   
+
+}
+
+
+let createPokemonDiv = function(pokemonDetail){
     let newDiv = document.createElement('div');
     let newBtnId = document.createElement('section');
     let newImg = document.createElement('img');
     let newBtnType = document.createElement('section');
     let newBtnPower = document.createElement('section');
     let newName = document.createElement('section');
-    newDiv.classList = ('section-pokemon')
-    newBtnId.innerText = dataPokemon.num;
+    newDiv.classList = ('section-pokemon');
+    newName.addEventListener('click',eventClick, false);
+    newBtnId.innerText = pokemonDetail.num;
     newBtnId.classList = ('pokemon-identifier');
-    newImg.src = dataPokemon.img;
+    newImg.src = pokemonDetail.img;
     newImg.classList = ('img-pokemon')
-    newBtnType.innerText = dataPokemon.type;
+    newBtnType.innerText = pokemonDetail.type;
     newBtnType.classList = ('type-pokemon')
-    newBtnPower.innerText = dataPokemon.type;
+    newBtnPower.innerText = pokemonDetail.type;
     newBtnPower.classList = ('attack')
-    newName.innerText = dataPokemon.name;
+    newName.innerText = pokemonDetail.name;
     newName.classList = ('namePokemon');
     newDiv.appendChild(newBtnId);
     newDiv.appendChild(newImg);
@@ -61,7 +137,11 @@ const showPokemons = (pokemonList) => {
     //clearDiv es para limpiar la lista completa de los pokemons , y por eso se le agregar el createPokemonDiv para que los vaya creando uno a uno.
     clearDiv() 
     // a pokemonList, se le hace el recorrido con un forEach donde se crea un nuevo div de cada pokemon.
-    pokemonList.forEach(pokemon => createPokemonDiv(pokemon)) ;
+    pokemonList.forEach(
+        (pokemon) => {
+             createPokemonDiv(pokemon)
+        }
+     );
      
 }
 
@@ -101,6 +181,15 @@ showPokemons(pokemons)
  
 orderingElements.addEventListener('change' , showPokemonSorted , false)
 
+let pokemonListClick = document.getElementsByClassName('section-pokemon');
+
+
+ 
+//  pokemonListClick.forEach(element => {
+//      element.addEventListener('click', eventClick, false);
+//  });
+
+ 
 
  
 
