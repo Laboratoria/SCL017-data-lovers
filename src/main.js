@@ -1,4 +1,5 @@
-import { filterTypePokemon,sortData, filterIdPokemon } from './data.js';
+import { filterTypePokemon, sortData , calculator , filterIdPokemon} from './data.js';
+
 // import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -144,13 +145,17 @@ const showPokemons = (pokemonList) => {
      
 }
 
-selectElementPlants.addEventListener('change', (event) => {
+selectElementPlants.addEventListener('change', (event) => { 
     
 const pokemons = filterTypePokemon(event.target.value);
   //returnElements(event.target.value);
   console.log(pokemons);
   
   showPokemons(pokemons) 
+
+ const percentage = calculator(pokemons.length);
+  console.log(percentage);
+ 
 }
 );
 // aqui llamamos la función y le decimos que nos muestre los pokemon de la dataPokemon.Pokemon 
@@ -169,6 +174,9 @@ const pokemons = sortData(event.target.value);
 console.log(pokemons)
 showPokemons(pokemons)
 }
+
+
+
 
  
 orderingElements.addEventListener('change' , showPokemonSorted , false)
