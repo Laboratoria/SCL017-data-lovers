@@ -109,7 +109,7 @@ for (let e = 0; e < 4; e++) {
                 oldcards[0].parentNode.removeChild(oldcards[0]);
             }
 
-            newOrder = pokemons.sortData(data, filter.value, filter.className);
+            newOrder = pokemons.sortData(newOrder, filter.value, filter.className);
 
             for (let i = 0; i < newOrder.length; i++) {
                 initiator.loadData(newOrder[i]);
@@ -124,14 +124,50 @@ for (let e = 0; e < 4; e++) {
 // Filtrando por las generaciones 
 let listGeneration = ["generation"];
 let counter3 = 18;
-
+let index;
 for (let c = 0; c < 2; c++) {
-    let filterGeneration = document.getElementsByName("generation")[c]
-    filterGeneration.addEventListener('click', function () {
-        if (!filterGeneration.checked) {
-            index = listGeneration.indexOf(filterGeneration.value);
+    let filterGeneration = document.getElementsByName("generation")
+    filterGeneration[c].addEventListener('click', function () {
+
+        if (filterGeneration[c].checked) {
+            try{
+                filterGeneration[c-1].checked=false;
+                newOrder=data.pokemon;
+                index = listGeneration.indexOf(filterGeneration[c-1].value);
+                if (index > -1) {
+                    listGeneration.splice(index, 1);
+                    
+                }
+            }
+            catch {
+                filterGeneration[c+1].checked=false;
+                newOrder=data.pokemon;
+                index = listGeneration.indexOf(filterGeneration[c+1].value);
+                if (index > -1) {
+                    listGeneration.splice(index, 1);
+    
+                }
+
+            }
+            listGeneration.push(filterGeneration[c].value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            newOrder = pokemons.filterData(newOrder, listGeneration)
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+            loadModals(newOrder);
+
+        }
+        if (!filterGeneration[c].checked) {
+            newOrder=data.pokemon;
+
+            index = listGeneration.indexOf(filterGeneration[c].value);
             if (index > -1) {
                 listGeneration.splice(index, 1);
+
             }
             oldcards = document.getElementsByClassName("pokemon-card");
             while (oldcards[0]) {
@@ -146,8 +182,8 @@ for (let c = 0; c < 2; c++) {
 
             loadModals(newOrder);
 
-            counter3 += 1
-            if (counter3 == 18) {
+            if (filterGeneration[0].checked==false && filterGeneration[1].checked==false) {
+
                 newOrder = data.pokemon;
                 for (let i = 0; i < newOrder.length; i++) {
                     initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
@@ -158,30 +194,33 @@ for (let c = 0; c < 2; c++) {
 
         }
 
-        if (filterGeneration.checked) {
-            listGeneration.push(filterGeneration.value);
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-            counter3 -= 1
-            newOrder = pokemons.filterData(newOrder, listGeneration)
-            for (let i = 0; i < newOrder.length; i++) {
-                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
-            }
-            loadModals(newOrder);
-
-        }
+       
     })
 }
 //-----------------------------------------------------------------------------
 //Filtramos por tipo de pokemon
 let listTypes = ["type"];
 let counter = 18;
-let index;
+
 for (let c = 0; c < 18; c++) {
     let filterTypes = document.getElementsByName("type")[c]
     filterTypes.addEventListener('click', function () {
+
+        if (filterTypes.checked) {
+            listTypes.push(filterTypes.value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter -= 1
+            newOrder=data.pokemon;
+            newOrder = pokemons.filterData(newOrder, listTypes)
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+            loadModals(newOrder);
+
+        }
 
         if (!filterTypes.checked) {
             index = listTypes.indexOf(filterTypes.value);
@@ -213,21 +252,7 @@ for (let c = 0; c < 18; c++) {
             }
 
         }
-
-        if (filterTypes.checked) {
-            listTypes.push(filterTypes.value);
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-            counter -= 1
-            newOrder = pokemons.filterData(newOrder, listTypes)
-            for (let i = 0; i < newOrder.length; i++) {
-                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
-            }
-            loadModals(newOrder);
-
-        }
+       
     })
 }
 //-----------------------------------------------------------------------------
@@ -238,6 +263,23 @@ let counter2 = 18;
 for (let c = 0; c < 18; c++) {
     let filterWeaknesses = document.getElementsByName("weaknesses")[c]
     filterWeaknesses.addEventListener('click', function () {
+
+        if (filterWeaknesses.checked) {
+            listWeaknesses.push(filterWeaknesses.value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter2 -= 1
+            newOrder=data.pokemon;
+
+            newOrder = pokemons.filterData(newOrder, listWeaknesses);
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+
+            loadModals(newOrder);
+        }
 
         if (!filterWeaknesses.checked) {
             index = listWeaknesses.indexOf(filterWeaknesses.value);
@@ -268,23 +310,7 @@ for (let c = 0; c < 18; c++) {
 
         }
 
-        if (filterWeaknesses.checked) {
-            listWeaknesses.push(filterWeaknesses.value);
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-            counter2 -= 1
-
-            newOrder = pokemons.filterData(newOrder, listWeaknesses);
-            for (let i = 0; i < newOrder.length; i++) {
-                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
-            }
-
-            loadModals(newOrder);
-
-
-        }
+        
     })
 }
 
@@ -297,6 +323,26 @@ for (let c = 0; c < 18; c++) {
     let filterResistant = document.getElementsByName("resistant")[c]
 
     filterResistant.addEventListener('click', function () {
+
+        if (filterResistant.checked) {
+            listResistant.push(filterResistant.value);
+            oldcards = document.getElementsByClassName("pokemon-card");
+            while (oldcards[0]) {
+                oldcards[0].parentNode.removeChild(oldcards[0]);
+            }
+            counter4 -= 1
+            newOrder=data.pokemon;
+
+            newOrder = pokemons.filterData(newOrder, listResistant)
+
+            for (let i = 0; i < newOrder.length; i++) {
+                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
+            }
+
+            loadModals(newOrder);
+
+
+        }
 
         if (!filterResistant.checked) {
             index = listResistant.indexOf(filterResistant.value);
@@ -330,23 +376,7 @@ for (let c = 0; c < 18; c++) {
 
         }
 
-        if (filterResistant.checked) {
-            listResistant.push(filterResistant.value);
-            oldcards = document.getElementsByClassName("pokemon-card");
-            while (oldcards[0]) {
-                oldcards[0].parentNode.removeChild(oldcards[0]);
-            }
-            counter4 -= 1
-            newOrder = pokemons.filterData(newOrder, listResistant)
-
-            for (let i = 0; i < newOrder.length; i++) {
-                initiator.loadData(newOrder[i]); // iniciamos el js de GeneratorPokemon el cual hace las tarjetas
-            }
-
-            loadModals(newOrder);
-
-
-        }
+        
     })
 }
 
