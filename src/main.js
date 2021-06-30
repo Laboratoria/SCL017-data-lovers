@@ -120,32 +120,29 @@ for (let e = 0; e < 4; e++) {
 //-----------------------------------------------------------------------------
 // Filtrando por las generaciones 
 let listGeneration = ["generation"];
-let counter3 = 18;
 let index;
 for (let c = 0; c < 2; c++) {
     let filterGeneration = document.getElementsByName("generation")
     filterGeneration[c].addEventListener('click', function () {
 
         if (filterGeneration[c].checked) {
-            try{
+            if (filterGeneration[c+1] === undefined )  { 
                 filterGeneration[c-1].checked=false;
                 newOrder=data.pokemon;
                 index = listGeneration.indexOf(filterGeneration[c-1].value);
-                if (index > -1) {
+                if (index > -1) { 
                     listGeneration.splice(index, 1);
-                    
                 }
-            }
-            catch {
+            } 
+            else{    
                 filterGeneration[c+1].checked=false;
                 newOrder=data.pokemon;
                 index = listGeneration.indexOf(filterGeneration[c+1].value);
-                if (index > -1) {
+                if (index > -1) {  
                     listGeneration.splice(index, 1);
-    
                 }
-
-            }
+                }
+                        
             listGeneration.push(filterGeneration[c].value);
             oldcards = document.getElementsByClassName("pokemon-card");
             while (oldcards[0]) {
@@ -158,6 +155,7 @@ for (let c = 0; c < 2; c++) {
             loadModals(newOrder);
 
         }
+
         if (!filterGeneration[c].checked) {
             newOrder=data.pokemon;
 
