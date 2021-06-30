@@ -44,25 +44,29 @@
   }
   .container{
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  footer section img{
-    width: 190px;
-    height: 90px;
-    margin-top: 20%;
+  .goImg {
+    width: 100px;
+    height: 50px;
+    margin-top: 10%;
   }
   .social h3 {
-    font-size: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
   .row img {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
   }
   .row label {
-    font-size: medium;
+    margin: -10px 0px 0px 5px;
+    font-size: 15px;
+    padding: 10px;
   }
   .download h3{
-    font-size: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
   .pokemonCard{
     margin-top: 25%;
