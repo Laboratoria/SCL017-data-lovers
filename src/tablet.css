@@ -71,12 +71,14 @@
   .pokemonCard{
     margin-top: 25%;
   }
-.card-pokeboll-img{
+  .card-pokeboll-img{
   height: 5px;
   width:20px;
-}
-.poke-card-num{
+  }
+  .poke-card-num{
   padding: 1px;
   margin-top: 15px;
-
-}
+  }
+  .dropDown {
+    margin: 15px 0px 10px 60px;
+  }

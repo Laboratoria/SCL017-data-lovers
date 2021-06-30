@@ -66,8 +66,37 @@
     </div>
     <!-- Pantalla de ver todos los pokemon -->
     <div id="showAllPokemon" style="display: none">
-      <ul></ul>
-      <div id="allPokeContainer"></div>
+
+         <select id="dropdownType" class="dropDown">
+          <option value="" disabled selected>-- Elemento --</option>
+          <option value="all" class="typeClass">Todos</option>
+          <option value="grass" class="typeClass">Planta</option>
+          <option value="normal" class="typeClass">Normal</option>
+          <option value="fire" class="typeClass">Fuego</option>
+          <option value="water" class="typeClass">Agua</option>
+          <option value="electric" class="typeClass">Eléctrico</option>
+          <option value="ice" class="typeClass">Hielo</option>
+          <option value="fighting" class="typeClass">Lucha</option>
+          <option value="poison" class="typeClass">Veneno</option>
+          <option value="ground" class="typeClass">Tierra</option>
+          <option value="flying" class="typeClass">Volador</option>
+          <option value="psychic" class="typeClass">Psíquico</option>
+          <option value="bug" class="typeClass">Bicho</option>
+          <option value="rock" class="typeClass">Roca</option>
+          <option value="ghost" class="typeClass">Fantasma</option>
+          <option value="dragon" class="typeClass">Dragón</option>
+        </select>
+
+        <select id="sortBy" class="dropDown">
+          <option value="" disabled selected>-- Ordenar --</option>
+          <option value="sort__az">A-Z</option>
+          <option value="sort__za">Z-A</option>
+          <option value="sort__19">001-250</option>
+          <option value="sort__91">250-001</option>
+        </select>
+
+            <div id="allPokeContainer"></div>
+
     </div>
     <!-- Pantalla de estadisticas de pokemon seleccionado -->
     <div id="pokeStatsContainer" style="display:none"></div>
