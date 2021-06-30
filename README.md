@@ -19,13 +19,6 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 3. Yo como Maestro Pokemón quiero que muestre cada pokemon y con un poco más de información.
 4. Yo como Maestro Pokemón quiero que haya una bienvenida a la página principal.
 
-### Prototipos  
-![Prototipo_Baja1](/img_prototipo/Prototipo_Baja_Pagina_Principal.png)
-![Prototipo_Baja2](/img_prototipo/Prototipo_Baja_Pagina_Principal_iteracion.png)
-![Prototipo_popUp](/img_prototipo/Prototipo_Baja_popUp.png)
-![Prototipo_popUp1](/img_prototipo/Prototipo_Baja_popUp_iteracion.png)
-![Prototipo_bienvenida](/img_prototipo/Prototipo_Baja_Pagina_Bienvenida.png)
-![Prototipo_alta](/img_prototipo/Prototipo_Alta_Pagina_Principal.png)
 
 ## Sprint 1 
 * Luego de generar las historias de usuario y sus respectivos bocetos de baja fidelidad, usamos Figma para generar nuestro prototipo de alta fidelidad para la historia de usuario elegida para este sprint (Página Principal).
@@ -46,7 +39,7 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 * El título confunde, quizás poner "virtual pokedex" envés.
 * En las pantallas más pequeñas se ve mal que este todo con margin left 0. 
 
-### Done
+### Cosas que se decidieron cambiar
 * El boton "Más" debería tener un pointer o hover o algo más que indique que se pueda clickear.
 * No se ven bien los titulos del sidebar, poner alguno subrayado o con color diferente.
 * Cambiar "evoluciona a"  por "siguiente evolución".
@@ -57,16 +50,21 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 * El contenedor de la tarjeta emergente no deja que al hacer click fuera de la tarjeta esta se cierre, en los costados ocurre esto.
 * Aparece la tilde de la o de dragon a un lado de la vocal.
 * Cuando estoy en responsively app, no sale cuando pongo "más" en en CELEBI.
-
-### Cosas que se decidieron cambiar
-
 * Las "x" para cerrar estan muy pequeñas.
 * La tarjeta emergente no baja en los celulares (responsivly).
- 
+
+### Faltan
+* Cuando se toque fuera del sidebar se cierre este. 
 * Si tengo algun tipo o debilidad ya elegida, al hacer click en los orden me lo resetea todo (se sale la info del clickeo de tipo o debilidad). Si vuelvo a hacer click en un tipo o debilidad se suma a la puesta anteriormente. 
 
 
-
+### Prototipos  
+![Prototipo_Baja1](/img_prototipo/Prototipo_Baja_Pagina_Principal.png)
+![Prototipo_Baja2](/img_prototipo/Prototipo_Baja_Pagina_Principal_iteracion.png)
+![Prototipo_popUp](/img_prototipo/Prototipo_Baja_popUp.png)
+![Prototipo_popUp1](/img_prototipo/Prototipo_Baja_popUp_iteracion.png)
+![Prototipo_bienvenida](/img_prototipo/Prototipo_Baja_Pagina_Bienvenida.png)
+![Prototipo_alta](/img_prototipo/Prototipo_Alta_Pagina_Principal.png)
 
 
 

@@ -6,6 +6,7 @@ import initiator from './GeneratorPokemons.js';
 import pokemons from './data.js';
 
 let newOrder = data.pokemon; // obtenemos data desde el archivo de datos .js
+
 // Generamos las tarjetas de los pokemon
 for (let i = 0; i < data.pokemon.length; i++) {
     initiator.loadData(newOrder[i]);
@@ -49,6 +50,7 @@ function loadModals(newOrder) {
 loadModals(newOrder);
 
 
+
 //-------------------------------------------------------
 // Manipulacion del menu lateral 
 
@@ -67,6 +69,7 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
+
 
 //------------------------------------------------------------------------
 //Scroll to top button 
@@ -366,7 +369,6 @@ input1.addEventListener("keyup", (event) => {
     const nombrePoke = event.target.value;
 
     const filterPoke = pokemons.findData(pokeArrayName, nombrePoke);
-    // const filterPoke = pokeArrayName.filter(pokeArrayName => pokeArrayName.toLowerCase().includes(nombrePoke.toLowerCase()));
 
     let posicionPoke = [];
 
