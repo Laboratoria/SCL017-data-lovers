@@ -7,6 +7,7 @@ const initiator = {
         let card = document.createElement("article");
         card.className = "pokemon-card";
         card.id = datapokemon.name;
+        
         //---------------------------------------------------------------------            
         // Generación de los elementos de la tarjeta pokemon (página principal)
 
@@ -100,8 +101,10 @@ const initiator = {
         // Clono la imagen del pokemon
         let modalImg = pokemonImage.cloneNode(true);
 
-        // Clono el nombre del pokemon
-        let modalName = pokemonName.cloneNode(true);
+        // Genero donde ira el nombre y numero del pokemon
+        let modalName = document.createElement("p");
+
+        modalName.textContent = datapokemon.num + " " + capitalizedName;
 
         // Genero la informacion de la rareza del pokemon
         let pokemonRarity = document.createElement("div");
@@ -143,30 +146,32 @@ const initiator = {
         let modalWeak = document.createElement("p");
         modalWeak.nameClass = "modal-weakness";
         modalWeak.innerHTML = "Débil contra: ";
-        let br = document.createElement("br");
-        modalMoreInfo.appendChild(br);
+
         modalMoreInfo.appendChild(modalWeak);
         datapokemon.weaknesses.forEach(function (value) {
             let pokemonWeak = document.createElement("div");
             let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1);
             capitalizedType = translateType(capitalizedType);
             pokemonWeak.innerHTML = capitalizedType;
-            pokemonWeak.className = "pokemon-type";
+            pokemonWeak.className = "pokemon-weakness";
             pokemonWeak.id = "pokemon-type-" + value;
+
             modalMoreInfo.appendChild(pokemonWeak);
         })
 
         // Generalo la informacion de las debilidades del pokemon
         let modalResistant = document.createElement("p");
+
         modalResistant.innerHTML = "Resistente a: ";
         modalResistant.nameClass = "modal-resistant";
+
         modalMoreInfo.appendChild(modalResistant);
         datapokemon.resistant.forEach(function (value) {
             let pokemonResistant = document.createElement("div");
             let capitalizedType = value.charAt(0).toUpperCase() + value.slice(1);
             capitalizedType = translateType(capitalizedType);
             pokemonResistant.innerHTML = capitalizedType;
-            pokemonResistant.className = "pokemon-type";
+            pokemonResistant.className = "pokemon-resistant";
             pokemonResistant.id = "pokemon-type-" + value;
             modalMoreInfo.appendChild(pokemonResistant);
         })
@@ -207,7 +212,6 @@ const initiator = {
 
         } else {
             let evolutionNext = document.createElement("li");
-
             evolutionNext.innerHTML = "Siguiente: No tiene";
             modalInfoEvolutions.appendChild(evolutionNext);
         }

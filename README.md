@@ -5,11 +5,11 @@
 
 ## Definición del producto
 
-Este producto esta hecho para los jugadores del juego "Pokemon Go", los cuales puedan necesitar mayor infomación de los pokemones con los que juegan.
+Este producto esta hecho para los jugadores del juego "Pokemon Go", los cuales puedan necesitar mayor información de los pokemones con los que juegan.
 
-En el producto podemos observar información de los primeros 251 pokemon del juego, además podemos ordenar de manera ascendente y descendente los nombres y los numeros de los pokemones. 
+En el producto podemos observar información de los primeros 251 pokemon del juego, además podemos ordenar de manera ascendente y descendente los nombres y los números de los pokemones. 
 
-Tambien se puede filtrar por tipo de pokemon, sus debilidades y resistencias. 
+También se puede filtrar por tipo de pokemon, sus debilidades y resistencias. 
 
 ## Historias de usuario (Sprint 1)
 Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de baja y mediana fidelidad respectivos. 
@@ -26,13 +26,13 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 * Comenzamos a trabajar en la historia de usuario sobre la Página Principal sin esperar terminarla
 ## Sprint 2
 * Nos dimos el objetivo de terminar la primera historia de usuario.
-* También maquetamos y pusimos en la página donde estaría la historia de usuario de los filtros de la pagina. 
-* Al quedar con tiempo en el día jueves decidimos investigar lo referente a la historia de usuario referida a como hacer los filtros y también la de la tarjeta emergente con más información. 
+* También maquetamos y pusimos en la página donde estaría la historia de usuario de los filtros de la página. 
+* Al quedar con tiempo en el día jueves decidimos investigar lo referente a la historia de usuario referida a cómo hacer los filtros y también la de la tarjeta emergente con más información. 
 ## Sprint 3
-* Durante el tercer sprint decidimos hacer los primeros filtros, ademas de asegurar que la tarjeta emergente tuviera toda la informacion. Arreglar lo necesario para que la pagina fuera Responsive.
+* Durante el tercer sprint decidimos hacer los primeros filtros, además de asegurar que la tarjeta emergente tuviera toda la información. Arreglar lo necesario para que la página fuera Responsive.
 ## Sprint 4
-* Terminamos el responsive de la página, asegurando que la tarjeta emergente fuera responsive tambien. 
-* Ademas vimos que todos los filtros necesarios estuvieran hechos, además de hacer algunos test y paso del linter.
+* Terminamos el responsive de la página, asegurando que la tarjeta emergente fuera responsive también. 
+* Además vimos que todos los filtros necesarios estuvieran hechos, además de hacer algunos test y paso del linter.
 
 ## Test de usabilidad #1
 ### Cosas que decidimos no cambiar 
@@ -40,23 +40,19 @@ Durante el primer Sprint generamos 4 historias de usuario con sus prototipos de 
 * En las pantallas más pequeñas se ve mal que este todo con margin left 0. 
 
 ### Cosas que se decidieron cambiar
-* El boton "Más" debería tener un pointer o hover o algo más que indique que se pueda clickear.
-* No se ven bien los titulos del sidebar, poner alguno subrayado o con color diferente.
+* El botón "Más" debería tener un pointer o hover o algo más que indique que se pueda clickear.
+* No se ven bien los títulos del sidebar, poner alguno subrayado o con color diferente.
 * Cambiar "evoluciona a"  por "siguiente evolución".
 * Agregar la preevolución a las tarjetas emergentes y si este no tiene evolución siguiente o previa poner igual el dato, pero con "---".
 * El botón "Top" es muy grande en los celulares y se sobrepone al "Más" del último pokemon.
 * La mitad del botón "Top" desaparece al poner motoG4 en opera. Pareciera que las pantallas de la app responsivly son unos cuantos pixeles más grandes que las que entrega opera.
 * Agregar el disclaimer de la página.
 * El contenedor de la tarjeta emergente no deja que al hacer click fuera de la tarjeta esta se cierre, en los costados ocurre esto.
-* Aparece la tilde de la o de dragon a un lado de la vocal.
+* Aparece la tilde de la o de dragón a un lado de la vocal.
 * Cuando estoy en responsively app, no sale cuando pongo "más" en en CELEBI.
-* Las "x" para cerrar estan muy pequeñas.
+* Las "x" para cerrar están muy pequeñas.
 * La tarjeta emergente no baja en los celulares (responsivly).
-
-### Faltan
-* Cuando se toque fuera del sidebar se cierre este. 
-* Si tengo algun tipo o debilidad ya elegida, al hacer click en los orden me lo resetea todo (se sale la info del clickeo de tipo o debilidad). Si vuelvo a hacer click en un tipo o debilidad se suma a la puesta anteriormente. 
-
+* Si tengo algún tipo o debilidad ya elegida, al hacer click en los orden me lo resetea todo (se sale la info del clickeo de tipo o debilidad). Si vuelvo a hacer click en un tipo o debilidad se suma a la puesta anteriormente. 
 
 ### Prototipos  
 ![Prototipo_Baja1](/img_prototipo/Prototipo_Baja_Pagina_Principal.png)
