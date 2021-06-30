@@ -9,7 +9,7 @@ const pokemons = {
       sortDirection = true;
     }
 
-    return data.pokemon.sort((object1, object2) => {
+    return data.sort((object1, object2) => {
       return compareObjects(object1, object2, sortBy, sortDirection)
 
     })
