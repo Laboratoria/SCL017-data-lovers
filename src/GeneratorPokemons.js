@@ -72,7 +72,7 @@ const initiator = {
         // Genero el boton de cerrado 
         let modalSpan = document.createElement("span");
         modalSpan.className = "close";
-        modalSpan.innerHTML = "&times;";
+        modalSpan.innerHTML = "x";
 
         // Genero donde irá la información 
         let modalInfo = document.createElement("div");
@@ -143,6 +143,8 @@ const initiator = {
         let modalWeak = document.createElement("p");
         modalWeak.nameClass = "modal-weakness";
         modalWeak.innerHTML = "Débil contra: ";
+        let br = document.createElement("br");
+        modalMoreInfo.appendChild(br);
         modalMoreInfo.appendChild(modalWeak);
         datapokemon.weaknesses.forEach(function (value) {
             let pokemonWeak = document.createElement("div");
@@ -173,6 +175,8 @@ const initiator = {
         let contentEvolution = document.createElement("ul");
         contentEvolution.nameClass = "name-evol";
         contentEvolution.textContent = "Evoluciones:";
+        let br2 = document.createElement("br");
+        modalInfoEvolutions.appendChild(br2);
         modalInfoEvolutions.appendChild(contentEvolution);
         // Generacion de la  evolución previa de los pokemon 
         if (datapokemon.evolution["prev-evolution"] !== undefined) {

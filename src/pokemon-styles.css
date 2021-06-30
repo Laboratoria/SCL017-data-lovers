@@ -157,14 +157,15 @@ Manipulacion de las tarjetas del pokemon */
 
 .modal {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     padding-top: 100px;
     left: 2%;
-    top: 0;
+    /* top: 0; */
     width: 100%;
     height: 100%;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow:visible ;
 }
 
 /* Contenido del modal (tarjeta emergente) */
@@ -184,7 +185,7 @@ Manipulacion de las tarjetas del pokemon */
 .close {
     color: #e5d549;
     float: right;
-    font-size: 150%;
+    font-size: 170%;
     font-weight: bold;
 }
 

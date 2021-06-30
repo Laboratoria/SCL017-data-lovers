@@ -1,6 +1,7 @@
 const pokemons = {
   sortData: (data, sortBy, sortOrder) => {
     // sortOrder: "upwardFilter" or "downwardFilter"
+    //sortBy: "name","num"
     let sortDirection;
     if (sortOrder == "upwardFilter") {
       sortDirection = false;
@@ -15,24 +16,24 @@ const pokemons = {
     })
   },
 
-  filterData: (data,condition) => {
+  filterData: (data, condition) => {
 
-    if (condition[0]== "type"){
+    if (condition[0] == "type") {
       const filteredTypesPokemon = data.filter(row => row.type.some(element => condition.includes(element)));
       return filteredTypesPokemon
-  
+
     }
-    if (condition[0]== "weaknesses"){
+    if (condition[0] == "weaknesses") {
       const filteredWeaknesses = data.filter(row => row.weaknesses.some(element => condition.includes(element)));
-      return filteredWeaknesses 
-  
+      return filteredWeaknesses
+
     }
     if (condition[0] == "resistant") {
       const filteredResistant = data.filter(row => row.resistant.some(element => condition.includes(element)));
       return filteredResistant;
     }
-    if (condition[0]== "generation"){
-      const filteredGeneration = data.filter(row =>condition.includes( row.generation.name));
+    if (condition[0] == "generation") {
+      const filteredGeneration = data.filter(row => condition.includes(row.generation.name));
       return filteredGeneration
     }
   },
