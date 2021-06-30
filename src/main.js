@@ -2,19 +2,47 @@ import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 import dataTipos from './data/pokemon/tipo.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+// import data from './data/rickandmorty/rickandmorty.js'
+
+const containerRoot= document.getElementById("root");
 let selectValue = document.getElementById("poketype");
 selectValue.addEventListener("change",()=>{
-    console.log(selectValue.value)
+    let selectValueType = selectValue.value;
+    console.log(selectValueType)
 
         const pokemon = data.pokemon;
         const printPokemon= pokemon.filter(element =>{
             console.log(element.type)
-            return element.type.includes("water");
+            return element.type.includes(selectValueType);
             
         });
-        console.log(printPokemon)
-       containerRoot.innerHTML= printPokemon;
+
+        containerRoot.innerHTML="";
+      for (let i=0; i< printPokemon.length; i++){
+        
+        console.log(printPokemon[i].name);
+        
+
+        containerRoot.innerHTML +=  `<div class="flip-card" id= "pokemon${printPokemon[i].num}">
+        <div class ="flip-card-inner">
+            <div class ="flip-card-front"> 
+                <img src="${printPokemon[i].img}" />
+                <p class="pokedex">#${printPokemon[i].num}</p>
+                <p>${printPokemon[i].name}</p>
+            </div>
+                    <div class="flip-card-back">
+                    <p>${ " Type : "  +  printPokemon[i].type}</p>
+                    <p>${ " Region : " + printPokemon[i].generation.name}</p>
+                    <p>${ " Eggs : " + printPokemon[i].egg}<p>
+                    <p>${ "Candies : " + printPokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                    <p>${ " Max CP : " + printPokemon[i].stats['max-cp']}</p>        
+           </div>; 
+            </div>
+        
+    </div>`;
+
+      }
+       
        
         
     });
@@ -33,7 +61,6 @@ const pokemonSearch = "";
 	});
 //};
 //FUNCTION DE BUSCAR//
-const containerRoot= document.getElementById("root");
 const searchPo = document.getElementById("searchPo");
 searchPo.addEventListener("keyup",(e)=> {
 
