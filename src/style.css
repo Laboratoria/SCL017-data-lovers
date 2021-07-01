@@ -1,5 +1,6 @@
 body {
     background-image: url("/imagenes/fondo.png");
+    display: flex;
 }
 
 h1,h2, body{
@@ -17,32 +18,99 @@ html,body{
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
     background-size: 100% 100%;
-    background-position: absolute;
+    background-position: center;
     
     color: #FFF;
     font-family: 'Arial, Helvetica', sans-serif;
     
 }
 
-#paginaUno h1{
+#titulo{
+    background-color: #6BAC2B90;
+    border-radius: 15px;
     position: absolute;
-    width: 350px;
+    width: 490px;
+    height: 350px;
+    left: 150px;
+    top: 100px;
+  
+}
+#paginaUno h1{
+    /*position: absolute;
+    width: 370px;
     height: 190px;
-    left: 842px;
-    top: 246px;
+    left: 100px;
+    top: 270px;*/
     font-weight: bold;
-    font-size: 72px;
+    font-size: 70px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+#paginaUno h2{
+    /*position: absolute;
+    width: 650px;
+    height: 190px;
+    left: 100px;
+    top: 230px;*/
+    font-weight: normal;
+    font-size: 32px;
+    margin-top: 60px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+.tituloImagen{
+    position: absolute;
+    width: 585px;
+    height: 442px;
+    left: 183px;
+    top: 90px;
 }
 
-#paginaUno h2{
+#paginaUno h3{
+
     position: absolute;
-    width: 350px;
-    height: 190px;
-    left: 842px;
-    top: 146px;
-    font-weight: normal;
-    font-size: 42px;
+    width: 450px;
+    height: 226px;
+    left: 827px;
+    top: 221px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 153.19%;
+    /* or 37px */
+    margin-top: 60px;
+    letter-spacing: 0.075em;
+}
+
+#paginaUno button{
+    position: absolute;
+    width: 193px;
+    height: 55px;
+    left: 800px;
+    top: 429px;
+
+    background: #ABD3EE;
+    border-radius: 10px;
+    border-bottom: none;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+
+    color: #123A43;
+
 }
 
 
@@ -52,13 +120,14 @@ html,body{
 
 
 #tituloPagina{
-    background-color: #6BAC2B;
-    opacity: 0.9;
+    background-color: #6BAC2B90;
     color: #FFF;
     font-family: 'Arial, Helvetica', sans-serif;
     padding: 16px 24px;
     margin-top: 42px;
     margin-bottom: 30px;
+    min-height: 65px;
+    width: calc(100vw - 65px);
 }
 
 .headerIcon{
@@ -128,3 +197,31 @@ html,body{
     color: #123A43;
 }
 
+.boxBuscador{
+    float: right;
+    margin-top: 16px;
+}
+
+.txtBuscador {
+    border-radius: 10px;
+    border: 0px #CCC solid;
+    line-height: 32px;
+    padding: 0px 16px;
+}
+
+.btnBuscador {
+    border-radius: 100%;
+    background: #91BF64;
+    color: #FFF;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    margin-left: -32px;
+    margin-top: 2px;
+    border: 0px;
+}
+
+.boxIzquierda {
+    float: left;
+    width: 60%;
+}

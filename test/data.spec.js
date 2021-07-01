@@ -1,9 +1,15 @@
 import { example, anotherExample } from '../src/data.js';
 
+/**
+ * - DESCRIBE: Sirve para blablabla
+ * - IT: Sirve para blablabla
+ * - EXPECT: Sirve para blablabla
+ * 
+ */
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('results', () => {
+  it('deberia tener un for', () => {
+    expect( results.toBe('function');
   });
 
   it('returns `example`', () => {
