@@ -3,25 +3,6 @@ body {
     display: flex;
 }
 
-#paginaUno h1{
-    position: absolute;
-    width: 350px;
-    height: 190px;
-    left: 842px;
-    top: 246px;
-    font-weight: bold;
-    font-size: 72px;
-}
-
-#paginaUno h2{
-    position: absolute;
-    width: 350px;
-    height: 190px;
-    left: 842px;
-    top: 146px;
-    font-weight: normal;
-    font-size: 42px;
-}
 h1,h2, body{
     margin: 0px;
     padding: 0px; 
