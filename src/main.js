@@ -1,8 +1,5 @@
 import { filterTypePokemon, sortData , calculator , filterIdPokemon} from './data.js';
-
-// import data from './data/lol/lol.js';
 import dataPokemon from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 let savelist = dataPokemon.pokemon;
 
@@ -45,17 +42,23 @@ const eventClick = function(event) {
     let pokemonDetail = filterIdPokemon(saveId);
     console.log(pokemonDetail);
 
-    let  evolution = [];
+    let  evolutionPokemon = [];
 
-    if(pokemonDetail[0].evolution["next-evolution"])
 
-    pokemonDetail[0].evolution["next-evolution"].forEach((element) => {
-     evolution.push(element.name);
-     element["next-evolution"].forEach((subElement) => {
-         evolution.push(subElement.name)
-     })
-    });
+        if(pokemonDetail[0].evolution && pokemonDetail[0].evolution["next-evolution"]){
+            pokemonDetail[0].evolution["next-evolution"].forEach((element) => {
+                evolutionPokemon.push(element.name)
+                if(element["next-evolution"] != undefined){
+                    element["next-evolution"].forEach((subElement) => {
+                        evolutionPokemon.push(subElement.name);
+                    })
+                }
+               
+            }); 
+        }else
+        evolutionPokemon.push("no tiene evolucion");
 
+           
     let attackS = [];
 
     pokemonDetail[0]['special-attack'].forEach((attack) => {
@@ -87,13 +90,13 @@ const eventClick = function(event) {
     newWeight.classList = ('weight-pokemon');
     newHeight.innerText = ("Altura: ") + pokemonDetail[0].size.height;
     newHeight.classList = ('height-pokemon');
-    nextEvolution.innerText = ("Proxima evolucion: ") + evolution.join(" <==> ");
+    nextEvolution.innerText = ("Proxima evolucion: ") + evolutionPokemon.join(" <==> ");
     nextEvolution.classList = ('next-evolution');
-    resistant.innerText = ("Fortalezas: ");
+    resistant.innerText = ("Fortalezas: ") + pokemonDetail[0].resistant;
     resistant.classList = ('resistant-pokemon');
     weaknesses.innerText =  ("Debilidades: ") +  pokemonDetail[0].weaknesses;
     weaknesses.classList = ('weaknesses-pokemon');
-    specialAttack.innerText =  ("Ataques Especiales: ") + pokemonDetail[0]["special-attack"];
+    specialAttack.innerText =  ("Ataques Especiales: ") + attackS.join('');
     specialAttack.classList = ('special-attack-pokemon');
     
     newDivClick.appendChild(newIdPokemon);
@@ -105,12 +108,7 @@ const eventClick = function(event) {
     newDivClick.appendChild(resistant);
     newDivClick.appendChild(weaknesses);
     newDivClick.appendChild(specialAttack);
-    contentThirdWindow.appendChild(newDivClick);
-   
-    
- 
-    
-   
+    contentThirdWindow.appendChild(newDivClick); 
 
 }
 
@@ -220,17 +218,6 @@ showPokemons(listPokemonSort)
 
  
 orderingElements.addEventListener('change' , showPokemonSorted , false)
-
-let pokemonListClick = document.getElementsByClassName('section-pokemon');
-
-
- 
-//  pokemonListClick.forEach(element => {
-//      element.addEventListener('click', eventClick, false);
-//  });
-
-
-
 
  
 

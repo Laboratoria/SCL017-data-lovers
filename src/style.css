@@ -101,9 +101,6 @@ body{
     margin: 10px;
     width: 30%;
     background-color: white;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15% 1fr 1fr; */
     font-size: 13px;
     
     
@@ -157,7 +154,7 @@ body{
     padding: 5px 10px 5px 10px;
     border-radius: 8px;
     text-transform: capitalize;
-
+    
 }
 
 .namePokemon{
@@ -311,21 +308,21 @@ body{
     .section-pokemon{
         width: 40%;
     }
-   .third-window{
-       width: 50%;
-       margin-left: 30%;
-   } 
+    .third-window{
+        width: 50%;
+        margin-left: 30%;
+    } 
 }
 @media (max-width: 500px){
-
+    
     .introduction{
         font-size: 1rem;
     }
-
+    
     .img-hash{
         width: 70%;
     }
-
+    
     .img-pokemon{
         padding-left: 0;
     }
@@ -339,19 +336,19 @@ body{
         
     }
     .img-footer {
-    height: 50px;
-
+        height: 50px;
+        
     }
-   .div-type{
-    font-size: 0.7rem;
-    justify-content: space-evenly;
-   } 
-  .namePokemon{
-      margin-left: 10%;
-  } 
-  .third-window {
-    width: 70%;
-    margin-left: 15%;
-  }
-
+    .div-type{
+        font-size: 0.7rem;
+        justify-content: space-evenly;
+    } 
+    .namePokemon{
+        margin-left: 10%;
+    } 
+    .third-window {
+        width: 70%;
+        margin-left: 15%;
+    }
+    
 }
