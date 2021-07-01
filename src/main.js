@@ -1,10 +1,11 @@
 import pokemon from "./data/pokemon/pokemon.js";
 
-
+const dataPokemon = pokemon.pokemon;
 const inputValue = document.getElementById("searchpokemon");
 const matchingPokesDiv = document.getElementById("matching");
 const buttonClick = document.getElementById("btn");
-const buttonBack = document.querySelector(".btn-back");
+
+//Pagina tarjeta individual
 
 inputValue.addEventListener("keyup", (event) => {
   matchingPokesDiv.innerHTML = "";
@@ -21,19 +22,20 @@ inputValue.addEventListener("keyup", (event) => {
           pokeStats(poke);
           pokeStatsContainer.innerHTML = `
         
-            <div class="pokemonCard">
-            
-              <p class="poke-card-num"> #${poke.num}</p> 
-              <h2>${poke.name}</h2>
-              <img src="${poke.img}">
-              <div class="card-square-info">
-                <p class="pokemon-card-about"> ${poke.about}</p>
-                <p class="poke-card-type"> type: ${poke.type}.<p>
-                <p class="poke-card-resistance"> Fuerte frente a: ${poke.resistant}</p>
-                <p class="poke-card-resistance"> Debil frente a: ${poke.weaknesses}</p>
-              </div>
-            </div>
-            <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>
+          <div class="pokemonCard">
+          <p class="poke-card-num">#${poke.num}</p> 
+          <h2>${poke.name}</h2>
+          <img src="${poke.img}">
+          <div class="card-square-info">
+            <p class="poke-card-type"> Type: ${poke.type}.<p>
+            <p class="pokemon-card-about"> ${poke.about}</p>
+            <p class="p-resistant">Strong against:</p>
+            <div class="poke-card-resistant"></div>
+            <p class="p-resistant">Weak against:</p>
+            <div class="poke-card-weaknesses"></div>
+          </div>
+        </div>
+        <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>
           
           `
           ;
@@ -41,6 +43,107 @@ inputValue.addEventListener("keyup", (event) => {
           function goBack (){
             document.getElementById("firstPage").style.display = "block";
             document.getElementById("pokeStatsContainer").style.display = "none";
+            };
+             //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
+             if (poke.resistant.lenght == 1){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">`;
+            }
+            else if (poke.resistant.lenght == 2){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">`;
+            }
+            else if (poke.resistant.lenght == 3){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">`;
+            }
+            else if (poke.resistant.length == 4){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">`;
+            }
+            else if (poke.resistant.length == 5){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[4]}.png">`;
+            }
+            else if (poke.resistant.length == 6){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[4]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[5]}.png">`;
+            }
+            else if (poke.resistant.length == 7){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[4]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[5]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[6]}.png">`;
+            };
+
+            //Estos if insertan la imagen de los tipos a los que el pokemon es debil
+            if (poke.weaknesses.length == 1){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">`;
+            }
+            else if (poke.weaknesses.lenght == 2){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">`;
+            }
+            else if (poke.weaknesses.lenght == 3){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">`;
+            }
+            else if (poke.weaknesses.length == 4){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">`;
+            }
+            else if (poke.weaknesses.length == 5){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">`;
+            }
+            else if (poke.weaknesses.length == 6){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[5]}.png">`;
+            }
+            else if (poke.weaknesses.length == 7){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[5]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[6]}.png">`;
             };
         };
         //Lista en barra de búsqueda
@@ -51,6 +154,8 @@ inputValue.addEventListener("keyup", (event) => {
   }
 });
 
+
+  // Pagina con todas las tarjetas
 buttonClick.addEventListener("click", (event) => {
   document.getElementById("firstPage").style.display = "none";
   document.getElementById("showAllPokemon").style.display = "block";
@@ -62,27 +167,130 @@ buttonClick.addEventListener("click", (event) => {
         pokeStats(poke);
         pokeStatsContainer.innerHTML = `
         
-            <div class="pokemonCard">
-              <p class="poke-card-num">#${poke.num}</p> 
-              <h2>${poke.name}</h2>
-              <img src="${poke.img}">
-              <div class="card-square-info">
-                <p class="pokemon-card-about"> ${poke.about}</p>
-                <p class="poke-card-type"> type: ${poke.type}.<p>
-                <p class="poke-card-resistance"> Fuerte frente a: ${poke.resistant}</p>
-                <p class="poke-card-resistance"> Debil frente a: ${poke.weaknesses}</p>
-              </div>
-            </div>
-            <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>
+      <div class="pokemonCard">
+        <p class="poke-card-num">#${poke.num}</p> 
+        <h2>${poke.name}</h2>
+        <img src="${poke.img}">
+        <div class="card-square-info">
+          <p class="poke-card-type"> Type: ${poke.type}.<p>
+          <p class="pokemon-card-about"> ${poke.about}</p>
+          <p class="p-resistant">Strong against:</p>
+          <div class="poke-card-resistant"></div>
+          <p class="p-resistant">Weak against:</p>
+          <div class="poke-card-weaknesses"></div>
+        </div>
+      </div>
+      <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>
           
           `;
+
           document.querySelector(".btn-back").addEventListener("click", goBack);
           function goBack (){
             document.getElementById("firstPage").style.display = "block";
             document.getElementById("pokeStatsContainer").style.display = "none";
             };
+           
+            //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
+            if (poke.resistant.lenght == 1){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">`;
+            }
+            else if (poke.resistant.lenght == 2){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">`;
+            }
+            else if (poke.resistant.lenght == 3){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">`;
+            }
+            else if (poke.resistant.length == 4){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">`;
+            }
+            else if (poke.resistant.length == 5){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[4]}.png">`;
+            }
+            else if (poke.resistant.length == 6){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[4]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[5]}.png">`;
+            }
+            else if (poke.resistant.length == 7){
+              document.querySelector(".poke-card-resistant").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.resistant[0]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[1]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[2]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[3]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[4]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[5]}.png">
+              <img class="imgResistant" src="./img/${poke.resistant[6]}.png">`;
+            };
 
-          // Pagina con todas las tarjetas
+            //Estos if insertan la imagen de los tipos a los que el pokemon es debil
+            if (poke.weaknesses.length == 1){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">`;
+            }
+            else if (poke.weaknesses.lenght == 2){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">`;
+            }
+            else if (poke.weaknesses.lenght == 3){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">`;
+            }
+            else if (poke.weaknesses.length == 4){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">`;
+            }
+            else if (poke.weaknesses.length == 5){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">`;
+            }
+            else if (poke.weaknesses.length == 6){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[5]}.png">`;
+            }
+            else if (poke.weaknesses.length == 7){
+              document.querySelector(".poke-card-weaknesses").innerHTML = `
+              <img class="imgResistant" src="./img/${poke.weaknesses[0]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[1]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[2]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[3]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[5]}.png">
+              <img class="imgResistant" src="./img/${poke.weaknesses[6]}.png">`;
+            };
       };
       matchingPoke.innerHTML = `<p class= "pokeNumber"> <img class="pokeballImg" src="img/pokeball.png">  N° ${poke.num}</p>
                                 <img class="pokeImgList" src="${poke.img}">
