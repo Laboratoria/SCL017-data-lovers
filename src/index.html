@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tablet.css" media="(min-width: 768px)">
     <link rel="stylesheet" href="desktop.css" media="(min-width: 1200px)"> 
-    <title>Document</title>
+    <title>Laboratorio del Profesor Oak</title>
 </head>
 <body>
     <!-- Pantalla de bienvenida con barra de búsqueda -->
@@ -27,15 +28,16 @@
                 <p>En el laboratorio del Profesor Oak están todos los  pokémon de las regiones Kanto y Johto. Conocen sus características y arma el mejor equipo para tus batallas.</p>   
                      <form id="form">
                         <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
-                        <button type="button" class="btn" id="btn-buscar">Buscar</button>
-                        <button type="button" class="btn" id="btn-verlosTodos">¡Quiero verlos todos!</button>
+                        <div id="matching"></div>
+                          <br />
+                        <button type="button" class="btn" id="btn">¡Quiero verlos todos!</button>
                     </form>
             </section>
         </main>
         <footer>
          <div class="container">
-         <section >
-            <img src="img/go.png">
+         <section>
+            <img class="goImg" src="img/go.png">
          </section>
          <section class="social">
              <h3>Redes Sociales</h3>
@@ -80,6 +82,42 @@
       </div>
 
     </div>
+    <!-- Pantalla de ver todos los pokemon -->
+    <div id="showAllPokemon" style="display: none">
+
+         <select id="dropdownType" class="dropDown">
+          <option value="" disabled selected>-- Elemento --</option>
+          <option value="all" class="typeClass">Todos</option>
+          <option value="grass" class="typeClass">Planta</option>
+          <option value="normal" class="typeClass">Normal</option>
+          <option value="fire" class="typeClass">Fuego</option>
+          <option value="water" class="typeClass">Agua</option>
+          <option value="electric" class="typeClass">Eléctrico</option>
+          <option value="ice" class="typeClass">Hielo</option>
+          <option value="fighting" class="typeClass">Lucha</option>
+          <option value="poison" class="typeClass">Veneno</option>
+          <option value="ground" class="typeClass">Tierra</option>
+          <option value="flying" class="typeClass">Volador</option>
+          <option value="psychic" class="typeClass">Psíquico</option>
+          <option value="bug" class="typeClass">Bicho</option>
+          <option value="rock" class="typeClass">Roca</option>
+          <option value="ghost" class="typeClass">Fantasma</option>
+          <option value="dragon" class="typeClass">Dragón</option>
+        </select>
+
+        <select id="sortBy" class="dropDown">
+          <option value="" disabled selected>-- Ordenar --</option>
+          <option value="sort__az">A-Z</option>
+          <option value="sort__za">Z-A</option>
+          <option value="sort__19">001-250</option>
+          <option value="sort__91">250-001</option>
+        </select>
+
+            <div id="allPokeContainer"></div>
+
+    </div>
+    <!-- Pantalla de estadisticas de pokemon seleccionado -->
+    <div id="pokeStatsContainer" style="display:none"></div>
     <script src="main.js" type="module"></script>
 </body>
 </html>

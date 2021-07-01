@@ -11,8 +11,7 @@
   }
   .nav-menu ul li{
     display: inline-block;
-    margin: 65px 35px 0px 70px;
-    
+    margin: 65px 35px 0px 70px; 
   }
   .nav-menu ul li a{
     font-size: 25px;
@@ -44,24 +43,46 @@
   }
   .container{
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  footer section img{
-    width: 190px;
-    height: 90px;
-    margin-top: 20%;
+  #matching {
+    min-height: 150px;
+    height: 150px;
+    width: 443px;
+    transform: translateY(-30px);
+  }
+  .goImg {
+    width: 100px;
+    height: 50px;
+    margin-top: 10%;
   }
   .social h3 {
-    font-size: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
   .row img {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
   }
   .row label {
-    font-size: medium;
+    margin: -10px 0px 0px 5px;
+    font-size: 15px;
+    padding: 10px;
   }
   .download h3{
-    font-size: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
-
+  .pokemonCard{
+    margin-top: 25%;
+  }
+  .card-pokeboll-img{
+  height: 5px;
+  width:20px;
+  }
+  .poke-card-num{
+  padding: 1px;
+  }
+  .dropDown {
+    margin: 15px 0px 10px 60px;
+  }
