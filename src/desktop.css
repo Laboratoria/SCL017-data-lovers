@@ -69,30 +69,33 @@
     margin: 5% 10%;
   }
   .poke-card-num{
-    font-size: 1.5em;
-    margin-top: 10px;
+    font-size: 2.5em;
   }
   
   .pokemonCard h2{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: white;
   }
  .pokemonCard img{
-   width: 250px;
+   width: 300px;
   }
   .card-square-info{
     margin: 1%;
     padding: 2%;
   }
   .poke-card-type{
-    font-size: 40px;
+    font-size: 70px;
   }
   .pokemon-card-about{
-    font-size: 40px;
+    font-size: 65px;
     margin-top: 20px;
   }
-  .poke-card-resistance{
-    font-size: 38px;
+  .p-resistant{
+    font-size: 55px; 
+  }
+  .imgResistant{
+    /* width: 50px; */
+    height: 280px;
   }
   .btn-back{
     width: 40%;
@@ -104,4 +107,9 @@
   }
   .dropDown {
     margin: 15px 0px 10px 100px;
+  }
+  .btn-back{
+    height: 80px;
+    margin: 5% 30%;
+    font-size: 40px;
   }
