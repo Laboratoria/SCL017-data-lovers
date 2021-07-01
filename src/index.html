@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body id="body"  class="body">
+<body>
   <header>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Play&family=Prompt:wght@400;700&display=swap" rel="stylesheet">
@@ -15,14 +15,15 @@
     <img id="logo" class="logo" src="img/logo.png" alt="logo">
   </header>
   <div id="home" class="container">
-    <div>
+    <div class="home-section">
       <h1 class="introduction">Bienvenidos para saber <br> más de pokémon <br> haz click en “comenzar” </h1>
-      <div class="picture">
-          <img class="img-hash"  src="img/ash.png">
-        </div>       
+      <div>
+        <img class="img-hash" src="img/ash.png">
+      </div>       
     </div>
-      <button id="start" class="begin"><b>COMENZAR</b></button> 
-   </div>
+    <div class="btn-star">
+      <button class="begin" id="start" ><b>COMENZAR</b></button> 
+    </div>
   </div>
   <div class="second-window hide" id="second-window">
     <div class="options">
@@ -53,42 +54,43 @@
         <option value="NumeroDeIdinferior">Numero de ID inferior</option>
         <option value="NumeroDeIdsuperior">Numero de ID superior</option>
       </select>
-
+      
     </div>
     <div id="showPercentage">
       <p class="resultCalculate" id="percentage"></p>
     </div>
     <div id="pokemonList" class="pokemon-list">
-           
+      
     </div>
     <div id="pokemonListClick">
-  
-
+      
+      
     </div>
-    <a href="index.html">Return</a>
-
+    
+    
   </div>
   <div id="third-window" class="third-window hide" >
     <div id='content-third-window'>
       
     </div>
     <button id="buttonReturn" class="button-return">Return</button>
-   
+    
   </div>
+  
+  
+  <footer class="footer" >
+    <div>
+      <p>Para sugerencias, dudas o consultas: correo@example.com</p>
+      <p>Desarrollado por Nicole Quijada y Daniela Araque </p>
+    </div>
+    <div class="information-footer">
+    
+        <img src="img/squir.png" alt="img1" class="img-footer">
+        <img src="img/pica.png" alt="img1" class="img-footer">
+        <img src="img/pokebola.png" alt="img1" class="img-footer">
+    
+    </div>
+  </footer>
   <script src="main.js" type="module"></script>
 </body>
-<footer class="footer">
-  <div class="informationFooter">
-    <p class="SuggestionsParagraph">Para sugerencias, dudas o consultas: correo@example.com</p>
-     <p class="infoDeveloper">Desarrollado por Nicole Quijada y Daniela Araque </p>
-  </div>
-  <div class="imgFooter">
-    <section class="img-footer">
-      <img src="img/squir.png" alt="img1" class="img-squir">
-      <img src="img/pica.png" alt="img1" class="img-pica">
-      <img src="img/pokebola.png" alt="img1" class="img-poke">
-    </section>
-  </div>
-</footer>
-
 </html>
