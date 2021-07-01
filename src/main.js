@@ -34,12 +34,33 @@ const eventClick = function(event) {
     document.getElementById('second-window').classList.add('hide');
     contentThirdWindow.innerHTML="";
 
+  
+
  
     console.log(event.srcElement);
     let saveId = event.srcElement.parentNode.firstChild.innerText;
     console.log(saveId)
     let pokemonDetail = filterIdPokemon(saveId);
     console.log(pokemonDetail);
+
+    let  evolution = [];
+
+    if(pokemonDetail[0].evolution["next-evolution"])
+
+    pokemonDetail[0].evolution["next-evolution"].forEach((element) => {
+     evolution.push(element.name);
+     element["next-evolution"].forEach((subElement) => {
+         evolution.push(subElement.name)
+     })
+    });
+
+    let attackS = [];
+
+    pokemonDetail[0]['special-attack'].forEach((attack) => {
+        attackS.push(attack.name);
+
+    });
+    console.log(attackS)
 
 
     let newDivClick = document.createElement('div');
@@ -60,19 +81,20 @@ const eventClick = function(event) {
     newImgPokemon.classList = ('new-img-pokemon');
     newNamePokemon.innerText = pokemonDetail[0].name;
     newNamePokemon.classList = ('new-name-pokemon');
-    newWeight.innerText = pokemonDetail[0].size.weight;
+    newWeight.innerText = ("Peso: ") + pokemonDetail[0].size.weight;
     newWeight.classList = ('weight-pokemon');
-    newHeight.innerText = pokemonDetail[0].size.height;
+    newHeight.innerText = ("Altura: ") + pokemonDetail[0].size.height;
     newHeight.classList = ('height-pokemon');
-    nextEvolution.innerText = pokemonDetail[0].evolution[1];
+    nextEvolution.innerText = ("Proxima evolucion: ") + evolution.join(" <==> ");
     nextEvolution.classList = ('next-evolution');
-    resistant.innerText = pokemonDetail[0].resistant;
+    resistant.innerText = ("Fortalezas: ");
     resistant.classList = ('resistant-pokemon');
-    weaknesses.innerText = pokemonDetail[0].weaknesses;
+    weaknesses.innerText =  ("Debilidades: ") +  pokemonDetail[0].weaknesses;
     weaknesses.classList = ('weaknesses-pokemon');
-    specialAttack.innerText = pokemonDetail[0]["special-attack"];
+    specialAttack.innerText =  ("Ataques Especiales: ") + pokemonDetail[0]["special-attack"];
     specialAttack.classList = ('special-attack-pokemon');
     
+    newDivClick.appendChild(newIdPokemon);
     newDivClick.appendChild(newImgPokemon);
     newDivClick.appendChild(newNamePokemon);
     newDivClick.appendChild(newWeight);
@@ -84,8 +106,8 @@ const eventClick = function(event) {
     contentThirdWindow.appendChild(newDivClick);
    
     
-   
-    newDivClick.appendChild(newIdPokemon);
+ 
+    
    
 
 }
@@ -95,15 +117,17 @@ let createPokemonDiv = function(pokemonDetail){
     let newDiv = document.createElement('div');
     let newBtnId = document.createElement('section');
     let newImg = document.createElement('img');
-    let newBtnType = document.createElement('section');
-    let newGeneration = document.createElement('section');
+    let newDivType = document.createElement('div');
+    let newBtnType = document.createElement('div');
+    let newGeneration = document.createElement('div');
     let newName = document.createElement('button');
     newDiv.classList = ('section-pokemon');
     newName.addEventListener('click',eventClick, false);
     newBtnId.innerText = pokemonDetail.num;
     newBtnId.classList = ('pokemon-identifier');
     newImg.src = pokemonDetail.img;
-    newImg.classList = ('img-pokemon')
+    newImg.classList = ('img-pokemon');
+    newDivType.classList = ('div-type');
     newBtnType.innerText = pokemonDetail.type;
     newBtnType.classList = ('type-pokemon')
     newGeneration.innerText = pokemonDetail.generation.name;
@@ -112,8 +136,9 @@ let createPokemonDiv = function(pokemonDetail){
     newName.classList = ('namePokemon');
     newDiv.appendChild(newBtnId);
     newDiv.appendChild(newImg);
-    newDiv.appendChild(newBtnType);
-    newDiv.appendChild(newGeneration);
+    newDivType.appendChild(newBtnType);
+    newDivType.appendChild(newGeneration);
+    newDiv.appendChild(newDivType);
     newDiv.appendChild(newName);
     pokemonList.appendChild(newDiv);
     
@@ -194,3 +219,4 @@ let pokemonListClick = document.getElementsByClassName('section-pokemon');
  
 
 
+// alert(`${document.body.offsetWidth} ${document.body.offsetHeight}`)
