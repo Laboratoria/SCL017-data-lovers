@@ -14,7 +14,6 @@ const togo = () => {
 start.addEventListener("click", togo, false);
 
 let pokemonList = document.getElementById('pokemonList');
-let thirdWindow = document.getElementById('third-window');
 let contentThirdWindow =  document.getElementById('content-third-window');
 
 let buttonReturn = document.getElementById('buttonReturn');
@@ -36,11 +35,9 @@ const eventClick = function(event) {
   
 
  
-    console.log(event.srcElement);
     let saveId = event.srcElement.parentNode.firstChild.innerText;
-    console.log(saveId)
     let pokemonDetail = filterIdPokemon(saveId);
-    console.log(pokemonDetail);
+    
 
     let  evolutionPokemon = [];
 
@@ -65,7 +62,7 @@ const eventClick = function(event) {
         attackS.push(attack.name);
 
     });
-    console.log(attackS)
+    
 
 
     let newDivClick = document.createElement('div');
@@ -86,17 +83,17 @@ const eventClick = function(event) {
     newImgPokemon.classList = ('new-img-pokemon');
     newNamePokemon.innerText = pokemonDetail[0].name;
     newNamePokemon.classList = ('new-name-pokemon');
-    newWeight.innerText = ("Peso: ") + pokemonDetail[0].size.weight;
+    newWeight.innerText = ("Weight: ") + pokemonDetail[0].size.weight;
     newWeight.classList = ('weight-pokemon');
-    newHeight.innerText = ("Altura: ") + pokemonDetail[0].size.height;
+    newHeight.innerText = ("Height: ") + pokemonDetail[0].size.height;
     newHeight.classList = ('height-pokemon');
-    nextEvolution.innerText = ("Proxima evolucion: ") + evolutionPokemon.join(" <==> ");
+    nextEvolution.innerText = ("Next evolution: ") + evolutionPokemon.join(" <==> ");
     nextEvolution.classList = ('next-evolution');
-    resistant.innerText = ("Fortalezas: ") + pokemonDetail[0].resistant;
+    resistant.innerText = ("resistant: ") + pokemonDetail[0].resistant;
     resistant.classList = ('resistant-pokemon');
-    weaknesses.innerText =  ("Debilidades: ") +  pokemonDetail[0].weaknesses;
+    weaknesses.innerText =  ("Weaknesses: ") +  pokemonDetail[0].weaknesses;
     weaknesses.classList = ('weaknesses-pokemon');
-    specialAttack.innerText =  ("Ataques Especiales: ") + attackS.join('');
+    specialAttack.innerText =  ("Special Attacks: ") + attackS.join('');
     specialAttack.classList = ('special-attack-pokemon');
     
     newDivClick.appendChild(newIdPokemon);
@@ -175,14 +172,14 @@ selectElementPlants.addEventListener('change', (event) => {
 const pokemons = filterTypePokemon(event.target.value);
 
 savelist = pokemons
-  //returnElements(event.target.value);
-  console.log(pokemons);
+ 
+  
   
   showPokemons(pokemons) 
 
   // agrgandoporcentage
  const percentage = calculator(pokemons.length);
- console.log(percentage);
+ 
 
  document.getElementById("percentage").innerHTML = 'Este tipo corresponde a <b>' + percentage + ' % </b>  los Pokemons'
 }

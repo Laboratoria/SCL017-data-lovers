@@ -9,7 +9,7 @@ export let filterTypePokemon = function(typeElement){
 elements = dataPokemon.pokemon 
   } 
   
-  console.log(typeElement);
+  
   return elements; 
 } 
 
