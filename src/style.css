@@ -63,7 +63,7 @@ main section p {
   margin: 5%;
 }
 #searchpokemon {
-  width: 90%;
+  width: 250px;
   height: 30px;
   border-radius: 10px;
   border: 0px;
@@ -148,12 +148,13 @@ footer {
   height: 10%;
 }
 #matching {
-  min-height: 150px;
-  height: 150px;
+  min-height: 120px;
+  height: 120px;
   max-height: auto;
   overflow: hidden;
   overflow-y: auto;
-  transform: translateY(-32px);
+  width: 250px;
+  margin-left: 25px;
 }
 #showAllPokemon {
   background-color: rgba(107, 190, 242, 0.2);
