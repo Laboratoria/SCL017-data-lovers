@@ -4,6 +4,8 @@ import { filterTypePokemon, sortData , calculator , filterIdPokemon} from './dat
 import dataPokemon from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
+let savelist = dataPokemon.pokemon;
+
 const start =  document.getElementById('start');
 
 const togo = () => {
@@ -148,15 +150,21 @@ const showPokemons = (pokemonList) => {
 selectElementPlants.addEventListener('change', (event) => { 
     
 const pokemons = filterTypePokemon(event.target.value);
+
+savelist = pokemons
   //returnElements(event.target.value);
   console.log(pokemons);
   
   showPokemons(pokemons) 
 
+  // agrgandoporcentage
  const percentage = calculator(pokemons.length);
-  console.log(percentage);
- 
+ console.log(percentage);
+
+ document.getElementById("percentage").innerHTML = 'Este tipo corresponde a <b>' + percentage + ' % </b>  los Pokemons'
 }
+
+
 );
 // aqui llamamos la función y le decimos que nos muestre los pokemon de la dataPokemon.Pokemon 
 showPokemons(dataPokemon.pokemon) 
@@ -166,13 +174,20 @@ showPokemons(dataPokemon.pokemon)
 
 // permite mostrar los pokemon ordenados en la pantalla, y le pasamos el parametro del event que es el cambio 'change' que el usuario quiere ver.
 const showPokemonSorted = (event) => {
+const orderPokemons = event.target.value; 
+const listPokemonSort = sortData(orderPokemons, savelist)
+
+showPokemons(listPokemonSort) 
+
+
+
+
+
+
 
 // en esta función le decimos a sortData que nos ordene, en este caso el event es cuando cada vez que hago click  me cambie a lo que quiero ordenar
 // el target es el objetivo que quiero que me traiga desde el html con su value que es el orden que quiere ver el usuario . ejemplo "ordenarAZ"
-const pokemons = sortData(event.target.value);  
 
-console.log(pokemons)
-showPokemons(pokemons)
 }
 
 
@@ -189,7 +204,8 @@ let pokemonListClick = document.getElementsByClassName('section-pokemon');
 //      element.addEventListener('click', eventClick, false);
 //  });
 
- 
+
+
 
  
 

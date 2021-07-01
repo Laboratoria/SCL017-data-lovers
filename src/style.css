@@ -354,6 +354,11 @@ body{
     float: left;
 }
 
+.resultCalculate{
+    text-align: center;
+    font-size: 30px;
+    
+}
 /* 
   ##Dispositivo = Mayoria de telefonos moviles (vertical)
 */

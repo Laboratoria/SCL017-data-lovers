@@ -60,28 +60,28 @@ return result;
 }
 
 // sortData ordenar la data pokemon 
-export const sortData = (orderValue) => {
+export const sortData = (orderValue, pokemons ) => {
  
 // Creamos estos if (para decir que si orderValue)  que es el parametro que se le esta dando a "sortData" es === a "ordenarAZ"
 // que son mis value que estan en el html , eso me va a retornar el sortNameAlphabetically que son las funicones que se crearon anteriormente.
 // y asi con cada uno de los if que siguen 
 
-  if (orderValue === "ordenarAZ") {
-  return sortNameAlphabetically(dataPokemon.pokemon)
+   if (orderValue === "ordenarAZ") {
+  return sortNameAlphabetically(pokemons)
     } 
 
 
-  else if (orderValue === "ordenarZA") { 
-    return sortAlphabeticallyInReverse(dataPokemon.pokemon)
+   else if (orderValue === "ordenarZA") { 
+    return sortAlphabeticallyInReverse(pokemons)
    }
 
 
    else if (orderValue === "NumeroDeIdinferior") {
-   return pokemonNumber(dataPokemon.pokemon)
+   return pokemonNumber(pokemons)
    } 
    
    else if (orderValue === "NumeroDeIdsuperior") {
-    return pokemonNumberReverse(dataPokemon.pokemon)
+   return pokemonNumberReverse(pokemons)
    }
    
 
