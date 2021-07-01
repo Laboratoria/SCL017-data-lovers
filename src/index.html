@@ -9,23 +9,42 @@
 
 <body>
   <div id="paginaUno">
-    <h1>
-      Hola terricola, estás en <br />
-      WUBBA LUBBA
-    </h1>
-    <h2>
+    <div id="titulo">
+      
+      <h2>
+        Hola terricola, estás en
+      </h2>
+      <h1>
+         WUBBA LUBBA
+      </h1>
+      <img src="/imagenes/rick.png" class="tituloImagen">
+    </div>
+   
+    <h3>
       Aquí podrás encontrar información de los personajes de Rick and Morty y
       también ordenarlos según tu interés.
-    </h2>
+    </h3>
     <button id="pasarPagina" class="button">Iniciar</button>
+    
   </div>
 
 
   <div id="paginaDos">
     <div id="tituloPagina">
-      <img src="/imagenes/headerIcon.png" class="headerIcon" />
-      <h2>Listado de personajes</h2>
-      <h1>WUBBA LUBBA</h1>
+      <div class="boxIzquierda">
+        <img src="/imagenes/headerIcon.png" class="headerIcon" />
+        <h2>Listado de personajes</h2>
+        <h1>WUBBA LUBBA</h1>
+      </div>
+      <div class="boxBuscador">
+        <input id="txtBuscador" class="txtBuscador" type="text" placeholder="Buscador" />
+        <button class="btnBuscador">oo</button>
+      </div>
+    </div>
+    <div class="filtros">
+      <h2>Elige la opción para filtrar</h2>
+      <input id="filtroEspecie" class="especie" type="radio">
+      <label for="filtroEspecie">Especie</label>
     </div>
     <div id="root"></div>
   </div>
