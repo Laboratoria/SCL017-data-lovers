@@ -297,6 +297,12 @@ body{
     background-size: 60px 60px;
 }
 
+.resultCalculate{
+    text-align: center;
+    font-size: 30px;
+    
+}
+
 @media (max-width: 780px){
     .pokemon-list{
         display: flex;
@@ -347,4 +353,5 @@ body{
     width: 70%;
     margin-left: 15%;
   }
+
 }
