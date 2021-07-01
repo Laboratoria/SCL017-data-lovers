@@ -11,8 +11,7 @@
   }
   .nav-menu ul li{
     display: inline-block;
-    margin: 65px 35px 0px 70px;
-    
+    margin: 65px 35px 0px 70px; 
   }
   .nav-menu ul li a{
     font-size: 25px;
@@ -45,6 +44,12 @@
   .container{
     flex-direction: row;
     justify-content: space-between;
+  }
+  #matching {
+    min-height: 150px;
+    height: 150px;
+    width: 443px;
+    transform: translateY(-30px);
   }
   .goImg {
     width: 100px;
