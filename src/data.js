@@ -103,3 +103,15 @@ export let filterIdPokemon = function(idElement){
   });
   return elements;
 }
+
+export const example = () => {
+  return 'example';
+};
+
+export const anotherExample = () => {
+  return 'OMG';
+}
+
+export const prueba = () => {
+  return 'Holis'
+}
