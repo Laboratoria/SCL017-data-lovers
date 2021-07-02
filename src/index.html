@@ -24,7 +24,7 @@
               </header>
         <main>
             <section class="square">
-                <h3>El laboratorio del Profesor Oak</h3>
+                <h3>El laboratorio del Profesor Oak.</h3>
                 <p>En el laboratorio del Profesor Oak están todos los  pokémon de las regiones Kanto y Johto. Conocen sus características y arma el mejor equipo para tus batallas.</p>   
                      <form id="form">
                         <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
@@ -64,6 +64,23 @@
          </section>
         </div> 
         </footer>
+      </div>
+
+    <div id="root">
+
+    <!-- Pantalla donde aparece info del Pokemon ingresado en barra de búsqueda -->
+      <div id="paginaPokemon" style="display: none;">
+      <div id="resultado"> </div>
+      </div>
+
+    <!-- Pantalla donde aparecen desplegados todos -->
+      <div id="paginaVerTodos" style="display:none;">
+        <header>
+        </header>
+        <main> </main>
+        <footer></footer>   
+      </div>
+
     </div>
     <!-- Pantalla de ver todos los pokemon -->
     <div id="showAllPokemon" style="display: none">

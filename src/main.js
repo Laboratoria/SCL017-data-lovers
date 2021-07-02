@@ -310,7 +310,3 @@ const pokeStats = () => {
     document.getElementById("pokeStatsContainer").style.display = "block";
 }
 
-buttonAZ.addEventListener("click", (event) =>{
-  let sorted = [];
-  sorted = sortA_Z(dataPokemon)
-};
