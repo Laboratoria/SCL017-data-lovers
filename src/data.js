@@ -14,7 +14,7 @@ elements = dataPokemon.pokemon
 } 
 
 // creando función para ordenar alfabeticamente de forma ascendente A-Z
-const sortNameAlphabetically = (dataList) => {
+export const sortNameAlphabetically = (dataList) => {
 
   //creamos otra constante para guardar el resultado de la función
   const result = dataList.sort((a, b) => {
@@ -28,7 +28,7 @@ return result;
 }
 
  // creando función para ordenar alfabeticamente de forma descendente Z-A
-const sortAlphabeticallyInReverse = (dataList) => {
+export const sortAlphabeticallyInReverse = (dataList) => {
 
 //creamos otra constante para guardar el resultado de la función
  const result = dataList.sort((a, b) => {
@@ -42,7 +42,7 @@ return result;
 }
 
 // creando función para Ordenar por numero de ID numero inferior 
-const pokemonNumber = (dataList) => {
+export const pokemonNumber = (dataList) => {
 
   //creamos otra constante para guardar el resultado de la función
 const result = dataList.sort((a, b) => a.num - b.num);
@@ -51,7 +51,7 @@ return result;
 }
 
 // creando función para ordenar por numero de ID numero superior
-const pokemonNumberReverse = (dataList) => {
+export const pokemonNumberReverse = (dataList) => {
 
 //creamos otra constante para guardar el resultado de la función
 const result = dataList.sort((a, b) => b.num - a.num);
@@ -102,16 +102,4 @@ export let filterIdPokemon = function(idElement){
    return idElement === pokemonData.num;
   });
   return elements;
-}
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-}
-
-export const prueba = () => {
-  return 'Holis'
 }
