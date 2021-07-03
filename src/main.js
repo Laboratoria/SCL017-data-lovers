@@ -4,6 +4,8 @@ import data from './data/pokemon/pokemon.js';
 import dataTipos from './data/pokemon/tipo.js';
 // import data from './data/rickandmorty/rickandmorty.js'
 
+
+//Filtrar por tipo//
 const containerRoot= document.getElementById("root");
 let selectValue = document.getElementById("poketype");
 selectValue.addEventListener("change",()=>{
@@ -46,10 +48,87 @@ selectValue.addEventListener("change",()=>{
        
         
     });
+// Filtrar por region//
+
+let selectValueRegion = document.getElementById("pokeregion");
+selectValueRegion.addEventListener("change",()=>{
+    let selectValueRegionRegion = selectValueRegion.value;
+
+        const pokemon = data.pokemon;
+        const printRegion= pokemon.filter(element =>{
+            return element.generation.name.includes(selectValueRegionRegion);
+            
+        });
+
+        containerRoot.innerHTML="";
+      for (let i=0; i< printRegion.length; i++){
+        
+        containerRoot.innerHTML +=  `<div class="flip-card" id= "pokemon${printRegion[i].num}">
+        <div class ="flip-card-inner">
+            <div class ="flip-card-front"> 
+                <img src="${printRegion[i].img}" />
+                <p class="pokedex">#${printRegion[i].num}</p>
+                <p>${printRegion[i].name}</p>
+            </div>
+                    <div class="flip-card-back">
+                    <p>${ " Type : "  +  printRegion[i].type}</p>
+                    <p>${ " Region : " + printRegion[i].generation.name}</p>
+                    <p>${ " Eggs : " + printRegion[i].egg}<p>
+                    <p>${ "Candies : " + printRegion[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                    <p>${ " Max CP : " + printRegion[i].stats['max-cp']}</p>        
+           </div>; 
+            </div>
+        
+    </div>`;
+
+      }
+       
+       
+        
+    });
 
 
-console.log(selectValue)
+    //FILTRO POR HUEVOS//
 
+let selectValueEggs = document.getElementById("pokeeggs");
+selectValueEggs.addEventListener("change",()=>{
+    let selectValueEggsEggs = selectValueEggs.value;
+    console.log(selectValueEggsEggs)
+
+        const pokemon = data.pokemon;
+        const printEggs= pokemon.filter(element =>{
+            return element.egg.includes(selectValueEggsEggs);
+            
+        });
+
+        containerRoot.innerHTML="";
+      for (let i=0; i< printEggs.length; i++){
+        
+        containerRoot.innerHTML +=  `<div class="flip-card" id= "pokemon${printEggs[i].num}">
+        <div class ="flip-card-inner">
+            <div class ="flip-card-front"> 
+                <img src="${printEggs[i].img}" />
+                <p class="pokedex">#${printEggs[i].num}</p>
+                <p>${printEggs[i].name}</p>
+            </div>
+                    <div class="flip-card-back">
+                    <p>${ " Type : "  +  printEggs[i].type}</p>
+                    <p>${ " Region : " + printEggs[i].generation.name}</p>
+                    <p>${ " Eggs : " + printEggs[i].egg}<p>
+                    <p>${ "Candies : " + printEggs[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                    <p>${ " Max CP : " + printEggs[i].stats['max-cp']}</p>        
+           </div>; 
+            </div>
+        
+    </div>`;
+
+      }
+       
+       
+        
+    });
+
+//FILTRAR POR BÚSQUEDA//
 const pokemon= data.pokemon;
 //const tiposDePokemones = dataTipos.tiposDePokemones;//
 const pokemonSearch = "";
@@ -99,7 +178,7 @@ searchPo.addEventListener("keyup",(e)=> {
 
 });
 
-
+//IMPRIMIR DATA EN CONTAINER ROOT//
 window.onload=bringData()
 
 function bringData() {

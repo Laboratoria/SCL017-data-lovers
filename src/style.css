@@ -90,15 +90,17 @@ background-size: cover;
 .searcher{
     width: 80%;
     box-sizing: border-box;
-    height: 45px;
+    height: 50px;
     margin: 20px auto;
   /*margin-right:200px;
     margin-top: 100px;*/
     display: flex;
+    flex-direction: row;
     position: relative;
-    /*justify-content: space-around;*/
+    justify-content: space-around;
     background: rgb(139, 134, 134);
     /*overflow: hidden;*/
+    
 }
 
 .btn{
@@ -197,3 +199,62 @@ background-size: cover;
     color:black;
     transform: rotateY(180deg);
   }
+
+li {
+  list-style:none
+}
+.menu_bar{
+  display: none;
+}
+a span{
+  margin-right: 10px;
+}
+nav ul li {
+  float: right;
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+  color: antiquewhite;
+  text-decoration-line:#ccc; /* no funciona :c */
+}
+
+
+@media screen and (max-width:900px) {
+   .searcher input nav {
+       width: 80%;
+       height: 100%;
+       margin: 0px;
+       position: fixed;
+     }
+
+  nav ul li {
+    display: block;
+    float: none;
+    
+    
+  }
+.menu_bar{
+  display: block;
+  width:100%;
+  background-color: #ccc;
+}
+/*
+.nav-menu{
+  /*text-decoration-line:;
+}*/
+.menu_bar .bt-menu{
+  display: block;
+  padding: 20px;
+  background: rgb(139, 134, 134);
+  color: antiquewhite;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu_bar span {
+  float:right;
+
+}
+
+}
