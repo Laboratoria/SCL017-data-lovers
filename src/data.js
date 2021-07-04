@@ -1,14 +1,14 @@
 
 
-
-const sortAZ = (dataPokemon) => dataPokemon.sort((a,b) =>{
-    if(a.name<b.name) return -1;
-    if(a.name>b.name) return 1;
-    return 0;
-});
-
-
-
-
-
 export {sortAZ};
+
+const sortAZ = (dataPokemon, value) => {
+    if (value === 'A-Z') {
+      dataPokemon.sort((a, b) => a.name.localeCompare(b.name));
+    } else {
+      dataPokemon.sort((a, b) => b.name.localeCompare(a.name));
+    }
+  };
+
+
+
