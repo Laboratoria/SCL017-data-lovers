@@ -12,7 +12,6 @@ document.getElementById("txtBuscador").addEventListener("change", function (even
     const texto = event.target.value.toLowerCase()
     
     // Buscando con filter
-    const nuevasCajas = data.results.
-    filter(personaje => personaje.name.toLowerCase().indexOf(texto) > -1)
+    const nuevasCajas = data.results.filter(personaje => personaje.name.toLowerCase().indexOf(texto) > -1)
     cajasPantalla(nuevasCajas)
 })

@@ -38,14 +38,24 @@
       </div>
       <div class="boxBuscador">
         <input id="txtBuscador" class="txtBuscador" type="text" placeholder="Buscador" />
-        <button class="btnBuscador">oo</button>
+        <button class="btnBuscador">🔎</button>
       </div>
     </div>
-    <div class="filtros">
-      <h2>Elige la opción para filtrar</h2>
-      <input id="filtroEspecie" class="especie" type="radio">
-      <label for="filtroEspecie">Especie</label>
+    <div class="filtroOrden">
+    <select name="filtro" class="filtro" id="filtro">
+      <option select>Ordenar por</option>
+      <option select id="opcionUno" value="A-Z">A-Z</option>
+      <option select id="opcionDos" value ="Z-A">Z-A</option>
+    </select>
     </div>
+    <div class="filtroEspecie">
+        <select name="filtroE" class="filtroE" id="filtroE">
+          <option select>Filtrar por Especie</option>
+          <option select id="opcionUno" value=></option>
+          <option select id="opcionDos" value=></option>
+        </select>
+    </div>
+    <br><br><br>
     <div id="root"></div>
   </div>
 
