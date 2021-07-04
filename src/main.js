@@ -36,7 +36,7 @@ selectValue.addEventListener("change",()=>{
                     <p>${ " Type : "  +  printPokemon[i].type}</p>
                     <p>${ " Region : " + printPokemon[i].generation.name}</p>
                     <p>${ " Eggs : " + printPokemon[i].egg}<p>
-                    <p>${ "Candies : " + printPokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                    <p>${ " Spawn Chance : "+ printPokemon[i]['spawn-chance']}%</p>
                     <p>${ " Max CP : " + printPokemon[i].stats['max-cp']}</p>        
            </div>; 
             </div>
@@ -74,7 +74,7 @@ selectValueRegion.addEventListener("change",()=>{
                     <p>${ " Type : "  +  printRegion[i].type}</p>
                     <p>${ " Region : " + printRegion[i].generation.name}</p>
                     <p>${ " Eggs : " + printRegion[i].egg}<p>
-                    <p>${ "Candies : " + printRegion[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                    <p>${ " Spawn Chance : "+  printRegion[i]['spawn-chance']}%</p>
                     <p>${ " Max CP : " + printRegion[i].stats['max-cp']}</p>        
            </div>; 
             </div>
@@ -114,8 +114,8 @@ selectValueEggs.addEventListener("change",()=>{
                     <div class="flip-card-back">
                     <p>${ " Type : "  +  printEggs[i].type}</p>
                     <p>${ " Region : " + printEggs[i].generation.name}</p>
-                    <p>${ " Eggs : " + printEggs[i].egg}<p>
-                    <p>${ "Candies : " + printEggs[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                    <p>${ " Eggs : " + printEggs[i].egg}</p>
+                    <p>${ " Spawn Chance : "+ printEggs[i]['spawn-chance']}%</p>
                     <p>${ " Max CP : " + printEggs[i].stats['max-cp']}</p>        
            </div>; 
             </div>
@@ -128,6 +128,8 @@ selectValueEggs.addEventListener("change",()=>{
         
     });
 
+//TRAER DATA AL APRETAR SELECT EN FILTRO HUEVOS//
+
 //FILTRAR POR BÚSQUEDA//
 const pokemon= data.pokemon;
 //const tiposDePokemones = dataTipos.tiposDePokemones;//
@@ -138,7 +140,8 @@ const pokemonSearch = "";
 	buttonDown.addEventListener("click",() => {
 		window.scrollTo(0,0);
 	});
-//};
+
+
 //FUNCTION DE BUSCAR//
 const searchPo = document.getElementById("searchPo");
 searchPo.addEventListener("keyup",(e)=> {
@@ -167,7 +170,7 @@ searchPo.addEventListener("keyup",(e)=> {
                   <p>${ " Type : "  +  filteredPokemon[i].type}</p>
                   <p>${ " Region : " + filteredPokemon[i].generation.name}</p>
                   <p>${ " Eggs : " + filteredPokemon[i].egg}<p>
-                  <p>${ "Candies : " + filteredPokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                  <p>${ " Spawn Chance : "+ filteredPokemon[i]['spawn-chance']}%</p>
                   <p>${ " Max CP : " + filteredPokemon[i].stats['max-cp']}</p>
                 </div>
              </div>
@@ -198,7 +201,7 @@ function bringData() {
                         <p>${ " Type : "  +  pokemon[i].type}</p>
                         <p>${ " Region : " + pokemon[i].generation.name}</p>
                         <p>${ " Eggs : " + pokemon[i].egg}<p>
-                        <p>${ "Candies : " + pokemon[i].evolution['next-evolution']?.[0]['candy-cost']}</p>
+                        <p>${ " Spawn Chance : "+ pokemon[i]['spawn-chance']}%</p>
                         <p>${ " Max CP : " + pokemon[i].stats['max-cp']}</p>        
                </div>; 
                 </div>

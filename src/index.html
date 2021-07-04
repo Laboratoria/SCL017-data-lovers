@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   </head>
   <body>
-
     <span class="ir-arriba" id="button-down">^</span>
     <div class="contenedor">
-      <div class="banner"></div>
-    
+    <div class="banner"></div> 
     <div class= "searcher">
       <input type="text" id="searchPo" placeholder="Search Pokémon">
       <div class="menu_bar">
@@ -52,7 +50,7 @@
         </select>
       <li><label for="">Eggs</label>
         <select name="eggs" id="pokeeggs"></li> 
-          <option value="select" active>Select</option>
+          <span id="select"><option value="num" active>Select</option></span>
           <option value="not in eggs">Not In Eggs</option>
           <option value="2 km">2 Km</option>
           <option value= "5 km">5 km</option>
@@ -64,7 +62,9 @@
     </nav>
  </div>
 </div>
-    <div id="root"></div>
+    <div id="root">
+      
+    </div>
   </div>
       
     <script src="main.js" type="module"></script>
