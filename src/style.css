@@ -225,3 +225,43 @@ html,body{
     float: left;
     width: 60%;
 }
+
+.filtroOrden{
+    float: left;
+    margin-top: 0px;
+    margin-left: 24px;
+    margin-bottom: 10px;
+    width: 24px;
+    height: 24px;
+}
+.filtro{
+    border-radius: 10px;
+    border: 1px solid #91BF64;;
+    line-height: 32px;
+    padding: 9px 66px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px #91BF64;
+}
+.filtroEspecie{
+    float: left;
+    margin-top: 0px;
+    margin-left: 305px;
+    width: 24px;
+    height: 24px;
+
+}
+
+.filtroE{
+    border-radius: 10px;
+    border: 1px solid #91BF64;;
+    line-height: 32px;
+    padding: 9px 66px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px #91BF64;
+}
