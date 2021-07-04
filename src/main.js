@@ -27,12 +27,13 @@ inputValue.addEventListener("keyup", (event) => {
           <h2>${poke.name}</h2>
           <img src="${poke.img}">
           <div class="card-square-info">
-            <p class="poke-card-type"> Type: ${poke.type}.<p>
+            <div class="poke-card-type"> </div>
             <p class="pokemon-card-about"> ${poke.about}</p>
             <p class="p-resistant">Strong against:</p>
             <div class="poke-card-resistant"></div>
             <p class="p-resistant">Weak against:</p>
             <div class="poke-card-weaknesses"></div>
+            <p class="poke-card-size"> Height: ${poke.size.height} Weigth:${poke.size.weight}<p>
           </div>
         </div>
         <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>
@@ -44,6 +45,17 @@ inputValue.addEventListener("keyup", (event) => {
             document.getElementById("firstPage").style.display = "block";
             document.getElementById("pokeStatsContainer").style.display = "none";
             };
+
+            if (poke.type.length == 1){
+              document.querySelector(".poke-card-type").innerHTML = `
+              <img class="imgType" src="./img/${poke.type[0]}.png">`;
+            }
+            else if (poke.type.length == 2){
+              document.querySelector(".poke-card-type").innerHTML = `
+              <img class="imgType" src="./img/${poke.type[0]}.png">
+              <img class="imgType" src="./img/${poke.type[1]}.png">`;
+            };
+
              //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
              if (poke.resistant.length == 1){
               document.querySelector(".poke-card-resistant").innerHTML = `
@@ -169,27 +181,37 @@ buttonClick.addEventListener("click", (event) => {
         pokeStats(poke);
         pokeStatsContainer.innerHTML = `
         
-      <div class="pokemonCard">
+        <div class="pokemonCard">
         <p class="poke-card-num">#${poke.num}</p> 
         <h2>${poke.name}</h2>
         <img src="${poke.img}">
         <div class="card-square-info">
-          <p class="poke-card-type"> Type: ${poke.type}.<p>
+          <div class="poke-card-type"> </div>
           <p class="pokemon-card-about"> ${poke.about}</p>
           <p class="p-resistant">Strong against:</p>
           <div class="poke-card-resistant"></div>
           <p class="p-resistant">Weak against:</p>
           <div class="poke-card-weaknesses"></div>
+          <p class="poke-card-size"> Height: ${poke.size.height} Weigth:${poke.size.weight}<p>
         </div>
       </div>
       <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>
-          
           `;
 
           document.querySelector(".btn-back").addEventListener("click", goBack);
           function goBack (){
             document.getElementById("firstPage").style.display = "block";
             document.getElementById("pokeStatsContainer").style.display = "none";
+            };
+
+            if (poke.type.length == 1){
+              document.querySelector(".poke-card-type").innerHTML = `
+              <img class="imgType" src="./img/${poke.type[0]}.png">`;
+            }
+            else if (poke.type.length == 2){
+              document.querySelector(".poke-card-type").innerHTML = `
+              <img class="imgType" src="./img/${poke.type[0]}.png">
+              <img class="imgType" src="./img/${poke.type[1]}.png">`;
             };
            
             //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
