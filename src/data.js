@@ -1,14 +1,19 @@
-
-
-
-const sortAZ = (dataPokemon) => dataPokemon.sort((a,b) =>{
-    if(a.name<b.name) return -1;
-    if(a.name>b.name) return 1;
-    return 0;
+const sortAZ = (dataPokemon) => dataPokemon.sort((a, b) => {
+  return a.name > b.name ? 1 : a.name < b.name ? -1 : 0
+});
+const sortZA = (dataPokemon) => dataPokemon.sort((a, b) => {
+  return a.name > b.name ? -1 : a.name < b.name ? 1 : 0
+});
+const sortAscNum = (dataPokemon) => dataPokemon.sort((a, b) => {
+  return a.num > b.num ? 1 : a.num < b.num ? -1 : 0
+});
+const sortDesNum = (dataPokemon) => dataPokemon.sort((a, b) => {
+  return a.num > b.num ? -1 : a.num < b.num ? 1 : 0
 });
 
 
 
 
 
-export {sortAZ};
+
+export {sortAZ, sortZA, sortAscNum, sortDesNum};
