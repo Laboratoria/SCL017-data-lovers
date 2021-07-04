@@ -1,11 +1,9 @@
 import pokemon from "./data/pokemon/pokemon.js";
-import { sortAZ } from "./data.js";
 
 const dataPokemon = pokemon.pokemon;
 const inputValue = document.getElementById("searchpokemon");
 const matchingPokesDiv = document.getElementById("matching");
 const buttonClick = document.getElementById("btn");
-const buttonAZ = document.getElementById("sort_az");
 
 //Pagina tarjeta individual
 
@@ -16,11 +14,11 @@ inputValue.addEventListener("keyup", (event) => {
     pokemon.pokemon
       .filter((pkm) => pkm.name.startsWith(inputValueLowerCase))
       .forEach((poke) => {
-        const matchingPoke1 = document.createElement("div");
-        matchingPoke1.className = "pokeNameStyle";
+        const matchingPoke = document.createElement("div");
+        matchingPoke.className = "pokeNameStyle";
         
         //Click a pokemon en barra de busqueda para ir a info Pokemon
-        matchingPoke1.onclick = function () {
+        matchingPoke.onclick = function () {
           pokeStats(poke);
           pokeStatsContainer.innerHTML = `
         
@@ -151,9 +149,9 @@ inputValue.addEventListener("keyup", (event) => {
             };
         };
         //Lista en barra de búsqueda
-        matchingPoke1.innerHTML = `<img class="pokeImgDisplay" src="${poke.img}">
+        matchingPoke.innerHTML = `<img class="pokeImgDisplay" src="${poke.img}">
                                   <p class= "pokeTxtDisplay">${poke.name}</p>`;
-        matchingPokesDiv.appendChild(matchingPoke1);
+        matchingPokesDiv.appendChild(matchingPoke);
       });
   }
 });
@@ -165,9 +163,9 @@ buttonClick.addEventListener("click", (event) => {
   document.getElementById("showAllPokemon").style.display = "block";
     pokemon.pokemon
     .forEach((poke) => {
-      let matchingPoke2 = document.createElement("div");
-      matchingPoke2.className = "pokeListStyle";
-      matchingPoke2.onclick = function () {
+      let matchingPoke = document.createElement("div");
+      matchingPoke.className = "pokeListStyle";
+      matchingPoke.onclick = function () {
         pokeStats(poke);
         pokeStatsContainer.innerHTML = `
         
@@ -176,7 +174,7 @@ buttonClick.addEventListener("click", (event) => {
         <h2>${poke.name}</h2>
         <img src="${poke.img}">
         <div class="card-square-info">
-          <div class="poke-card-type"> Type: ${poke.type}.<div>
+          <p class="poke-card-type"> Type: ${poke.type}.<p>
           <p class="pokemon-card-about"> ${poke.about}</p>
           <p class="p-resistant">Strong against:</p>
           <div class="poke-card-resistant"></div>
@@ -193,7 +191,6 @@ buttonClick.addEventListener("click", (event) => {
             document.getElementById("firstPage").style.display = "block";
             document.getElementById("pokeStatsContainer").style.display = "none";
             };
-
            
             //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
             if (poke.resistant.length == 1){
@@ -297,10 +294,10 @@ buttonClick.addEventListener("click", (event) => {
               <img class="imgResistant" src="./img/${poke.weaknesses[6]}.png">`;
             };
       };
-      matchingPoke2.innerHTML = `<p class= "pokeNumber"> <img class="pokeballImg" src="img/pokeball.png">  N° ${poke.num}</p>
+      matchingPoke.innerHTML = `<p class= "pokeNumber"> <img class="pokeballImg" src="img/pokeball.png">  N° ${poke.num}</p>
                                 <img class="pokeImgList" src="${poke.img}">
                                 <p class= "pokeName">${poke.name}</p>`;
-      document.getElementById("allPokeContainer").appendChild(matchingPoke2);
+      document.getElementById("allPokeContainer").appendChild(matchingPoke);
     });
 });
 
