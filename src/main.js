@@ -7,8 +7,7 @@ var modal = document.getElementById("myModal");
 //Filtrar por tipo//
 const containerRoot= document.getElementById("root");
 
- 
-let selectValue = document.getElementById("poketype");
+ let selectValue = document.getElementById("poketype");
 selectValue.addEventListener("change",()=>{
     let selectValueType = selectValue.value;
     console.log(selectValueType)
@@ -125,12 +124,13 @@ selectValueEggs.addEventListener("change",()=>{
         
     });
 
-//TRAER DATA AL APRETAR SELECT EN FILTRO HUEVOS//
+//BOTON IR HACIA ABAJO//
+const buttonUp = document.getElementById("button-up");
+	buttonUp.addEventListener("click",() => {
+		window.scrollTo(0,99999);
+	});
 
-//FILTRAR POR BÚSQUEDA//
 const pokemon= data.pokemon;
-//const tiposDePokemones = dataTipos.tiposDePokemones;//
-const pokemonSearch = "";
 
 // boton de ir hacia arriba //
 //window.onload = () => {

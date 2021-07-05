@@ -18,7 +18,7 @@ Nuestro producto “GO Data” está diseñado para jugadores de la famosa aplic
 
 ## 2. Organización
 Elegimos la plataforma trello para ir fijando lo que teníamos que hacer por cada Sprint y así ir viendo como  iba avanzando realmente y cómo finalmente iba agarrando forma el proyecto semana a semana.
-![Trello](pictures/Trello.PNG)
+![Trello](src/pictures/Trello.PNG)
 
 
 ## 3. Historias de Usuario
@@ -29,24 +29,38 @@ Basamos nuestras historias de usuario en preguntas realizadas a usuarios reales 
 * En cuanto al filtrado, ¿ Que sería algo atractivo de encontrar en esta sección?
 * ¿Para qué usarías esta página? ¿ Cuál crees que sería su utilidad?
 
+#### Historia 1 
+![Historia 1](src/pictures/HISTORIA1.PNG)
 
-![Historia 1](pictures/HISTORIA1.PNG)
+#### Historia 2 
+![Historia 2](src/pictures/HISTORIA2.PNG)
 
-
-![Historia 2](pictures/HISTORIA2.PNG)
-
-
-![Historia 3](pictures/HISTORIA3.PNG)
+#### Historia 3 
+![Historia 3](src/pictures/HISTORIA3.PNG)
 
 
 ## 4. Diseño de la interfaz del usuario
 La interfaz de usuario fue diseñada en base a las historias de usuario y el research de los mismos. Primeramente diseñamos un prototipo de baja fidelidad en la plataforma “InVision” para posteriormente realizar la de alta fidelidad en la plataforma “Figma”.
 
-![Prototipo de baja fidelidad](pictures/BajaFidelidadPokemon.png)
+#### Prototipo de baja fidelidad
 
+<details>
+<summary>Click para ver prototipo</summary>
 
-![Prototipo de alta fidelidad](pictures/AltaFidelidad.jpg)
+> ![Prototipo de alta fidelidad](src/pictures/BajaFidelidadPokemon.png)
 
+</details>
+<br>
+
+#### Prototipo de alta fidelidad
+
+<details>
+<summary>Click para ver prototipo</summary>
+
+> ![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
+
+</details>
+<br>
 
 ## 5. Testeo de Usabilidad
 Los test de usabilidad los realizamos con 3 usuarios varones que van desde los 11 años a los 27 años de edad, todos usuarios recurrentes de “Pokémon GO”. Para testear la web, les dimos a cada uno 3 misiones o tareas a realizar en la misma y una exploración libre por la página comentando sus recomendaciones y sensaciones.
@@ -57,14 +71,25 @@ Las Misiones eran las siguientes:
 * Explora libremente por la página, ¿hay alguna recomendación?
 
 A continuación se muestran imágenes a modo tabla con los hallazgos del test de usabilidad
-
-![Usuario 1](pictures/testU1.PNG)
-
-
-![Usuario 2](pictures/testU2.PNG)
+#### Usuario 1 
+![Usuario 1](src/pictures/testU1.PNG)
 
 
-![Usuario 3](pictures/testU3.PNG)
+#### Usuario 2
+![Usuario 2](src/pictures/testU2.PNG)
+
+
+#### Usuario 3
+![Usuario 3](src/pictures/testU3.PNG)
+
+### Iteraciones 
+Tomando en cuenta las opiniones decidimos iterar sobre las siguientes recomendaciones:
+* Hacer el botón de ir hacia arriba más llamativo para que sea más fácil de ver
+* Que el texto que tienen los pokémon con su información sea un poco más gruesa para que sea más fácil de leer. 
+* Agregar Spawn a la información de cada Pokémon 
+* Sacar la información de Caramelos 
+* Agregar botón que baje a la parte inferior de la página
+* Modal para conocer el uso de página (en relación a información de Pokemones)
 
 
 ## 6. Link a "GO data"

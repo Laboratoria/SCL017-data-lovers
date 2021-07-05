@@ -25,80 +25,90 @@ background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .divbtn{ 
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .myBtn{
+    width:5%; 
+    height:10%;
+    background-color:	#FF7F50;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor:pointer;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-weight: bold
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: 		#FFE4B5;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid 	#FF7F50;
+    width: 80%;
+    font-weight: bold
+  }
+  .modal-content  p {
+  
+  text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: 	#ce963d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+/* boton ir hacia abajo */ 
+.ir-abajo{
+  display:inline-block;
+	padding:20px;
+	background:		#FF8C00;
+	font-size:15px;
+	color: 	#FFFF00;
+	cursor:pointer;
+	position: fixed;
+	bottom: 10px;
+	right:10px;
+  border-radius: 80%;
 }
-
-.myBtn{
-  width:5%; 
-  height:10%;
-  background-color:	#FF7F50;
-  font-weight: bold;
-  border-radius: 25px;
-  cursor:pointer;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  font-weight: bold
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: 		#FFE4B5;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid 	#FF7F50;
-  width: 80%;
-  font-weight: bold
-}
-.modal-content  p {
-
-text-align: center;
-}
-
-/* The Close Button */
-.close {
-  color: 	#ce963d;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* boton ir hacia arriba */ 
 .ir-arriba {
 	display:inline-block;
 	padding:20px;
 	background:		#FF8C00;
-	/* font-size:20px; */
+	font-size:15px;
 	color: 	#FFFF00;
 	cursor:pointer;
 	position: fixed;
-	bottom: 10px; 
-	right:10px; 
+	bottom: 80px;
+	right:10px;
   border-radius: 50%;
-  margin: 4px 2px;
-  transition: .2s;
 }
 
 #root{
