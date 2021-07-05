@@ -26,18 +26,31 @@ background-size: cover;
     background-position: center;
 }
 
-
+/* boton ir hacia abajo */ 
+.ir-abajo{
+  display:inline-block;
+	padding:20px;
+	background:		#FF8C00;
+	font-size:15px;
+	color: 	#FFFF00;
+	cursor:pointer;
+	position: fixed;
+	bottom: 10px;
+	right:10px;
+  border-radius: 80%;
+}
 /* boton ir hacia arriba */ 
 .ir-arriba {
 	display:inline-block;
 	padding:20px;
-	background:		#4169E1;
-	font-size:20px;
+	background:		#FF8C00;
+	font-size:15px;
 	color: 	#FFFF00;
 	cursor:pointer;
 	position: fixed;
-	bottom: 10px;;
+	bottom: 80px;
 	right:10px;
+  border-radius: 50%;
 }
 
 #root{

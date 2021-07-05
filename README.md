@@ -82,5 +82,14 @@ A continuación se muestran imágenes a modo tabla con los hallazgos del test de
 #### Usuario 3
 ![Usuario 3](src/pictures/testU3.PNG)
 
+### Iteraciones 
+Tomando en cuenta las opiniones decidimos iterar sobre las siguientes recomendaciones:
+* Hacer el botón de ir hacia arriba más llamativo para que sea más fácil de ver
+* Que el texto que tienen los pokémon con su información sea un poco más gruesa para que sea más fácil de leer. 
+* Agregar Spawn a la información de cada Pokémon 
+* Sacar la información de Caramelos 
+* Agregar botón que baje a la parte inferior de la página
+* Modal para conocer el uso de página (en relación a información de Pokemones)
+
 
 ## 6. Link a "GO data"

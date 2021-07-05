@@ -128,12 +128,14 @@ selectValueEggs.addEventListener("change",()=>{
         
     });
 
-//TRAER DATA AL APRETAR SELECT EN FILTRO HUEVOS//
+//BOTON IR HACIA ABAJO//
+const buttonUp = document.getElementById("button-up");
+	buttonUp.addEventListener("click",() => {
+		window.scrollTo(0,99999);
+	});
 
-//FILTRAR POR BÚSQUEDA//
 const pokemon= data.pokemon;
-//const tiposDePokemones = dataTipos.tiposDePokemones;//
-const pokemonSearch = "";
+
 // boton de ir hacia arriba //
 //window.onload = () => {
 	const buttonDown = document.getElementById("button-down");
