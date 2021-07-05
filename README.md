@@ -57,13 +57,15 @@ Las Misiones eran las siguientes:
 * Explora libremente por la página, ¿hay alguna recomendación?
 
 A continuación se muestran imágenes a modo tabla con los hallazgos del test de usabilidad
-
+# Usuario 1 
 ![Usuario 1](src/pictures/testU1.PNG)
 
 
+# Usuario 2
 ![Usuario 2](src/pictures/testU2.PNG)
 
 
+# Usuario 3
 ![Usuario 3](src/pictures/testU3.PNG)
 
 
