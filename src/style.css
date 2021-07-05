@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Kosugi+Maru&family=Press+Start+2P&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +12,6 @@ html{
 }
 #firstPage{
   background-image: url(img/lab-mobile.png);
-  background-repeat: no-repeat;
   background-size: cover;
 }
 header{
@@ -35,7 +35,7 @@ header img{
 }
 .nav-menu ul li a{
   font-size: 16px;
-  color: #0E1426;
+  color: #1154a0;
   text-decoration: none;
   line-height: 30px;
   font-weight: bold;
@@ -52,13 +52,14 @@ main {
   margin: 10%;
 }
 main section h3{
-  color: navy;
-  font-size: 20px;
+  color: rgba(204, 166, 42, 0.938);
+  font-family: "Press Start 2P";
+  font-size: 15px;
   margin: 5%;
 }
 main section p {
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 2em;
   margin: 5%;
 }
@@ -74,12 +75,12 @@ main section p {
   background: white;
 }
 .btn {
-  width: 150px;
+  width: 120px;
   height: 30px;
-  margin: 10%;
+  margin: 5%;
   border-radius: 18px;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
 footer {
@@ -210,7 +211,7 @@ footer {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: 7% 5%; 
+  margin: 3% 5%; 
 }
 .pokemonCard{
   display: flex;
@@ -220,6 +221,7 @@ footer {
   box-shadow: 4px 4px 4px #0E1426;
   overflow-x: visible;
   border-radius: 5px;
+  font-family: "Inconsolata";
 }
 /* .pokemonCard img{ 
   position: absolute;
@@ -247,13 +249,20 @@ footer {
   border-radius: 7px;
 }
 .poke-card-type{
-  font-size: 20px;
   text-align: center;
-  /* margin-bottom: 20%; */
+}
+.imgType{
+  width: 40px;
+  height: 50px;
 }
 .pokemon-card-about{
   font-size: 20px;
-  margin: 10px 0;
+  text-align: center;
+  margin: 15px 0;
+}
+.poke-card-size{
+text-align: center;
+margin:5px;
 }
 .p-resistant{
   font-size: 18px; 
