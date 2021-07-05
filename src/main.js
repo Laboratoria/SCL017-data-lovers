@@ -175,9 +175,7 @@ inputValue.addEventListener("keyup", (event) => {
 
     loadSelectedPokemon("all");
 
-  document
-    .getElementById("dropdownType")
-    .addEventListener("change", (event) => {
+  document.getElementById("dropdownType").addEventListener("change", (event) => {
       loadSelectedPokemon(event.target.value);
     });
 
@@ -513,8 +511,6 @@ inputValue.addEventListener("keyup", (event) => {
       document.getElementById("allPokeContainer").appendChild(matchingPoke);
     });
   }
-
-
 });
 
 const pokeStats = () => {
