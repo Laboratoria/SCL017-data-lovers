@@ -223,10 +223,6 @@ footer {
   border-radius: 5px;
   font-family: "Inconsolata";
 }
-/* .pokemonCard img{ 
-  position: absolute;
-  margin-top: 13%;
-}*/
 .poke-card-num {
   font-size: 1.2em;
   text-align: center;
@@ -234,7 +230,6 @@ footer {
   font-style: bold;
   background: #03A688;
   padding: 5px;
-  /* margin-top: 7px; */
   width: 100%;
   border-radius: 10px 10px 0px 0px;
 }
