@@ -58,6 +58,8 @@ La interfaz de usuario fue diseñada en base a las historias de usuario y el res
 <summary>Click para ver prototipo</summary>
 
 > ![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
+
+</details>
 <br>
 
 ## 5. Testeo de Usabilidad
