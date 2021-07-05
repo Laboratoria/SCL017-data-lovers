@@ -18,7 +18,7 @@ Nuestro producto “GO Data” está diseñado para jugadores de la famosa aplic
 
 ## 2. Organización
 Elegimos la plataforma trello para ir fijando lo que teníamos que hacer por cada Sprint y así ir viendo como  iba avanzando realmente y cómo finalmente iba agarrando forma el proyecto semana a semana.
-![Trello](pictures/Trello.PNG)
+![Trello](src/pictures/Trello.PNG)
 
 
 ## 3. Historias de Usuario
@@ -36,16 +36,16 @@ Basamos nuestras historias de usuario en preguntas realizadas a usuarios reales 
 ![Historia 2](src/pictures/HISTORIA2.PNG)
 
 
-![Historia 3](pictures/HISTORIA3.PNG)
+![Historia 3](src/pictures/HISTORIA3.PNG)
 
 
 ## 4. Diseño de la interfaz del usuario
 La interfaz de usuario fue diseñada en base a las historias de usuario y el research de los mismos. Primeramente diseñamos un prototipo de baja fidelidad en la plataforma “InVision” para posteriormente realizar la de alta fidelidad en la plataforma “Figma”.
 
-![Prototipo de baja fidelidad](pictures/BajaFidelidadPokemon.png)
+![Prototipo de baja fidelidad](src/pictures/BajaFidelidadPokemon.png)
 
 
-![Prototipo de alta fidelidad](pictures/AltaFidelidad.jpg)
+![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
 
 
 ## 5. Testeo de Usabilidad
@@ -58,13 +58,13 @@ Las Misiones eran las siguientes:
 
 A continuación se muestran imágenes a modo tabla con los hallazgos del test de usabilidad
 
-![Usuario 1](pictures/testU1.PNG)
+![Usuario 1](src/pictures/testU1.PNG)
 
 
-![Usuario 2](pictures/testU2.PNG)
+![Usuario 2](src/pictures/testU2.PNG)
 
 
-![Usuario 3](pictures/testU3.PNG)
+![Usuario 3](src/pictures/testU3.PNG)
 
 
 ## 6. Link a "GO data"
