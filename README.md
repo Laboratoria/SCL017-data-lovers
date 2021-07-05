@@ -43,7 +43,12 @@ Basamos nuestras historias de usuario en preguntas realizadas a usuarios reales 
 La interfaz de usuario fue diseñada en base a las historias de usuario y el research de los mismos. Primeramente diseñamos un prototipo de baja fidelidad en la plataforma “InVision” para posteriormente realizar la de alta fidelidad en la plataforma “Figma”.
 
 #### Prototipo de baja fidelidad
+<details>
+<summary>Click para ver</summary>
+<br>
 ![Prototipo de baja fidelidad](src/pictures/BajaFidelidadPokemon.png)
+</details>
+
 
 
 #### Prototipo de alta fidelidad
