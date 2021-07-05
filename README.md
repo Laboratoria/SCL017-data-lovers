@@ -46,10 +46,10 @@ La interfaz de usuario fue diseñada en base a las historias de usuario y el res
 
 <details>
 <summary>Click para ver</summary>
-<img src="BajaFidelidadPokemon.png">
+> ![Prototipo de alta fidelidad](src/pictures/BajaFidelidadPokemon.png)
+
 </details>
-
-
+<br>
 
 #### Prototipo de alta fidelidad
 ![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
