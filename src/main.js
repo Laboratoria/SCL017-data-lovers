@@ -325,7 +325,8 @@ inputValue.addEventListener("keyup", (event) => {
       // console.log(matchingPoke);
 
       let displayOrder = document.getElementById("sortBy");
-      displayOrder.addEventListener("change", () => {
+      const order = () => {
+        displayOrder.addEventListener("change", () => {
         let orderPoke = "";
         if (displayOrder.value == "sort__az"){
           orderPoke = sortAZ(dataPokemon)
@@ -339,12 +340,7 @@ inputValue.addEventListener("keyup", (event) => {
         if (displayOrder.value == "sort__91"){
           orderPoke = sortDesNum(dataPokemon)
         }
-
-        console.log(orderPoke);
-        
-        });
-
-    });
+       })}
     
 });
 
