@@ -29,22 +29,24 @@ Basamos nuestras historias de usuario en preguntas realizadas a usuarios reales 
 * En cuanto al filtrado, ¿ Que sería algo atractivo de encontrar en esta sección?
 * ¿Para qué usarías esta página? ¿ Cuál crees que sería su utilidad?
 
-
+#### Historia 1 
 ![Historia 1](src/pictures/HISTORIA1.PNG)
 
-
+#### Historia 2 
 ![Historia 2](src/pictures/HISTORIA2.PNG)
 
-
+#### Historia 3 
 ![Historia 3](src/pictures/HISTORIA3.PNG)
 
 
 ## 4. Diseño de la interfaz del usuario
 La interfaz de usuario fue diseñada en base a las historias de usuario y el research de los mismos. Primeramente diseñamos un prototipo de baja fidelidad en la plataforma “InVision” para posteriormente realizar la de alta fidelidad en la plataforma “Figma”.
 
+#### Prototipo de baja fidelidad
 ![Prototipo de baja fidelidad](src/pictures/BajaFidelidadPokemon.png)
 
 
+#### Prototipo de alta fidelidad
 ![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
 
 
