@@ -45,15 +45,20 @@ La interfaz de usuario fue diseñada en base a las historias de usuario y el res
 #### Prototipo de baja fidelidad
 
 <details>
-<summary>Click para ver</summary>
+<summary>Click para ver prototipo</summary>
+
 > ![Prototipo de alta fidelidad](src/pictures/BajaFidelidadPokemon.png)
 
 </details>
 <br>
 
 #### Prototipo de alta fidelidad
-![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
 
+<details>
+<summary>Click para ver prototipo</summary>
+
+> ![Prototipo de alta fidelidad](src/pictures/AltaFidelidad.jpg)
+<br>
 
 ## 5. Testeo de Usabilidad
 Los test de usabilidad los realizamos con 3 usuarios varones que van desde los 11 años a los 27 años de edad, todos usuarios recurrentes de “Pokémon GO”. Para testear la web, les dimos a cada uno 3 misiones o tareas a realizar en la misma y una exploración libre por la página comentando sus recomendaciones y sensaciones.
