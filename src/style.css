@@ -30,13 +30,16 @@ background-size: cover;
 .ir-arriba {
 	display:inline-block;
 	padding:20px;
-	background:		#4169E1;
-	font-size:20px;
+	background:		#FF8C00;
+	/* font-size:20px; */
 	color: 	#FFFF00;
 	cursor:pointer;
 	position: fixed;
-	bottom: 10px;;
-	right:10px;
+	bottom: 10px; 
+	right:10px; 
+  border-radius: 50%;
+  margin: 4px 2px;
+  transition: .2s;
 }
 
 #root{
@@ -101,6 +104,9 @@ background-size: cover;
     /*overflow: hidden;*/
 }
 
+
+
+
 .btn{
     display: flex;
     /*align-self:30px ;*/
@@ -114,7 +120,7 @@ background-size: cover;
     display: flex;
     flex-direction: row;
     margin: auto;
-    /*align-self: center;*/
+    align-self: flex-start;
    /* margin-left: 300px;*/
     width:300px;
     height: 20px;
@@ -127,13 +133,12 @@ background-size: cover;
 
  }
 
-#searcherPo input{
+  #searcherPo input{
     border: none;
     outline: none;
     padding: 0 10px;
     font-size: 20px;
-} 
-
+}  
  .btn span{
     
     color: darkslateblue;
@@ -166,6 +171,7 @@ background-size: cover;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
 
 
 
@@ -181,6 +187,7 @@ background-size: cover;
     position: absolute;
     width: 300px;
     height: 300px;
+    border-radius: 25px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     
@@ -188,7 +195,8 @@ background-size: cover;
   
   .flip-card-front {
     background-color:#4682B4;
-    color: black;
+    color: black; 
+    font-weight: bold
     
   }
   
@@ -196,4 +204,46 @@ background-size: cover;
     background-color:			#87CEEB;
     color:black;
     transform: rotateY(180deg);
+    font-weight: bold
+
   }
+
+
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

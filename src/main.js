@@ -1,10 +1,36 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 import dataTipos from './data/pokemon/tipo.js';
-// import data from './data/rickandmorty/rickandmorty.js'
+var modal = document.getElementById("myModal");
 
 const containerRoot= document.getElementById("root");
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+ // boton que abre el modal
+ var btn = document.getElementById("myBtn"); 
+
+ // obtiene el elemento span que tiene el modal
+ var span = document.getElementsByClassName("close")[0];
+
+  //cuando el usuario hace click se abre el modal
+ btn.onclick = function() {
+   modal.style.display = "block";
+ }
+ 
+ // Cuando se haga click en la x se cierre el modal
+ span.onclick = function() {
+ modal.style.display = "none";
+ }
+ 
+ // Si se hace click fuera del modal se cierra
+ window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = "none"; 
+   }
+ }
+ 
 let selectValue = document.getElementById("poketype");
 selectValue.addEventListener("change",()=>{
     let selectValueType = selectValue.value;
@@ -19,10 +45,6 @@ selectValue.addEventListener("change",()=>{
 
         containerRoot.innerHTML="";
       for (let i=0; i< printPokemon.length; i++){
-        
-        console.log(printPokemon[i].name);
-        
-
         containerRoot.innerHTML +=  `<div class="flip-card" id= "pokemon${printPokemon[i].num}">
         <div class ="flip-card-inner">
             <div class ="flip-card-front"> 
@@ -45,10 +67,9 @@ selectValue.addEventListener("change",()=>{
        
        
         
-    });
+    }); 
+  
 
-
-console.log(selectValue)
 
 const pokemon= data.pokemon;
 //const tiposDePokemones = dataTipos.tiposDePokemones;//
@@ -130,6 +151,31 @@ function bringData() {
  }}; 
 
 
+
+ // boton que abre el modal
+var btn = document.getElementById("myBtn"); 
+
+// obtiene el elemento span que tiene el modal
+var span = document.getElementsByClassName("close")[0];
+ //cuando el usuario hace click se abre el modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cuando se haga click en la x se cierre el modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// Si se hace click fuera del modal se cierra
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none"; 
+  }
+}
+
+
+
 /*
  const selectElement=document.querySelector("poketype");
  selectElement.addEventListener("change", (event)=>{
@@ -179,4 +225,6 @@ resultado.textContent= `probando si imprime ${event.target.value}`;
       
   //  });// 
 
-   // return types;}  // */
+  */
+
+  
