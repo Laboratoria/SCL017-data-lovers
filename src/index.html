@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts.css"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   </head>
   <body>
     <span class="ir-arriba" id="button-down">^</span>
     <div class="contenedor">
-      <div class="banner">
-        <h2>este es mi navbar</h2> 
-    </div>
+    <div class="banner"></div> 
     <div class= "searcher">
+      <input type="text" id="searchPo" placeholder="Search Pokémon">
+      <div class="menu_bar">
+        <a href="#" class="bt-menu"><span class= "icon-menu3"></span>Filtrar por</a>
+      </div>
+
+
+  
+      <nav class="nav-menu"> 
+        <ul>
       <div class = "filter">
-        <label for ="">Type</label>
-        <select name= "type" id= "poketype">
+        <li><label for ="">Type</label>
+        <select name= "type" id= "poketype"></li>
           <option value="select" active>Select</option> 
           <option value= "water">Water</option>
           <option value="fire">Fire</option>
@@ -36,42 +43,43 @@
           <option value="ghost">Ghost</option>
           <option value="dark">Dark</option>
         </select>
-        <label for ="">Region</label>
-        <select name="region" id="pokeregion">
+       <li><label for ="">Region</label>
+        <select name="region" id="pokeregion"></li> 
           <option value="select" active>Select</option>
           <option value="kanto">Kanto</option>
           <option value="johto">Johto</option>
         </select>
-        <label for="">Eggs</label>
-        <select name="eggs" id="pokeeggs">
-          <option value="select" active>Select</option>
-          <option value="noteggs">Not Eggs</option>
-          <option value="twokm">2 Km</option>
-          <option value= "fivekm">5 km</option>
-          <option value="tenkm">10 km</option>
+      <li><label for="">Eggs</label>
+        <select name="eggs" id="pokeeggs"></li> 
+          <span id="select"><option value="num" active>Select</option></span>
+          <option value="not in eggs">Not In Eggs</option>
+          <option value="2 km">2 Km</option>
+          <option value= "5 km">5 km</option>
+          <option value="10 km">10 km</option>
         </select>
 
       </div>
-      <div id="btn"></div>
-      <input type="text" id="searchPo" placeholder="Search Pokémon">
-      <div id="btn"></div>
-      <span><i class="fas fa-search icon"></i></span>
+    </ul>
+    </nav>
+ </div>
 </div>
-         <!-- Abrir el modal -->
-         <button id="myBtn">IMPORTANTE!!!!</button> 
+<div class="divbtn">
+  <!-- Trigger/Open The Modal -->
+  <button class="myBtn" id="myBtn">?</button>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal"> 
 
-         <!-- El modal -->
-         <div id="myModal" class="modal" >
-         
-         </div> <!-- Contenido del modal-->
-           <div class="modal-content">
-             <span class="close">&times;</span>
-             <p>PUEDES PONER TU MOUSE ARRIBA DEL POKEMON QUE GUSTES PARA CONOCER MAS INFOMACION SOBRE EL .</p>
-           </div>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Welcome to Go Data here you can search for your favorite pokemon, filter them and you can put your </p>
+    <p>cursor on the pokemon you like the most to learn more about it.</p>
+ </div>
 </div>
-    <div id="root"></div>
-</div>
-</div> 
-    <script src="main.js" type="module"></script>
+<div id="root"></div>
+ 
+     <script src="main.js" type="module"></script>
+  </header>
   </body>
 </html>
