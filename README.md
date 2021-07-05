@@ -30,10 +30,10 @@ Basamos nuestras historias de usuario en preguntas realizadas a usuarios reales 
 * ¿Para qué usarías esta página? ¿ Cuál crees que sería su utilidad?
 
 
-![Historia 1](pictures/HISTORIA1.PNG)
+![Historia 1](src/pictures/HISTORIA1.PNG)
 
 
-![Historia 2](pictures/HISTORIA2.PNG)
+![Historia 2](src/pictures/HISTORIA2.PNG)
 
 
 ![Historia 3](pictures/HISTORIA3.PNG)
