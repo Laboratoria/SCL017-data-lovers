@@ -11,9 +11,4 @@ const sortDesNum = (a, b) => {
   return a.num > b.num ? -1 : a.num < b.num ? 1 : 0
 };
 
-
-
-
-
-
 export {sortAZ, sortZA, sortAscNum, sortDesNum};

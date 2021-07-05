@@ -173,7 +173,6 @@ inputValue.addEventListener("keyup", (event) => {
   document.getElementById("firstPage").style.display = "none";
   document.getElementById("showAllPokemon").style.display = "block";
 
-
     loadSelectedPokemon("all");
 
   document
@@ -194,7 +193,6 @@ inputValue.addEventListener("keyup", (event) => {
     dataPokemon.filter(filterFunction).forEach((poke) => {
       let matchingPoke = document.createElement("div");
       matchingPoke.className = "pokeListStyle";
-      // console.log(pokemon.pokemon.forEach)
       matchingPoke.onclick = function () {
         pokeStats(poke);
         pokeStatsContainer.innerHTML = `
@@ -339,31 +337,9 @@ inputValue.addEventListener("keyup", (event) => {
                                 <img class="pokeImgList" src="${poke.img}">
                                 <p class= "pokeName">${poke.name}</p>`;
       document.getElementById("allPokeContainer").appendChild(matchingPoke);
-     
-      // console.log(matchingPoke);
-
-      /*let displayOrder = document.getElementById("sortBy");
-      displayOrder.addEventListener("change", () => {
-        let orderPoke = "";
-        if (displayOrder.value == "sort__az"){
-          orderPoke = sortAZ(dataPokemon)
-        }
-        if (displayOrder.value == "sort__za"){
-          orderPoke = sortZA(dataPokemon)
-        }
-        if (displayOrder.value == "sort__19"){
-          orderPoke = sortAscNum(dataPokemon)
-        }
-        if (displayOrder.value == "sort__91"){
-          orderPoke = sortDesNum(dataPokemon)
-        }
-
-        console.log(orderPoke);
-        
-        });*/
-
     });
   }
+
   function sortPokemon(selected) {
     if (selected === "") {
       sortSelectedPokemon = sortAZ;
@@ -382,7 +358,7 @@ inputValue.addEventListener("keyup", (event) => {
           sortSelectedPokemon = sortDesNum;
           break;
         default:
-          console.log("Revisar error del listener");
+          //console.log("Revisar error del listener");
       }
     }
 
