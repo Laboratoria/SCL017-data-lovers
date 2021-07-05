@@ -191,7 +191,7 @@ btn.onclick = function() {
 
 // Cuando se haga click en la x se cierre el modal
 span.onclick = function() {
-modal.style.display = "none";
+modal.style.display = "none";               
 }
 
 // Si se hace click fuera del modal se cierra
@@ -208,7 +208,6 @@ function bringData() {
     containerRoot.innerHTML="";
 
     for (let i = 0; i < pokemon.length; i++) {
-        //const tiposDelPokemonActual = getTipos(pokemon[i].type);//
         containerRoot.innerHTML += 
         `<div class="flip-card" id= "pokemon${pokemon[i].num}">
             <div class ="flip-card-inner">
