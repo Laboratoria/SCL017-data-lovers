@@ -45,7 +45,7 @@ main {
   justify-items: right;
 }
 .square{
-  background: rgba(14, 20, 38, 0.6);
+  background: rgba(14, 20, 38, 0.7);
   align-self: center;
   border-radius: 20px;
   text-align: center;
@@ -60,6 +60,7 @@ main section h3{
 }
 main section p {
   color: white;
+  font-style: bold;
   font-size: 15px;
   line-height: 2em;
   margin: 5%;
