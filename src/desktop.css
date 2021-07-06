@@ -15,7 +15,7 @@
     align-self: flex-end;
   }
   .nav-menu ul li a{
-    font-size: 30px;
+    font-size: 25px;
   }
   main {
     width: 50%;
@@ -70,51 +70,53 @@
     margin-right: 25px;
     transform: translateY(-38px);
   }
+  #pokeStatsContainer{
+    margin: 1% 5%; 
+  }
   .pokemonCard{
-    margin: 5% 10%;
+    margin: 2% 5%;
   }
   .poke-card-num{
-    font-size: 2.5em;
+    font-size: 2em;
   }
-  
   .pokemonCard h2{
-    font-size: 3.5rem;
-    color: white;
+    font-size: 3rem;
   }
- .pokemonCard img{
-   width: 300px;
-  }
+ .poke-card-img {
+   width: 15%;
+   padding: 0;
+ }
   .card-square-info{
     margin: 1%;
-    padding: 2%;
+    padding: 1%;
   }
-  .poke-card-type{
-    font-size: 70px;
+  .imgType{
+    width: 60px;
+    height: 70px;
   }
   .pokemon-card-about{
-    font-size: 65px;
-    margin-top: 20px;
+    font-size: 38px;
+    margin: 3% 0;
+    padding: 1%;
   }
   .p-resistant{
-    font-size: 55px; 
+    font-size: 40px; 
   }
-  .imgResistant{
-    /* width: 50px; */
-    height: 280px;
+  .imgResistant {
+    width: 60px;
+    height: 70px;
   }
-  .btn-back{
-    width: 40%;
-    height: 50px;
-    margin: 5% 30%;
-    border-radius: 15px;
-    color: white;
+  .poke-card-size{
+    text-align: center;
     font-size: 38px;
-  }
+    margin: 2%;
+    }
   .dropDown {
     margin: 15px 0px 10px 100px;
   }
   .btn-back{
-    height: 80px;
-    margin: 5% 30%;
-    font-size: 40px;
+    width: 15%;
+    height: 44px;
+    margin: 5% 45%;
+    font-size: 25px;
   }

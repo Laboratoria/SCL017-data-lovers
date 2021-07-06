@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Kosugi+Maru&family=Press+Start+2P&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
@@ -34,7 +35,7 @@ header img{
 }
 .nav-menu ul li a{
   font-size: 16px;
-  color: #0E1426;
+  color: #1154a0;
   text-decoration: none;
   line-height: 30px;
   font-weight: bold;
@@ -51,13 +52,15 @@ main {
   margin: 10%;
 }
 main section h3{
-  color: navy;
-  font-size: 20px;
+  color: rgba(204, 166, 42);
+  font-family: "Press Start 2P";
+  font-size: 15px;
   margin: 5%;
+  line-height: 2em;
 }
 main section p {
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 2em;
   margin: 5%;
 }
@@ -73,12 +76,12 @@ main section p {
   background: white;
 }
 .btn {
-  width: 80px;
+  width: 120px;
   height: 30px;
-  margin: 10%;
+  margin: 5%;
   border-radius: 18px;
   color: white;
-  font-size: 110%;
+  font-size: 12px;
   background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
 footer {
@@ -205,13 +208,13 @@ footer {
 .pokeballImg {
   width: 20%;
 }
-#pokeStatsContainer{
+#pokeStatsContainer {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: 7% 5%; 
+  margin: 3% 5%; 
 }
-.pokemonCard{
+.pokemonCard {
   display: flex;
   flex-flow: column;
   align-items: center;         
@@ -219,11 +222,8 @@ footer {
   box-shadow: 4px 4px 4px #0E1426;
   overflow-x: visible;
   border-radius: 5px;
+  font-family: "Inconsolata";
 }
-/* .pokemonCard img{ 
-  position: absolute;
-  margin-top: 13%;
-}*/
 .poke-card-num {
   font-size: 1.2em;
   text-align: center;
@@ -231,13 +231,14 @@ footer {
   font-style: bold;
   background: #03A688;
   padding: 5px;
-  /* margin-top: 7px; */
   width: 100%;
   border-radius: 10px 10px 0px 0px;
 }
 .pokemonCard h2{
   font-size: 1.5rem;
   color: white;
+  text-transform: capitalize;
+  padding: 2%;
 }
 .card-square-info{
   background-color: rgb(255, 255, 255, 0.85);
@@ -245,11 +246,10 @@ footer {
   padding: 3%;
   border-radius: 7px;
 }
-.poke-card-type{
-  font-size: 20px;
+.poke-card-type {
   text-align: center;
-  /* margin-bottom: 20%; */
 }
+<<<<<<< HEAD
 .poke-card-size{
   font-size: 18px;
   text-align: center;
@@ -257,21 +257,44 @@ footer {
 .pokemon-card-about{
   font-size: 20px;
   margin: 10px 0;
+=======
+.imgType{
+  width: 40px;
+  height: 50px;
+>>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
 }
-.p-resistant{
-  font-size: 18px; 
+.pokemon-card-about {
+  font-size: 20px;
+  text-align:center;
+  margin: 15px 0;
+  line-height: 1.5em;
 }
-.imgResistant{
+.poke-card-size {
+text-align: center;
+margin:5px;
+padding: 2%;
+font-weight: bold;
+font-size: 18px;
+}
+.poke-card-img {
+  padding: 4%;
+}
+.p-resistant {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 1%; 
+}
+.imgResistant {
   width: 40px;
   height: 50px;
 }
-.btn-back{
-  width: 50%;
-  height: 30px;
-  margin: 10% 25%;
-  border-radius: 15px;
+.btn-back {
+  width: 40%;
+  height: 35px;
+  margin: 10% 30%;
+  border-radius: 18px;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   background: linear-gradient(90deg, rgba(36,204,169,1) 0%, rgba(162,219,150,1) 99%, rgba(255,255,255,1) 100%);
 }
 .dropDown {

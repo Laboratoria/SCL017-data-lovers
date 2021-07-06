@@ -24,7 +24,7 @@
               </header>
         <main>
             <section class="square">
-                <h3>El laboratorio del Profesor Oak.</h3>
+                <h3>El laboratorio del Profesor Oak</h3>
                 <p>En el laboratorio del Profesor Oak están todos los  pokémon de las regiones Kanto y Johto. Conocen sus características y arma el mejor equipo para tus batallas.</p>   
                      <form id="form">
                         <input type="text" id="searchpokemon" placeholder=" 🔍 BUSCAR">
@@ -85,6 +85,14 @@
     <!-- Pantalla de ver todos los pokemon -->
     <div id="showAllPokemon" style="display: none">
 
+     <select id="sortBy" class="dropDown">
+        <option value="" disabled selected>-- Ordenar --</option>
+        <option value="sort__az">A-Z</option>
+        <option value="sort__za">Z-A</option>
+        <option value="sort__19">001-250</option>
+        <option value="sort__91">250-001</option>
+      </select>
+
          <select id="dropdownType" class="dropDown">
           <option value="" disabled selected>-- Elemento --</option>
           <option value="all" class="typeClass">Todos</option>
@@ -105,6 +113,7 @@
           <option value="dragon" class="typeClass">Dragón</option>
         </select>
 
+<<<<<<< HEAD
         <select id="sortBy" class="dropDown">
           <option value="" disabled selected>-- Ordenar --</option>
           <option value="A-Z">A-Z</option>
@@ -113,6 +122,8 @@
           <option value="sort__91">250-001</option>
         </select>
 
+=======
+>>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
             <div id="allPokeContainer"></div>
 
     </div>
