@@ -249,19 +249,9 @@ footer {
 .poke-card-type {
   text-align: center;
 }
-<<<<<<< HEAD
-.poke-card-size{
-  font-size: 18px;
-  text-align: center;
-}
-.pokemon-card-about{
-  font-size: 20px;
-  margin: 10px 0;
-=======
 .imgType{
   width: 40px;
   height: 50px;
->>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
 }
 .pokemon-card-about {
   font-size: 20px;

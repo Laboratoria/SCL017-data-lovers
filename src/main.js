@@ -1,8 +1,5 @@
 import pokemon from "./data/pokemon/pokemon.js";
-<<<<<<< HEAD
-=======
 import {sortAZ, sortZA, sortDesNum, sortAscNum, filterfunction} from "./data.js"; 
->>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
 
 const dataPokemon = pokemon.pokemon;
 const inputValue = document.getElementById("searchpokemon");
@@ -20,10 +17,6 @@ inputValue.addEventListener("keyup", (event) => {
       .forEach((poke) => {
         const matchingPoke = document.createElement("div");
         matchingPoke.className = "pokeNameStyle";
-<<<<<<< HEAD
-        
-=======
->>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
         //Click a pokemon en barra de busqueda para ir a info Pokemon
         matchingPoke.onclick = function () {
           pokeStats(poke);
@@ -40,27 +33,6 @@ inputValue.addEventListener("keyup", (event) => {
   buttonClick.addEventListener("click", (event) => {
   document.getElementById("firstPage").style.display = "none";
   document.getElementById("showAllPokemon").style.display = "block";
-<<<<<<< HEAD
-    pokemon.pokemon
-    .forEach((poke) => {
-      let matchingPoke = document.createElement("div");
-      matchingPoke.className = "pokeListStyle";
-      matchingPoke.onclick = function () {
-        pokeStats(poke);
-        pokeStatsContainer.innerHTML = `
-        
-      <div class="pokemonCard">
-        <p class="poke-card-num">#${poke.num}</p> 
-        <h2>${poke.name}</h2>
-        <img src="${poke.img}">
-        <div class="card-square-info">
-          <p class="poke-card-type"> Type: ${poke.type}.<p>
-          <p class="pokemon-card-about"> ${poke.about}</p>
-          <p class="p-resistant">Strong against:</p>
-          <div class="poke-card-resistant"></div>
-          <p class="p-resistant">Weak against:</p>
-          <div class="poke-card-weaknesses"></div>
-=======
 
     loadSelectedPokemon("all");
 
@@ -126,7 +98,6 @@ const pokeStats = (poke) => {
             <div class="poke-card-weaknesses"></div>
             <p class="poke-card-size"> Height: ${poke.size.height} Weigth:${poke.size.weight}<p>
           </div>
->>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
         </div>
         <button type="button" class="btn-back" id="btn-back">Vuelve a atrás</button>`;
 
@@ -135,17 +106,6 @@ const pokeStats = (poke) => {
     document.getElementById("pokeStatsContainer").style.display = "none";
   });
 
-<<<<<<< HEAD
-          document.querySelector(".btn-back").addEventListener("click", goBack);
-          function goBack (){
-            document.getElementById("firstPage").style.display = "block";
-            document.getElementById("pokeStatsContainer").style.display = "none";
-            };
-           
-            //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
-            if (poke.resistant.length == 1){
-              document.querySelector(".poke-card-resistant").innerHTML = `
-=======
   if (poke.type.length == 1) {
     document.querySelector(".poke-card-type").innerHTML = `
               <img class="imgType" src="./img/${poke.type[0]}.png">`;
@@ -158,7 +118,6 @@ const pokeStats = (poke) => {
   //Estos if insertan la imagen de los tipos a los que el pokemon es fuerte
   if (poke.resistant.length == 1) {
     document.querySelector(".poke-card-resistant").innerHTML = `
->>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
               <img class="imgResistant" src="./img/${poke.resistant[0]}.png">`;
   } else if (poke.resistant.length == 2) {
     document.querySelector(".poke-card-resistant").innerHTML = `
@@ -244,22 +203,6 @@ const pokeStats = (poke) => {
               <img class="imgResistant" src="./img/${poke.weaknesses[4]}.png">
               <img class="imgResistant" src="./img/${poke.weaknesses[5]}.png">
               <img class="imgResistant" src="./img/${poke.weaknesses[6]}.png">`;
-<<<<<<< HEAD
-            };
-      };
-      matchingPoke.innerHTML = `<p class= "pokeNumber"> <img class="pokeballImg" src="img/pokeball.png">  N° ${poke.num}</p>
-                                <img class="pokeImgList" src="${poke.img}">
-                                <p class= "pokeName">${poke.name}</p>`;
-      document.getElementById("allPokeContainer").appendChild(matchingPoke);
-    });
-});
-
-const pokeStats = () => {
-    document.getElementById("firstPage").style.display = "none";
-    document.getElementById("showAllPokemon").style.display = "none";
-    document.getElementById("pokeStatsContainer").style.display = "block";
-}
-=======
   }
 };
 
@@ -274,4 +217,3 @@ const pokeCreation = (poke) => {
                               <p class= "pokeName">${poke.name}</p>`;
   document.getElementById("allPokeContainer").appendChild(matchingPoke);
 };
->>>>>>> d53960ce59c659d9f259a7c8a09fa9dbed5dc9ca
