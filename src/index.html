@@ -85,6 +85,14 @@
     <!-- Pantalla de ver todos los pokemon -->
     <div id="showAllPokemon" style="display: none">
 
+     <select id="sortBy" class="dropDown">
+        <option value="" disabled selected>-- Ordenar --</option>
+        <option id="sort_az" value="sort__az">A-Z</option>
+        <option value="sort__za">Z-A</option>
+        <option value="sort__19">001-250</option>
+        <option value="sort__91">250-001</option>
+      </select>
+
          <select id="dropdownType" class="dropDown">
           <option value="" disabled selected>-- Elemento --</option>
           <option value="all" class="typeClass">Todos</option>
@@ -103,14 +111,6 @@
           <option value="rock" class="typeClass">Roca</option>
           <option value="ghost" class="typeClass">Fantasma</option>
           <option value="dragon" class="typeClass">Dragón</option>
-        </select>
-
-        <select id="sortBy" class="dropDown">
-          <option value="" disabled selected>-- Ordenar --</option>
-          <option id="sort_az" value="sort__az">A-Z</option>
-          <option value="sort__za">Z-A</option>
-          <option value="sort__19">001-250</option>
-          <option value="sort__91">250-001</option>
         </select>
 
             <div id="allPokeContainer"></div>

@@ -173,12 +173,9 @@ inputValue.addEventListener("keyup", (event) => {
   document.getElementById("firstPage").style.display = "none";
   document.getElementById("showAllPokemon").style.display = "block";
 
-
     loadSelectedPokemon("all");
 
-  document
-    .getElementById("dropdownType")
-    .addEventListener("change", (event) => {
+  document.getElementById("dropdownType").addEventListener("change", (event) => {
       loadSelectedPokemon(event.target.value);
     });
 
@@ -194,7 +191,6 @@ inputValue.addEventListener("keyup", (event) => {
     dataPokemon.filter(filterFunction).forEach((poke) => {
       let matchingPoke = document.createElement("div");
       matchingPoke.className = "pokeListStyle";
-      // console.log(pokemon.pokemon.forEach)
       matchingPoke.onclick = function () {
         pokeStats(poke);
         pokeStatsContainer.innerHTML = `
@@ -339,9 +335,9 @@ inputValue.addEventListener("keyup", (event) => {
                                 <img class="pokeImgList" src="${poke.img}">
                                 <p class= "pokeName">${poke.name}</p>`;
       document.getElementById("allPokeContainer").appendChild(matchingPoke);
-
     });
   }
+
   function sortPokemon(selected) {
     if (selected === "") {
       sortSelectedPokemon = sortAZ;
@@ -360,7 +356,7 @@ inputValue.addEventListener("keyup", (event) => {
           sortSelectedPokemon = sortDesNum;
           break;
         default:
-          console.log("Revisar error del listener");
+          //console.log("Revisar error del listener");
       }
     }
 
@@ -515,8 +511,6 @@ inputValue.addEventListener("keyup", (event) => {
       document.getElementById("allPokeContainer").appendChild(matchingPoke);
     });
   }
-
-
 });
 
 const pokeStats = () => {

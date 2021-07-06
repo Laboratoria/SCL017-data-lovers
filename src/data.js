@@ -13,7 +13,5 @@ const sortDesNum = (a, b) => {
 
 
 
-
-
-
 export {sortAZ, sortZA, sortAscNum, sortDesNum};
+
