@@ -32,8 +32,18 @@ Por ultimo, establecimos como *Definición de Terminado* lo siguiente:
 
 Luego de cumplir con las tareas mencionadas, pasamos a la segunda historia que fue:
 
-Por ultimo, pasamos a la tercera historia de usuario que fue:
+      Yo: como jugador de Pokemon Go,
 
+      Quiero: saber que ventajas y debilidades tiene su tipo
+
+      Para: utilizarlo y ganar batallas.
+
+Por ultimo, pasamos a la tercera historia de usuario que fue:
+      Yo: como jugador de Pokemon Go,
+
+      Quiero: ordenar los pokemon según tipo
+
+      Para: ver todos los pokemon de un tipo en específico.
 
 ## Prototipos
 Comenzamos haciendo un sketch del sitio en Papel:
@@ -62,5 +72,3 @@ Luego de establecer el diseño final, comenzamos la implementación de la interf
 
 El diseño final del sitio:
 ![Final1](src/img/final1.png)
-
-

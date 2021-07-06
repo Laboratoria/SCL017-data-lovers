@@ -12,6 +12,9 @@ const sortDesNum = (a, b) => {
 };
 
 
+const filterfunction = (pokemon, selectedType) =>
+  pokemon.type.includes(selectedType);
 
-export {sortAZ, sortZA, sortAscNum, sortDesNum};
+
+export {sortAZ, sortZA, sortAscNum, sortDesNum, filterfunction};
 

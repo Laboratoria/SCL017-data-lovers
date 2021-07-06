@@ -22,7 +22,7 @@
    margin-left: 43%;
   }
   main section h3 {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 20px;
   }
   main section p {
@@ -74,50 +74,53 @@
     margin: 0;
   }
   .pokemonCard{
-    margin: 2% 4%;
-  
+    margin: 2% 5%;
+    
   }
   .poke-card-num{
-    font-size: 1em;
+    font-size: 1.3em;
+    padding: 2px;
+    height: 30px;
   }
   .pokemonCard h2{
-    font-size: 1.5rem;
-    color: white;
-    margin: 1% 0;
+    font-size: 1.8rem;
+    margin: 1px;
   }
- .pokemonCard img{
-   width: 130px;
-   height: 150px;
-  }
+ .poke-card-img {
+   width: 10%;
+   padding: 0;
+ }
   .card-square-info{
     margin: 1%;
     padding: 1%;
   }
   .imgType{
-  
+    width: 60px;
+    height: 70px;
   }
   .pokemon-card-about{
-    font-size: 1.5rem;
-    margin: 2% 0;
+    font-size: 1.3em;
+    padding: 1%;
   }
   .p-resistant{
-    font-size: 1.5rem; 
+    font-size: 1.3em; 
+    margin: 0;
   }
-  .imgResistant{
-
+  .imgResistant {
+    width: 60px;
+    height: 70px;
   }
   .poke-card-size{
     text-align: center;
-    font-size: 1.5em;
-    margin: 2%;
+    font-size: 1.3em;
+    margin: 0;
     }
   .dropDown {
     margin: 15px 0px 10px 100px;
   }
   .btn-back{
-    height: 60px;
-    width: 50%;
-    text-align: center;
-    margin-top: 0;
-    font-size: 1.5em;
+    width: 15%;
+    height: 44px;
+    margin: 1% 45%;
+    font-size: 25px;
   }
