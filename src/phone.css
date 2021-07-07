@@ -1,0 +1,16 @@
+#paginaUno {
+    background-image: url("/imagenes/fondophone.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+   
+    
+}
+
+#titulo{
+    position: center;
+    width: 490px;
+    height: 350px;
+    left: 150px;
+    top: 100px;
+}
