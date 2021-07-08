@@ -1,23 +1,61 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortAZ, sortZA, sortAscNum, sortDesNum, filterfunction} from '../src/data.js';
+import pokemon from "../src/data/pokemon/pokemon.js";
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('sortAZ', () => {
+  it('debería ser una función', () => {
+    expect(typeof sortAZ).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('Se espera que 24 sea mayor que 1', () => {
+    expect(sortAZ(pokemon.pokemon[24], pokemon.pokemon[1])).toBe(1);
+  });
+
+  it('Se espera que 24 sea mayor que 1', () => {
+    expect(sortAZ(pokemon.pokemon[1], pokemon.pokemon[24])).toBe(-1);
   });
 });
 
-
-describe('anotherExample', () => {
+describe('sortZA', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortZA).toBe('function');
   });
 
   it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+    expect(sortZA(pokemon.pokemon[1], pokemon.pokemon[24])).toBe(1);
   });
+  
+  it('returns `anotherExample`', () => {
+    expect(sortZA(pokemon.pokemon[24], pokemon.pokemon[1])).toBe(-1);
+  });
+});
+
+describe('sortAscNum', () => {
+  it('is a function', () => {
+    expect(typeof sortAscNum).toBe('function');
+  });
+
+  /*it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });*/
+});
+
+describe('sortDesNum', () => {
+  it('is a function', () => {
+    expect(typeof sortDesNum).toBe('function');
+  });
+
+  /*it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });*/
+});
+
+describe('filterfunction', () => {
+  it('is a function', () => {
+    expect(typeof filterfunction).toBe('function');
+  });
+
+  /*it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });*/
 });
