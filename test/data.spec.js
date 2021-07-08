@@ -3,7 +3,7 @@ import pokemon from "../src/data/pokemon/pokemon.js";
 
 
 describe('sortAZ', () => {
-  it('debería ser una función', () => {
+  it('is a function', () => {
     expect(typeof sortAZ).toBe('function');
   });
 
