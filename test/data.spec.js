@@ -7,11 +7,11 @@ describe('sortAZ', () => {
     expect(typeof sortAZ).toBe('function');
   });
 
-  it('Se espera que 24 sea mayor que 1', () => {
+  it('returns 1', () => {
     expect(sortAZ(pokemon.pokemon[24], pokemon.pokemon[1])).toBe(1);
   });
 
-  it('Se espera que 24 sea mayor que 1', () => {
+  it('returns -1', () => {
     expect(sortAZ(pokemon.pokemon[1], pokemon.pokemon[24])).toBe(-1);
   });
 });
@@ -21,11 +21,11 @@ describe('sortZA', () => {
     expect(typeof sortZA).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
+  it('returns 1', () => {
     expect(sortZA(pokemon.pokemon[1], pokemon.pokemon[24])).toBe(1);
   });
   
-  it('returns `anotherExample`', () => {
+  it('returns -1', () => {
     expect(sortZA(pokemon.pokemon[24], pokemon.pokemon[1])).toBe(-1);
   });
 });
