@@ -1,5 +1,5 @@
 import data from './data/rickandmorty/rickandmorty.js'
-import { filterData }  from './data.js'
+import { filterData, sortData }  from './data.js'
 
 // Vamos a hacer que la pagina uno pase a la pagina dos
 document.getElementById("pasarPagina").addEventListener("click", function () {
@@ -87,3 +87,6 @@ document.getElementById("filtroE").addEventListener("change", function getSelect
         specie
     }))
 });
+
+
+// console.log(sortData(data.results, 'name', 'ASC'))
