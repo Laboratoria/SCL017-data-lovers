@@ -32,6 +32,20 @@ export const filterData = (data, condition) => {
   )
 }
 
+export const sortData = (data, sortBy, sortOrden) => {
+  return data.sort((a, b) => {
+    if (sortOrden === 'ASC') {
+      // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+      return a[sortBy] > b[sortBy] ? 1 : -1
+    } else {
+      return a[sortBy] < b[sortBy] ? 1 : -1
+    }
+  })
+}
+
+// sortData(data, 'name', 'ASC')
+// sortData(data, 'name', 'DESC')
+
 
 
 

@@ -7,7 +7,7 @@
         position: relative;
         width: 200px;
         height: 200px;
-        left: 8px;
+        left: -5px;
         top: 190px;
     }
 #paginaUno h1{
@@ -35,9 +35,48 @@
     left: 50px;
     font-size: 14px;
     margin-top: 190px;
-      text-align: center;
+    text-align: center;
+    }
 
-    
+#paginaUno button{
+    float: left;
+    position: center;
+    width: 120px;
+    height: 40px;
+    left: 75px;
+    top: 502px;
+    }
+#tituloPagina{
+    padding: 16px 35px;
+    }
+.headerIcon{
+    float:left;
+    margin-left: -40px;
+    }
+#tituloPagina h2{
+
+    margin-left: 100px;
+    width: 200px;
+    font-size: 17px;
+   }
+h1{
+   margin-left: 125px; 
+   font-size: 20px;
+    }
+.txtBuscador {
+    margin-right: -17px;
+    padding: 0px 89px;
+    }
+.filtro{
+    padding: 4px 16px;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-left: -8px;
+    }
+.filtroE{
+    line-height: 32px;
+    padding: 4px 16px;
+    margin-top: 12px;
+    margin-left: -80px;
     }
 }
-
