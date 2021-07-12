@@ -10,6 +10,20 @@
 </head>
 
 <body>
+  <div id="modal">
+    <div id="modalIzquierda">
+        <img src="/imagenes/rick.png" id="modalImagen" class="modalImagen" />
+    </div>
+    <div id="modalDerecha">
+      <h2 id="modalTitulo" class="modalTitulo">Titulo</h2>
+      <p><strong>Genero: </strong><br /><span class="modalContenido" id="modalGenero">88888</span></p>
+      <p><strong>Estado: </strong><br /><span class="modalContenido" id="modalEstado">88888</span></p>
+      <p><strong>Origen: </strong><br /><span class="modalContenido" id="modalOrigen">88888</span></p>
+      <p><strong>Especie: </strong><br /><span class="modalContenido" id="modalEspecie">88888</span></p>
+      <p><strong>Tipo: </strong><br /><span class="modalContenido" id="modalTipo">88888</span></p>
+      <button id="modalButton">Volver</button>
+    </div>
+  </div>
   <div id="paginaUno">
     <div id="titulo">
       
@@ -46,8 +60,8 @@
     <div class="filtroOrden">
     <select name="filtro" class="filtro" id="filtro">
       <option select>Ordenar por</option>
-      <option select id="opcionUno" value="A-Z">A-Z</option>
-      <option select id="opcionDos" value ="Z-A">Z-A</option>
+      <option select id="opcionUno" value="ASC">A-Z</option>
+      <option select id="opcionDos" value ="DESC">Z-A</option>
     </select>
     </div>
     <div class="filtroEspecie">

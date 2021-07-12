@@ -1,6 +1,7 @@
 body {
     background-image: url("/imagenes/fondo.png");
     display: flex;
+    overflow-x: hidden !important;
 }
 
 h1,h2, body{
@@ -264,4 +265,65 @@ html,body{
     font-weight: normal;
     font-size: 15px;
     box-shadow: 5px 5px 5px #91BF64;
+}
+
+
+#modal {
+    background: #F5F5FA;
+    position: fixed;
+    width: 60vw;
+    height: 80vh;
+    left: 20vw;
+    top: 7.5vh;
+    z-index: 100;
+    padding: 32px;
+    font-family: 'Arial, Helvetica', sans-serif;
+    border-radius: 15px;
+    display: none;
+}
+
+#modal * {
+    color: #123A43;
+}
+
+.modalImagen {
+    background: #FFF;
+    border: 1px solid #CCC;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#modalIzquierda {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#modalDerecha{
+    float: right;
+    width: calc(50% - 32px);
+    height: 100%;
+    padding-left: 32px;
+}
+
+h2.modalTitulo{
+    text-align: center;
+    width: 75%;
+    margin-left: 12.5%;
+    font-size: 32px;
+}
+
+.modalContenido{
+    font-size: 32px;
+}
+
+#modalButton{
+    background: #91BF64;
+    color: #FFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -5px -5px 10px #FFFFFF;
+    line-height: 32px;
+    width: 50%;
+    margin-left: 25%;
+    position: relative;
 }

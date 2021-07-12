@@ -29,7 +29,33 @@ document.getElementById("txtBuscador").addEventListener("change", function (even
         specie
     }))
 })
+
+const modificaModalSpan = (identificador, valor) => {
+    document.getElementById("modal" + identificador).innerText = valor;
+}
+
+
+const abrirModal = (personaje) => {
+    document.getElementById('modal').style.display = "block";
+    console.log({ personaje })
+
+    document.getElementById("modalTitulo").innerText = personaje.name
+
+    modificaModalSpan("Genero", personaje.gender);
+    modificaModalSpan("Estado", personaje.status);
+    modificaModalSpan("Origen", personaje.origin.name); // añadir link
+    modificaModalSpan("Especie", personaje.species);
+    modificaModalSpan("Tipo", personaje.type === "" ? "No especificado" : personaje.type);
+
+    document.getElementById("modalImagen").src = personaje.image;
+}
+
+const cerrarModal = () => {
+    document.getElementById('modal').style.display = "none";
+}
+
 const paginaDos = () => {
+
     document.getElementById("paginaUno").style.display = "none";
     document.getElementById("paginaDos").style.display = "block";
 }
@@ -51,13 +77,19 @@ const paginaDos = () => {
         cajaNombre.className = "nombre";
         const texto = document.createTextNode(personajes.name);
         cajaNombre.appendChild(texto);
-        caja.appendChild(cajaNombre)
+        caja.appendChild(cajaNombre);
 
         const cajaBoton = document.createElement("button")
         cajaBoton.className = "button";
         const textoBoton = document.createTextNode("Ver ficha completa");
         cajaBoton.appendChild(textoBoton);
-        caja.appendChild(cajaBoton)
+        // Abrir modal
+        cajaBoton.addEventListener("click", function () {
+            abrirModal(personajes)
+        })
+
+        caja.appendChild(cajaBoton);
+
 
         document.getElementById("root").appendChild(caja)
     }
@@ -67,26 +99,21 @@ export const limpiarPantalla = () => {
     document.getElementById("root").innerHTML = ""
 }
 
-document.getElementById("filtroE").addEventListener("change", function getSelectValue() {
+const ordenar = () => {
+    const sortOrden = document.getElementById('filtro').value
     const specie = document.getElementById("filtroE").value
     const name = document.getElementById("txtBuscador").value
-    console.log({
-        name,
-        specie,
-        event,
-        cajasPantalla: filterData(data.results, {
-            name,
-            specie
-        })
-    })
-    // Buscando con filter
-    // const nuevasCajas = data.results.filter(personaje => personaje.name.toLowerCase().indexOf(texto) > -1)
-    // cajasPantalla(nuevasCajas)
-    cajasPantalla(filterData(data.results, {
+
+    cajasPantalla(sortData(filterData(data.results, {
         name,
         specie
-    }))
-});
+    }), 'name', sortOrden))
+}
+
+document.getElementById("filtroE").addEventListener("change", ordenar);
+document.getElementById('filtro').addEventListener("change", ordenar);
+
+document.getElementById("modalButton").addEventListener("click", cerrarModal)
 
 
 // console.log(sortData(data.results, 'name', 'ASC'))
