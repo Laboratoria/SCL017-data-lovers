@@ -1,5 +1,11 @@
 import { example, anotherExample } from '../src/data.js';
 
+/**
+ * - DESCRIBE: Sirve para blablabla
+ * - IT: Sirve para blablabla
+ * - IT: Sirve para blablabla
+ * 
+ */
 
 describe('example', () => {
   it('is a function', () => {
