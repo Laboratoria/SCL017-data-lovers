@@ -1,0 +1,305 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(pictures/fondo1.png.jpeg);
+/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+    background-position: center center;
+/* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+background-size: cover;
+
+/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+    background-color: 	#008080;
+
+}
+ .banner{ 
+    width: auto;
+    min-height: 357px;
+    height: auto;
+    background: url(pictures/Magenta\ and\ Yellow\ Vibrant\ and\ Dynamic\ Business\ Retractable\ Exhibition\ Banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.divbtn{ 
+  display: flex;
+  justify-content: center;
+  }
+  
+  .myBtn{
+    width:5%; 
+    height:10%;
+    background-color:	#FF7F50;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor:pointer;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-weight: bold
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: 		#FFE4B5;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid 	#FF7F50;
+    width: 80%;
+    font-weight: bold
+  }
+  .modal-content  p {
+  
+  text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: 	#ce963d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+/* boton ir hacia abajo */ 
+.ir-abajo{
+  display:inline-block;
+	padding:20px;
+	background:		#FF8C00;
+	font-size:15px;
+	color: 	#FFFF00;
+	cursor:pointer;
+	position: fixed;
+	bottom: 10px;
+	right:10px;
+  border-radius: 80%;
+}
+/* boton ir hacia arriba */ 
+.ir-arriba {
+	display:inline-block;
+	padding:20px;
+	background:		#FF8C00;
+	font-size:15px;
+	color: 	#FFFF00;
+	cursor:pointer;
+	position: fixed;
+	bottom: 80px;
+	right:10px;
+  border-radius: 50%;
+}
+
+#root{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; 
+
+   }
+  
+.pokedex{
+    /*text-align: left; */
+    margin-bottom: 10px;
+    float:left; 
+    
+} 
+
+
+
+
+.searcher{
+    width: 80%;
+    box-sizing: border-box;
+    height: 50px;
+    margin: 20px auto;
+  /*margin-right:200px;
+    margin-top: 100px;*/
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    background: rgb(139, 134, 134);
+    /*overflow: hidden;*/
+    
+}
+
+
+
+
+.btn{
+    display: flex;
+    /*align-self:30px ;*/
+    width: 55px;
+    height: 55px;
+    line-height: 35px;
+
+} 
+
+#searchPo{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-self: flex-start;
+   /* margin-left: 300px;*/
+    width:300px;
+    height: 20px;
+    /*align-content: center;*/
+    padding: 2px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 20px;
+
+ }
+
+  #searcherPo input{
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 20px;
+}  
+ .btn span{
+    
+    color: darkslateblue;
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+  
+  .flip-card {
+  
+    perspective: 1000px;
+    opacity: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+   
+}
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 50px;
+
+
+
+   
+}
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+  }
+  
+  .flip-card-front {
+    background-color:#4682B4;
+    color: black; 
+    font-weight: bold
+    
+  }
+  
+  .flip-card-back {
+    background-color:			#87CEEB;
+    color:black;
+    transform: rotateY(180deg);
+  }
+
+li {
+  list-style:none
+}
+.menu_bar{
+  display: none;
+}
+a span{
+  margin-right: 10px;
+}
+nav ul li {
+  float: right;
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+  color: antiquewhite;
+  text-decoration-line:#ccc; /* no funciona :c */
+}
+
+
+
+@media screen and (max-width:900px) {
+   .searcher input nav {
+       width: 80%;
+       height: 100%;
+       margin: 0px;
+       position: fixed;
+     }
+
+  nav ul li {
+    display: block;
+    float: none;
+    
+    
+  }
+.menu_bar{
+  display: block;
+  width:100%;
+  background-color: #ccc;
+}
+
+.menu_bar .bt-menu{
+  display: block;
+  padding: 20px;
+  background: rgb(139, 134, 134);
+  color: antiquewhite;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu_bar span {
+  float:right;
+
+}
+
+}
