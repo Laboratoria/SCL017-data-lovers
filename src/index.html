@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pokemon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play&family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <img id="logo" class="logo" src="img/logo.png" alt="logo">
+  </header>
+  <div id="home" class="container">
+    <div class="home-section">
+      <h1 class="introduction">Welcome to know <br> more about pokémon <br> click on “start” </h1>
+      <div>
+        <img class="img-hash" src="img/ash.png">
+      </div>       
+    </div>
+    <div class="btn-star">
+      <button class="begin" id="start" ><b>START</b></button> 
+    </div>
+  </div>
+  <div class="second-window hide" id="second-window">
+    <div class="options">
+      <select name="select-dues" class="select-dues">
+        <option value="all">All pokemon</option>
+        <option value="grass">Grass</option>
+        <option value="water">Water</option>
+        <option value="fire">Fire</option>
+        <option value="poison">Poison</option>
+        <option value="bug">Bug</option>
+        <option value="normal">Normal</option>
+        <option value="electric">Electric</option>
+        <option value="ground">Ground</option>
+        <option value="fighting">Fighting</option>
+        <option value="psychic">Psychic</option>
+        <option value="ice">Ice</option>
+        <option value="dark">Dark</option>
+        <option value="rock">Rock</option>
+        <option value="steel">Steel</option>
+        <option value="fairy">Fairy</option>
+        <option value="dragon">Dragon</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+      </select>
+      <select  id="order" name="order" class="select-dues">
+        <option value="ordenarAZ">Sort by A-Z</option>
+        <option value="ordenarZA">Sort by Z-A</option>
+        <option value="NumeroDeIdinferior">Lower ID number</option>
+        <option value="NumeroDeIdsuperior">Top ID number</option>
+      </select>
+      
+    </div>
+    <div id="showPercentage">
+      <p class="resultCalculate" id="percentage"></p>
+    </div>
+    <div id="pokemonList" class="pokemon-list">
+      
+    </div>
+    <div id="pokemonListClick">
+      
+      
+    </div>
+    
+    
+  </div>
+  <div id="third-window" class="third-window hide" >
+    <div id="content-third-window">
+      
+    </div>
+    <button id="buttonReturn" class="button-return">Return</button>
+    
+  </div>
+  
+  
+  <footer class="footer" >
+    <div>
+      <p>For suggestions, questions or queries: email@example.com</p>
+      <p>Developed by Nicole Quijada and Daniela Araque </p>
+    </div>
+    <div class="information-footer">
+    
+        <img src="img/squir.png" alt="img1" class="img-footer">
+        <img src="img/pica.png" alt="img1" class="img-footer">
+        <img src="img/pokebola.png" alt="img1" class="img-footer">
+    
+    </div>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
 </html>
