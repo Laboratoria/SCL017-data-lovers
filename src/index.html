@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="phone.css">
+</head>
+
+<body>
+  <div id="paginaUno">
+    <div id="titulo">
+      
+      <h2>
+        Hola terricola, estás en
+      </h2>
+      <h1>
+         WUBBA LUBBA
+      </h1>
+      <img src="/imagenes/rick.png" class="tituloImagen">
+    </div>
+   
+    <h3>
+      Aquí podrás encontrar información de los personajes de Rick and Morty y
+      también ordenarlos según tu interés.
+    </h3>
+    <button id="pasarPagina" class="button">Iniciar</button>
+    
+  </div>
+
+
+  <div id="paginaDos">
+    <div id="tituloPagina">
+      <div class="boxIzquierda">
+        <img src="/imagenes/headerIcon.png" class="headerIcon" />
+        <h2>Listado de personajes</h2>
+        <h1>WUBBA LUBBA</h1>
+      </div>
+      <div class="boxBuscador">
+        <input id="txtBuscador" class="txtBuscador" type="text" placeholder="Buscador" />
+        <button class="btnBuscador">🔎</button>
+      </div>
+    </div>
+    <div class="filtroOrden">
+    <select name="filtro" class="filtro" id="filtro">
+      <option select>Ordenar por</option>
+      <option select id="opcionUno" value="A-Z">A-Z</option>
+      <option select id="opcionDos" value ="Z-A">Z-A</option>
+    </select>
+    </div>
+    <div class="filtroEspecie">
+        <select id="filtroE" class="filtroE">
+          <option value="NoEspecie">Especie</option>
+          <option value="Human">Humana</option>
+          <option value="Alien">Alien</option>
+          <option value="Humanoid">Humanoide</option>
+          <option value="Mytholog">Mitologico</option>
+          <option value="unknown">Desconocida</option>
+          <option value="Poopybutthole">Poopybutthole</option>
+          <option value="Animal">Animal</option>
+          <option value="Vampire">Vampira</option>
+          <option value="Robot">Robot</option>
+          <option value="Parasite">Parasito</option>
+          <option value="Disease">Enfermedad</option>
+          <option value="Cronenberg">Cronenberg</option>
+        </select>
+    </div>
+    <br><br><br>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+  </div>
+
+  
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
